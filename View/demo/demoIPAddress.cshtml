@@ -1,0 +1,33 @@
+<%@ page import="service.manageUser.ServiceIPAddress" %>
+<%@ page import="java.net.InetAddress" %>
+<%@ page import="java.net.UnknownHostException" %><%--
+  Created by IntelliJ IDEA.
+  User: ADMIN
+  Date: 24/4/2024
+  Time: 11:42
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>get ip address</title>
+</head>
+<body>
+<h1>Client IP Address</h1>
+<p>IP Address: <%= request.getRemoteAddr() %></p>
+<%
+    String ip = "unknown";
+    try{
+        ip = request.getRemoteAddr();
+        if(ip.equals("0:0:0:0:0:0:0:1") || ip.equals("127.0.0.1")) {
+            InetAddress hostAddress = InetAddress.getLocalHost();
+            ip = hostAddress.getHostAddress();
+        }
+    } catch (UnknownHostException e) {
+        ip = "unknown";
+    }
+%>
+<p>IP Address: <%=ip%></p>
+
+</body>
+</html>

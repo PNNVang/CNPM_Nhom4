@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.12" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.19" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.17">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="View\**" />
+      <Compile Remove="Img\**" />
+      <Compile Remove="JS\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="View\**" />
+      <EmbeddedResource Remove="Img\**" />
+      <EmbeddedResource Remove="JS\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="View\**" />
+      <Content Remove="Img\**" />
+      <Content Remove="JS\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="View\**" />
+      <None Remove="Img\**" />
+      <None Remove="JS\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="View\admin\admin.cshtml" />
+      <_ContentIncludedByDefault Remove="View\admin\admin_backward_product.cshtml" />
+      <_ContentIncludedByDefault Remove="View\admin\admin_form_update.cshtml" />
+      <_ContentIncludedByDefault Remove="View\admin\admin_form_upload_product.cshtml" />
+      <_ContentIncludedByDefault Remove="View\admin\admin_header.cshtml" />
+      <_ContentIncludedByDefault Remove="View\admin\admin_image.cshtml" />
+      <_ContentIncludedByDefault Remove="View\admin\admin_inventory.cshtml" />
+      <_ContentIncludedByDefault Remove="View\admin\admin_log.cshtml" />
+      <_ContentIncludedByDefault Remove="View\admin\admin_order.cshtml" />
+      <_ContentIncludedByDefault Remove="View\admin\admin_product.cshtml" />
+      <_ContentIncludedByDefault Remove="View\admin\admin_summary.cshtml" />
+      <_ContentIncludedByDefault Remove="View\admin\admin_user.cshtml" />
+      <_ContentIncludedByDefault Remove="View\demo\demoIPAddress.cshtml" />
+      <_ContentIncludedByDefault Remove="View\error\404.cshtml" />
+      <_ContentIncludedByDefault Remove="View\index.cshtml" />
+      <_ContentIncludedByDefault Remove="View\shoppingcart.cshtml" />
+      <_ContentIncludedByDefault Remove="View\user\changepassword.cshtml" />
+      <_ContentIncludedByDefault Remove="View\user\forgotPassword.cshtml" />
+      <_ContentIncludedByDefault Remove="View\user\login.cshtml" />
+      <_ContentIncludedByDefault Remove="View\user\profile.cshtml" />
+      <_ContentIncludedByDefault Remove="View\user\register.cshtml" />
+      <_ContentIncludedByDefault Remove="View\user\UpdateProfileThenRegister.cshtml" />
+      <_ContentIncludedByDefault Remove="View\views\about.cshtml" />
+      <_ContentIncludedByDefault Remove="View\views\contact.cshtml" />
+      <_ContentIncludedByDefault Remove="View\views\footer.cshtml" />
+      <_ContentIncludedByDefault Remove="View\views\header.cshtml" />
+      <_ContentIncludedByDefault Remove="View\views\index.cshtml" />
+      <_ContentIncludedByDefault Remove="View\views\policy.cshtml" />
+      <_ContentIncludedByDefault Remove="View\views\search.cshtml" />
+    </ItemGroup>
+
+</Project>
