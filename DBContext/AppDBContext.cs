@@ -14,6 +14,7 @@ public class AppDBContext : DbContext
     public DbSet<ProductImage> ProductImages { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<OrderDetail> OrderDetails { get; set; }
+    public DbSet<Category> Categories { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<User>()
@@ -26,8 +27,9 @@ public class AppDBContext : DbContext
         // Product and ProductImage have a one-to-one relationship
         modelBuilder.Entity<Product>()
             .HasOne(p => p.ProductImage)
-            .WithOne(pi => pi.Product)
-            .HasForeignKey<ProductImage>(pi => pi.Id);
+            .WithOne(pi => pi.Product).HasForeignKey<ProductImage>(p => p.Id);
+        
+            
         // Order Configuration
         modelBuilder.Entity<Order>()
             .HasKey(o => o.Id);
@@ -50,5 +52,6 @@ public class AppDBContext : DbContext
             .HasOne(od => od.Product)
             .WithMany() // Assuming Product has no navigation property to OrderDetail
             .HasForeignKey(od => od.ProductId);
+        modelBuilder.Entity<Product>().HasOne(p => p.Category).WithMany().HasForeignKey(p => p.CategoryId);
     }
 }
