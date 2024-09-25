@@ -4,9 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Dot_Net_ECommerceWeb.Controller;
+
 [Route("api/[controller]")]
 [ApiController]
-public class ProductController:ControllerBase
+public class ProductController : ControllerBase
 {
     private readonly AppDBContext _context;
 
@@ -46,7 +47,7 @@ public class ProductController:ControllerBase
     [HttpGet("redirect_update")]
     public async Task<IActionResult> RedirectToUpdate([FromQuery] int id)
     {
-        var product = await _context.Products.Include(p => p.ProductImage)
+        var product = await _context.Products
             .FirstOrDefaultAsync(p => p.Id == id);
         if (product == null)
         {
@@ -54,5 +55,37 @@ public class ProductController:ControllerBase
         }
 
         return Ok(product); // Trả về sản phẩm để cập nhật
+    }
+
+    //POST: api/product/insertproduct
+    [HttpPost("insertproduct")]
+    public async Task<IActionResult> InsertProduct([FromBody] Product product)
+    {
+        //kiểm tra từng thông tin của sản phẩm trước khi lưu xuống DB
+        if (product != null)
+        {
+            var products = _context.Products.AddAsync(product);
+        }
+
+        return Ok(product);
+    }
+
+    //PUT :api/product/updateproduct
+    [HttpPut("updateproduct")]
+    public async Task<String> UpdateProduct([FromBody] Product product)
+    {
+        //kiểm tra từng trường dữ liệu gửi từ client xuống server có khác null hay không
+        if (product != null)
+        {
+            var products = _context.Products.Find(product.Id);
+            if (products != null)
+            {
+                //ví dụ cập nhật id 
+                products.Id = product.Id;
+                _context.SaveChanges();
+            }
+        }
+
+        return "Cập nhật thành công";
     }
 }

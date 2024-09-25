@@ -8,7 +8,7 @@ public class ProductImage
     public string Img2 { get; set; }
     public string Img3 { get; set; }
     public string Img4 { get; set; }
-
+    
     // Navigation Property for Product
     public Product Product { get; set; }
 }
