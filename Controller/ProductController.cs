@@ -1,13 +1,13 @@
 ﻿using Dot_Net_ECommerceWeb.DBContext;
+using Dot_Net_ECommerceWeb.DTO;
 using Dot_Net_ECommerceWeb.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Dot_Net_ECommerceWeb.Controller;
-
-[Route("api/[controller]")]
+[Route("/api/[controller]")]
 [ApiController]
-public class ProductController : ControllerBase
+public class ProductController : Microsoft.AspNetCore.Mvc.Controller
 {
     private readonly AppDBContext _context;
 
@@ -18,11 +18,21 @@ public class ProductController : ControllerBase
 
     // GET: api/product/getproduct_admin
     [HttpGet("getproduct_admin")]
-    public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+    public async Task<ActionResult<IEnumerable<ProductImageDTO>>> GetProductImages()
     {
-        var products = await _context.Products
+        var products = await _context.ProductImages
             .ToListAsync();
-        return Ok(products);
+        var productImages = products.Select(product => new ProductImageDTO
+        {
+            Id = product.Id,
+            ImgMain = product.ImgMain,
+            Img1 = product.Img1,
+            Img2 = product.Img2,
+            Img3 = product.Img3,
+            Img4 = product.Img4,
+        }).ToList();
+
+        return Ok(productImages);
     }
 
     // DELETE: api/product/deleteproduct_admin?id={id}
@@ -59,33 +69,44 @@ public class ProductController : ControllerBase
 
     //POST: api/product/insertproduct
     [HttpPost("insertproduct")]
-    public async Task<IActionResult> InsertProduct([FromBody] Product product)
+    public async Task<IActionResult> InsertProduct([FromBody] ProductDTO productDTO)
     {
         //kiểm tra từng thông tin của sản phẩm trước khi lưu xuống DB
-        if (product != null)
+        if (productDTO != null)
         {
-            var products = _context.Products.AddAsync(product);
+            var product = new Product
+            {
+                Id = productDTO.Id,
+                CreatedAt = productDTO.CreatedAt,
+                Description = productDTO.Description
+            };
+            // _context.Entry(product).Property(p =>p.CreatedAt).IsModified = true;
+            // _context.Entry(product).Property(p =>p.Description).IsModified = true;
+            _context.Products.Add(product);
+            _context.SaveChanges();
+            return Ok(product);
         }
 
-        return Ok(product);
+        return BadRequest();
     }
 
     //PUT :api/product/updateproduct
     [HttpPut("updateproduct")]
-    public async Task<String> UpdateProduct([FromBody] Product product)
+    public async Task<String> UpdateProduct([FromBody] ProductDTO productDTO)
     {
         //kiểm tra từng trường dữ liệu gửi từ client xuống server có khác null hay không
-        if (product != null)
+        if (productDTO != null)
         {
-            var products = _context.Products.Find(product.Id);
+            var products = _context.Products.Find(productDTO.Id);
             if (products != null)
             {
-                //ví dụ cập nhật id 
-                products.Id = product.Id;
+                products.Description= productDTO.Description;
+                _context.Products.Update(products);
                 _context.SaveChanges();
+                return "Đã cập nhật thành công";
             }
         }
 
-        return "Cập nhật thành công";
+        return "Dữ liệu không được tìm thấy";
     }
 }

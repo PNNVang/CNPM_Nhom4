@@ -1,37 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Backend_DotNet\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb.csproj": {}
+    "D:\\Backend_DotNet_EommerceWeb\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb.csproj": {}
   },
   "projects": {
-    "D:\\Backend_DotNet\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb.csproj": {
+    "D:\\Backend_DotNet_EommerceWeb\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Backend_DotNet\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb.csproj",
+        "projectUniqueName": "D:\\Backend_DotNet_EommerceWeb\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb.csproj",
         "projectName": "Dot_Net_ECommerceWeb",
-        "projectPath": "D:\\Backend_DotNet\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb.csproj",
+        "projectPath": "D:\\Backend_DotNet_EommerceWeb\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb.csproj",
         "packagesPath": "C:\\Users\\ngoke\\.nuget\\packages\\",
-        "outputPath": "D:\\Backend_DotNet\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb\\obj\\",
+        "outputPath": "D:\\Backend_DotNet_EommerceWeb\\Dot_Net_ECommerceWeb\\Dot_Net_ECommerceWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
         ],
         "configFilePaths": [
           "C:\\Users\\ngoke\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -47,8 +46,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "CloudinaryDotNet": {
               "target": "Package",
@@ -61,6 +60,16 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.19, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.17, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -88,24 +97,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -114,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

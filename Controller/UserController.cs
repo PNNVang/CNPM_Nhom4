@@ -1,32 +1,52 @@
 ﻿
 
 using Dot_Net_ECommerceWeb.DBContext;
+using Dot_Net_ECommerceWeb.DTO;
 using Dot_Net_ECommerceWeb.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 namespace Dot_Net_ECommerceWeb.Controller
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    // [Route("api/[controller]")]
+    // [ApiController]
     
-    public class UsersController : ControllerBase
+    public class UserController : Microsoft.AspNetCore.Mvc.Controller
     {
         private readonly AppDBContext _context;
 
-        public UsersController(AppDBContext context)
+        public UserController(AppDBContext context)
         {
             _context = context;
         }
-
+       
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsers()
         {
-            return await _context.Users.ToListAsync();
+            var users = await _context.Users.ToListAsync();
+
+            var userDtos = users.Select(user => new UserDTO
+            {
+                username = user.username ?? string.Empty, // Sử dụng giá trị mặc định nếu NULL
+                password = user.password ?? string.Empty, // Nếu cần thiết
+                // fullName = user.FullName ?? string.Empty,
+                // gender = user.Gender ?? string.Empty,
+                // birthday = user.Birthday?.ToString("yyyy-MM-dd") ?? string.Empty, // Chuyển đổi DateTime sang chuỗi
+                // email = user.Email ?? string.Empty,
+                // phone = user.Phone ?? string.Empty,
+                // address = user.Address ?? string.Empty,
+                // avatar = user.Avatar ?? string.Empty,
+                // role = user.Role ?? string.Empty,
+                // status = user.Status ?? string.Empty,
+                // typeLogin = user.TypeLogin ?? string.Empty
+            }).ToList();
+
+            return Ok(userDtos);
         }
 
+
         [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(int id)
+        public async Task<ActionResult<users>> GetUser(int id)
         {
             var user = await _context.Users.FindAsync(id);
             if (user == null) return NotFound();
@@ -34,7 +54,7 @@ namespace Dot_Net_ECommerceWeb.Controller
         }
 
         [HttpPost]
-        public async Task<ActionResult<User>> PostUser(User user)
+        public async Task<ActionResult<users>> PostUser(users user)
         {
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
@@ -42,7 +62,7 @@ namespace Dot_Net_ECommerceWeb.Controller
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(int id, User user)
+        public async Task<IActionResult> PutUser(int id, users user)
         {
             if (id != user.Id) return BadRequest();
 

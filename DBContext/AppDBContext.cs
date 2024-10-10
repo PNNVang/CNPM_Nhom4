@@ -9,7 +9,7 @@ public class AppDBContext : DbContext
     {
     }
 
-    public DbSet<User> Users { get; set; }
+    public DbSet<users> Users { get; set; }
     public DbSet<Product> Products { get; set; }
     public DbSet<ProductImage> ProductImages { get; set; }
     public DbSet<Order> Orders { get; set; }
@@ -17,11 +17,11 @@ public class AppDBContext : DbContext
     public DbSet<Category> Categories { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<User>()
+        modelBuilder.Entity<users>()
             .Property(u => u.Gender)
             .HasConversion<string>();
 
-        modelBuilder.Entity<User>()
+        modelBuilder.Entity<users>()
             .Property(u => u.TypeLogin)
             .HasConversion<string>();
         // Product and ProductImage have a one-to-one relationship
@@ -47,11 +47,14 @@ public class AppDBContext : DbContext
             .HasOne(od => od.Order)
             .WithMany(o => o.OrderDetails)
             .HasForeignKey(od => od.OrderId);
-
-        modelBuilder.Entity<OrderDetail>()
-            .HasOne(od => od.Product)
-            .WithMany() // Assuming Product has no navigation property to OrderDetail
-            .HasForeignKey(od => od.ProductId);
-        modelBuilder.Entity<Product>().HasOne(p => p.Category).WithMany().HasForeignKey(p => p.CategoryId);
+        modelBuilder.Entity<Product>()
+            .HasMany(p => p.OrderDetail)
+            .WithOne(o => o.Product)
+            .HasForeignKey(o => o.ProductId);
+        // modelBuilder.Entity<OrderDetail>()
+        //     .HasOne(od => od.Product)
+        //     .WithMany() // Assuming Product has no navigation property to OrderDetail
+        //     .HasForeignKey(od => od.ProductId);
+        // modelBuilder.Entity<Product>().HasOne(p => p.Category).WithMany().HasForeignKey(p => p.CategoryId);
     }
 }
