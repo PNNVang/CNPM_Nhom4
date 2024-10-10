@@ -34,5 +34,6 @@ public class Product
 
     // Navigation Property for ProductImage
     public ProductImage? ProductImage { get; set; }
+    public Category? Category { get; set; }
     public ICollection<OrderDetail> OrderDetail { get; set; } 
 }
