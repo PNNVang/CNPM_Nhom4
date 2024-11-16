@@ -36,6 +36,7 @@ public class CategoryController : Microsoft.AspNetCore.Mvc.Controller
             });
         }
         return Ok(categoryDtos);
+       
     }
 
     [HttpGet("getcategoriesandproducts")]

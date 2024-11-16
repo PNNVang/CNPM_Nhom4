@@ -22,17 +22,21 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
     {
         var products = await _context.ProductImages
             .ToListAsync();
-        var productImages = products.Select(product => new ProductImageDTO
-        {
-            Id = product.Id,
-            ImgMain = product.ImgMain,
-            Img1 = product.Img1,
-            Img2 = product.Img2,
-            Img3 = product.Img3,
-            Img4 = product.Img4,
-        }).ToList();
-
-        return Ok(productImages);
+        // var productImages = products.Select(product => new ProductImageDTO
+        // {
+        //     Id = product.Id,
+        //     ImgMain = product.ImgMain,
+        //     Img1 = product.Img1,
+        //     Img2 = product.Img2,
+        //     Img3 = product.Img3,
+        //     Img4 = product.Img4,
+        // }).ToList();
+        // Console.WriteLine(productImages);
+        // foreach (var product in products)
+        // {
+        //     Console.WriteLine(product.ToString());
+        // }
+        return Ok(products);
     }
 
     // DELETE: api/product/deleteproduct_admin?id={id}
@@ -108,5 +112,17 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
         }
 
         return "Dữ liệu không được tìm thấy";
+    }
+[HttpGet("getproduct")]
+    public async Task<IActionResult> getProduct()
+    {
+        var products = from product in _context.Products
+            join category in _context.Categories
+                on product.CategoryId equals category.Id
+            select new
+            {
+                product.Id,
+            };
+        return Ok(products);
     }
 }

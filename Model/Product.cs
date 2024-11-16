@@ -12,28 +12,33 @@ public class Product
     [Column("id")]
     public int? Id { get; set; }
     [Column("category_id")]
-    
     public int? CategoryId { get; set; }
-    // public Category? Category { get; set; }
-    // public string? ProductName { get; set; }
-    // public float? Price { get; set; }
-    // public string? Status { get; set; }
-    // public int? Sale { get; set; } = 0;
-    // public bool? Hot { get; set; } = false;
+    [StringLength(50)]
+    [Column("product_name")]
+    public string? ProductName { get; set; }
+    [Column("price")]
+    public float? Price { get; set; }
+    [Column("status")]
+    public string? Status { get; set; }
+    [Column("sale")]
+    public int Sale { get; set; } = 0; // Giá trị mặc định
+    [Column("hot")]
+    public bool Hot { get; set; } = false; // Sử dụng bool thay vì tinyint
     [Column("description")]
     public string? Description { get; set; }
-    // public string? Information { get; set; }
+    [StringLength(200)]
+    [Column("information")]
+    public string? Information { get; set; } // NOT NULL
     [Column("created_at")]
-    public DateTime? CreatedAt { get; set; }
-    // public DateTime? UpdatedAt { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    [Column("updated_at")]
+    public DateTime? UpdatedAt { get; set; }
     [Column("deleted_at")]
     public DateTime? DeletedAt { get; set; }
-    
-    // public int? ImageProduct { get; set; }
-    // public string? StatusDeleted { get; set; }
-
-    // Navigation Property for ProductImage
-    public ProductImage? ProductImage { get; set; }
+    [Column("image_product")]
+    public int? ImageProduct { get; set; }
+    [Column("status_deleted")]
+    public string? StatusDeleted { get; set; }
     public Category? Category { get; set; }
-    public ICollection<OrderDetail> OrderDetail { get; set; } 
+    public Order? Order { get; set; }
 }

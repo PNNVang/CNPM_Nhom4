@@ -135,7 +135,7 @@
 
             showSpinner();
             $.ajax({
-                url: '@Url.Action("GetProductImages", "Product")', // Adjust your URL here
+                url: '/api/Product/getproduct_admin', // Adjust your URL here
                 method: 'GET',
                 dataType: 'JSON',
                 success: function (response) {
@@ -146,7 +146,7 @@
 
                         $.each(value, function (key, value_item_key) {
                             var $cell;
-                            if (key == 'img_main') {
+                            if (key == 'imgMain') {
                                 var imgmain = $('<img>', {
                                     src: value_item_key,
                                     alt: 'Ảnh chính',
@@ -154,7 +154,7 @@
                                     height: '20%'
                                 });
                                 $cell = $('<td>').append(imgmain);
-                            } else if (key === 'img_1') {
+                            } else if (key === 'img1') {
                                 var img1 = $('<img>', {
                                     src: value_item_key,
                                     alt: 'Ảnh 1',
@@ -162,7 +162,7 @@
                                     height: '20%'
                                 });
                                 $cell = $('<td>').append(img1);
-                            } else if (key === 'img_2') {
+                            } else if (key === 'img2') {
                                 var img2 = $('<img>', {
                                     src: value_item_key,
                                     alt: 'Ảnh 2',
@@ -170,7 +170,7 @@
                                     height: '20%'
                                 });
                                 $cell = $('<td>').append(img2);
-                            } else if (key === 'img_3') {
+                            } else if (key === 'img3') {
                                 var img3 = $('<img>', {
                                     src: value_item_key,
                                     alt: 'Ảnh 3',
@@ -178,7 +178,7 @@
                                     height: '20%'
                                 });
                                 $cell = $('<td>').append(img3);
-                            } else if (key === 'img_4') {
+                            } else if (key === 'img4') {
                                 var img4 = $('<img>', {
                                     src: value_item_key,
                                     alt: 'Ảnh 4',
