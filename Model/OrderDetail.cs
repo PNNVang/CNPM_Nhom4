@@ -17,5 +17,5 @@ public class OrderDetail
     public double? TotalPrice { get; set; }
 
     public Order? Order { get; set; } // Navigation property
-    // public Product? Product { get; set; } // Assuming you have a Product class
+    public Product? Product { get; set; } // Assuming you have a Product class
 }

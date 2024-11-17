@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Dot_Net_ECommerceWeb.Controller;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("/api/[controller]")]
 public class ImageController : ControllerBase
 {
     private readonly AppDBContext _dbContext;

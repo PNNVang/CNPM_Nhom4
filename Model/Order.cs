@@ -31,6 +31,6 @@ public class Order
     public string? StatusPayment { get; set; } // Use an enum if you prefer
     [Column("note")]
     public string? Note { get; set; }
-    
     public ICollection<OrderDetail> OrderDetails { get; set; }
+    public User user { get; set; }
 }

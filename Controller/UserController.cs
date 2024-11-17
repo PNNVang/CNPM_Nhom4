@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 namespace Dot_Net_ECommerceWeb.Controller
 {
-    // [Route("api/[controller]")]
-    // [ApiController]
+    [Route("/api/[controller]")]
+    [ApiController]
     
     public class UserController : Microsoft.AspNetCore.Mvc.Controller
     {
@@ -46,7 +46,7 @@ namespace Dot_Net_ECommerceWeb.Controller
 
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<users>> GetUser(int id)
+        public async Task<ActionResult<User>> GetUser(int id)
         {
             var user = await _context.Users.FindAsync(id);
             if (user == null) return NotFound();
@@ -54,7 +54,7 @@ namespace Dot_Net_ECommerceWeb.Controller
         }
 
         [HttpPost]
-        public async Task<ActionResult<users>> PostUser(users user)
+        public async Task<ActionResult<User>> PostUser(User user)
         {
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
@@ -62,11 +62,11 @@ namespace Dot_Net_ECommerceWeb.Controller
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(int id, users user)
+        public async Task<IActionResult> PutUser(int id, User user)
         {
             if (id != user.Id) return BadRequest();
 
-            _context.Entry(user).State = EntityState.Modified;
+            _context.Entry(User).State = EntityState.Modified;
             await _context.SaveChangesAsync();
             return NoContent();
         }
@@ -81,5 +81,19 @@ namespace Dot_Net_ECommerceWeb.Controller
             await _context.SaveChangesAsync();
             return NoContent();
         }
+        [HttpPut("updaterole/{id}")]
+        public async Task<IActionResult> UpdateRole(int id,[FromBody] string role)
+        {
+            var user= await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+            if (user == null) return NotFound();
+            if (user != null)
+            {
+               user.Role = role;
+               await _context.SaveChangesAsync();
+               return Ok("Role updated");
+            }
+            return StatusCode(500,"Not Execute");
+        }
     }
+   
 }

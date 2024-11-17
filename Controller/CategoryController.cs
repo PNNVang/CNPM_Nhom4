@@ -16,41 +16,11 @@ public class CategoryController : Microsoft.AspNetCore.Mvc.Controller
     {
         _context = context;
     }
-
     [HttpGet("getcategories")]
-    public async Task<IActionResult> getCategories()
+    public IActionResult GetCategories()
     {
-        var categories = from p in _context.Products
-            join c in _context.Categories on p.CategoryId equals c.Id
-            select new
-            {
-                categoryName=c.CategoryName
-            };
-        var categoriesList =  categories.ToList();
-        List<CategoryNameDTO> categoryDtos = new List<CategoryNameDTO>();
-        foreach (var c in categoriesList)
-        {
-            categoryDtos.Add(new CategoryNameDTO()
-            {
-                CategoryName = c.categoryName
-            });
-        }
-        return Ok(categoryDtos);
-       
-    }
-
-    [HttpGet("getcategoriesandproducts")]
-    public async Task<IActionResult> getCategoriesAndProducts()
-    {
-        var categories = _context.Categories.Select(c => new CategoryNameDTO()
-        {
-            CategoryName = c.CategoryName,
-            Products = c.Products.Select(product => new ProductDTO()
-            {
-                CategoryId = product.CategoryId,
-            }).ToList()
-        });
+        var categories = _context.Categories.ToList();
         return Ok(categories);
     }
-
+   
 }

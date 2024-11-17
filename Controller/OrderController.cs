@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Dot_Net_ECommerceWeb.Controller;
 
-    [Route("api/[controller]")]
+    [Route("/api/[controller]")]
     [ApiController]
     public class OrdersController : ControllerBase
     {

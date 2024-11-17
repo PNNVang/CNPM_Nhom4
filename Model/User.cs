@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Dot_Net_ECommerceWeb.Model;
 [Table("users")]
-public class users
+public class User
 {
     [Column("id")]
     public int? Id { get; set; }
@@ -37,4 +37,5 @@ public class users
     public string? Status { get; set; }
     [Column("type_login")]
     public string? TypeLogin { get; set; }
+    public List<Order> Orders { get; set; }
 }

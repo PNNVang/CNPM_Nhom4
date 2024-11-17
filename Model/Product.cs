@@ -40,5 +40,7 @@ public class Product
     [Column("status_deleted")]
     public string? StatusDeleted { get; set; }
     public Category? Category { get; set; }
-    public Order? Order { get; set; }
+    // public Order? Order { get; set; }
+    public List<OrderDetail> OrderDetail { get; set; }
+    public ProductImage? ProductImage { get; set; }
 }

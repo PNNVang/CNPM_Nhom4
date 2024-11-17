@@ -1,4 +1,5 @@
 using Dot_Net_ECommerceWeb.DBContext;
+using Dot_Net_ECommerceWeb.Service;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +9,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
         new MySqlServerVersion(new Version(8, 0, 32)))); 
-
+builder.Services.AddScoped<CloudinaryService>();
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");

@@ -1,19 +1,23 @@
 ﻿using Dot_Net_ECommerceWeb.DBContext;
 using Dot_Net_ECommerceWeb.DTO;
 using Dot_Net_ECommerceWeb.Model;
+using Dot_Net_ECommerceWeb.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Dot_Net_ECommerceWeb.Controller;
+
 [Route("/api/[controller]")]
 [ApiController]
 public class ProductController : Microsoft.AspNetCore.Mvc.Controller
 {
     private readonly AppDBContext _context;
+    private readonly CloudinaryService _cloudinaryService;
 
-    public ProductController(AppDBContext context)
+    public ProductController(AppDBContext context, CloudinaryService cloudinaryService)
     {
         _context = context;
+        _cloudinaryService = cloudinaryService;
     }
 
     // GET: api/product/getproduct_admin
@@ -22,20 +26,7 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
     {
         var products = await _context.ProductImages
             .ToListAsync();
-        // var productImages = products.Select(product => new ProductImageDTO
-        // {
-        //     Id = product.Id,
-        //     ImgMain = product.ImgMain,
-        //     Img1 = product.Img1,
-        //     Img2 = product.Img2,
-        //     Img3 = product.Img3,
-        //     Img4 = product.Img4,
-        // }).ToList();
-        // Console.WriteLine(productImages);
-        // foreach (var product in products)
-        // {
-        //     Console.WriteLine(product.ToString());
-        // }
+     
         return Ok(products);
     }
 
@@ -57,19 +48,7 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
         return Ok(new { message = "Product deleted successfully" });
     }
 
-    // GET: api/product/redirect_update?id={id}
-    [HttpGet("redirect_update")]
-    public async Task<IActionResult> RedirectToUpdate([FromQuery] int id)
-    {
-        var product = await _context.Products
-            .FirstOrDefaultAsync(p => p.Id == id);
-        if (product == null)
-        {
-            return NotFound();
-        }
 
-        return Ok(product); // Trả về sản phẩm để cập nhật
-    }
 
     //POST: api/product/insertproduct
     [HttpPost("insertproduct")]
@@ -84,8 +63,6 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
                 CreatedAt = productDTO.CreatedAt,
                 Description = productDTO.Description
             };
-            // _context.Entry(product).Property(p =>p.CreatedAt).IsModified = true;
-            // _context.Entry(product).Property(p =>p.Description).IsModified = true;
             _context.Products.Add(product);
             _context.SaveChanges();
             return Ok(product);
@@ -94,26 +71,8 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
         return BadRequest();
     }
 
-    //PUT :api/product/updateproduct
-    [HttpPut("updateproduct")]
-    public async Task<String> UpdateProduct([FromBody] ProductDTO productDTO)
-    {
-        //kiểm tra từng trường dữ liệu gửi từ client xuống server có khác null hay không
-        if (productDTO != null)
-        {
-            var products = _context.Products.Find(productDTO.Id);
-            if (products != null)
-            {
-                products.Description= productDTO.Description;
-                _context.Products.Update(products);
-                _context.SaveChanges();
-                return "Đã cập nhật thành công";
-            }
-        }
 
-        return "Dữ liệu không được tìm thấy";
-    }
-[HttpGet("getproduct")]
+    [HttpGet("getproduct")]
     public async Task<IActionResult> getProduct()
     {
         var products = from product in _context.Products
@@ -124,5 +83,45 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
                 product.Id,
             };
         return Ok(products);
+    }
+
+    [HttpPost("upload")]
+    public async Task<IActionResult> Upload([FromForm] List<IFormFile> file)
+    {
+        List<string> imageUrlList = new List<string>();
+        if (file == null || file.Count < 0)
+        {
+            return BadRequest("No file uploaded.");
+        }
+
+        foreach (var fileObject in file)
+        {
+            var urlFolder = "asp image";
+            var imageUrl = await _cloudinaryService.UploadImageAsync(fileObject, urlFolder);
+            if (imageUrl == null)
+            {
+                return StatusCode(500, "Failed to upload image.");
+            }
+
+            var imageURLJSON = new { Url = imageUrl };
+            imageUrlList.Add(imageURLJSON.Url);
+        }
+
+
+        return Ok(new { imgUrlList = imageUrlList });
+    }
+
+    [HttpPut("updateproduct/{id}")]
+    public async Task<IActionResult> UpdateProduct(int id, [FromBody] ProductDTO productDTO)
+    {
+        var product = await _context.Products.FindAsync(id);
+        if (product == null)
+        {
+            return NotFound(new { message = "Product not found" });
+        }
+
+        product.Description = productDTO.Description;
+        _context.Products.Update(product);
+        return Ok(product);
     }
 }

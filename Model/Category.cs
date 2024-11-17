@@ -9,9 +9,9 @@ public class Category
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
-        public int Id { get; set; }
+        public int? Id { get; set; }
         [Column("category_name")]
-        public string CategoryName { get; set; }
+        public string? CategoryName { get; set; }
         [Column("created_at")]
         public DateTime? CreatedAt { get; set; }
         [Column("updated_at")]
@@ -19,8 +19,8 @@ public class Category
         [Column("deleted_at")]
         public DateTime? DeletedAt { get; set; }
         [Column("status")]
-        public string Status { get; set; }
+        public string? Status { get; set; }
         [Column("img_link")]
-        public string ImgLink { get; set; }
-        public  ICollection<Product> Products { get; set; }
+        public string? ImgLink { get; set; }
+        public  ICollection<Product>? Products { get; set; }
     }

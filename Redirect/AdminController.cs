@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Dot_Net_ECommerceWeb.Model;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace Dot_Net_ECommerceWeb.Controller;
 
@@ -16,6 +18,14 @@ public class AdminController:Microsoft.AspNetCore.Mvc.Controller
 
  public IActionResult admin_form_update()
  {
+  //check tempdata nếu còn thì sẽ gửi dữ liệu sang 
+  //tempdata lưu trữ object chứa các thông tin cần hiển thị
+  //các dữ liệu khác cũng vậy
+  if (TempData["data"] != null)
+  {
+   var data = JsonConvert.DeserializeObject<Product>(TempData["data"].ToString());
+   return View(data);
+  }
   return View();
  }
 
