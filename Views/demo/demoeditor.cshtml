@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CKEditor 5 - Basic Toolbar</title>
+	<link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/43.3.1/ckeditor5.css">
+	<style>
+		.main-container {
+			width: 795px;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+<div class="main-container">
+	<div id="editor">
+		<p>Welcome to the enhanced CKEditor 5!</p>
+	</div>
+</div>
+<script type="importmap">
+	{
+        "imports": {
+            "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/43.3.1/ckeditor5.js",
+            "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/43.3.1/"
+        }
+    }
+</script>
+<script type="module">
+	import {
+		ClassicEditor,
+		Essentials,
+		Paragraph,
+		Bold,
+		Italic,
+		Underline,
+		Strikethrough,
+		Font,
+		Alignment,
+		List,
+		Table
+	} from 'ckeditor5';
+
+	ClassicEditor
+		.create(document.querySelector('#editor'), {
+			plugins: [
+				Essentials, Paragraph, Bold, Italic, Underline, Strikethrough,
+				Font, Alignment, List, Table
+			],
+			toolbar: [
+				'undo', 'redo', '|',
+				'bold', 'italic', 'underline', 'strikethrough', '|',
+				'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', '|',
+				'alignment:left', 'alignment:center', 'alignment:right', 'alignment:justify', '|',
+				'bulletedList', 'numberedList', '|',
+				'insertTable'
+			]
+		})
+		.then(editor => {
+			window.editor = editor;
+		})
+		.catch(error => {
+			console.error(error);
+		});
+</script>
+</body>
+</html>
