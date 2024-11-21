@@ -1,5 +1,6 @@
 ﻿using Dot_Net_ECommerceWeb.DBContext;
 using Dot_Net_ECommerceWeb.DTO;
+using Dot_Net_ECommerceWeb.Service;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -7,19 +8,19 @@ using Microsoft.EntityFrameworkCore;
 namespace Dot_Net_ECommerceWeb.Controller;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("/api/[controller]")]
 public class CategoryController : Microsoft.AspNetCore.Mvc.Controller
 {
-    public AppDBContext _context;
+   public CategoryService _categoryService;
 
-    public CategoryController(AppDBContext context)
+    public CategoryController(CategoryService categoryService)
     {
-        _context = context;
+      _categoryService = categoryService;  
     }
     [HttpGet("getcategories")]
-    public IActionResult GetCategories()
+    public async Task<IActionResult> GetCategories()
     {
-        var categories = _context.Categories.ToList();
+        var categories = _categoryService.GetAllCategories();
         return Ok(categories);
     }
    

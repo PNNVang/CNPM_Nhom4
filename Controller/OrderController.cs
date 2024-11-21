@@ -5,7 +5,7 @@ namespace Dot_Net_ECommerceWeb.Controller;
 
     [Route("/api/[controller]")]
     [ApiController]
-    public class OrdersController : ControllerBase
+    public class OrdersController : Microsoft.AspNetCore.Mvc.Controller
     {
         private readonly AppDBContext _context;
 

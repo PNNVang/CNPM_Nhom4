@@ -41,6 +41,7 @@ public class Product
     public string? StatusDeleted { get; set; }
     public Category? Category { get; set; }
     // public Order? Order { get; set; }
-    public List<OrderDetail> OrderDetail { get; set; }
+    public List<OrderDetail>? OrderDetail { get; set; }
     public ProductImage? ProductImage { get; set; }
+    public List<InventoryDetails>? InventoryDetail { get; set; }
 }

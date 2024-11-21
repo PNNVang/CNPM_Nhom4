@@ -15,9 +15,13 @@ public class AppDBContext : DbContext
     public DbSet<Order> Orders { get; set; }
     public DbSet<OrderDetail> OrderDetails { get; set; }
     public DbSet<Category> Categories { get; set; }
-
+    public DbSet<Logs> Logs { get; set; }
+    public DbSet<InventoryDetails> InventoryDetails { get; set; }
+    public DbSet<Inventories> Inventories { get; set; }
+   
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Logs>();
         modelBuilder.Entity<ProductImage>();
         modelBuilder.Entity<User>()
             .Property(u => u.Gender)
@@ -46,6 +50,8 @@ public class AppDBContext : DbContext
         modelBuilder.Entity<Order>().HasMany(o => o.OrderDetails).WithOne(o => o.Order).HasForeignKey(o => o.OrderId);
         modelBuilder.Entity<Product>().HasOne(p => p.Category).WithMany(c => c.Products);
         modelBuilder.Entity<Order>().HasOne(o=>o.user).WithMany(o=>o.Orders);
-       
+        modelBuilder.Entity<Product>().HasMany(p=>p.InventoryDetail).WithOne(i=>i.product).HasForeignKey(i=>i.ProductId);
+        modelBuilder.Entity<InventoryDetails>().HasOne(i=>i.product).WithMany(p=>p.InventoryDetail);
+        modelBuilder.Entity<Inventories>().HasMany(i=>i.inventory_details).WithOne(i=>i.Inventories).HasForeignKey(i=>i.Id);
     }
 }

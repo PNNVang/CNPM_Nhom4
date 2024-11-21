@@ -10,6 +10,8 @@ builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
         new MySqlServerVersion(new Version(8, 0, 32)))); 
 builder.Services.AddScoped<CloudinaryService>();
+builder.Services.AddScoped<CategoryService>();
+builder.Services.AddScoped<LogService>();
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");

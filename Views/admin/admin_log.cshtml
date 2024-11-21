@@ -37,53 +37,53 @@
                     </a>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
                         <li class="nav-item">
-                            <a href="admin_summary.cshtml" class="nav-link align-middle px-0">
+                            <a href="@Url.Action("admin_summary","Admin")" class="nav-link align-middle px-0">
                                 <i class="fa-solid fa-chart-simple"></i> <span class="ms-1 d-none d-sm-inline">Doanh thu</span>
                             </a>
                         </li>
                         <li>
-                            <a href="admin_product.cshtml" class="nav-link px-0 align-middle" id="menu_0">
+                            <a href="@Url.Action("admin_product","Admin")" class="nav-link px-0 align-middle" id="menu_0">
                                 <i class="fa-brands fa-product-hunt"></i> <span class="ms-1 d-none d-sm-inline">Quản lí sản phẩm</span>
                             </a>
                         </li>
                         <li>
-                            <a href="@Url.Page("AdminFormUploadProduct")" class="nav-link px-0 align-middle" id="menu_1">
+                            <a href="@Url.Action("admin_form_upload_product","Admin")" class="nav-link px-0 align-middle" id="menu_1">
                                 <i class="fa-solid fa-upload"></i> <span class="ms-1 d-none d-sm-inline">Thêm sản phẩm</span>
                             </a>
                         </li>
                         <li>
-                            <a href="admin_order.cshtml" class="nav-link px-0 align-middle">
+                            <a href="@Url.Action("admin_order","Admin")" class="nav-link px-0 align-middle">
                                 <i class="fa-solid fa-gift"></i> <span class="ms-1 d-none d-sm-inline">Quản lí đơn hàng</span>
                             </a>
                         </li>
                         <li>
-                            <a href="admin_user.cshtml" class="nav-link px-0 align-middle">
+                            <a href="@Url.Action("admin_user","Admin")" class="nav-link px-0 align-middle">
                                 <i class="fa-solid fa-user"></i> <span class="ms-1 d-none d-sm-inline">Quản lí người dùng</span>
                             </a>
                         </li>
                         <li>
-                            <a href="@Url.Page("AdminInventory")" class="nav-link px-0 align-middle">
+                            <a href="@Url.Action("admin_inventory","Admin")" class="nav-link px-0 align-middle">
                                 <i class="fa-solid fa-warehouse"></i><span class="ms-1 d-none d-sm-inline">Quản lí số lượng tồn kho</span>
                             </a>
                         </li>
                         <li>
-                            <a href="@Url.Page("AdminLog")" class="nav-link px-0 align-middle">
+                            <a href="@Url.Action("admin_log","Admin")" class="nav-link px-0 align-middle">
                                 <i class="fa-solid fa-note-sticky"></i> <span class="ms-1 d-none d-sm-inline">Quản lí log</span>
                             </a>
                         </li>
                         <li>
-                            <a href="@Url.Page("AdminImage")" class="nav-link px-0 align-middle">
+                            <a href="@Url.Action("admin_image","Admin")" class="nav-link px-0 align-middle">
                                 <i class="fa-solid fa-image"></i> <span class="ms-1 d-none d-sm-inline">Quản lí ảnh</span>
                             </a>
                         </li>
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <li>
-                                <a href="@Url.Page("AdminLogout")" class="nav-link px-0 align-middle">
-                                    <i class="fa-solid fa-door-open"></i><span class="ms-1 d-none d-sm-inline">Đăng xuất</span>
-                                </a>
-                            </li>
-                        }
+                        @* @if (Session["user"] != null) *@
+                        @* { *@
+                        @*     <li> *@
+                        @*         <a href="~/admin_logout" class="nav-link px-0 align-middle"> *@
+                        @*             <i class="fa-solid fa-door-open"></i><span class="ms-1 d-none d-sm-inline">Đăng xuất</span> *@
+                        @*         </a> *@
+                        @*     </li> *@
+                        @* } *@
                     </ul>
                     <hr>
                 </div>
