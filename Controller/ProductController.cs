@@ -52,7 +52,7 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
 
     //POST: api/product/insertproduct
     [HttpPost("insertproduct")]
-    public async Task<IActionResult> InsertProduct([FromBody] ProductDTO productDTO)
+    public async Task<IActionResult> InsertProduct([FromForm] ProductDTO productDTO)
     {
         //kiểm tra từng thông tin của sản phẩm trước khi lưu xuống DB
         if (productDTO != null)

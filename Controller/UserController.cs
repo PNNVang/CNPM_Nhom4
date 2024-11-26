@@ -77,7 +77,8 @@ namespace Dot_Net_ECommerceWeb.Controller
             var user = await _context.Users.FindAsync(id);
             if (user == null) return NotFound();
 
-            _context.Users.Remove(user);
+            // _context.Users.Remove(user);
+            user.Status = "Đã xóa";
             await _context.SaveChangesAsync();
             return NoContent();
         }
