@@ -1,21 +1,24 @@
-﻿namespace Dot_Net_ECommerceWeb.DTO;
+﻿using Newtonsoft.Json;
+
+namespace Dot_Net_ECommerceWeb.DTO;
 
 public class UserDTO
 {
-    public int id { get; set; }
+    public int? Id { get; set; }
     public string username { get; set; }
     public string password { get; set; }
-    public string FullName { get; set; }
-    public string Gender { get; set; }
-    public DateTime? Birthday { get; set; }
-    public string Email { get; set; }
-    public string Phone { get; set; }
-    public string Address { get; set; }
-    public string Avatar { get; set; }
-    public DateTime CreatedAt { get; set; } = DateTime.Now;
-    public DateTime? UpdatedAt { get; set; }
-    public DateTime? DeletedAt { get; set; }
-    public string Role { get; set; }
-    public string Status { get; set; }
-    public string TypeLogin { get; set; }
+    public string fullName { get; set; }
+    public string gender { get; set; }
+    public DateTime? birthday { get; set; }
+    public string email { get; set; }
+    public string phone { get; set; }
+    public string address { get; set; }
+    public string avatar { get; set; }
+    [JsonIgnore]
+    public DateTime createdAt { get; set; } = DateTime.Now;
+    public DateTime? updatedAt { get; set; }
+    public DateTime? deletedAt { get; set; }
+    public string role { get; set; }
+    public string status { get; set; }
+    public string typeLogin { get; set; }
 }
