@@ -130,7 +130,7 @@
 
             showSpinner();
             $.ajax({
-                url: '@Url.Action("GetInventory", "YourControllerName")', // Thay đổi cho phù hợp với route
+                url: '/api/Inventory/getinventoriesdetail', // Thay đổi cho phù hợp với route
                 method: 'GET',
                 dataType: 'JSON',
                 success: function (response) {
@@ -157,6 +157,9 @@
             var table2excel = new Table2Excel();
             table2excel.export(document.querySelectorAll("table"));
         }
+        $(document).ready(function () {
+            $('.dt-empty').hide()
+        })
     </script>
 </body>
 </html>

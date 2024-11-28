@@ -138,11 +138,11 @@
         });
 
         // Order status buttons click handlers
-        $('#waiting').click(loadOrders.bind(null, '@Url.Action("GetOrderWaiting", "Admin")'));
-        $('#giving').click(loadOrders.bind(null, '@Url.Action("GetOrderGiving", "Admin")'));
-        $('#gived').click(loadOrders.bind(null, '@Url.Action("GetOrderGived", "Admin")'));
-        $('#canceled').click(loadOrders.bind(null, '@Url.Action("GetOrderCanceled", "Admin")'));
-        $('#waiting-giving').click(loadOrders.bind(null, '@Url.Action("GetOrderWaitingGiving", "Admin")'));
+        $('#waiting').click(loadOrders.bind(null, '/api/orders/getorder_waiting'));
+        $('#giving').click(loadOrders.bind(null, '/api/orders/getorder_giving'));
+        $('#gived').click(loadOrders.bind(null, '/api/orders/getorder_gived'));
+        $('#canceled').click(loadOrders.bind(null, '/api/orders/getorder_cancelled'));
+        $('#waiting-giving').click(loadOrders.bind(null, '/api/orders/getorder_waitinggiving'));
 
         function loadOrders(url) {
             $tbody.empty();
@@ -238,5 +238,8 @@
             var table2excel = new Table2Excel();
             table2excel.export(document.querySelectorAll("table"));
         }
+        $(document).ready(function () {
+            $('.dt-empty').hide()
+        })
     </script>
 }

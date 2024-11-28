@@ -110,16 +110,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="//cdn.datatables.net/2.0.2/js/dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="~/js/table2excel.js"></script>
+    @* <script src="~/js/table2excel.js"></script> *@
 
     <script>
         $(document).ready(function () {
+            // Khởi tạo DataTable
             $("#table_id").DataTable();
-        });
 
-        var $tbody = $('#body');
-
-        $(document).ready(function () {
+            // Tạo spinner để hiển thị khi tải dữ liệu
             var $spinner = $('<div class="spinner"><div class="d-flex justify-content-center"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div></div></div>');
             $('body').append($spinner);
 
@@ -131,78 +129,63 @@
                 $spinner.hide();
             }
 
+            var $tbody = $('#body'); // Tham chiếu đến tbody của bảng
+
+            // Hiển thị spinner khi bắt đầu tải dữ liệu
             showSpinner();
+
+            // Gọi AJAX để lấy dữ liệu từ API
             $.ajax({
-                url: '/api/Category/getcategories', // Adjust your URL here
+                url: '/api/Category/getcategories', // URL chính xác của API
                 method: 'GET',
                 dataType: 'JSON',
                 success: function (response) {
-                    hideSpinner();
-                    $.each(response, function (key, value) {
-                        var $row = $('<tr>');
-                        $row.attr('id', value.id);
+                    hideSpinner(); // Ẩn spinner sau khi nhận dữ liệu
+                        $.each(response, function (index, category) {
+                            var $row = $('<tr>').attr('id', category.id);
 
-                        $.each(value, function (key, value_item_key) {
-                            var $cell;
-                            if (key == 'imgMain') {
-                                var imgmain = $('<img>', {
-                                    src: value_item_key,
-                                    alt: 'Ảnh chính',
-                                    width: '20%',
-                                    height: '20%'
-                                });
-                                $cell = $('<td>').append(imgmain);
-                            } else if (key === 'img1') {
-                                var img1 = $('<img>', {
-                                    src: value_item_key,
-                                    alt: 'Ảnh 1',
-                                    width: '20%',
-                                    height: '20%'
-                                });
-                                $cell = $('<td>').append(img1);
-                            } else if (key === 'img2') {
-                                var img2 = $('<img>', {
-                                    src: value_item_key,
-                                    alt: 'Ảnh 2',
-                                    width: '20%',
-                                    height: '20%'
-                                });
-                                $cell = $('<td>').append(img2);
-                            } else if (key === 'img3') {
-                                var img3 = $('<img>', {
-                                    src: value_item_key,
-                                    alt: 'Ảnh 3',
-                                    width: '20%',
-                                    height: '20%'
-                                });
-                                $cell = $('<td>').append(img3);
-                            } else if (key === 'img4') {
-                                var img4 = $('<img>', {
-                                    src: value_item_key,
-                                    alt: 'Ảnh 4',
-                                    width: '20%',
-                                    height: '20%'
-                                });
-                                $cell = $('<td>').append(img4);
-                            } else {
-                                $cell = $('<td>').text(value_item_key);
-                            }
-                            $row.append($cell);
+                            $.each(category, function (key, value) {
+                                var $cell;
+                                if (key === 'imgLink') {
+                                    $cell = $('<td>').append(
+                                        $('<img>', {
+                                            src: value || 'default-image.jpg', // Sử dụng ảnh mặc định nếu không có link
+                                            alt: 'Category Image',
+                                            width: '100',  // Tùy chỉnh kích thước theo yêu cầu
+                                            height: '100'
+                                        })
+                                    );
+                                } else {
+                                    $cell = $('<td>').text(value || 'N/A'); // Xử lý giá trị rỗng hoặc undefined
+                                }
+                                $row.append($cell);
+                            });
+
+                            $tbody.append($row); // Thêm hàng vào tbody
                         });
-                        $tbody.append($row); 
-                    });
+                    
+                       
+                    
                 },
-                error: function (error) {
-                    hideSpinner();
-                    alert('Không thể tải dữ liệu người dùng');
+                error: function (xhr, status, error) {
+                    hideSpinner(); // Ẩn spinner khi lỗi xảy ra
+                    console.error('Lỗi khi tải dữ liệu:', error);
+                    alert('Không thể tải dữ liệu người dùng. Vui lòng thử lại sau.');
                 }
             });
-        });
 
-        function converttoExcel() {
-            var table2excel = new Table2Excel();
-            table2excel.export(document.querySelectorAll("#table_id"));
-        }
+            // Hàm xuất dữ liệu sang Excel
+            window.converttoExcel = function () {
+                var table2excel = new Table2Excel();
+                table2excel.export(document.querySelectorAll("#table_id"));
+            };
+        });
+        $(document).ready(function () {
+            $('.dt-empty').hide()
+        })
     </script>
+  
+    @* $tbody.append('<tr><td colspan="6">Không có dữ liệu.</td></tr>'); // Điều chỉnh colspan tùy thuộc số cột của bảng *@
+
 </body>
 </html>

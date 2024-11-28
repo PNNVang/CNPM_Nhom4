@@ -79,4 +79,8 @@ public class AdminController:Microsoft.AspNetCore.Mvc.Controller
   return View();
  }
 
+ public IActionResult admin_categories()
+ {
+  return View();
+ }
 }
