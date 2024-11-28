@@ -17,7 +17,7 @@ public class LogController:Microsoft.AspNetCore.Mvc.Controller
     [HttpGet("getloglist")]
     public async Task<IActionResult> getListLog()
     {
-        var logList = _logService.GetLogs();
+        var logList = await _logService.GetLogs(); // Thêm await
         return Ok(logList);
     }
 }

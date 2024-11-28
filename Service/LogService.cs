@@ -17,8 +17,7 @@ public class LogService
 
     public async Task<List<Logs>> GetLogs()
     {
-        var logs = await _context.Logs.ToListAsync();
-        return  await Task.FromResult(logs);
+        return await _context.Logs.ToListAsync();
     }
 
 }

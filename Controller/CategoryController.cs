@@ -20,7 +20,7 @@ public class CategoryController : Microsoft.AspNetCore.Mvc.Controller
     [HttpGet("getcategories")]
     public async Task<IActionResult> GetCategories()
     {
-        var categories = _categoryService.GetAllCategories();
+        var categories = await _categoryService.GetAllCategories();
         return Ok(categories);
     }
    
