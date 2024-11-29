@@ -17,6 +17,7 @@ public class CategoryController : Microsoft.AspNetCore.Mvc.Controller
     {
       _categoryService = categoryService;  
     }
+    //api lay danh muc
     [HttpGet("getcategories")]
     public async Task<IActionResult> GetCategories()
     {

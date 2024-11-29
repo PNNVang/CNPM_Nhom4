@@ -13,7 +13,7 @@ public class LogController:Microsoft.AspNetCore.Mvc.Controller
     {
         _logService = logService;
     }
-
+//api lay log lich su
     [HttpGet("getloglist")]
     public async Task<IActionResult> getListLog()
     {

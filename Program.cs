@@ -1,5 +1,7 @@
+using CloudinaryDotNet;
 using Dot_Net_ECommerceWeb.DBContext;
 using Dot_Net_ECommerceWeb.Service;
+using Dot_Net_ECommerceWeb.Utils;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,17 @@ builder.Services.AddDbContext<AppDBContext>(options =>
 builder.Services.AddScoped<CloudinaryService>();
 builder.Services.AddScoped<CategoryService>();
 builder.Services.AddScoped<LogService>();
+// Đọc thông tin cấu hình từ appsettings.json
+var cloudinaryConfig = builder.Configuration.GetSection("Cloudinary").Get<CloudinarySettings>();
+var cloudinaryAccount = new Account(
+    cloudinaryConfig.CloudName,
+    cloudinaryConfig.ApiKey,
+    cloudinaryConfig.ApiSecret
+);
+var cloudinary = new Cloudinary(cloudinaryAccount);
+
+// Thêm Cloudinary vào DI container
+builder.Services.AddSingleton(cloudinary);
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");

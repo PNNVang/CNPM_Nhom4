@@ -15,6 +15,7 @@ public class InventoryController:Microsoft.AspNetCore.Mvc.Controller
     {
         _context = context;
     }
+    //api lay san luong
     [HttpGet("getinventoriesdetail")]
     public  async Task<IActionResult> GetInventory()
     {

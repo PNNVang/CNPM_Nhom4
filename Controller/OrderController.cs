@@ -15,7 +15,7 @@ namespace Dot_Net_ECommerceWeb.Controller;
             _context = context;
         }
 
-        // GET: api/orders/getorder_waiting
+        // api lay thong tin don hang dang cho giao
         [HttpGet("getorder_waiting")]
         public async  Task<IActionResult> GetWaitingOrders()
         {
@@ -23,7 +23,7 @@ namespace Dot_Net_ECommerceWeb.Controller;
             return Ok(orders);
         }
 
-        // GET: api/orders/getorder_giving
+        // api lay thong tin don hang dang giao
         [HttpGet("getorder_giving")]
         public async Task<IActionResult> GetGivingOrders()
         {
@@ -31,7 +31,7 @@ namespace Dot_Net_ECommerceWeb.Controller;
             return Ok(orders);
         }
 
-        // GET: api/orders/getorder_gived
+        // api lay thong tin don hang da giao
         [HttpGet("getorder_gived")]
         public async Task<IActionResult> GetGivedOrders()
         {
@@ -39,7 +39,7 @@ namespace Dot_Net_ECommerceWeb.Controller;
             return Ok(orders);
         }
 
-        // GET: api/orders/getorder_canceled
+        // api lay thong tin don hang da bi huy
         [HttpGet("getorder_cancelled")]
         public async Task<IActionResult> GetCanceledOrders()
         {
@@ -47,7 +47,7 @@ namespace Dot_Net_ECommerceWeb.Controller;
             return Ok(orders);
         }
 
-        // GET: api/orders/getorder_waitinggiving
+        // api lay thong tin dat hang dang cho giao
         [HttpGet("getorder_waitinggiving")]
         public async Task<IActionResult> GetWaitingGivingOrders()
         {
@@ -55,20 +55,20 @@ namespace Dot_Net_ECommerceWeb.Controller;
             return Ok(orders);
         }
 
-        // POST: api/orders/updateorder
-        [HttpPost("updateorder")]
-        public async Task<IActionResult> UpdateOrder([FromForm] int id, [FromForm] string select)
+        //api cap nhat trang thai don hang
+        [HttpPut("updateorder/{id}")]
+        public async Task<IActionResult> UpdateOrder(int id,[FromQuery] string status)
         {
             var order = _context.Orders.Find(id);
             if (order == null)
             {
-                return NotFound();
+                return NotFound("Not found order by requirement");
             }
-
-            order.Status = select;
-            _context.SaveChanges();
-
-            return Ok(new { message = "Cập nhật thành công!" });
+            order.Status = status;
+            _context.Orders.Update(order);
+            await _context.SaveChangesAsync();
+            return Ok(order);
         }
+        
     }
 

@@ -1,4 +1,6 @@
-﻿using Dot_Net_ECommerceWeb.DBContext;
+﻿using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
+using Dot_Net_ECommerceWeb.DBContext;
 using Dot_Net_ECommerceWeb.DTO;
 using Dot_Net_ECommerceWeb.Model;
 using Dot_Net_ECommerceWeb.Service;
@@ -12,27 +14,27 @@ namespace Dot_Net_ECommerceWeb.Controller;
 public class ProductController : Microsoft.AspNetCore.Mvc.Controller
 {
     private readonly AppDBContext _context;
-    private readonly CloudinaryService _cloudinaryService;
+    private readonly Cloudinary _cloudinary;
 
-    public ProductController(AppDBContext context, CloudinaryService cloudinaryService)
+    public ProductController(AppDBContext context, Cloudinary cloudinary)
     {
         _context = context;
-        _cloudinaryService = cloudinaryService;
+        _cloudinary = cloudinary;
     }
 
-    // GET: api/product/getproduct_admin
+//api lay thong tin san pham
     [HttpGet("getproduct_admin")]
     public async Task<ActionResult<IEnumerable<ProductImageDTO>>> GetProductImages()
     {
         var products = await _context.ProductImages
             .ToListAsync();
-     
+
         return Ok(products);
     }
 
-    // DELETE: api/product/deleteproduct_admin?id={id}
-    [HttpDelete("deleteproduct_admin")]
-    public async Task<IActionResult> DeleteProduct([FromQuery] int id)
+//api xoa san pham dua tren id
+    [HttpDelete("deleteproduct_admin/{id}")]
+    public async Task<IActionResult> DeleteProduct(int id)
     {
         var product = await _context.Products.FindAsync(id);
         if (product == null)
@@ -40,44 +42,123 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
             return NotFound(new { message = "Product not found" });
         }
 
-        // Xóa hình ảnh liên quan nếu cần
-        var images = await _context.ProductImages.Where(img => img.Id == id).ToListAsync();
-        _context.ProductImages.RemoveRange(images);
-        _context.Products.Remove(product);
+
+        var productEdited = new Product()
+        {
+            StatusDeleted = "Đã xóa"
+        };
+        _context.Products.Update(productEdited);
         await _context.SaveChangesAsync();
         return Ok(new { message = "Product deleted successfully" });
     }
 
-
-
-    //POST: api/product/insertproduct
+//api them san pham
     [HttpPost("insertproduct")]
-    public async Task<IActionResult> InsertProduct([FromForm] ProductDTO productDTO)
+    public async Task<IActionResult> AddProduct(ProductForm model)
     {
-        //kiểm tra từng thông tin của sản phẩm trước khi lưu xuống DB
-        if (productDTO != null)
+        if (!ModelState.IsValid)
         {
-            var product = new Product
-            {
-                Id = productDTO.Id,
-                CreatedAt = productDTO.CreatedAt,
-                Description = productDTO.Description
-            };
-            _context.Products.Add(product);
-            _context.SaveChanges();
-            return Ok(product);
+            return BadRequest(ModelState);
         }
 
-        return BadRequest();
+        var products = new Product
+        {
+            CategoryId = model.categoryID,
+            StatusDeleted = "chưa xóa",
+            CreatedAt = DateTime.Now,
+            UpdatedAt = DateTime.Now,
+            Sale = 0,
+            Id = _context.Products.Max(x => x.Id) + 1,
+            Information = GenerateProductInfo(model),
+            ProductName = model.productName,
+            Price = (float?)model.price,
+            Status = model.Status,
+            Description = model.Description,
+        };
+        _context.Products.Add(products);
+        await _context.SaveChangesAsync();
+        var inventoryDetail = new InventoryDetails
+        {
+            Id = _context.InventoryDetails.Max(x => x.Id) + 1,
+            Price = model.price,
+            Quantity = model.NumberImport,
+            ProductId = (from p in _context.Products
+                where p.ProductName == model.productName
+                select p.Id).FirstOrDefault()
+        };
+        var inventory = new Inventories
+        {
+            id = _context.Inventories.Max(x => x.id) + 1,
+            date = DateTime.Now,
+            user_imported = "admin"
+        };
+        _context.InventoryDetails.Add(inventoryDetail);
+        _context.Inventories.Add(inventory);
+        await _context.SaveChangesAsync();
+        var imageUrls = await UploadImagesToCloudinary(model);
+        var productImages = new ProductImage
+        {
+            ImgMain = imageUrls[0],
+            Img1 = imageUrls[1],
+            Img2 = imageUrls[2],
+            Img3 = imageUrls[3],
+            Img4 = imageUrls[4]
+        };
+        _context.ProductImages.Add(productImages);
+        await _context.SaveChangesAsync();
+        return Ok(new { message = "Product added successfully" });
+    }
+//hàm upload nhiều ảnh lên cloudinary 
+    private async Task<string[]> UploadImagesToCloudinary(ProductForm model)
+    {
+        var imageUrls = new string[5]; // Mảng chứa các URL ảnh (5 ảnh)
+
+        // Mảng ảnh cần upload
+        var images = new IFormFile[] { model.MainImage, model.Image1, model.Image2, model.Image3, model.Image4 };
+
+        for (int i = 0; i < images.Length; i++)
+        {
+            var image = images[i];
+            if (image != null)
+            {
+                var uploadResult = await UploadImageToCloudinary(image);
+                if (uploadResult != null)
+                {
+                    imageUrls[i] = uploadResult.Url.ToString(); // Lưu URL ảnh vào mảng
+                }
+            }
+        }
+
+        return imageUrls;
+    }
+//hàm upload ảnh lên cloudinary
+    private async Task<ImageUploadResult> UploadImageToCloudinary(IFormFile image)
+    {
+        var uploadParams = new ImageUploadParams()
+        {
+            File = new FileDescription(image.FileName, image.OpenReadStream())
+        };
+
+        var uploadResult = await _cloudinary.UploadAsync(uploadParams);
+        return uploadResult;
+    }
+//hàm tạo thông tin
+    public string GenerateProductInfo(ProductForm model)
+    {
+        var productInfo = $"/color:{model.Color};" +
+                          $"weight:{model.Weight};" +
+                          $"size:{model.Size};" +
+                          $"opacity:{model.Opacity};" +
+                          $"cutting_form:{model.CuttingForm}/";
+
+        return productInfo;
     }
 
-
-    [HttpGet("getproduct")]
-    public async Task<IActionResult> getProduct()
+//api lấy thông tin sản phẩm cho viec cap nhat san pham
+    [HttpGet("getproduct/{id}")]
+    public async Task<IActionResult> getProduct(int id)
     {
         var products = from product in _context.Products
-            join category in _context.Categories
-                on product.CategoryId equals category.Id
             select new
             {
                 product.Id,
@@ -85,43 +166,116 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
         return Ok(products);
     }
 
-    [HttpPost("upload")]
-    public async Task<IActionResult> Upload([FromForm] List<IFormFile> file)
-    {
-        List<string> imageUrlList = new List<string>();
-        if (file == null || file.Count < 0)
-        {
-            return BadRequest("No file uploaded.");
-        }
-
-        foreach (var fileObject in file)
-        {
-            var urlFolder = "asp image";
-            var imageUrl = await _cloudinaryService.UploadImageAsync(fileObject, urlFolder);
-            if (imageUrl == null)
-            {
-                return StatusCode(500, "Failed to upload image.");
-            }
-
-            var imageURLJSON = new { Url = imageUrl };
-            imageUrlList.Add(imageURLJSON.Url);
-        }
-
-
-        return Ok(new { imgUrlList = imageUrlList });
-    }
-
+//api cập nhật sản phẩm
     [HttpPut("updateproduct/{id}")]
-    public async Task<IActionResult> UpdateProduct(int id, [FromBody] ProductDTO productDTO)
+    public async Task<IActionResult> UpdateProduct(int id, [FromForm] ProductFormUpdate model)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
         var product = await _context.Products.FindAsync(id);
         if (product == null)
         {
             return NotFound(new { message = "Product not found" });
         }
 
-        product.Description = productDTO.Description;
-        _context.Products.Update(product);
-        return Ok(product);
+        if (model.productName != null)
+        {
+            product.ProductName = model.productName;
+            _context.Products.Update(product);
+        }
+
+        if (model.price != null)
+        {
+            product.Price = (float?)model.price;
+            _context.Products.Update(product);
+        }
+
+        if (model.status != null)
+        {
+            product.Status = model.status;
+            _context.Products.Update(product);
+        }
+
+        if (model.description != null)
+        {
+            product.Description = model.description;
+            _context.Products.Update(product);
+        }
+
+        if (model.ImageMain != null)
+        {
+            var uploadResult = await UploadImageToCloudinary(model.ImageMain);
+            var productImageMain = uploadResult.Url.ToString();
+            var productImage = await _context.ProductImages.FindAsync(id);
+            if (productImage == null)
+            {
+                return NotFound(new { message = "Product Image not found" });
+            }
+
+            productImage.ImgMain = productImageMain;
+            _context.ProductImages.Update(productImage);
+        }
+
+        if (model.Image1 != null)
+        {
+            var uploadResult = await UploadImageToCloudinary(model.Image1);
+            var productImage1 = uploadResult.Url.ToString();
+            var productImage = await _context.ProductImages.FindAsync(id);
+            if (productImage == null)
+            {
+                return NotFound(new { message = "Product Image not found" });
+            }
+
+            productImage.Img1 = productImage1;
+            _context.ProductImages.Update(productImage);
+        }
+
+        if (model.Image2 != null)
+        {
+            var uploadResult = await UploadImageToCloudinary(model.Image2);
+            var productImage2 = uploadResult.Url.ToString();
+            var productImage = await _context.ProductImages.FindAsync(id);
+            if (productImage == null)
+            {
+                return NotFound(new { message = "Product Image not found" });
+            }
+
+            productImage.Img2 = productImage2;
+            _context.ProductImages.Update(productImage);
+        }
+
+        if (model.Image3 != null)
+        {
+            var uploadResult = await UploadImageToCloudinary(model.Image3);
+            var productImage3 = uploadResult.Url.ToString();
+            var productImage = await _context.ProductImages.FindAsync(id);
+            if (productImage == null)
+            {
+                return NotFound(new { message = "Product Image not found" });
+            }
+
+            productImage.Img3 = productImage3;
+            _context.ProductImages.Update(productImage);
+        }
+
+        if (model.Image4 != null)
+        {
+            var uploadResult = await UploadImageToCloudinary(model.Image4);
+            var productImage4 = uploadResult.Url.ToString();
+            var productImage = await _context.ProductImages.FindAsync(id);
+            if (productImage == null)
+            {
+                return NotFound(new { message = "Product Image not found" });
+            }
+
+            productImage.Img4 = productImage4;
+            _context.ProductImages.Update(productImage);
+        }
+
+        await _context.SaveChangesAsync();
+        return Ok("Update successfully");
     }
 }

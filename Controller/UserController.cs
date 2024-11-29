@@ -19,7 +19,7 @@ namespace Dot_Net_ECommerceWeb.Controller
         {
             _context = context;
         }
-       
+       //api lay thong tin nguoi dung
         [HttpGet("getuser")]
         public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsers()
         {
@@ -32,7 +32,7 @@ namespace Dot_Net_ECommerceWeb.Controller
                 password = user.password ?? string.Empty, // Nếu cần thiết
                 fullName = user.FullName ?? string.Empty,
                 gender = user.Gender ?? string.Empty,
-                // birthday = user.Birthday?.ToString("yyyy-MM-dd") ?? string.Empty, // Chuyển đổi DateTime sang chuỗi
+                birthday = user.Birthday, // Chuyển đổi DateTime sang chuỗi
                 email = user.Email ?? string.Empty,
                 phone = user.Phone ?? string.Empty,
                 address = user.Address ?? string.Empty,
@@ -44,45 +44,21 @@ namespace Dot_Net_ECommerceWeb.Controller
 
             return Ok(userDtos);
         }
-
-
-        [HttpGet("getuser/{id}")]
-        public async Task<ActionResult<User>> GetUser(int id)
-        {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null) return NotFound();
-            return user;
-        }
-        //
-        // [HttpPost("adduser")]
-        // public async Task<ActionResult<User>> PostUser(User user)
-        // {
-        //     _context.Users.Add(user);
-        //     await _context.SaveChangesAsync();
-        //     return CreatedAtAction("GetUser", new { id = user.Id }, user);
-        // }
-
-        // [HttpPut("{id}")]
-        // public async Task<IActionResult> PutUser(int id, User user)
-        // {
-        //     if (id != user.Id) return BadRequest();
-        //
-        //     _context.Entry(User).State = EntityState.Modified;
-        //     await _context.SaveChangesAsync();
-        //     return NoContent();
-        // }
-
+        
+    
+//api xoa nguoi dung
         [HttpDelete("deleteuser/{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
             var user = await _context.Users.FindAsync(id);
             if (user == null) return NotFound();
 
-            // _context.Users.Remove(user);
+          
             user.Status = "Đã xóa";
             await _context.SaveChangesAsync();
             return NoContent();
         }
+        //api cap nhat quyen cua user
         [HttpPut("updaterole/{id}")]
         public async Task<IActionResult> UpdateRole(int id,[FromBody] string role)
         {

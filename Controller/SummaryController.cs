@@ -14,7 +14,7 @@ public class SummaryController:Microsoft.AspNetCore.Mvc.Controller
     {
         _context = context;
     }
-
+//api lay tong doanh thu
     [HttpGet("getsummary")]
     public async Task<IActionResult> GetSummary()
     {

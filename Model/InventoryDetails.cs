@@ -10,7 +10,7 @@ public class InventoryDetails
     [Column("id")]
     public int Id { get; set; }
     [Column("product_id")]
-    public int ProductId { get; set; }
+    public int? ProductId { get; set; }
     [Column("quantity")]
     public int Quantity { get; set; }
     [Column("price")]
