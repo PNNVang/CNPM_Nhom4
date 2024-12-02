@@ -28,7 +28,7 @@ public class ProductService
             Status = p.Status,
             Sale = p.Sale,
             Hot = p.Hot
-        }).ToListAsync();
+        }).Where(p=>p.StatusDeleted=="chưa xóa").ToListAsync();
     }
 
     public async Task<bool> DeleteProductAsync(int id)
