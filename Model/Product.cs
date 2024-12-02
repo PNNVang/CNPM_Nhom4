@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
+using Newtonsoft.Json;
 
 namespace Dot_Net_ECommerceWeb.Model;
 [Table("products")]
@@ -30,6 +31,7 @@ public class Product
     [Column("information")]
     public string? Information { get; set; } // NOT NULL
     [Column("created_at")]
+    [JsonIgnore]
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     [Column("updated_at")]
     public DateTime? UpdatedAt { get; set; }

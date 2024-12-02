@@ -1,5 +1,6 @@
 ﻿using Dot_Net_ECommerceWeb.DBContext;
 using Dot_Net_ECommerceWeb.Model;
+using Dot_Net_ECommerceWeb.Service;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,25 +10,17 @@ namespace Dot_Net_ECommerceWeb.Controller;
 [ApiController]
 public class InventoryController:Microsoft.AspNetCore.Mvc.Controller
 {
-    private AppDBContext _context { get; set; }
+    private readonly InventoryService _inventoryService;
 
-    public InventoryController(AppDBContext context)
+    public InventoryController(InventoryService inventoryService)
     {
-        _context = context;
+        _inventoryService = inventoryService;
     }
-    //api lay san luong
+
     [HttpGet("getinventoriesdetail")]
-    public  async Task<IActionResult> GetInventory()
+    public async Task<IActionResult> GetInventory()
     {
-        var inventories = await (from i in _context.InventoryDetails
-            join p in _context.Products on i.ProductId equals p.Id
-            group i by i.ProductId into grouped
-            select new 
-            {
-                ProductId = grouped.Key,
-                TotalQuantity = grouped.Sum(x => x.Quantity),
-                TotalPrice = grouped.Sum(x => x.Quantity * x.Price)
-            }).ToListAsync();
+        var inventories = await _inventoryService.GetInventoryDetailsAsync();
         return Ok(inventories);
-        }
+    }
 }

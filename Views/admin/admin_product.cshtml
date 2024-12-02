@@ -113,7 +113,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="//cdn.datatables.net/2.0.2/js/dataTables.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="~/js/table2excel.js"></script>
+@* <script src="~/js/table2excel.js"></script> *@
 
 <script>
     var $tbody = $('#body');
@@ -132,17 +132,22 @@
 
         showSpinner();
         $.ajax({
-            url: '/api/Product/getproduct',
+            url: '/api/Product/getproduct_admin',
             method: 'GET',
             dataType: 'JSON',
             success: function (response) {
                 hideSpinner();
                 $.each(response, function (index, value) {
                     var $row = $('<tr>');
+
+                    // Xử lý đặc biệt cho key 'id'
                     $.each(value, function (key, value_item_key) {
-                        var $cell = $('<td>').text(value_item_key);
-                        $row.append($cell);
+                            
+                            // Các cột dữ liệu khác
+                            var $cell = $('<td>').text(value_item_key);
+                            $row.append($cell);
                     });
+                    $row.attr('id',value.id)
                     // Add icons at the end of each row
                     var $icon1 = $('<i class="fa-solid fa-trash"></i>').click(function () {
                         Swal.fire({
@@ -155,11 +160,13 @@
                             confirmButtonText: "Xóa đi!"
                         }).then((result) => {
                             if (result.isConfirmed) {
+                                // Lấy ID từ data-id
+                               
                                 $.ajax({
-                                    url: '@Url.Action("DeleteProductAdmin", "Admin")',
-                                    method: 'GET',
-                                    dataType: 'JSON',
-                                    data: { id: $row.prop('id') },
+                                    url: '/api/Product/deleteproduct_admin/'+ + $row.prop('id'),
+                                    method: 'DELETE',
+                                    contentType: 'application/json', // Cần thiết khi gửi dữ liệu JSON
+                                     // Chuyển đổi đối tượng thành JSON
                                     success: function (res) {
                                         console.log(res);
                                         Swal.fire({
@@ -168,6 +175,13 @@
                                             icon: "success"
                                         });
                                         $row.hide();
+                                    },
+                                    error: function(xhr, status, error) {
+                                        Swal.fire({
+                                            title: "Lỗi!",
+                                            text: "Không thể xóa sản phẩm",
+                                            icon: "error"
+                                        });
                                     }
                                 });
                             }
@@ -175,7 +189,8 @@
                     });
 
                     var $icon2 = $('<i class="fa-solid fa-wrench"></i>').click(function () {
-                        var productId = $row.prop('id');
+                        // Lấy ID từ data-id
+                        var productId = $row.attr('data-id');
                         window.location.href = '@Url.Action("RedirectUpdate", "Admin")?id=' + productId;
                     });
 
@@ -192,18 +207,10 @@
             }
         });
 
-       
+
+
     });
-    $('#convert').on('click', function () {
-        $("#table_id").table2excel({
-            filename: "file.xls"
-        });
-    });
-    function converttoExcel() {
-        $("#table_id").table2excel({
-            filename: "file.xls"
-        });
-    }
+
     $(document).ready(function () {
         $('.dt-empty').hide()
     })

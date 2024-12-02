@@ -21,11 +21,11 @@ public class AdminController:Microsoft.AspNetCore.Mvc.Controller
   //check tempdata nếu còn thì sẽ gửi dữ liệu sang 
   //tempdata lưu trữ object chứa các thông tin cần hiển thị
   //các dữ liệu khác cũng vậy
-  if (TempData["data"] != null)
-  {
-   var data = JsonConvert.DeserializeObject<Product>(TempData["data"].ToString());
-   return View(data);
-  }
+  // if (TempData["data"] != null)
+  // {
+  //  var data = JsonConvert.DeserializeObject<Product>(TempData["data"].ToString());
+  //  return View(data);
+  // }
   return View();
  }
 

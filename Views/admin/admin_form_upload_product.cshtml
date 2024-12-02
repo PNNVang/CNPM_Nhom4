@@ -93,7 +93,7 @@
 
         <div class="col py-3" style="width: 70%">
             <h2>Thông tin sản phẩm</h2>
-            <form method="post" action="@Url.Action("AddProduct", "Admin")" enctype="multipart/form-data" id="form" accept-charset="UTF-8">
+            <form method="post" action="/api/Product/insertproduct" enctype="multipart/form-data" id="form" accept-charset="UTF-8">
                 <div class="form-group">
                     <label for="productName">Tên sản phẩm:</label>
                     <input type="text" class="form-control" id="productName" placeholder="Nhập tên sản phẩm" name="productName" />

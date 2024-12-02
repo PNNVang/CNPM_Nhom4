@@ -1,5 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using Dot_Net_ECommerceWeb.DBContext;
+using Dot_Net_ECommerceWeb.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,25 +9,17 @@ namespace Dot_Net_ECommerceWeb.Controller;
 [ApiController]
 public class SummaryController:Microsoft.AspNetCore.Mvc.Controller
 {
-    private AppDBContext _context;
+    private readonly SummaryService _summaryService;
 
-    public SummaryController(AppDBContext context)
+    public SummaryController(SummaryService summaryService)
     {
-        _context = context;
+        _summaryService = summaryService;
     }
-//api lay tong doanh thu
+
     [HttpGet("getsummary")]
     public async Task<IActionResult> GetSummary()
     {
-        var summary = await (from order in _context.Orders
-            join order_detail in _context.OrderDetails
-                on order.Id equals order_detail.OrderId
-                group order by order.CreatedAt.Month into g
-            select new
-            {
-                Month = g.Key,
-                Sum=g.Sum(x=>x.TotalPrice)
-            }).ToListAsync();
+        var summary = await _summaryService.GetMonthlyRevenueSummaryAsync();
         return Ok(summary);
     }
 }

@@ -1,77 +1,46 @@
-﻿
-
-using Dot_Net_ECommerceWeb.DBContext;
-using Dot_Net_ECommerceWeb.DTO;
-using Dot_Net_ECommerceWeb.Model;
+﻿using Dot_Net_ECommerceWeb.DTO;
+using Dot_Net_ECommerceWeb.Service;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+
 namespace Dot_Net_ECommerceWeb.Controller
 {
     [Route("/api/[controller]")]
     [ApiController]
-    
-    public class UserController : Microsoft.AspNetCore.Mvc.Controller
+    public class UserController : ControllerBase
     {
-        private readonly AppDBContext _context;
+        private readonly UserService _userService;
 
-        public UserController(AppDBContext context)
+        public UserController(UserService userService)
         {
-            _context = context;
+            _userService = userService;
         }
-       //api lay thong tin nguoi dung
+
+        // API lấy thông tin người dùng
         [HttpGet("getuser")]
         public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsers()
         {
-            var users = await _context.Users.ToListAsync();
-
-            var userDtos = users.Select(user => new UserDTO
-            {
-                Id = user.Id,
-                username = user.username ?? string.Empty, // Sử dụng giá trị mặc định nếu NULL
-                password = user.password ?? string.Empty, // Nếu cần thiết
-                fullName = user.FullName ?? string.Empty,
-                gender = user.Gender ?? string.Empty,
-                birthday = user.Birthday, // Chuyển đổi DateTime sang chuỗi
-                email = user.Email ?? string.Empty,
-                phone = user.Phone ?? string.Empty,
-                address = user.Address ?? string.Empty,
-                avatar = user.Avatar ?? string.Empty,
-                role = user.Role ?? string.Empty,
-                status = user.Status ?? string.Empty,
-                typeLogin = user.TypeLogin ?? string.Empty
-            }).ToList();
-
-            return Ok(userDtos);
+            var users = await _userService.GetUsersAsync();
+            return Ok(users);
         }
-        
-    
-//api xoa nguoi dung
+
+        // API xóa người dùng
         [HttpDelete("deleteuser/{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null) return NotFound();
+            var result = await _userService.DeleteUserAsync(id);
+            if (!result) return NotFound();
 
-          
-            user.Status = "Đã xóa";
-            await _context.SaveChangesAsync();
             return NoContent();
         }
-        //api cap nhat quyen cua user
-        [HttpPut("updaterole/{id}")]
-        public async Task<IActionResult> UpdateRole(int id,[FromBody] string role)
+
+        // API cập nhật quyền của người dùng
+        [HttpPut("updaterole/{id}/{selected_value}")]
+        public async Task<IActionResult> UpdateRole(int id, string selected_value)
         {
-            var user= await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
-            if (user == null) return NotFound();
-            if (user != null)
-            {
-               user.Role = role;
-               await _context.SaveChangesAsync();
-               return Ok("Role updated");
-            }
-            return StatusCode(500,"Not Execute");
+            var result = await _userService.UpdateUserRoleAsync(id, selected_value);
+            if (!result) return NotFound(new { message = "User not found" });
+
+            return Ok(new { message = "Role updated successfully", userId = id, newRole = selected_value });
         }
     }
-   
 }

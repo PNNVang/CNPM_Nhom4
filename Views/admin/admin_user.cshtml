@@ -121,7 +121,7 @@ Layout = null;
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="//cdn.datatables.net/2.0.2/js/dataTables.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="@Url.Content("~/js/table2excel.js")"></script>
+@* <script src="@Url.Content("~/js/table2excel.js")"></script> *@
 
 <script>
     $(document).ready(function () {
@@ -178,10 +178,9 @@ Layout = null;
                                 const selected_value = result.value;
                                 let id = $row.prop('id');
                                 $.ajax({
-                                    url: '@Url.Action("UpdateUser", "Admin")',
-                                    data: { id: id, select: selected_value },
-                                    dataType: 'json',
-                                    type: "POST",
+                                    url: '/api/User/updaterole/'+id+'/'+selected_value,
+                                    dataType: 'JSON',
+                                    method: "PUT",
                                     success: function (res) {
                                         console.log(res);
                                         Swal.fire({
@@ -208,10 +207,9 @@ Layout = null;
                             if (result.isConfirmed) {
                                 let id = $row.prop('id');
                                 $.ajax({
-                                    url: '@Url.Action("DeleteUser", "Admin")',
-                                    data: { id: id },
+                                    url: '/api/User/deleteuser/'+id,
                                     dataType: 'json',
-                                    type: "DELETE",
+                                    method: "DELETE",
                                     success: function (res) {
                                         console.log(res);
                                         Swal.fire({

@@ -14,13 +14,31 @@ builder.Services.AddDbContext<AppDBContext>(options =>
 builder.Services.AddScoped<CloudinaryService>();
 builder.Services.AddScoped<CategoryService>();
 builder.Services.AddScoped<LogService>();
+builder.Services.AddScoped<OrderService>();
+builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<InventoryService>();
+builder.Services.AddScoped<SummaryService>();
 // Đọc thông tin cấu hình từ appsettings.json
-var cloudinaryConfig = builder.Configuration.GetSection("Cloudinary").Get<CloudinarySettings>();
+var cloudinaryConfig = builder.Configuration.GetSection("CloudinarySettings").Get<CloudinarySettings>();
+if (cloudinaryConfig == null)
+{
+    throw new Exception("CloudinarySettings configuration is missing or invalid.");
+}
+
+if (string.IsNullOrEmpty(cloudinaryConfig.CloudName) || 
+    string.IsNullOrEmpty(cloudinaryConfig.ApiKey) || 
+    string.IsNullOrEmpty(cloudinaryConfig.ApiSecret))
+{
+    throw new Exception("One or more required Cloudinary settings are missing.");
+}
+
 var cloudinaryAccount = new Account(
     cloudinaryConfig.CloudName,
     cloudinaryConfig.ApiKey,
     cloudinaryConfig.ApiSecret
 );
+
 var cloudinary = new Cloudinary(cloudinaryAccount);
 
 // Thêm Cloudinary vào DI container

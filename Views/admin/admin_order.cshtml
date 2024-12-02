@@ -120,7 +120,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="//cdn.datatables.net/2.0.2/js/dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="~/js/table2excel.js"></script>
+    @* <script src="~/js/table2excel.js"></script> *@
 
     <script>
         var $tbody = $('#body');
@@ -138,11 +138,11 @@
         });
 
         // Order status buttons click handlers
-        $('#waiting').click(loadOrders.bind(null, '/api/orders/getorder_waiting'));
-        $('#giving').click(loadOrders.bind(null, '/api/orders/getorder_giving'));
-        $('#gived').click(loadOrders.bind(null, '/api/orders/getorder_gived'));
-        $('#canceled').click(loadOrders.bind(null, '/api/orders/getorder_cancelled'));
-        $('#waiting-giving').click(loadOrders.bind(null, '/api/orders/getorder_waitinggiving'));
+        $('#waiting').click(loadOrders.bind(null, '/api/orders/getorders/waiting'));
+        $('#giving').click(loadOrders.bind(null, '/api/orders/getorders/giving'));
+        $('#gived').click(loadOrders.bind(null, '/api/orders/getorders/gived'));
+        $('#canceled').click(loadOrders.bind(null, '/api/orders/getorders/cancelled'));
+        $('#waiting-giving').click(loadOrders.bind(null, '/api/orders/getorders/waiting_giving'));
 
         function loadOrders(url) {
             $tbody.empty();
@@ -203,10 +203,9 @@
 
         function updateOrder(orderId, status) {
             $.ajax({
-                url: "@Url.Action("UpdateOrder", "Admin")",
-                data: { id: orderId, select: status },
-                dataType: 'json',
-                type: "POST",
+                url: "/api/orders/updateorder/"+orderId+'/'+status,
+                dataType: 'JSON',
+                method: "PUT",
                 success: function (res) {
                     console.log(res);
                     Swal.fire({

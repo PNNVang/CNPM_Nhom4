@@ -5,12 +5,13 @@ using Dot_Net_ECommerceWeb.Model;
 using Dot_Net_ECommerceWeb.Utils;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Dot_Net_ECommerceWeb.Controller;
 
 [ApiController]
 [Route("/api/[controller]")]
-public class ImageController : ControllerBase
+public class ImageController : Microsoft.AspNetCore.Mvc.Controller
 {
     private readonly AppDBContext _dbContext;
 
@@ -23,7 +24,17 @@ public class ImageController : ControllerBase
     [HttpGet("getimage")]
     public async Task<ActionResult<ProductImage>> GetImage()
     {
-        var image = await _dbContext.ProductImages.ToListAsync();
+        var image = (from p in _dbContext.Products
+            join imgproduct in _dbContext.ProductImages on p.Id equals imgproduct.Id select new
+            {
+                imgproduct.Id,
+                p.ProductName,
+                imgproduct.ImgMain,
+                imgproduct.Img1,
+                imgproduct.Img2,
+                imgproduct.Img3,
+                imgproduct.Img4,
+            });
         return Ok(image);
     }
 
