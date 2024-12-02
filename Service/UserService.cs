@@ -33,7 +33,7 @@ public class UserService
             role = user.Role ?? string.Empty,
             status = user.Status ?? string.Empty,
             typeLogin = user.TypeLogin ?? string.Empty
-        }).ToList();
+        }).Where(u=>u.status=="chưa xóa").ToList();
     }
 
     // Xóa người dùng
