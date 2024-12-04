@@ -6,7 +6,7 @@ namespace Dot_Net_ECommerceWeb.Controller
 {
     [Route("/api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class UserController : Microsoft.AspNetCore.Mvc.Controller
     {
         private readonly UserService _userService;
 

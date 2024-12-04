@@ -38,4 +38,10 @@ public class User
     [Column("type_login")]
     public string? TypeLogin { get; set; }
     public List<Order> Orders { get; set; }
+
+    public User(string username, string password)
+    {
+        this.username = username;
+        this.password = password;
+    }
 }

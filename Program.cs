@@ -1,16 +1,33 @@
 using CloudinaryDotNet;
 using Dot_Net_ECommerceWeb.DBContext;
+using Dot_Net_ECommerceWeb.Model;
 using Dot_Net_ECommerceWeb.Service;
 using Dot_Net_ECommerceWeb.Utils;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+// Cấu hình dịch vụ đăng nhập Google
+builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+    })
+    .AddCookie()
+    .AddGoogle(options =>
+    {
+        options.ClientId = builder.Configuration["Google:ClientId"];
+        options.ClientSecret = builder.Configuration["Google:ClientSecret"];
+    });
 // Thêm dịch vụ MVC
 builder.Services.AddControllersWithViews();
 // Đăng ký dịch vụ kết nối DB trước khi gọi builder.Build()
 builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
-        new MySqlServerVersion(new Version(8, 0, 32)))); 
+        new MySqlServerVersion(new Version(8, 0, 32))));
+builder.Services.AddScoped<TestUser>();
 builder.Services.AddScoped<CloudinaryService>();
 builder.Services.AddScoped<CategoryService>();
 builder.Services.AddScoped<LogService>();
@@ -40,7 +57,7 @@ var cloudinaryAccount = new Account(
 );
 
 var cloudinary = new Cloudinary(cloudinaryAccount);
-
+builder.Services.AddRazorPages();
 // Thêm Cloudinary vào DI container
 builder.Services.AddSingleton(cloudinary);
 var app = builder.Build();
@@ -57,8 +74,12 @@ using (var scope = app.Services.CreateScope())
 // Cấu hình middleware
 app.UseRouting();
 app.MapControllers();
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.MapRazorPages();
+app.UseRouting();
 app.UseAuthorization();
-
+app.UseAuthentication();  // Đảm bảo thêm dòng này
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
