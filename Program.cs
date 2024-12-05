@@ -5,28 +5,40 @@ using Dot_Net_ECommerceWeb.Service;
 using Dot_Net_ECommerceWeb.Utils;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
-// Cấu hình dịch vụ đăng nhập Google
+builder.Services.AddSingleton(x =>
+    new PaypalClient(
+        builder.Configuration["PayPalOptions:ClientId"],
+        builder.Configuration["PayPalOptions:ClientSecret"],
+        builder.Configuration["PayPalOptions:Mode"]
+    )
+);
+// Cấu hình dịch vụ đăng nhập Google OAuth
 builder.Services.AddAuthentication(options =>
     {
-        options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+        options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+        options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     })
     .AddCookie()
-    .AddGoogle(options =>
+    .AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
     {
-        options.ClientId = builder.Configuration["Google:ClientId"];
-        options.ClientSecret = builder.Configuration["Google:ClientSecret"];
+        options.ClientId = builder.Configuration.GetSection("GoogleKeys:ClientId").Value;
+        options.ClientSecret = builder.Configuration.GetSection("GoogleKeys:ClientSecret").Value;
     });
-// Thêm dịch vụ MVC
+// Đăng ký dịch vụ MVC và Razor Pages
 builder.Services.AddControllersWithViews();
-// Đăng ký dịch vụ kết nối DB trước khi gọi builder.Build()
+builder.Services.AddRazorPages();
+
+// Đăng ký dịch vụ kết nối DB (MySQL)
 builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
         new MySqlServerVersion(new Version(8, 0, 32))));
+
+// Đăng ký các dịch vụ ứng dụng
 builder.Services.AddScoped<TestUser>();
 builder.Services.AddScoped<CloudinaryService>();
 builder.Services.AddScoped<CategoryService>();
@@ -36,18 +48,13 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<InventoryService>();
 builder.Services.AddScoped<SummaryService>();
-// Đọc thông tin cấu hình từ appsettings.json
+
+// Cấu hình Cloudinary
 var cloudinaryConfig = builder.Configuration.GetSection("CloudinarySettings").Get<CloudinarySettings>();
-if (cloudinaryConfig == null)
+if (cloudinaryConfig == null || string.IsNullOrEmpty(cloudinaryConfig.CloudName) ||
+    string.IsNullOrEmpty(cloudinaryConfig.ApiKey) || string.IsNullOrEmpty(cloudinaryConfig.ApiSecret))
 {
     throw new Exception("CloudinarySettings configuration is missing or invalid.");
-}
-
-if (string.IsNullOrEmpty(cloudinaryConfig.CloudName) || 
-    string.IsNullOrEmpty(cloudinaryConfig.ApiKey) || 
-    string.IsNullOrEmpty(cloudinaryConfig.ApiSecret))
-{
-    throw new Exception("One or more required Cloudinary settings are missing.");
 }
 
 var cloudinaryAccount = new Account(
@@ -57,30 +64,33 @@ var cloudinaryAccount = new Account(
 );
 
 var cloudinary = new Cloudinary(cloudinaryAccount);
-builder.Services.AddRazorPages();
-// Thêm Cloudinary vào DI container
 builder.Services.AddSingleton(cloudinary);
+
+// Cấu hình các middleware cần thiết
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+// Thiết lập middleware
+app.UseExceptionHandler("/Error");
+app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
+app.UseHttpsRedirection();
+app.UseStaticFiles();
 
-// Khởi động các dịch vụ ở đây
+// Cấu hình endpoints
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapRazorPages(); // Nếu bạn sử dụng Razor Pages
+
+// Khởi động ứng dụng với dịch vụ DBContext
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     var dbContext = services.GetRequiredService<AppDBContext>();
-    // Thực hiện các công việc khởi động dữ liệu ở đây nếu cần
+    // Thực hiện các công việc khởi tạo dữ liệu ở đây nếu cần
 }
-// Cấu hình middleware
-app.UseRouting();
-app.MapControllers();
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.MapRazorPages();
-app.UseRouting();
-app.UseAuthorization();
-app.UseAuthentication();  // Đảm bảo thêm dòng này
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapGet("/", () => "Hello World!");
+
 app.Run();
