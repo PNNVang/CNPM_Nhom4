@@ -9,10 +9,10 @@ namespace Dot_Net_ECommerceWeb.Controller;
 [ApiController]
 public class PaypalController : Microsoft.AspNetCore.Mvc.Controller
 {
-    private readonly PaypalClient _paypalClient;
+    private readonly PaypalService _paypalClient;
     private readonly AppDBContext db;
 
-    public PaypalController(AppDBContext context, PaypalClient paypalClient)
+    public PaypalController(AppDBContext context, PaypalService paypalClient)
     {
         _paypalClient = paypalClient;
         db = context;

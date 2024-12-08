@@ -10,7 +10,7 @@ using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton(x =>
-    new PaypalClient(
+    new PaypalService(
         builder.Configuration["PayPalOptions:ClientId"],
         builder.Configuration["PayPalOptions:ClientSecret"],
         builder.Configuration["PayPalOptions:Mode"]

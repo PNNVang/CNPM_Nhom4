@@ -6,7 +6,7 @@ using System.Text.Json;
 
 
 
-	public sealed class PaypalClient
+	public sealed class PaypalService
 	{
 		public string Mode { get; }
 		public string ClientId { get; }
@@ -16,7 +16,7 @@ using System.Text.Json;
 			? "https://api-m.paypal.com"
 			: "https://api-m.sandbox.paypal.com";
 
-		public PaypalClient(string clientId, string clientSecret, string mode)
+		public PaypalService(string clientId, string clientSecret, string mode)
 		{
 			ClientId = clientId;
 			ClientSecret = clientSecret;
