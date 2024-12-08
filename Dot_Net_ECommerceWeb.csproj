@@ -23,6 +23,14 @@
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
+      <PackageReference Include="PayPal" Version="2.0.0-rc2" />
+      <PackageReference Include="paypal.dotnetcore" Version="1.1.0" />
+      <PackageReference Include="PayPal.SDK.NETCore" Version="1.9.1.2" />
+      <PackageReference Include="PayPalCheckoutSdk" Version="1.0.4" />
+      <PackageReference Include="PayPalCheckoutSdk.DotNet" Version="1.0.8" />
+      <PackageReference Include="PayPalCoreSDK" Version="1.7.1" />
+      <PackageReference Include="PayPalHttp" Version="1.0.1" />
+      <PackageReference Include="PayPalHttpRequest.DotNet" Version="1.0.8" />
       <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
     </ItemGroup>
 

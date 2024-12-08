@@ -83,4 +83,14 @@ public class AdminController:Microsoft.AspNetCore.Mvc.Controller
  {
   return View();
  }
+
+ public IActionResult admin_login_google()
+ {
+  return View();
+ }
+
+ public IActionResult admin_paypal()
+ {
+  return View();
+ }
 }
