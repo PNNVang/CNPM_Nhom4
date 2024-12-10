@@ -1,0 +1,76 @@
+@* <%-- *@
+@*   Created by IntelliJ IDEA. *@
+@*   User: ADMIN *@
+@*   Date: 16/3/2024 *@
+@*   Time: 16:40 *@
+@*   To change this template use File | Settings | File Templates. *@
+@* --%> *@
+@* <%@ page contentType="text/html;charset=UTF-8" language="java" %> *@
+@* <html> *@
+@* <head> *@
+@*     <title>Chính sách</title> *@
+@*     <meta charset="UTF-8"> *@
+@*     <meta name="viewport" content="width=device-width, initial-scale=1.0"> *@
+@* *@
+@* </head> *@
+@* <style> *@
+@*     .policy{ *@
+@*         margin-top: 50px; *@
+@*     } *@
+@* </style> *@
+@* <body> *@
+@* <%-- header--%> *@
+@* <jsp:include page="header.jsp"/> *@
+@* *@
+@* <section> *@
+@*     <div class="policy"> *@
+@*         <h4><strong>Đá Quý Màu</strong></h4> *@
+@*            <ul> *@
+@*                <li><p>Bảo hành vĩnh viễn về màu sắc và chất lượng của đá</p></li> *@
+@*                <li><p>Trường hợp sản phẩm bị Lỗi do chính quý khách chúng tôi sẽ hỗ trợ sửa chữa </p></li> *@
+@*                <li><p>Đá chủ nhập lại 70% trong 3 năm đầu, năm thứ 4 – 5 thu lại 80%.</p></li> *@
+@*                <li><p>Từ năm thứ 5 tới năm 10 thu lại 90% giá trị và sau 10 năm thu lại 100% giá trị viên đá </p></li> *@
+@*                <li><p>Đổi nâng cấp sản phẩm khác được tính 80% cộng phần chênh lệch.</p></li> *@
+@*                <li><p>Tất cả những viên đá đều được kiểm định và viết giấy bảo hành trọn đời. </p></li> *@
+@*                <li><p>Áp dụng với những viên đá có giá trị từ 1Tr trở lên </p></li> *@
+@*            </ul> *@
+@*         <h4><strong>Trường hợp không được bảo hành </strong></h4> *@
+@*            <ul> *@
+@*                <li><p>Nứt vỡ, sứt, thay đổi hình dạng do va đập rơi trong quá trình sử dụng</p></li> *@
+@*                <li><p>Thay đổi kích thước kết cấu viên đá so với ban đầu</p></li> *@
+@*                <li><p>Sản phẩm được trì chú theo chủ nhân</p></li> *@
+@*                <li><p>Không có giấy bảo hành, hóa đơn sản phẩm.</p></li> *@
+@*            </ul> *@
+@*         <h4><strong>Cam kết bảo mật thông tin khách hàng</strong></h4> *@
+@*             <ul> *@
+@*                 <li><p>Thông tin cá nhân của Khách hàng được Ban quản trị cam kết bảo mật thông tin của *@
+@*                 khách hàng. Việc thu thập và sử dụng thông tin của khách hàng chỉ được thực hiện khi có sự đồng *@
+@*                 ý của khách hàng trừ những trường hợp pháp luật có quy định khác và quy định này. *@
+@*                 </p></li> *@
+@*                 <li><p>Không sử dụng, không chuyển giao, cung cấp hoặc tiết lộ cho bên thứ 3 *@
+@*                     về thông tin cá nhân của khách hàng khi không có sự đồng ý của khách hàng *@
+@*                     ngoại trừ các trường hợp được quy định tại quy định này hoặc quy định của pháp luật.</p></li> *@
+@*                 <li><p>Trong trường hợp máy chủ lưu trữ thông tin bị hacker tấn công dẫn đến mất mát dữ liệu *@
+@*                     cá nhân của khách hàng, Ban quản trị có trách nhiệm thông báo và làm việc với cơ quan *@
+@*                     chức năng điều tra và xử lý kịp thời, đồng thời thông báo cho khách hàng được biết *@
+@*                     về vụ việc.</p></li> *@
+@*             </ul> *@
+@*     </div> *@
+@* </section> *@
+@* <%--footer--%> *@
+@* <jsp:include page="footer.jsp"/> *@
+@* <script> *@
+@*     $(document).ready(function (){ *@
+@*         nav_active() *@
+@*     }) *@
+@*     function nav_active() { *@
+@*         $('a.nav-link').removeClass('active') *@
+@*         $('a.nav-link').each(function() { *@
+@*             if ($(this).text().trim() === 'Chính sách') { // Dùng .trim() để loại bỏ khoảng trắng dư thừa *@
+@*                 $(this).addClass('active').addClass('main-color'); *@
+@*             } *@
+@*         }); *@
+@*     } *@
+@* </script> *@
+@* </body> *@
+@* </html> *@

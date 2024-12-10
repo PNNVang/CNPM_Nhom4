@@ -1,0 +1,135 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Dot_Net_ECommerceWeb
+build_property.RootNamespace = Dot_Net_ECommerceWeb
+build_property.ProjectDir = D:\Backend_DotNet_EommerceWeb\Dot_Net_ECommerceWeb\Dot_Net_ECommerceWeb\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Backend_DotNet_EommerceWeb\Dot_Net_ECommerceWeb\Dot_Net_ECommerceWeb
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/admin/admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cYWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/admin/admin_backward_product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cYWRtaW5fYmFja3dhcmRfcHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/admin/admin_form_update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cYWRtaW5fZm9ybV91cGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/admin/admin_form_upload_product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cYWRtaW5fZm9ybV91cGxvYWRfcHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/admin/admin_header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cYWRtaW5faGVhZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/admin/admin_image.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cYWRtaW5faW1hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/admin/admin_inventory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cYWRtaW5faW52ZW50b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/admin/admin_log.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cYWRtaW5fbG9nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/admin/admin_order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cYWRtaW5fb3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/admin/admin_product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cYWRtaW5fcHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/admin/admin_summary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cYWRtaW5fc3VtbWFyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/admin/admin_user.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cYWRtaW5fdXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/demo/demoIPAddress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGVtb1xkZW1vSVBBZGRyZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/error/404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZXJyb3JcNDA0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/shoppingcart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2hvcHBpbmdjYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/user/changepassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxjaGFuZ2VwYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/user/forgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxmb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/user/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxsb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/user/profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxwcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/user/register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxyZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/user/UpdateProfileThenRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxVcGRhdGVQcm9maWxlVGhlblJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/views/about.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncdmlld3NcYWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/views/contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncdmlld3NcY29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/views/footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncdmlld3NcZm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/views/header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncdmlld3NcaGVhZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/views/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncdmlld3NcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/views/policy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncdmlld3NccG9saWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Backend_DotNet_EommerceWeb/Dot_Net_ECommerceWeb/Dot_Net_ECommerceWeb/Views/views/search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncdmlld3Ncc2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
