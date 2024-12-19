@@ -190,8 +190,8 @@
 
                     var $icon2 = $('<i class="fa-solid fa-wrench"></i>').click(function () {
                         // Lấy ID từ data-id
-                        var productId = $row.attr('data-id');
-                        window.location.href = '@Url.Action("RedirectUpdate", "Admin")?id=' + productId;
+                        var productId = $row.attr('id');
+                        window.location.href = '@Url.Action("admin_form_update", "Admin")?id=' + productId;
                     });
 
                     var $actionsCell = $('<td>').append($icon1).append($icon2);

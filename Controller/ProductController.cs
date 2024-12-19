@@ -42,4 +42,11 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
 
         return Ok(new { message = "Product added successfully" });
     }
+
+    [HttpPost("updateproduct")]
+    public async Task<IActionResult> UpdateProduct([FromForm] ProductFormUpdate model)
+    {
+        await _productService.UpdateProduct(model);
+        return Ok(new { message = "Product updated successfully" });
+    }
 }

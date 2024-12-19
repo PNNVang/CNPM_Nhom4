@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
 
 namespace Dot_Net_ECommerceWeb.Model;
+
 [Table("products")]
 public class Product
 {
@@ -12,38 +13,38 @@ public class Product
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Column("id")]
     public int? Id { get; set; }
-    [Column("category_id")]
-    public int? CategoryId { get; set; }
+
+    [Column("category_id")] public int? CategoryId { get; set; }
+
     [StringLength(50)]
     [Column("product_name")]
     public string? ProductName { get; set; }
-    [Column("price")]
-    public float? Price { get; set; }
-    [Column("status")]
-    public string? Status { get; set; }
-    [Column("sale")]
-    public int Sale { get; set; } = 0; // Giá trị mặc định
-    [Column("hot")]
-    public bool Hot { get; set; } = false; // Sử dụng bool thay vì tinyint
-    [Column("description")]
-    public string? Description { get; set; }
+
+    [Column("price")] public float? Price { get; set; }
+    [Column("status")] public string? Status { get; set; }
+    [Column("sale")] public int? Sale { get; set; } = 0; // Giá trị mặc định
+
+    [Column("hot")] public bool? Hot { get; set; } // Sử dụng bool thay vì tinyint
+
+    [Column("description")] public string? Description { get; set; }
+
     [StringLength(200)]
     [Column("information")]
     public string? Information { get; set; } // NOT NULL
-    [Column("created_at")]
+
+    [Column("created_at")] [JsonIgnore] public DateTime? CreatedAt { get; set; }
+    [Column("updated_at")] [JsonIgnore] public DateTime? UpdatedAt { get; set; }
+    [JsonIgnore] [Column("deleted_at")] public DateTime? DeletedAt { get; set; }
+    [JsonIgnore] [Column("image_product")] public int? ImageProduct { get; set; }
+
     [JsonIgnore]
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    [Column("updated_at")]
-    public DateTime? UpdatedAt { get; set; }
-    [Column("deleted_at")]
-    public DateTime? DeletedAt { get; set; }
-    [Column("image_product")]
-    public int? ImageProduct { get; set; }
     [Column("status_deleted")]
     public string? StatusDeleted { get; set; }
-    public Category? Category { get; set; }
+
+    [JsonIgnore] public Category? Category { get; set; }
+
     // public Order? Order { get; set; }
     public List<OrderDetail>? OrderDetail { get; set; }
-    public ProductImage? ProductImage { get; set; }
-    public List<InventoryDetails>? InventoryDetail { get; set; }
+    [JsonIgnore] public ProductImage? ProductImage { get; set; }
+    [JsonIgnore] public List<InventoryDetails>? InventoryDetail { get; set; }
 }

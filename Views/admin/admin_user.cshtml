@@ -90,7 +90,7 @@ Layout = null;
         </div>
 
         <div class="col py-3" style="width: 70%">
-            <button type="button" class="btn btn-primary" id="convert" onclick="converttoExcel()">Xuất Excel</button>
+            @* <button type="button" class="btn btn-primary" id="convert" onclick="converttoExcel()">Xuất Excel</button> *@
             <table id="table_id" class="table table-striped">
                 <thead>
                 <tr>
@@ -239,10 +239,7 @@ Layout = null;
     $(document).ready(function () {
         $('.dt-empty').hide()
     })
-    function converttoExcel() {
-        var table2excel = new Table2Excel();
-        table2excel.export(document.querySelectorAll("#table_id"));
-    }
+  
 </script>
 </body>
 </html>
