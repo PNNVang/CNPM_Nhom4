@@ -44,3 +44,6 @@ D:\Backend_DotNet_EommerceWeb\Dot_Net_ECommerceWeb\Dot_Net_ECommerceWeb\obj\Debu
 D:\Backend_DotNet_EommerceWeb\Dot_Net_ECommerceWeb\Dot_Net_ECommerceWeb\obj\Debug\net8.0\ref\Dot_Net_ECommerceWeb.dll
 D:\Backend_DotNet_EommerceWeb\Dot_Net_ECommerceWeb\Dot_Net_ECommerceWeb\obj\Debug\net8.0\Dot_Net_ECommerceWeb.RazorAssemblyInfo.cache
 D:\Backend_DotNet_EommerceWeb\Dot_Net_ECommerceWeb\Dot_Net_ECommerceWeb\obj\Debug\net8.0\Dot_Net_ECommerceWeb.RazorAssemblyInfo.cs
+D:\C#\Project_Dot_Net\obj\Debug\net8.0\Dot_Net_ECommerceWeb.dll
+D:\C#\Project_Dot_Net\obj\Debug\net8.0\refint\Dot_Net_ECommerceWeb.dll
+D:\C#\Project_Dot_Net\obj\Debug\net8.0\Dot_Net_ECommerceWeb.pdb
