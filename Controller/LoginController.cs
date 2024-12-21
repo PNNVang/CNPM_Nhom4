@@ -46,7 +46,7 @@ public class LoginController : Microsoft.AspNetCore.Mvc.Controller
                 switch (user.Role)
                 {
                     case "admin":
-                        return RedirectToAction("AdminDashboard", "Admin");
+                        return RedirectToAction("admin_summary", "Admin");
                     case "user":
                         return RedirectToAction("Home", "Home");
                     case "prohibit":
