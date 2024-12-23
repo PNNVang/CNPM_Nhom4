@@ -39,9 +39,9 @@ public class User
     public string? TypeLogin { get; set; }
     public List<Order> Orders { get; set; }
 
-    public User(string username, string password)
-    {
-        this.username = username;
-        this.password = password;
-    }
+    // public User(string username, string password)
+    // {
+    //     this.username = username;
+    //     this.password = password;
+    // }
 }

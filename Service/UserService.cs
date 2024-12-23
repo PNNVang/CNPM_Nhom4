@@ -1,5 +1,6 @@
 ﻿using Dot_Net_ECommerceWeb.DBContext;
 using Dot_Net_ECommerceWeb.DTO;
+using Dot_Net_ECommerceWeb.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace Dot_Net_ECommerceWeb.Service;
