@@ -1,26 +1,28 @@
-﻿// using Dot_Net_ECommerceWeb.Model;
-// using Dot_Net_ECommerceWeb.Service;
-// using Microsoft.AspNetCore.Http;
-// using Microsoft.AspNetCore.Mvc;
-// using Newtonsoft.Json;
-// using System.Threading.Tasks;
-//
-// namespace Dot_Net_ECommerceWeb.Controller;
-// [Route("Account")]
-// public class LoginController : Microsoft.AspNetCore.Mvc.Controller
-// {
-//     private readonly LoginService _loginService;
-//
-//     public LoginController(LoginService loginService)
-//     {
-//         _loginService = loginService;
-//     }
-//
-//     [HttpGet("Login")]
-//     public IActionResult Login()
-//     {
-//         return View("~/Views/User/Login.cshtml");
-//     }
+﻿using Dot_Net_ECommerceWeb.Model;
+using Dot_Net_ECommerceWeb.Service;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Threading.Tasks;
+
+namespace Dot_Net_ECommerceWeb.Controller;
+
+[Route("Account")]
+public class LoginController : Microsoft.AspNetCore.Mvc.Controller
+{
+    private readonly LoginService _loginService;
+
+    public LoginController(LoginService loginService)
+    {
+        _loginService = loginService;
+    }
+
+    [HttpGet("Login")]
+    public IActionResult Login()
+    {
+        return View("~/Views/User/Login.cshtml");
+    }
+}
 //
 //     [HttpPost("Login")]
 //     public async Task<IActionResult> Login(string username, string password)
