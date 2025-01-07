@@ -6,17 +6,11 @@ using Dot_Net_ECommerceWeb.Utils;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
+using Newtonsoft.Json;
+
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddDistributedMemoryCache(); // Cấu hình bộ nhớ để lưu trữ Session
-builder.Services.AddSession(options =>
-{
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian hết hạn của session
-    options.Cookie.HttpOnly = true; // Chỉ có thể truy cập từ máy chủ
-    options.Cookie.IsEssential = true; // Đánh dấu cookie là quan trọng đối với ứng dụng
-});
-
 
 builder.Services.AddSingleton(x =>
     new PaypalService(
@@ -25,6 +19,16 @@ builder.Services.AddSingleton(x =>
         builder.Configuration["PayPalOptions:Mode"]
     )
 );
+
+//Cấu hình session
+builder.Services.AddDistributedMemoryCache(); // Cấu hình bộ nhớ để lưu trữ Session
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian hết hạn của session
+    options.Cookie.HttpOnly = true; // Chỉ có thể truy cập từ máy chủ
+    options.Cookie.IsEssential = true; // Đánh dấu cookie là quan trọng đối với ứng dụng
+});
+
 // Cấu hình dịch vụ đăng nhập Google OAuth
 builder.Services.AddAuthentication(options =>
     {
@@ -41,7 +45,12 @@ builder.Services.AddAuthentication(options =>
 // Đăng ký dịch vụ MVC và Razor Pages
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian hết hạn của session
+    options.Cookie.HttpOnly = true; // Đảm bảo cookie không thể truy cập qua JavaScript
+    options.Cookie.IsEssential = true; // Đánh dấu cookie là cần thiết
+});
 // Đăng ký dịch vụ kết nối DB (MySQL)
 builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
@@ -57,6 +66,12 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<InventoryService>();
 builder.Services.AddScoped<SummaryService>();
+// Cấu hình dịch vụ
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+    {
+        options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+    });
 
 // Cấu hình Cloudinary
 var cloudinaryConfig = builder.Configuration.GetSection("CloudinarySettings").Get<CloudinarySettings>();
@@ -88,6 +103,10 @@ app.UseAuthorization();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+
+
+
+app.UseSession(); 
 
 // Cấu hình endpoints
 app.MapControllerRoute(

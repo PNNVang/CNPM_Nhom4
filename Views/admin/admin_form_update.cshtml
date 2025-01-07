@@ -1,6 +1,10 @@
+@using PayPal.OpenIdConnect
 @{
     // Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Cập nhật sản phẩm";
+}
+@{
+    var id = Context.Session.GetString("id");  // Lấy giá trị từ session
 }
 @* Liên kết CSS *@
 <link rel="stylesheet" href="//cdn.datatables.net/2.0.2/css/dataTables.dataTables.min.css">
@@ -106,10 +110,13 @@
             @Html.Partial("admin_editor")
             @* Form cập nhật sản phẩm *@
             <form method="post" enctype="multipart/form-data" action="/api/Product/updateproduct" id="form">
+                @* <div class="form-group"> *@
+                @*     <label for="id">Mã sản phẩm:</label> *@
+                @*     <input type="number" class="form-control" id="id" placeholder="STT Sản phẩm" name="id"  *@
+                @*            $1$ value="@Session["id"]" /> #1#/> *@
+                @* </div> *@
                 <div class="form-group">
-                    <label for="id">Mã sản phẩm:</label>
-                    <input type="number" class="form-control" id="id" placeholder="STT Sản phẩm" name="id" 
-                           @* value="@Session["id"]" /> *@/>
+                    <input type="hidden" class="form-control" name="id" value="@id" />
                 </div>
                 <div class="form-group">
                     <label for="productName">Tên sản phẩm:</label>
@@ -122,23 +129,23 @@
 
                 <div class="form-group mb-3">
                     <label for="productImages-main">Ảnh sản phẩm-chính:</label>
-                    <input type="file" class="form-control-file" id="productImages-main" name="image-main" />
+                    <input type="file" class="form-control-file" id="productImages-main" name="imageMain" />
                 </div>
                 <div class="form-group mb-3">
                     <label for="productImages-1">Ảnh sản phẩm-1:</label>
-                    <input type="file" class="form-control-file" id="productImages-1" name="image-1" />
+                    <input type="file" class="form-control-file" id="productImages-1" name="image1" />
                 </div>
                 <div class="form-group mb-3">
                     <label for="productImages-2">Ảnh sản phẩm-2:</label>
-                    <input type="file" class="form-control-file" id="productImages-2" name="image-2" />
+                    <input type="file" class="form-control-file" id="productImages-2" name="image2" />
                 </div>
                 <div class="form-group mb-3">
                     <label for="productImages-3">Ảnh sản phẩm-3:</label>
-                    <input type="file" class="form-control-file" id="productImages-3" name="image-3" />
+                    <input type="file" class="form-control-file" id="productImages-3" name="image3" />
                 </div>
                 <div class="form-group mb-3">
                     <label for="productImages-4">Ảnh sản phẩm-4:</label>
-                    <input type="file" class="form-control-file" id="productImages-4" name="image-4" />
+                    <input type="file" class="form-control-file" id="productImages-4" name="image4" />
                 </div>
 
                 <div class="form-group">
