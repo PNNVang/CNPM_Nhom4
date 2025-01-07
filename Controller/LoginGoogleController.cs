@@ -1,4 +1,5 @@
 ﻿using System.Security.Claims;
+using System.Text.Json;
 using Dot_Net_ECommerceWeb.DBContext;
 using Dot_Net_ECommerceWeb.Model;
 using Microsoft.AspNetCore.Authentication;
@@ -46,7 +47,8 @@ namespace Dot_Net_ECommerceWeb.Controller
                 Avatar = result.Principal.FindFirstValue("picture"),
                 TypeLogin = "google",
                 Status = "chưa xóa",
-                Role = "user",
+                // Role = "user",
+                Role="admin",
                 CreatedAt = DateTime.Now,
                 UpdatedAt = DateTime.Now,
                 password = "chưa xác định"
@@ -70,8 +72,9 @@ namespace Dot_Net_ECommerceWeb.Controller
             }
 
             await _context.SaveChangesAsync();
-            HttpContext.Session.SetString("username",user.username.ToString());
-            return new JsonResult(user);
+            string userJson = JsonSerializer.Serialize(user);
+            HttpContext.Session.SetString("user",userJson);
+            return RedirectToAction("admin_summary", "Admin");
         }
     }
 }

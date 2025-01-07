@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 
 namespace Dot_Net_ECommerceWeb.Controller;
-// [SessionCheckFilter]
+[SessionCheckFilter]
 public class AdminController : Microsoft.AspNetCore.Mvc.Controller
 {
     public IActionResult admin()
