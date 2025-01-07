@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Dot_Net_ECommerceWeb.Model.ShoppingCartItem>
+@using Dot_Net_ECommerceWeb.Helper;
+<table class="table table-light" style="margin-top:10px">
+    <tr class="text-center">
+        <th scope="col">STT</th>
+        <th scope="col">Sản phẩm</th>
+        <th scope="col">Giá</th>
+        <th scope="col" style="width:100px;">Số lượng</th>
+        <th scope="col">Thành tiền</th>
+        <th style="width:200px;"></th>
+    </tr>
+    @if (Model != null && Model.Any())
+    {
+        var i = 0;
+        var tongtien = 0f;
+        foreach (var item in Model)
+        {
+            tongtien += item.TotalPrice;
+            <tr class="text-center" id="trow_@item.ProductId">
+                <td>@(i + 1)</td>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <img src="@item.ProductImg" alt="KKK" class="img-thumbnail"
+                             style="width: 60px; height: =60px; margin-right: 10px;">
+                        <span>@item.ProductName</span>
+                    </div>
+                </td>
+                <td>@Common.FormatNumber(item.Price, 0)</td>
+                <td><input type="number" id="Quantity_@item.ProductId" value="@item.Quantity"/></td>
+                <th>@Common.FormatNumber(item.TotalPrice, 2)</th>
+                <td>
+                    <a class="btn btn-sm btn-danger btnDelete" href="#" data-id="@item.ProductId">Xóa</a>
+                </td>
+            </tr>
+            i++;
+        }
+        <tr>
+            <th colspan="6" class="text-end">Tổng tiền:</th>
+            <th class="text-center">@Common.FormatNumber(tongtien, 0)</th>
+            <th></th>
+        </tr>
+        
+
+    }
+    else
+    {
+        <tr class="text-center">
+            <th colspan="7">Không có sản phẩm trong giỏ hàng</th>
+        </tr>
+    }
+
+</table>
