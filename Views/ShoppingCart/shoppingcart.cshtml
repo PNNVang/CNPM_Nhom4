@@ -1,0 +1,45 @@
+@using Dot_Net_ECommerceWeb.Helper;
+@{
+    ViewBag.Title = "Giỏ Hàng";
+}
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <title>@ViewBag.Title</title>
+    <style type="text/css">
+        .table th, .table td {
+        text-align: center;
+        vertical-align: middle;
+        }
+
+        .form-group {
+        display: flex;
+        justify-content: space-between;
+        width: 20%;
+        }
+
+        .form-control {
+        width: 20%;
+        text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    @Html.Partial("~/Views/views/header.cshtml")
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-12" id="load_data">
+                @await Html.PartialAsync("Partial_Item_Cart")
+            </div>
+            <div class="col-md-12"> 
+                <div class="text-end">
+                     <a href="#" class="btn btn-sm btn-danger btnDeleteAll">Xóa</a>
+                     <a href="#" class="btn btn-sm btn-success">Thanh toán</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("~/Views/views/footer.cshtml")
+</body>
+</html>
