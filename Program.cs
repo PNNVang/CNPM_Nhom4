@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Newtonsoft.Json;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton(x =>
@@ -18,6 +19,16 @@ builder.Services.AddSingleton(x =>
         builder.Configuration["PayPalOptions:Mode"]
     )
 );
+
+//Cấu hình session
+builder.Services.AddDistributedMemoryCache(); // Cấu hình bộ nhớ để lưu trữ Session
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian hết hạn của session
+    options.Cookie.HttpOnly = true; // Chỉ có thể truy cập từ máy chủ
+    options.Cookie.IsEssential = true; // Đánh dấu cookie là quan trọng đối với ứng dụng
+});
+
 // Cấu hình dịch vụ đăng nhập Google OAuth
 builder.Services.AddAuthentication(options =>
     {
@@ -93,6 +104,7 @@ var cloudinaryAccount = new Account(
 
 var cloudinary = new Cloudinary(cloudinaryAccount);
 builder.Services.AddSingleton(cloudinary);
+builder.Services.AddHttpContextAccessor();
 
 // Cấu hình các middleware cần thiết
 var app = builder.Build();
@@ -100,11 +112,17 @@ var app = builder.Build();
 // Thiết lập middleware
 app.UseExceptionHandler("/Error");
 app.UseRouting();
+app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+
+
+
 app.UseSession(); 
+
 // Cấu hình endpoints
 app.MapControllerRoute(
     name: "default",
@@ -120,5 +138,9 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.MapGet("/", () => "Hello World!");
-
+app.MapControllerRoute(
+    name: "ShoppingCart",
+    pattern: "cart",
+    defaults: new { controller = "ShoppingCart", action = "ShoppingCart", alias = "DefaultAlias" }
+    );
 app.Run();
