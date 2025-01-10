@@ -10,7 +10,7 @@ public class ProductImage
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Column("id")]
-    public int? Id { get; set; }
+    public int Id { get; set; }
     [Column("img_main")]
     public string? ImgMain { get; set; }
     [Column("img_1")]
@@ -24,4 +24,6 @@ public class ProductImage
     
     // Navigation Property for Product
     public Product Product { get; set; }
+
+
 }

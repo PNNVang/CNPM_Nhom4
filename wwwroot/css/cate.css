@@ -1,0 +1,69 @@
+.cate {
+    background-color: #f0f8ff;
+    padding: 20px;
+}
+
+.categories .container-fluid {
+    background-color: #ffffff;
+    /* Màu nền bên trong */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+    background-color: #FFFAF0;
+    /* Màu nền của vùng chứa hình ảnh và chữ */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+    .image-container:hover {
+        background-color: #FFFAF0;
+        /* Màu nền khi hover */
+    }
+
+    .image-container a {
+        text-decoration: none;
+        color: #333;
+        /* Màu chữ ban đầu */
+        transition: color 0.3s ease;
+    }
+
+        .image-container a:hover {
+            color: #007bff;
+            /* Màu chữ khi hover */
+        }
+
+.category-image {
+    width: 100%;
+    height: 115px;
+    border-radius: 8px;
+    /* Hình ảnh bo tròn */
+    transition: transform 0.3s ease;
+}
+
+    .category-image:hover {
+        transform: scale(1.05);
+        /* Tăng kích thước khi hover */
+    }
+
+.category-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    /* Làm cho chữ đậm hơn */
+    margin-top: 10px;
+    color: #555;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+    .category-name:hover {
+        color: #007bff;
+        /* Màu chữ khi hover */
+        font-weight: bolder;
+        /* Làm cho chữ đậm hơn khi hover */
+    }

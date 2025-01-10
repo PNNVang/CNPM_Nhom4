@@ -106,13 +106,22 @@ app.UseStaticFiles();
 
 
 
-app.UseSession(); 
+
+app.UseSession();
 
 // Cấu hình endpoints
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-app.MapRazorPages(); // Nếu bạn sử dụng Razor Pages
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+
+    endpoints.MapControllerRoute(
+        name: "category",
+        pattern: "Category/{action=Category}/{id?}",
+        defaults: new { controller = "Category" });
+});
+
 
 // Khởi động ứng dụng với dịch vụ DBContext
 using (var scope = app.Services.CreateScope())
@@ -128,4 +137,11 @@ app.MapControllerRoute(
     pattern: "cart",
     defaults: new { controller = "ShoppingCart", action = "ShoppingCart", alias = "DefaultAlias" }
     );
+app.MapControllerRoute(
+    name: "Checkout",
+    pattern: "checkout",
+    defaults: new { controller = "ShoppingCart", action = "Checkout", alias = "DefaultAlias" }
+    );
 app.Run();
+
+

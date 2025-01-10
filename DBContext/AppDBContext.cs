@@ -5,6 +5,10 @@ namespace Dot_Net_ECommerceWeb.DBContext;
 
 public class AppDBContext : DbContext
 {
+    public AppDBContext()
+    {
+    }
+
     public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
     {
     }
@@ -33,7 +37,7 @@ public class AppDBContext : DbContext
         // Product and ProductImage have a one-to-one relationship
         modelBuilder.Entity<Product>()
             .HasOne(p => p.ProductImage)
-            .WithOne(pi => pi.Product).HasForeignKey<ProductImage>(p => p.Id);
+            .WithOne(pi => pi.Product).HasForeignKey<ProductImage>(pi => pi.Id);
 
 
      

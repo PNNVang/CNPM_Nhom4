@@ -91,7 +91,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="wwwroot\" />
+      <None Include="wwwroot\css\cate.css" />
+      <None Include="wwwroot\css\change-pass.css" />
+      <None Include="wwwroot\css\contact.css" />
+      <None Include="wwwroot\css\forgotpassword.css" />
+      <None Include="wwwroot\css\profile.css" />
     </ItemGroup>
 
 </Project>
