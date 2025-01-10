@@ -143,4 +143,9 @@ app.MapControllerRoute(
     pattern: "cart",
     defaults: new { controller = "ShoppingCart", action = "ShoppingCart", alias = "DefaultAlias" }
     );
+app.MapControllerRoute(
+    name: "Checkout",
+    pattern: "checkout",
+    defaults: new { controller = "ShoppingCart", action = "Checkout", alias = "DefaultAlias" }
+    );
 app.Run();

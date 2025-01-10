@@ -12,17 +12,17 @@ public class Product
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Column("id")]
-    public int? Id { get; set; }
+    public int Id { get; set; }
 
     [Column("category_id")] public int? CategoryId { get; set; }
 
     [StringLength(50)]
     [Column("product_name")]
-    public string? ProductName { get; set; }
+    public string ProductName { get; set; }
 
-    [Column("price")] public float? Price { get; set; }
+    [Column("price")] public float Price { get; set; }
     [Column("status")] public string? Status { get; set; }
-    [Column("sale")] public int? Sale { get; set; } = 0; // Giá trị mặc định
+    [Column("sale")] public int Sale { get; set; } = 0; // Giá trị mặc định
 
     [Column("hot")] public bool? Hot { get; set; } // Sử dụng bool thay vì tinyint
 
