@@ -8,7 +8,7 @@ public class Order
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Column("id")]
-    public int? Id { get; set; }
+    public int Id { get; set; }
     [Column("created_at")]
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     [Column("updated_at")]

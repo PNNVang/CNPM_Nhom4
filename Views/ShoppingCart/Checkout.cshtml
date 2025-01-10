@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Thanh Toán";
+}
+@model IEnumerable<Dot_Net_ECommerceWeb.Model.ShoppingCartItem>
+@using Dot_Net_ECommerceWeb.Helper;
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    @Html.Partial("~/Views/views/header.cshtml")
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Thanh toán</h1>
+                <p>Bạn hãy kiểm tra lại thông tin đơn hàng</p>
+            </div>
+        </div>
+        <hr />
+        @if (ViewBag.CheckCart != null) 
+         {
+        <div class="row">
+            <div class="col-md-9">
+                <h3>Thông tin khách hàng</h3>
+                <div class="form-group">
+                    <label>Họ tên khách hàng</label>
+                    <input type="text" name="CustomerName" class="form-control" autocomplete="off" />
+                </div>
+                <div class="form-group">
+                    <label>Số điện thoại</label>
+                    <input type="text" name="Phone" class="form-control" autocomplete="off" />
+                </div>
+                <div class="form-group">
+                    <label>Địa chỉ</label>
+                    <input type="text" name="Address" class="form-control" autocomplete="off" />
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" name="Email" class="form-control" autocomplete="off" />
+                </div>
+
+                <div class="form-group">
+                    <label>Hình thức thanh toán</label>
+                    <select class="form-control" name="Payment">
+                        <option value="1" selected>OOD</option>
+                        <option value="2">Chuyển khoản</option>
+                    </select>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <button type="button" class="btn btn-success w-100">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                @await Html.PartialAsync("Partial_Item_ThanhToan")
+            </div>
+        </div>
+        }else{ 
+            <div> 
+                 Bạn chưa có sản phẩm nào. Vui lòng thêm sản phẩm vào giỏ hàng!!! 
+            </div> 
+         }
+    </div>
+    @Html.Partial("~/Views/views/footer.cshtml")
+</body>
+</html>
