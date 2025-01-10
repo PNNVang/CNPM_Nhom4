@@ -26,7 +26,7 @@
                     </div>
                 </td>
                 <td>@Common.FormatNumber(item.Price, 0)</td>
-                <td><input type="number" id="Quantity_@item.ProductId" value="@item.Quantity"/></td>
+                <td><input type="number" id="Quantity_@item.ProductId" value="@item.Quantity" /></td>
                 <th>@Common.FormatNumber(item.TotalPrice, 2)</th>
                 <td>
                     <a class="btn btn-sm btn-danger btnDelete" href="#" data-id="@item.ProductId">Xóa</a>
@@ -39,7 +39,7 @@
             <th class="text-center">@Common.FormatNumber(tongtien, 0)</th>
             <th></th>
         </tr>
-        
+
 
     }
     else

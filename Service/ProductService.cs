@@ -60,7 +60,7 @@ public class ProductService
             UpdatedAt = DateTime.Now,
             Sale = 0,
             ProductName = model.productName,
-            Price = (float?)model.price,
+            Price = (float)model.price,
             Status = model.Status,
             Description = model.Description,
             Information = GenerateProductInfo(model),
@@ -150,7 +150,7 @@ public class ProductService
             var product = _context.Products.FirstOrDefault(p => p.Id == model.id);
             if (product != null)
             {
-                product.Price = model.price;
+                product.Price = (float)model.price;
                 _context.Products.Update(product);
                 await _context.SaveChangesAsync();
             }
@@ -292,7 +292,7 @@ public class ProductService
             var product = _context.Products.FirstOrDefault(p => p.Id == model.id);
             if (product != null)
             {
-                product.Sale = model.sale;
+                product.Sale = (int)model.sale;
                 _context.Products.Update(product);
                 await _context.SaveChangesAsync();
                 

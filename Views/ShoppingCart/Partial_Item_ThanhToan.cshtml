@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Dot_Net_ECommerceWeb.Model.ShoppingCartItem>
+@using Dot_Net_ECommerceWeb.Helper;
+
+
+@if (Model != null && Model.Any())
+{
+    <h3>GIỎ HÀNG<span style="float:right;position:relative"><small id="cartItemCount">@Model.Count()</small></span></h3>
+    float tongtien = 0f;
+    <div style="border:1px solid #000000">
+        <table class="table">
+
+            @foreach (var item in Model)
+            {
+                tongtien += item.TotalPrice;
+                <tr>
+                    <td>@item.ProductName</td>
+                    <td>@Common.FormatNumber(item.TotalPrice, 2)</td>
+                </tr>
+            }
+            <tr>
+                <td>Tổng tiền</td>
+                <td>@Common.FormatNumber(tongtien, 2)</td>
+            </tr>
+        </table>
+    </div>
+}
+else
+{
+  
+}
