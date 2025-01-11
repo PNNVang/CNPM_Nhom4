@@ -146,7 +146,13 @@ using (var scope = app.Services.CreateScope())
     // Thực hiện các công việc khởi tạo dữ liệu ở đây nếu cần
 }
 
-app.MapGet("/", () => "Hello World!");
+// app.MapGet("/", () => "Hello World!");
+app.MapGet("/", async (HttpContext context) =>
+{
+    context.Response.Redirect("Account/login");
+    return Task.CompletedTask;
+});
+
 app.MapControllerRoute(
     name: "ShoppingCart",
     pattern: "cart",
