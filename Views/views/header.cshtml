@@ -67,33 +67,30 @@
                         href="index.cshtml">Trang chủ</a> 
                  </li>
                
-                                @*  <li class="nav-item">  *@
-                                @*     <a class="nav-link" aria-current="page" href="#">Trang sức</a> *@
-                                @* </li> *@
+                
                  <!-- dropdown --> 
-                @* <li class="nav-item dropdown"> *@
-                @*     <div class="d-flex align-items-center">  *@
-                @*          <a id="category-link" class="nav-link" href="#">Đá quý</a>  *@
-                @*          <a id="dropdown-toggle" class="nav-link dropdown-toggle" href="#" role="button"  *@
-                @*             data-bs-toggle="dropdown" aria-expanded="false"></a>  *@
-                @*      </div>  *@
-                @*      <ul class="dropdown-menu" id="gemstone-dropdown"> *@
-                @*         <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Ruby")">Ruby</a></li> *@
-                @*         <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Sapphire")">Sapphire</a></li> *@
-                @*         <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Ngọc%20lục%20bảo")">Ngọc lục bảo</a></li> *@
-                @*         <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Spinel")">Spinel</a></li> *@
-                @*         <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Tourmaline")">Tourmaline</a></li> *@
-                @*         <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Aquamarine")">Aquamarine</a></li> *@
-                @*         <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Peridot")">Peridot</a></li> *@
-                @*         <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Garnet")">Garnet</a></li> *@
-                @*         <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Zircon")">Zircon</a></li> *@
-                @*         <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Topaz")">Topaz</a></li> *@
-                @*         <li>  *@
-                @*              <hr class="dropdown-divider">  *@
-                @*          </li>  *@
-                @*          <li><a class="dropdown-item" href="#">Something else here</a></li>  *@
-                @*      </ul>  *@
-                @*  </li> *@
+                <li class="nav-item dropdown">
+                    <!-- Dropdown link -->
+                    <a id="category-link" class="nav-link dropdown-toggle" href="#" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">Đá quý</a>
+                    <!-- Dropdown menu -->
+                    <ul class="dropdown-menu" id="gemstone-dropdown">
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Ruby")">Ruby</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Sapphire")">Sapphire</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Ngọc%20lục%20bảo")">Ngọc lục bảo</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Spinel")">Spinel</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Tourmaline")">Tourmaline</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Aquamarine")">Aquamarine</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Peridot")">Peridot</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Garnet")">Garnet</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Zircon")">Zircon</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Topaz")">Topaz</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+
+
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page"
                        href="@Url.Action("SendMail", "Home")">Liên hệ</a>
@@ -182,5 +179,11 @@
              @*    } *@
              </ul> 
          </div> 
-     </div> 
+     </div>
+    <!-- Bootstrap JavaScript (đảm bảo phiên bản tương ứng với CSS) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="//cdn.datatables.net/2.0.2/js/dataTables.min.js"></script>
+
  </header> 

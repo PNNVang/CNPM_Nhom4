@@ -7,8 +7,9 @@ using Microsoft.EntityFrameworkCore;
 
 public class ProductService
 {
-    private readonly AppDBContext _context;
+    private AppDBContext _context { get; set; }
     private readonly Cloudinary _cloudinary;
+
 
     public ProductService(AppDBContext context, Cloudinary cloudinary)
     {
@@ -31,6 +32,22 @@ public class ProductService
                 Hot = p.Hot
             })
             .ToListAsync();
+    }
+
+    public async Task<List<Product>> GetProduct()
+    {
+        return await _context.Products
+            .Include(p => p.ProductImage)
+            .Where(p => p.StatusDeleted == "chưa xóa")
+            .ToListAsync();
+    }
+
+    public async Task<List<Product>> GetProductHot()
+    {
+        return await _context.Products
+       .Include(p => p.ProductImage)
+       .Where(p => p.StatusDeleted == "chưa xóa" && p.Hot == 1)
+       .ToListAsync();
     }
 
 
@@ -305,7 +322,7 @@ public class ProductService
             var product = _context.Products.FirstOrDefault(p => p.Id == model.id);
             if (product != null)
             {
-                product.Hot = model.hot;
+                //product.Hot = (bool)model.hot;
                 _context.Products.Update(product);
                 await _context.SaveChangesAsync();
             }
@@ -323,4 +340,38 @@ public class ProductService
         }
         return true;
     }
+
+    public async Task<List<Product>> GetProductsByCategoryId(int categoryId)
+    {   
+        try
+        {
+            // Truy vấn sản phẩm thuộc danh mục theo categoryId
+            var products = await _context.Products
+                .Include(p => p.ProductImage)
+                .Where(p => p.CategoryId == categoryId)  // Lọc sản phẩm theo CategoryId
+                .ToListAsync(); // Lấy danh sách sản phẩm
+
+            return products;
+        }
+        catch (Exception ex)
+        {
+            // Log lỗi hoặc xử lý thông báo lỗi
+            throw new InvalidOperationException("Error fetching products for category.", ex);
+        }
+    }
+
+    public async Task<Product> GetProductByIdAsync(int id)
+    {
+        return await _context.Products
+                         .Include(p => p.ProductImage)  // Bao gồm thông tin ProductImage
+                         .FirstOrDefaultAsync(p => p.Id == id);
+    }
+
+    public async Task<ProductImage> GetProductImageByIdAsync(int id)
+    {
+        return await _context.ProductImages
+                             .FirstOrDefaultAsync(pi => pi.Id == id);
+    }
+
+   
 }

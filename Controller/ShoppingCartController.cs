@@ -20,6 +20,17 @@ namespace Dot_Net_ECommerceWeb.Controller
            
             return View();
         }
+        public IActionResult Checkout()
+        {
+            ShoppingCart cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart");
+            if (cart != null)
+            {
+                ViewBag.CheckCart = cart;
+
+
+            }
+            return View();
+        }
         public IActionResult Partial_Item_Cart()
         {
             ShoppingCart cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart");
@@ -28,6 +39,16 @@ namespace Dot_Net_ECommerceWeb.Controller
                 return PartialView(cart.Items);
 
             }   
+            return PartialView();
+        }
+        public IActionResult Partial_Item_Checkout()
+        {
+            ShoppingCart cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart");
+            if (cart != null)
+            {
+                return PartialView(cart.Items);
+
+            }
             return PartialView();
         }
 
@@ -63,7 +84,7 @@ namespace Dot_Net_ECommerceWeb.Controller
                     Quantity = quantity
                 };
 
-                if (checkProduct.ProductImage != null && checkProduct.ProductImage.IsDefault)
+                if (checkProduct.ProductImage != null && checkProduct.ProductImage.ImgMain != null)
                 {
                     item.ProductImg = checkProduct.ProductImage.ImgMain;
                 }

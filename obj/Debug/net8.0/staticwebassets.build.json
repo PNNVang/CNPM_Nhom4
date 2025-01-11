@@ -1,11 +1,6614 @@
 {
   "Version": 1,
-  "Hash": "mzY4lh3cGte5MGCigzFsehRwz2WsLSvpaytxxzjwNQk=",
+  "Hash": "aCig12He89Xxgftbi9TR5EsRbIhtrkdvaEmS93pqL+Q=",
   "Source": "Dot_Net_ECommerceWeb",
   "BasePath": "_content/Dot_Net_ECommerceWeb",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Dot_Net_ECommerceWeb\\wwwroot",
+      "Source": "Dot_Net_ECommerceWeb",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\cate.css",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "css/cate#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6nqhtsqqvs",
+      "Integrity": "Iu4WYXah2VpGjA5I17TMOPqsTTGIG3qlr/gGsn+WVpE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\cate.css"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\change-pass.css",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "css/change-pass#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cc1udd9wuq",
+      "Integrity": "tIzNWQWPQt79PYCHpyH6av75zjklXj/fDKBzgekPqkE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\change-pass.css"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\contact.css",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "css/contact#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "huedn8mjl6",
+      "Integrity": "aUPz040+JaZrKzFjIqeMHAqR3wGSMlXAOri0LTs7oiQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\contact.css"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\forgotpassword.css",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "css/forgotpassword#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hx9e71lh1a",
+      "Integrity": "xcRfXxCOOUYiHHamp8bfOQy1u66gnUo1KBfJaOTnqfg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\forgotpassword.css"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\profile.css",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "css/profile#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xi70550a8y",
+      "Integrity": "Gf8zJjOrC2daQ5fTSZaekyJUdD6Y0OMdzgsNFAJqAhE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\profile.css"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\avatar.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/avatar#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s6s9dq7h99",
+      "Integrity": "DIR+k43bUoXNVnS4IalsZ+7wvFvB1zeU05lDcN8luhI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\avatar.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/banner/banner#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2jjicwddet",
+      "Integrity": "Xk8k3THz83kd6ADn6bDqNelfrRvDvdWsoBIwTJfm0uk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner\\banner.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner1.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/banner/banner1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8zw63u3qs8",
+      "Integrity": "jEijal5aij348VbzPbzE+Z/XdKDwaX0mkp0yOtIrHII=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner\\banner1.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner2.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/banner/banner2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mxyghsnujx",
+      "Integrity": "JlqZAAoWRu2RK6hd5m3eKJ/xCxssEzic7StuZi2AdME=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner\\banner2.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner-about.webp",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/banner/banner-about#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "66b6ck0ceh",
+      "Integrity": "8iXGaPqYXLSHNFENwU3TR2Vy4pvHAbXyAlWtSuGW0E4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner\\banner-about.webp"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\jewelry.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/banner/jewelry#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "50e342khgn",
+      "Integrity": "W0omah9PXnblYkUesDQT+oUOZG6+W7YqL3xMjqkOeh8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner\\jewelry.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\jewelry-2.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/banner/jewelry-2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ym851w7ru4",
+      "Integrity": "+gt6I+L+nd08cUmMG2hGy+slQ0rHqzjNqv5MKbpHlOg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner\\jewelry-2.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\jewelry-3.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/banner/jewelry-3#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1qj3vju8xg",
+      "Integrity": "mRHO2r65w8l2tJU5cHJvwfHKhFCy8Cy83hWFV5/q2Ng=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner\\jewelry-3.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\policy-1.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/banner/policy-1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jn5l8fqe5j",
+      "Integrity": "ISw0hGXOSx7vjiy1jnoZedQ558y7dyA8Rhtv22fMxBI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner\\policy-1.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\policy-2.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/banner/policy-2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "789xiz2vlq",
+      "Integrity": "CbWxon5as1HASeZ3vJidbPQrbaCrilpxQhXCa8j1Z/8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner\\policy-2.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\policy-3.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/banner/policy-3#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gkbb3etm94",
+      "Integrity": "UDrRsbZFwV1TN71O3W2vwvfk2ax2OOb0EBL0iERJ4j4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner\\policy-3.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\products-banner.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/banner/products-banner#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "syoryss91n",
+      "Integrity": "JAl4tuworD4Oh+2eRaUBZxVqbQvQY9nwfuEALTpXgFg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner\\products-banner.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\products-banner-1.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/banner/products-banner-1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6uc0yly99a",
+      "Integrity": "AokHbr+m7HSVJ/kcQ/Z8uOcm6NAfFggY2iDMCT2yFcs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner\\products-banner-1.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\products-banner-2.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/banner/products-banner-2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "svnkfws3tu",
+      "Integrity": "6CRZZqIXvOtupaOajeG7dBmjtZA7IANZAXCWVANktwk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner\\products-banner-2.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\TTN.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/banner/TTN#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ztm1bh8huv",
+      "Integrity": "KUdLva3f9c/OY1JDzN1Te0uAd8gggau4qZfn0cbO+ts=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner\\TTN.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\TTN-2.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/banner/TTN-2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4jfdd68kjg",
+      "Integrity": "4BTfVLxFz0R8hNzMY4O/WBILkybvkVQp8dM5QM7Vwyo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\banner\\TTN-2.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\aquamarine.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/category/aquamarine#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jbbvz5tvrx",
+      "Integrity": "8e2FTbpsDluYewBI7R64OjVu3sa4RytSFuyzmqhHVs4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\category\\aquamarine.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\enternal.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/category/enternal#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3gf31zgfsv",
+      "Integrity": "DcLwO7lONK2BCAVHMMEu5I+2zeL6wyEKa+OFMnveZwo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\category\\enternal.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\garnet.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/category/garnet#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4y0dx9r6qa",
+      "Integrity": "DPukc5wYoYQqQLkaJ+cWVCDrL8CB4w7M6YdsbNO6yWc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\category\\garnet.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\GREEN-TOURMALINE.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/category/GREEN-TOURMALINE#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3q2x2hhtka",
+      "Integrity": "9f0mn1Ln4ra+2vVrT34Vfk4WKj/ohY3GbHbdAqqsWns=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\category\\GREEN-TOURMALINE.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\Peridot.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/category/Peridot#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j27ivx24vf",
+      "Integrity": "S7eY78VfwGZlsvh/qIGL/v/Dx3bzHS4+wkh8xYMTp/A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\category\\Peridot.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\ruby.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/category/ruby#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ssgu462dcd",
+      "Integrity": "dJOM0kVybDSv6P9Izo1JFju1iwMpemo3IhHmTS11PCE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\category\\ruby.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\sapphire.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/category/sapphire#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zjof91g9k4",
+      "Integrity": "D7cBD0KIsv5gsFOilkXDtPQgYj1tkYliFUsCf24Gh24=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\category\\sapphire.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\spinel.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/category/spinel#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7qsvbjgtpn",
+      "Integrity": "0QWiR/4wHcD7pa/GRYLa4V/YyahcN0k4dlfKX1Cgvvs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\category\\spinel.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\topaz-1.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/category/topaz-1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zauty2jcfl",
+      "Integrity": "qxhud2FqyH5F2mrIZt7EQEejlnc4Z7CPedKcD6/S7IU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\category\\topaz-1.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\zircon.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/category/zircon#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rcd84mgtd6",
+      "Integrity": "ZS7W+cDFC8eUYU4Qc3qaxSSeGyVm+2lgPzmgnsc80xw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\category\\zircon.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\dai-hoc-long-lam.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/dai-hoc-long-lam#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s9iv3abxzo",
+      "Integrity": "QKm8FpWWPfQN6Lw9IXKUAPqCTHCkziT+53WEc+YlOEQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\dai-hoc-long-lam.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\facebook_cover_photo_1.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/facebook_cover_photo_1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nj58jcs6d3",
+      "Integrity": "7U5/+i8t60+wP6lfDftvQJp2LjG1Hm4SctosrNs2iV0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\facebook_cover_photo_1.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\facebook_cover_photo_2.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/facebook_cover_photo_2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "q39gwbla64",
+      "Integrity": "6nHaf65oD2v4SNJJb39nAbFHc9Z4PUx0OP9Ri+WHZGA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\facebook_cover_photo_2.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\facebook_profile_image.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/facebook_profile_image#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u1bwwscez3",
+      "Integrity": "DrDfTXQ9V2faWQhoShmaXtZDdfhtUshbZngzfYBgmmA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\facebook_profile_image.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\favicon.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/favicon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "l31ul93f6s",
+      "Integrity": "EUp4YbnxJwdm1OTN0asEswYpK3O4wEsy0xHuXqoVGDg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\favicon.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\diamond\\Anh-dai-dien-Kim-Cuong-tu-nhien.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/gemstone/diamond/Anh-dai-dien-Kim-Cuong-tu-nhien#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dsw58fvq8y",
+      "Integrity": "w7bJX2WcZNyd/9sHMfdsvJFoMPPSqxUmsc3E6sn525o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\gemstone\\diamond\\Anh-dai-dien-Kim-Cuong-tu-nhien.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\jewels\\Nhan-nam-Kim-Cuong-Vang-trang-Au18k-MA-K-6000000.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/gemstone/jewels/Nhan-nam-Kim-Cuong-Vang-trang-Au18k-MA-K-6000000#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w6map9iubm",
+      "Integrity": "2KsFatSx9jldT07Q+cIhcPcf+B7GSAAgv7qpeohYIEA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\gemstone\\jewels\\Nhan-nam-Kim-Cuong-Vang-trang-Au18k-MA-K-6000000.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\ruby\\Vien-Ruby-facet-Luc-Yen-063ct-IRRF152-231006300000.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/gemstone/ruby/Vien-Ruby-facet-Luc-Yen-063ct-IRRF152-231006300000#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xsw90rfkt4",
+      "Integrity": "r7U968H8RsSTdZaB3dk3E7FDWttbCGEb4nQsoKNnrxQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\gemstone\\ruby\\Vien-Ruby-facet-Luc-Yen-063ct-IRRF152-231006300000.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\spinel\\Vien-Spinel-sac-cobalt-sieu-VIP-175ct-IRSI65-231117500000.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/gemstone/spinel/Vien-Spinel-sac-cobalt-sieu-VIP-175ct-IRSI65-231117500000#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3d8m7im3kk",
+      "Integrity": "1+JsiMOVSVxC+cPXIdimE2I0+mSDH+DEXDKDJ5e8Gz4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\gemstone\\spinel\\Vien-Spinel-sac-cobalt-sieu-VIP-175ct-IRSI65-231117500000.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\topaz\\Vien-Topaz-tu-nhien-trang-tinh-khiet-283ct-IRTP56-23928300000-1.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/gemstone/topaz/Vien-Topaz-tu-nhien-trang-tinh-khiet-283ct-IRTP56-23928300000-1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4xmsq79lmi",
+      "Integrity": "CAkaK7b/9JNEIT9Cinv/4RAx3L8mFa6xVY1rYOyTKjA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\gemstone\\topaz\\Vien-Topaz-tu-nhien-trang-tinh-khiet-283ct-IRTP56-23928300000-1.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\HatchfulExport-All.zip",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/HatchfulExport-All#[.{fingerprint}]?.zip",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bbvsazv9wc",
+      "Integrity": "h3OcEv8qTFYE5Ysv0PQ7yPMGZCH4nvMWFmjH9PE2BvM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\HatchfulExport-All.zip"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\instagram_profile_image.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/instagram_profile_image#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j5nfhnwm2f",
+      "Integrity": "CfACkPpEQ+nipsiUAp4zaupDF72vxvjelhIg62GdP/8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\instagram_profile_image.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\kim_cuong_hong.webp",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/kim_cuong_hong#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kfkjxiczlm",
+      "Integrity": "MLffIj22wCFgIPOt2faqGc58ZzRQuraAWamtbuQp06A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\kim_cuong_hong.webp"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\linkedin_banner_image_1.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/linkedin_banner_image_1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w7ss5pxi7s",
+      "Integrity": "3DZ3703OCxYLlo/xEKXc6ib43KeWQanl6Wpr8P94P3c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\linkedin_banner_image_1.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\linkedin_banner_image_2.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/linkedin_banner_image_2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "oenvdzzd3l",
+      "Integrity": "wG6IvIiZZoG7Dtc6rleamy6rXLGvH5/h7sWzaEYN37c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\linkedin_banner_image_2.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\linkedin_profile_image.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/linkedin_profile_image#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j5nfhnwm2f",
+      "Integrity": "CfACkPpEQ+nipsiUAp4zaupDF72vxvjelhIg62GdP/8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\linkedin_profile_image.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\logo.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/logo#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tcgw18vbtb",
+      "Integrity": "zYsuhaeXGGwcsKXqYCGlPvidqZNQHke+45YFXGe522o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\logo.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\logo.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pm8bmwblca",
+      "Integrity": "cUZFgaUPnzdaZ/nJYQ1gdkqXrPdukUNe0JCW4IH28W4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\logo.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\logo_transparent.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/logo_transparent#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hxb0siy2i8",
+      "Integrity": "m/9zSOoahrSCRHG6wiow4KM2UVX6jcEG9j/ixgIF7JQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\logo_transparent.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\pinterest_board_photo.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/pinterest_board_photo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "491v3e2b82",
+      "Integrity": "GNNiN9+L2D0Dpu/MqLkylPN10rtsuq9118VCyKnTZqs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\pinterest_board_photo.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\pinterest_profile_image.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/pinterest_profile_image#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qxk6vjafwx",
+      "Integrity": "fro5XoNgRUV9Qf5TYw71ThatHCPLIs16r6bDJdL+d4w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\pinterest_profile_image.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\qr.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/qr#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "axz7h0ksxp",
+      "Integrity": "nqL6oQCSMF1sBPpAiGnM9t5CrDceKruiLpa3NGsKGqM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\qr.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-2.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/spinel-tim-anh-kim-2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7wp7mqa6n8",
+      "Integrity": "1xxxlT3kiJYlKEsMIQZYqwUA/uOvHYYOXV0UHh/PS/g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\spinel-tim-anh-kim-2.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-3.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/spinel-tim-anh-kim-3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zi7p40wia0",
+      "Integrity": "W/Y0/a+CHnsJ9agvvR/trafvyBCcvR/4sDBxf38fMQk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\spinel-tim-anh-kim-3.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-4.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/spinel-tim-anh-kim-4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fc61b2uxqp",
+      "Integrity": "oda3G5LcgXH+OZSHm/hfqe+O3SE2MMQmp55JsaZ/oG0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\spinel-tim-anh-kim-4.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-5.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/spinel-tim-anh-kim-5#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ooso63h1v6",
+      "Integrity": "yFav1sr6HVvX1bw6QGxNFHrESobzjkX59tmupgWd3LI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\spinel-tim-anh-kim-5.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\SPINEL-TIM-ANH-KIM-768x768.jpg",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/SPINEL-TIM-ANH-KIM-768x768#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uos22287tq",
+      "Integrity": "vsfbZqGwyt0/b7QQ10ZCISHFxif8N/LYzOZ4WF9wW1Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\SPINEL-TIM-ANH-KIM-768x768.jpg"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\twitter_header_photo_1.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/twitter_header_photo_1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i0digy2i07",
+      "Integrity": "YoqbPJrEPAEmJqIi9yHL7pnLPAsl1trk4UzLzJh0gUs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\twitter_header_photo_1.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\twitter_header_photo_2.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/twitter_header_photo_2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "spcnzjaymt",
+      "Integrity": "4BBPwPdQlZbGX/gdtbp1xwEacpi6mkRGcf2MVo8PTmM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\twitter_header_photo_2.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\twitter_profile_image.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/twitter_profile_image#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "491v3e2b82",
+      "Integrity": "GNNiN9+L2D0Dpu/MqLkylPN10rtsuq9118VCyKnTZqs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\twitter_profile_image.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\youtube_profile_image.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/youtube_profile_image#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "btyngf9wxd",
+      "Integrity": "AbRAi4QXni6HsBKzqcfwb1VBUWqJEQD8cTb18oImcw8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\youtube_profile_image.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\zalo-icon.png",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "Img/zalo-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4j52osqxdn",
+      "Integrity": "gHAZAptreh5k64/zqe64TMqWl1KEEV+usirS4ulHXMY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\zalo-icon.png"
+    },
+    {
+      "Identity": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\js\\jsShoppingCart.js",
+      "SourceId": "Dot_Net_ECommerceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\",
+      "BasePath": "_content/Dot_Net_ECommerceWeb",
+      "RelativePath": "js/jsShoppingCart#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7j8fb0x9od",
+      "Integrity": "8xOSf+mjuoxz6mFyBzJ/SJClTicjh3S6k0Y/4TqV0ZU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\jsShoppingCart.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/cate.6nqhtsqqvs.css",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\cate.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1614"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Iu4WYXah2VpGjA5I17TMOPqsTTGIG3qlr/gGsn+WVpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 09 Jan 2025 16:21:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6nqhtsqqvs"
+        },
+        {
+          "Name": "label",
+          "Value": "css/cate.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Iu4WYXah2VpGjA5I17TMOPqsTTGIG3qlr/gGsn+WVpE="
+        }
+      ]
+    },
+    {
+      "Route": "css/cate.css",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\cate.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1614"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Iu4WYXah2VpGjA5I17TMOPqsTTGIG3qlr/gGsn+WVpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 09 Jan 2025 16:21:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Iu4WYXah2VpGjA5I17TMOPqsTTGIG3qlr/gGsn+WVpE="
+        }
+      ]
+    },
+    {
+      "Route": "css/change-pass.cc1udd9wuq.css",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\change-pass.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1359"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tIzNWQWPQt79PYCHpyH6av75zjklXj/fDKBzgekPqkE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cc1udd9wuq"
+        },
+        {
+          "Name": "label",
+          "Value": "css/change-pass.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tIzNWQWPQt79PYCHpyH6av75zjklXj/fDKBzgekPqkE="
+        }
+      ]
+    },
+    {
+      "Route": "css/change-pass.css",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\change-pass.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1359"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tIzNWQWPQt79PYCHpyH6av75zjklXj/fDKBzgekPqkE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tIzNWQWPQt79PYCHpyH6av75zjklXj/fDKBzgekPqkE="
+        }
+      ]
+    },
+    {
+      "Route": "css/contact.css",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\contact.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3306"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aUPz040+JaZrKzFjIqeMHAqR3wGSMlXAOri0LTs7oiQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aUPz040+JaZrKzFjIqeMHAqR3wGSMlXAOri0LTs7oiQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/contact.huedn8mjl6.css",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\contact.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3306"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aUPz040+JaZrKzFjIqeMHAqR3wGSMlXAOri0LTs7oiQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "huedn8mjl6"
+        },
+        {
+          "Name": "label",
+          "Value": "css/contact.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aUPz040+JaZrKzFjIqeMHAqR3wGSMlXAOri0LTs7oiQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/forgotpassword.css",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\forgotpassword.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "775"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xcRfXxCOOUYiHHamp8bfOQy1u66gnUo1KBfJaOTnqfg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xcRfXxCOOUYiHHamp8bfOQy1u66gnUo1KBfJaOTnqfg="
+        }
+      ]
+    },
+    {
+      "Route": "css/forgotpassword.hx9e71lh1a.css",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\forgotpassword.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "775"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xcRfXxCOOUYiHHamp8bfOQy1u66gnUo1KBfJaOTnqfg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hx9e71lh1a"
+        },
+        {
+          "Name": "label",
+          "Value": "css/forgotpassword.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xcRfXxCOOUYiHHamp8bfOQy1u66gnUo1KBfJaOTnqfg="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile.css",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\profile.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "376"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Gf8zJjOrC2daQ5fTSZaekyJUdD6Y0OMdzgsNFAJqAhE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Gf8zJjOrC2daQ5fTSZaekyJUdD6Y0OMdzgsNFAJqAhE="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile.xi70550a8y.css",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\profile.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "376"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Gf8zJjOrC2daQ5fTSZaekyJUdD6Y0OMdzgsNFAJqAhE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xi70550a8y"
+        },
+        {
+          "Name": "label",
+          "Value": "css/profile.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Gf8zJjOrC2daQ5fTSZaekyJUdD6Y0OMdzgsNFAJqAhE="
+        }
+      ]
+    },
+    {
+      "Route": "Img/avatar.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\avatar.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2712"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DIR+k43bUoXNVnS4IalsZ+7wvFvB1zeU05lDcN8luhI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DIR+k43bUoXNVnS4IalsZ+7wvFvB1zeU05lDcN8luhI="
+        }
+      ]
+    },
+    {
+      "Route": "Img/avatar.s6s9dq7h99.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\avatar.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2712"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DIR+k43bUoXNVnS4IalsZ+7wvFvB1zeU05lDcN8luhI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s6s9dq7h99"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/avatar.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DIR+k43bUoXNVnS4IalsZ+7wvFvB1zeU05lDcN8luhI="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/banner.2jjicwddet.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "859579"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xk8k3THz83kd6ADn6bDqNelfrRvDvdWsoBIwTJfm0uk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2jjicwddet"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/banner/banner.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xk8k3THz83kd6ADn6bDqNelfrRvDvdWsoBIwTJfm0uk="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/banner.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "859579"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xk8k3THz83kd6ADn6bDqNelfrRvDvdWsoBIwTJfm0uk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xk8k3THz83kd6ADn6bDqNelfrRvDvdWsoBIwTJfm0uk="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/banner1.8zw63u3qs8.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "622764"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jEijal5aij348VbzPbzE+Z/XdKDwaX0mkp0yOtIrHII=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8zw63u3qs8"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/banner/banner1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jEijal5aij348VbzPbzE+Z/XdKDwaX0mkp0yOtIrHII="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/banner1.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "622764"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jEijal5aij348VbzPbzE+Z/XdKDwaX0mkp0yOtIrHII=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jEijal5aij348VbzPbzE+Z/XdKDwaX0mkp0yOtIrHII="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/banner2.mxyghsnujx.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1379682"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JlqZAAoWRu2RK6hd5m3eKJ/xCxssEzic7StuZi2AdME=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mxyghsnujx"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/banner/banner2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JlqZAAoWRu2RK6hd5m3eKJ/xCxssEzic7StuZi2AdME="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/banner2.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1379682"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JlqZAAoWRu2RK6hd5m3eKJ/xCxssEzic7StuZi2AdME=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JlqZAAoWRu2RK6hd5m3eKJ/xCxssEzic7StuZi2AdME="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/banner-about.66b6ck0ceh.webp",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner-about.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "76390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8iXGaPqYXLSHNFENwU3TR2Vy4pvHAbXyAlWtSuGW0E4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "66b6ck0ceh"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/banner/banner-about.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8iXGaPqYXLSHNFENwU3TR2Vy4pvHAbXyAlWtSuGW0E4="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/banner-about.webp",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner-about.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "76390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8iXGaPqYXLSHNFENwU3TR2Vy4pvHAbXyAlWtSuGW0E4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8iXGaPqYXLSHNFENwU3TR2Vy4pvHAbXyAlWtSuGW0E4="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/jewelry.50e342khgn.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\jewelry.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1421400"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W0omah9PXnblYkUesDQT+oUOZG6+W7YqL3xMjqkOeh8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "50e342khgn"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/banner/jewelry.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-W0omah9PXnblYkUesDQT+oUOZG6+W7YqL3xMjqkOeh8="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/jewelry.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\jewelry.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1421400"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W0omah9PXnblYkUesDQT+oUOZG6+W7YqL3xMjqkOeh8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-W0omah9PXnblYkUesDQT+oUOZG6+W7YqL3xMjqkOeh8="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/jewelry-2.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\jewelry-2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1278645"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+gt6I+L+nd08cUmMG2hGy+slQ0rHqzjNqv5MKbpHlOg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+gt6I+L+nd08cUmMG2hGy+slQ0rHqzjNqv5MKbpHlOg="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/jewelry-2.ym851w7ru4.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\jewelry-2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1278645"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+gt6I+L+nd08cUmMG2hGy+slQ0rHqzjNqv5MKbpHlOg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ym851w7ru4"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/banner/jewelry-2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+gt6I+L+nd08cUmMG2hGy+slQ0rHqzjNqv5MKbpHlOg="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/jewelry-3.1qj3vju8xg.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\jewelry-3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "959611"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mRHO2r65w8l2tJU5cHJvwfHKhFCy8Cy83hWFV5/q2Ng=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1qj3vju8xg"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/banner/jewelry-3.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mRHO2r65w8l2tJU5cHJvwfHKhFCy8Cy83hWFV5/q2Ng="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/jewelry-3.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\jewelry-3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "959611"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mRHO2r65w8l2tJU5cHJvwfHKhFCy8Cy83hWFV5/q2Ng=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mRHO2r65w8l2tJU5cHJvwfHKhFCy8Cy83hWFV5/q2Ng="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/policy-1.jn5l8fqe5j.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\policy-1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "119080"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ISw0hGXOSx7vjiy1jnoZedQ558y7dyA8Rhtv22fMxBI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jn5l8fqe5j"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/banner/policy-1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ISw0hGXOSx7vjiy1jnoZedQ558y7dyA8Rhtv22fMxBI="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/policy-1.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\policy-1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "119080"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ISw0hGXOSx7vjiy1jnoZedQ558y7dyA8Rhtv22fMxBI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ISw0hGXOSx7vjiy1jnoZedQ558y7dyA8Rhtv22fMxBI="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/policy-2.789xiz2vlq.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\policy-2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "204725"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CbWxon5as1HASeZ3vJidbPQrbaCrilpxQhXCa8j1Z/8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "789xiz2vlq"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/banner/policy-2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CbWxon5as1HASeZ3vJidbPQrbaCrilpxQhXCa8j1Z/8="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/policy-2.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\policy-2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "204725"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CbWxon5as1HASeZ3vJidbPQrbaCrilpxQhXCa8j1Z/8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CbWxon5as1HASeZ3vJidbPQrbaCrilpxQhXCa8j1Z/8="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/policy-3.gkbb3etm94.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\policy-3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UDrRsbZFwV1TN71O3W2vwvfk2ax2OOb0EBL0iERJ4j4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gkbb3etm94"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/banner/policy-3.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UDrRsbZFwV1TN71O3W2vwvfk2ax2OOb0EBL0iERJ4j4="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/policy-3.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\policy-3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UDrRsbZFwV1TN71O3W2vwvfk2ax2OOb0EBL0iERJ4j4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UDrRsbZFwV1TN71O3W2vwvfk2ax2OOb0EBL0iERJ4j4="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/products-banner.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\products-banner.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "415075"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JAl4tuworD4Oh+2eRaUBZxVqbQvQY9nwfuEALTpXgFg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JAl4tuworD4Oh+2eRaUBZxVqbQvQY9nwfuEALTpXgFg="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/products-banner.syoryss91n.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\products-banner.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "415075"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JAl4tuworD4Oh+2eRaUBZxVqbQvQY9nwfuEALTpXgFg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "syoryss91n"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/banner/products-banner.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JAl4tuworD4Oh+2eRaUBZxVqbQvQY9nwfuEALTpXgFg="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/products-banner-1.6uc0yly99a.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\products-banner-1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "555908"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AokHbr+m7HSVJ/kcQ/Z8uOcm6NAfFggY2iDMCT2yFcs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6uc0yly99a"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/banner/products-banner-1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AokHbr+m7HSVJ/kcQ/Z8uOcm6NAfFggY2iDMCT2yFcs="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/products-banner-1.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\products-banner-1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "555908"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AokHbr+m7HSVJ/kcQ/Z8uOcm6NAfFggY2iDMCT2yFcs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AokHbr+m7HSVJ/kcQ/Z8uOcm6NAfFggY2iDMCT2yFcs="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/products-banner-2.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\products-banner-2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "353253"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6CRZZqIXvOtupaOajeG7dBmjtZA7IANZAXCWVANktwk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6CRZZqIXvOtupaOajeG7dBmjtZA7IANZAXCWVANktwk="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/products-banner-2.svnkfws3tu.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\products-banner-2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "353253"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6CRZZqIXvOtupaOajeG7dBmjtZA7IANZAXCWVANktwk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "svnkfws3tu"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/banner/products-banner-2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6CRZZqIXvOtupaOajeG7dBmjtZA7IANZAXCWVANktwk="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/TTN.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\TTN.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "113046"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KUdLva3f9c/OY1JDzN1Te0uAd8gggau4qZfn0cbO+ts=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KUdLva3f9c/OY1JDzN1Te0uAd8gggau4qZfn0cbO+ts="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/TTN.ztm1bh8huv.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\TTN.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "113046"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KUdLva3f9c/OY1JDzN1Te0uAd8gggau4qZfn0cbO+ts=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ztm1bh8huv"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/banner/TTN.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KUdLva3f9c/OY1JDzN1Te0uAd8gggau4qZfn0cbO+ts="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/TTN-2.4jfdd68kjg.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\TTN-2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86750"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4BTfVLxFz0R8hNzMY4O/WBILkybvkVQp8dM5QM7Vwyo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4jfdd68kjg"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/banner/TTN-2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4BTfVLxFz0R8hNzMY4O/WBILkybvkVQp8dM5QM7Vwyo="
+        }
+      ]
+    },
+    {
+      "Route": "Img/banner/TTN-2.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\TTN-2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86750"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4BTfVLxFz0R8hNzMY4O/WBILkybvkVQp8dM5QM7Vwyo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4BTfVLxFz0R8hNzMY4O/WBILkybvkVQp8dM5QM7Vwyo="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/aquamarine.jbbvz5tvrx.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\aquamarine.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23384"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8e2FTbpsDluYewBI7R64OjVu3sa4RytSFuyzmqhHVs4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jbbvz5tvrx"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/category/aquamarine.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8e2FTbpsDluYewBI7R64OjVu3sa4RytSFuyzmqhHVs4="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/aquamarine.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\aquamarine.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23384"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8e2FTbpsDluYewBI7R64OjVu3sa4RytSFuyzmqhHVs4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8e2FTbpsDluYewBI7R64OjVu3sa4RytSFuyzmqhHVs4="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/enternal.3gf31zgfsv.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\enternal.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23655"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DcLwO7lONK2BCAVHMMEu5I+2zeL6wyEKa+OFMnveZwo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3gf31zgfsv"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/category/enternal.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DcLwO7lONK2BCAVHMMEu5I+2zeL6wyEKa+OFMnveZwo="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/enternal.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\enternal.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23655"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DcLwO7lONK2BCAVHMMEu5I+2zeL6wyEKa+OFMnveZwo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DcLwO7lONK2BCAVHMMEu5I+2zeL6wyEKa+OFMnveZwo="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/garnet.4y0dx9r6qa.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\garnet.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30934"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DPukc5wYoYQqQLkaJ+cWVCDrL8CB4w7M6YdsbNO6yWc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4y0dx9r6qa"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/category/garnet.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DPukc5wYoYQqQLkaJ+cWVCDrL8CB4w7M6YdsbNO6yWc="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/garnet.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\garnet.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30934"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DPukc5wYoYQqQLkaJ+cWVCDrL8CB4w7M6YdsbNO6yWc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DPukc5wYoYQqQLkaJ+cWVCDrL8CB4w7M6YdsbNO6yWc="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/GREEN-TOURMALINE.3q2x2hhtka.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\GREEN-TOURMALINE.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29087"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9f0mn1Ln4ra+2vVrT34Vfk4WKj/ohY3GbHbdAqqsWns=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3q2x2hhtka"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/category/GREEN-TOURMALINE.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9f0mn1Ln4ra+2vVrT34Vfk4WKj/ohY3GbHbdAqqsWns="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/GREEN-TOURMALINE.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\GREEN-TOURMALINE.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29087"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9f0mn1Ln4ra+2vVrT34Vfk4WKj/ohY3GbHbdAqqsWns=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9f0mn1Ln4ra+2vVrT34Vfk4WKj/ohY3GbHbdAqqsWns="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/Peridot.j27ivx24vf.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\Peridot.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37061"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"S7eY78VfwGZlsvh/qIGL/v/Dx3bzHS4+wkh8xYMTp/A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j27ivx24vf"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/category/Peridot.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-S7eY78VfwGZlsvh/qIGL/v/Dx3bzHS4+wkh8xYMTp/A="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/Peridot.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\Peridot.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37061"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"S7eY78VfwGZlsvh/qIGL/v/Dx3bzHS4+wkh8xYMTp/A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-S7eY78VfwGZlsvh/qIGL/v/Dx3bzHS4+wkh8xYMTp/A="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/ruby.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\ruby.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16162"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dJOM0kVybDSv6P9Izo1JFju1iwMpemo3IhHmTS11PCE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dJOM0kVybDSv6P9Izo1JFju1iwMpemo3IhHmTS11PCE="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/ruby.ssgu462dcd.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\ruby.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16162"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dJOM0kVybDSv6P9Izo1JFju1iwMpemo3IhHmTS11PCE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ssgu462dcd"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/category/ruby.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-dJOM0kVybDSv6P9Izo1JFju1iwMpemo3IhHmTS11PCE="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/sapphire.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\sapphire.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26207"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7cBD0KIsv5gsFOilkXDtPQgYj1tkYliFUsCf24Gh24=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7cBD0KIsv5gsFOilkXDtPQgYj1tkYliFUsCf24Gh24="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/sapphire.zjof91g9k4.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\sapphire.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26207"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7cBD0KIsv5gsFOilkXDtPQgYj1tkYliFUsCf24Gh24=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zjof91g9k4"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/category/sapphire.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7cBD0KIsv5gsFOilkXDtPQgYj1tkYliFUsCf24Gh24="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/spinel.7qsvbjgtpn.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\spinel.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28881"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0QWiR/4wHcD7pa/GRYLa4V/YyahcN0k4dlfKX1Cgvvs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7qsvbjgtpn"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/category/spinel.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0QWiR/4wHcD7pa/GRYLa4V/YyahcN0k4dlfKX1Cgvvs="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/spinel.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\spinel.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28881"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0QWiR/4wHcD7pa/GRYLa4V/YyahcN0k4dlfKX1Cgvvs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0QWiR/4wHcD7pa/GRYLa4V/YyahcN0k4dlfKX1Cgvvs="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/topaz-1.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\topaz-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22290"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qxhud2FqyH5F2mrIZt7EQEejlnc4Z7CPedKcD6/S7IU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qxhud2FqyH5F2mrIZt7EQEejlnc4Z7CPedKcD6/S7IU="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/topaz-1.zauty2jcfl.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\topaz-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22290"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qxhud2FqyH5F2mrIZt7EQEejlnc4Z7CPedKcD6/S7IU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zauty2jcfl"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/category/topaz-1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qxhud2FqyH5F2mrIZt7EQEejlnc4Z7CPedKcD6/S7IU="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/zircon.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\zircon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33810"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZS7W+cDFC8eUYU4Qc3qaxSSeGyVm+2lgPzmgnsc80xw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZS7W+cDFC8eUYU4Qc3qaxSSeGyVm+2lgPzmgnsc80xw="
+        }
+      ]
+    },
+    {
+      "Route": "Img/category/zircon.rcd84mgtd6.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\zircon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33810"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZS7W+cDFC8eUYU4Qc3qaxSSeGyVm+2lgPzmgnsc80xw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rcd84mgtd6"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/category/zircon.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZS7W+cDFC8eUYU4Qc3qaxSSeGyVm+2lgPzmgnsc80xw="
+        }
+      ]
+    },
+    {
+      "Route": "Img/dai-hoc-long-lam.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\dai-hoc-long-lam.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "444729"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QKm8FpWWPfQN6Lw9IXKUAPqCTHCkziT+53WEc+YlOEQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QKm8FpWWPfQN6Lw9IXKUAPqCTHCkziT+53WEc+YlOEQ="
+        }
+      ]
+    },
+    {
+      "Route": "Img/dai-hoc-long-lam.s9iv3abxzo.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\dai-hoc-long-lam.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "444729"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QKm8FpWWPfQN6Lw9IXKUAPqCTHCkziT+53WEc+YlOEQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s9iv3abxzo"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/dai-hoc-long-lam.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QKm8FpWWPfQN6Lw9IXKUAPqCTHCkziT+53WEc+YlOEQ="
+        }
+      ]
+    },
+    {
+      "Route": "Img/facebook_cover_photo_1.nj58jcs6d3.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\facebook_cover_photo_1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7978"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7U5/+i8t60+wP6lfDftvQJp2LjG1Hm4SctosrNs2iV0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nj58jcs6d3"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/facebook_cover_photo_1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7U5/+i8t60+wP6lfDftvQJp2LjG1Hm4SctosrNs2iV0="
+        }
+      ]
+    },
+    {
+      "Route": "Img/facebook_cover_photo_1.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\facebook_cover_photo_1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7978"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7U5/+i8t60+wP6lfDftvQJp2LjG1Hm4SctosrNs2iV0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7U5/+i8t60+wP6lfDftvQJp2LjG1Hm4SctosrNs2iV0="
+        }
+      ]
+    },
+    {
+      "Route": "Img/facebook_cover_photo_2.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\facebook_cover_photo_2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5453"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6nHaf65oD2v4SNJJb39nAbFHc9Z4PUx0OP9Ri+WHZGA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6nHaf65oD2v4SNJJb39nAbFHc9Z4PUx0OP9Ri+WHZGA="
+        }
+      ]
+    },
+    {
+      "Route": "Img/facebook_cover_photo_2.q39gwbla64.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\facebook_cover_photo_2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5453"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6nHaf65oD2v4SNJJb39nAbFHc9Z4PUx0OP9Ri+WHZGA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "q39gwbla64"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/facebook_cover_photo_2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6nHaf65oD2v4SNJJb39nAbFHc9Z4PUx0OP9Ri+WHZGA="
+        }
+      ]
+    },
+    {
+      "Route": "Img/facebook_profile_image.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\facebook_profile_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10710"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DrDfTXQ9V2faWQhoShmaXtZDdfhtUshbZngzfYBgmmA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DrDfTXQ9V2faWQhoShmaXtZDdfhtUshbZngzfYBgmmA="
+        }
+      ]
+    },
+    {
+      "Route": "Img/facebook_profile_image.u1bwwscez3.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\facebook_profile_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10710"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DrDfTXQ9V2faWQhoShmaXtZDdfhtUshbZngzfYBgmmA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u1bwwscez3"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/facebook_profile_image.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DrDfTXQ9V2faWQhoShmaXtZDdfhtUshbZngzfYBgmmA="
+        }
+      ]
+    },
+    {
+      "Route": "Img/favicon.l31ul93f6s.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "237"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EUp4YbnxJwdm1OTN0asEswYpK3O4wEsy0xHuXqoVGDg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l31ul93f6s"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EUp4YbnxJwdm1OTN0asEswYpK3O4wEsy0xHuXqoVGDg="
+        }
+      ]
+    },
+    {
+      "Route": "Img/favicon.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "237"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EUp4YbnxJwdm1OTN0asEswYpK3O4wEsy0xHuXqoVGDg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EUp4YbnxJwdm1OTN0asEswYpK3O4wEsy0xHuXqoVGDg="
+        }
+      ]
+    },
+    {
+      "Route": "Img/gemstone/diamond/Anh-dai-dien-Kim-Cuong-tu-nhien.dsw58fvq8y.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\diamond\\Anh-dai-dien-Kim-Cuong-tu-nhien.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "116054"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w7bJX2WcZNyd/9sHMfdsvJFoMPPSqxUmsc3E6sn525o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dsw58fvq8y"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/gemstone/diamond/Anh-dai-dien-Kim-Cuong-tu-nhien.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-w7bJX2WcZNyd/9sHMfdsvJFoMPPSqxUmsc3E6sn525o="
+        }
+      ]
+    },
+    {
+      "Route": "Img/gemstone/diamond/Anh-dai-dien-Kim-Cuong-tu-nhien.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\diamond\\Anh-dai-dien-Kim-Cuong-tu-nhien.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "116054"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w7bJX2WcZNyd/9sHMfdsvJFoMPPSqxUmsc3E6sn525o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-w7bJX2WcZNyd/9sHMfdsvJFoMPPSqxUmsc3E6sn525o="
+        }
+      ]
+    },
+    {
+      "Route": "Img/gemstone/jewels/Nhan-nam-Kim-Cuong-Vang-trang-Au18k-MA-K-6000000.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\jewels\\Nhan-nam-Kim-Cuong-Vang-trang-Au18k-MA-K-6000000.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39791"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2KsFatSx9jldT07Q+cIhcPcf+B7GSAAgv7qpeohYIEA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2KsFatSx9jldT07Q+cIhcPcf+B7GSAAgv7qpeohYIEA="
+        }
+      ]
+    },
+    {
+      "Route": "Img/gemstone/jewels/Nhan-nam-Kim-Cuong-Vang-trang-Au18k-MA-K-6000000.w6map9iubm.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\jewels\\Nhan-nam-Kim-Cuong-Vang-trang-Au18k-MA-K-6000000.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39791"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2KsFatSx9jldT07Q+cIhcPcf+B7GSAAgv7qpeohYIEA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w6map9iubm"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/gemstone/jewels/Nhan-nam-Kim-Cuong-Vang-trang-Au18k-MA-K-6000000.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2KsFatSx9jldT07Q+cIhcPcf+B7GSAAgv7qpeohYIEA="
+        }
+      ]
+    },
+    {
+      "Route": "Img/gemstone/ruby/Vien-Ruby-facet-Luc-Yen-063ct-IRRF152-231006300000.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\ruby\\Vien-Ruby-facet-Luc-Yen-063ct-IRRF152-231006300000.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "106538"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r7U968H8RsSTdZaB3dk3E7FDWttbCGEb4nQsoKNnrxQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r7U968H8RsSTdZaB3dk3E7FDWttbCGEb4nQsoKNnrxQ="
+        }
+      ]
+    },
+    {
+      "Route": "Img/gemstone/ruby/Vien-Ruby-facet-Luc-Yen-063ct-IRRF152-231006300000.xsw90rfkt4.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\ruby\\Vien-Ruby-facet-Luc-Yen-063ct-IRRF152-231006300000.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "106538"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r7U968H8RsSTdZaB3dk3E7FDWttbCGEb4nQsoKNnrxQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xsw90rfkt4"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/gemstone/ruby/Vien-Ruby-facet-Luc-Yen-063ct-IRRF152-231006300000.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r7U968H8RsSTdZaB3dk3E7FDWttbCGEb4nQsoKNnrxQ="
+        }
+      ]
+    },
+    {
+      "Route": "Img/gemstone/spinel/Vien-Spinel-sac-cobalt-sieu-VIP-175ct-IRSI65-231117500000.3d8m7im3kk.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\spinel\\Vien-Spinel-sac-cobalt-sieu-VIP-175ct-IRSI65-231117500000.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27309"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1+JsiMOVSVxC+cPXIdimE2I0+mSDH+DEXDKDJ5e8Gz4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3d8m7im3kk"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/gemstone/spinel/Vien-Spinel-sac-cobalt-sieu-VIP-175ct-IRSI65-231117500000.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1+JsiMOVSVxC+cPXIdimE2I0+mSDH+DEXDKDJ5e8Gz4="
+        }
+      ]
+    },
+    {
+      "Route": "Img/gemstone/spinel/Vien-Spinel-sac-cobalt-sieu-VIP-175ct-IRSI65-231117500000.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\spinel\\Vien-Spinel-sac-cobalt-sieu-VIP-175ct-IRSI65-231117500000.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27309"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1+JsiMOVSVxC+cPXIdimE2I0+mSDH+DEXDKDJ5e8Gz4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1+JsiMOVSVxC+cPXIdimE2I0+mSDH+DEXDKDJ5e8Gz4="
+        }
+      ]
+    },
+    {
+      "Route": "Img/gemstone/topaz/Vien-Topaz-tu-nhien-trang-tinh-khiet-283ct-IRTP56-23928300000-1.4xmsq79lmi.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\topaz\\Vien-Topaz-tu-nhien-trang-tinh-khiet-283ct-IRTP56-23928300000-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "106558"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CAkaK7b/9JNEIT9Cinv/4RAx3L8mFa6xVY1rYOyTKjA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4xmsq79lmi"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/gemstone/topaz/Vien-Topaz-tu-nhien-trang-tinh-khiet-283ct-IRTP56-23928300000-1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CAkaK7b/9JNEIT9Cinv/4RAx3L8mFa6xVY1rYOyTKjA="
+        }
+      ]
+    },
+    {
+      "Route": "Img/gemstone/topaz/Vien-Topaz-tu-nhien-trang-tinh-khiet-283ct-IRTP56-23928300000-1.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\topaz\\Vien-Topaz-tu-nhien-trang-tinh-khiet-283ct-IRTP56-23928300000-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "106558"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CAkaK7b/9JNEIT9Cinv/4RAx3L8mFa6xVY1rYOyTKjA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CAkaK7b/9JNEIT9Cinv/4RAx3L8mFa6xVY1rYOyTKjA="
+        }
+      ]
+    },
+    {
+      "Route": "Img/HatchfulExport-All.bbvsazv9wc.zip",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\HatchfulExport-All.zip",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "104019"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-zip-compressed"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h3OcEv8qTFYE5Ysv0PQ7yPMGZCH4nvMWFmjH9PE2BvM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bbvsazv9wc"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/HatchfulExport-All.zip"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-h3OcEv8qTFYE5Ysv0PQ7yPMGZCH4nvMWFmjH9PE2BvM="
+        }
+      ]
+    },
+    {
+      "Route": "Img/HatchfulExport-All.zip",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\HatchfulExport-All.zip",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "104019"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-zip-compressed"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h3OcEv8qTFYE5Ysv0PQ7yPMGZCH4nvMWFmjH9PE2BvM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-h3OcEv8qTFYE5Ysv0PQ7yPMGZCH4nvMWFmjH9PE2BvM="
+        }
+      ]
+    },
+    {
+      "Route": "Img/instagram_profile_image.j5nfhnwm2f.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\instagram_profile_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8579"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CfACkPpEQ+nipsiUAp4zaupDF72vxvjelhIg62GdP/8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j5nfhnwm2f"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/instagram_profile_image.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CfACkPpEQ+nipsiUAp4zaupDF72vxvjelhIg62GdP/8="
+        }
+      ]
+    },
+    {
+      "Route": "Img/instagram_profile_image.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\instagram_profile_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8579"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CfACkPpEQ+nipsiUAp4zaupDF72vxvjelhIg62GdP/8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CfACkPpEQ+nipsiUAp4zaupDF72vxvjelhIg62GdP/8="
+        }
+      ]
+    },
+    {
+      "Route": "Img/kim_cuong_hong.kfkjxiczlm.webp",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\kim_cuong_hong.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "89534"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MLffIj22wCFgIPOt2faqGc58ZzRQuraAWamtbuQp06A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Dec 2024 04:45:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kfkjxiczlm"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/kim_cuong_hong.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MLffIj22wCFgIPOt2faqGc58ZzRQuraAWamtbuQp06A="
+        }
+      ]
+    },
+    {
+      "Route": "Img/kim_cuong_hong.webp",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\kim_cuong_hong.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "89534"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MLffIj22wCFgIPOt2faqGc58ZzRQuraAWamtbuQp06A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Dec 2024 04:45:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MLffIj22wCFgIPOt2faqGc58ZzRQuraAWamtbuQp06A="
+        }
+      ]
+    },
+    {
+      "Route": "Img/linkedin_banner_image_1.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\linkedin_banner_image_1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12384"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3DZ3703OCxYLlo/xEKXc6ib43KeWQanl6Wpr8P94P3c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3DZ3703OCxYLlo/xEKXc6ib43KeWQanl6Wpr8P94P3c="
+        }
+      ]
+    },
+    {
+      "Route": "Img/linkedin_banner_image_1.w7ss5pxi7s.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\linkedin_banner_image_1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12384"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3DZ3703OCxYLlo/xEKXc6ib43KeWQanl6Wpr8P94P3c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w7ss5pxi7s"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/linkedin_banner_image_1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3DZ3703OCxYLlo/xEKXc6ib43KeWQanl6Wpr8P94P3c="
+        }
+      ]
+    },
+    {
+      "Route": "Img/linkedin_banner_image_2.oenvdzzd3l.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\linkedin_banner_image_2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6387"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wG6IvIiZZoG7Dtc6rleamy6rXLGvH5/h7sWzaEYN37c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oenvdzzd3l"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/linkedin_banner_image_2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wG6IvIiZZoG7Dtc6rleamy6rXLGvH5/h7sWzaEYN37c="
+        }
+      ]
+    },
+    {
+      "Route": "Img/linkedin_banner_image_2.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\linkedin_banner_image_2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6387"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wG6IvIiZZoG7Dtc6rleamy6rXLGvH5/h7sWzaEYN37c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wG6IvIiZZoG7Dtc6rleamy6rXLGvH5/h7sWzaEYN37c="
+        }
+      ]
+    },
+    {
+      "Route": "Img/linkedin_profile_image.j5nfhnwm2f.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\linkedin_profile_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8579"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CfACkPpEQ+nipsiUAp4zaupDF72vxvjelhIg62GdP/8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j5nfhnwm2f"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/linkedin_profile_image.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CfACkPpEQ+nipsiUAp4zaupDF72vxvjelhIg62GdP/8="
+        }
+      ]
+    },
+    {
+      "Route": "Img/linkedin_profile_image.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\linkedin_profile_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8579"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CfACkPpEQ+nipsiUAp4zaupDF72vxvjelhIg62GdP/8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CfACkPpEQ+nipsiUAp4zaupDF72vxvjelhIg62GdP/8="
+        }
+      ]
+    },
+    {
+      "Route": "Img/logo.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\logo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "57214"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zYsuhaeXGGwcsKXqYCGlPvidqZNQHke+45YFXGe522o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Dec 2024 02:27:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zYsuhaeXGGwcsKXqYCGlPvidqZNQHke+45YFXGe522o="
+        }
+      ]
+    },
+    {
+      "Route": "Img/logo.pm8bmwblca.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6769"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cUZFgaUPnzdaZ/nJYQ1gdkqXrPdukUNe0JCW4IH28W4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pm8bmwblca"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cUZFgaUPnzdaZ/nJYQ1gdkqXrPdukUNe0JCW4IH28W4="
+        }
+      ]
+    },
+    {
+      "Route": "Img/logo.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6769"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cUZFgaUPnzdaZ/nJYQ1gdkqXrPdukUNe0JCW4IH28W4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cUZFgaUPnzdaZ/nJYQ1gdkqXrPdukUNe0JCW4IH28W4="
+        }
+      ]
+    },
+    {
+      "Route": "Img/logo.tcgw18vbtb.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\logo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "57214"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zYsuhaeXGGwcsKXqYCGlPvidqZNQHke+45YFXGe522o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Dec 2024 02:27:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tcgw18vbtb"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/logo.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zYsuhaeXGGwcsKXqYCGlPvidqZNQHke+45YFXGe522o="
+        }
+      ]
+    },
+    {
+      "Route": "Img/logo_transparent.hxb0siy2i8.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\logo_transparent.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11788"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m/9zSOoahrSCRHG6wiow4KM2UVX6jcEG9j/ixgIF7JQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hxb0siy2i8"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/logo_transparent.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m/9zSOoahrSCRHG6wiow4KM2UVX6jcEG9j/ixgIF7JQ="
+        }
+      ]
+    },
+    {
+      "Route": "Img/logo_transparent.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\logo_transparent.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11788"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m/9zSOoahrSCRHG6wiow4KM2UVX6jcEG9j/ixgIF7JQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m/9zSOoahrSCRHG6wiow4KM2UVX6jcEG9j/ixgIF7JQ="
+        }
+      ]
+    },
+    {
+      "Route": "Img/pinterest_board_photo.491v3e2b82.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\pinterest_board_photo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GNNiN9+L2D0Dpu/MqLkylPN10rtsuq9118VCyKnTZqs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "491v3e2b82"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/pinterest_board_photo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GNNiN9+L2D0Dpu/MqLkylPN10rtsuq9118VCyKnTZqs="
+        }
+      ]
+    },
+    {
+      "Route": "Img/pinterest_board_photo.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\pinterest_board_photo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GNNiN9+L2D0Dpu/MqLkylPN10rtsuq9118VCyKnTZqs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GNNiN9+L2D0Dpu/MqLkylPN10rtsuq9118VCyKnTZqs="
+        }
+      ]
+    },
+    {
+      "Route": "Img/pinterest_profile_image.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\pinterest_profile_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3043"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fro5XoNgRUV9Qf5TYw71ThatHCPLIs16r6bDJdL+d4w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fro5XoNgRUV9Qf5TYw71ThatHCPLIs16r6bDJdL+d4w="
+        }
+      ]
+    },
+    {
+      "Route": "Img/pinterest_profile_image.qxk6vjafwx.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\pinterest_profile_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3043"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fro5XoNgRUV9Qf5TYw71ThatHCPLIs16r6bDJdL+d4w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qxk6vjafwx"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/pinterest_profile_image.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fro5XoNgRUV9Qf5TYw71ThatHCPLIs16r6bDJdL+d4w="
+        }
+      ]
+    },
+    {
+      "Route": "Img/qr.axz7h0ksxp.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\qr.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nqL6oQCSMF1sBPpAiGnM9t5CrDceKruiLpa3NGsKGqM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "axz7h0ksxp"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/qr.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nqL6oQCSMF1sBPpAiGnM9t5CrDceKruiLpa3NGsKGqM="
+        }
+      ]
+    },
+    {
+      "Route": "Img/qr.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\qr.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nqL6oQCSMF1sBPpAiGnM9t5CrDceKruiLpa3NGsKGqM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nqL6oQCSMF1sBPpAiGnM9t5CrDceKruiLpa3NGsKGqM="
+        }
+      ]
+    },
+    {
+      "Route": "Img/spinel-tim-anh-kim-2.7wp7mqa6n8.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "72772"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1xxxlT3kiJYlKEsMIQZYqwUA/uOvHYYOXV0UHh/PS/g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7wp7mqa6n8"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/spinel-tim-anh-kim-2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1xxxlT3kiJYlKEsMIQZYqwUA/uOvHYYOXV0UHh/PS/g="
+        }
+      ]
+    },
+    {
+      "Route": "Img/spinel-tim-anh-kim-2.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "72772"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1xxxlT3kiJYlKEsMIQZYqwUA/uOvHYYOXV0UHh/PS/g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1xxxlT3kiJYlKEsMIQZYqwUA/uOvHYYOXV0UHh/PS/g="
+        }
+      ]
+    },
+    {
+      "Route": "Img/spinel-tim-anh-kim-3.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "147460"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W/Y0/a+CHnsJ9agvvR/trafvyBCcvR/4sDBxf38fMQk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-W/Y0/a+CHnsJ9agvvR/trafvyBCcvR/4sDBxf38fMQk="
+        }
+      ]
+    },
+    {
+      "Route": "Img/spinel-tim-anh-kim-3.zi7p40wia0.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "147460"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W/Y0/a+CHnsJ9agvvR/trafvyBCcvR/4sDBxf38fMQk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zi7p40wia0"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/spinel-tim-anh-kim-3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-W/Y0/a+CHnsJ9agvvR/trafvyBCcvR/4sDBxf38fMQk="
+        }
+      ]
+    },
+    {
+      "Route": "Img/spinel-tim-anh-kim-4.fc61b2uxqp.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117674"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oda3G5LcgXH+OZSHm/hfqe+O3SE2MMQmp55JsaZ/oG0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fc61b2uxqp"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/spinel-tim-anh-kim-4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oda3G5LcgXH+OZSHm/hfqe+O3SE2MMQmp55JsaZ/oG0="
+        }
+      ]
+    },
+    {
+      "Route": "Img/spinel-tim-anh-kim-4.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117674"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oda3G5LcgXH+OZSHm/hfqe+O3SE2MMQmp55JsaZ/oG0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oda3G5LcgXH+OZSHm/hfqe+O3SE2MMQmp55JsaZ/oG0="
+        }
+      ]
+    },
+    {
+      "Route": "Img/spinel-tim-anh-kim-5.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35683"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yFav1sr6HVvX1bw6QGxNFHrESobzjkX59tmupgWd3LI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yFav1sr6HVvX1bw6QGxNFHrESobzjkX59tmupgWd3LI="
+        }
+      ]
+    },
+    {
+      "Route": "Img/spinel-tim-anh-kim-5.ooso63h1v6.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35683"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yFav1sr6HVvX1bw6QGxNFHrESobzjkX59tmupgWd3LI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ooso63h1v6"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/spinel-tim-anh-kim-5.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yFav1sr6HVvX1bw6QGxNFHrESobzjkX59tmupgWd3LI="
+        }
+      ]
+    },
+    {
+      "Route": "Img/SPINEL-TIM-ANH-KIM-768x768.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\SPINEL-TIM-ANH-KIM-768x768.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16519"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vsfbZqGwyt0/b7QQ10ZCISHFxif8N/LYzOZ4WF9wW1Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vsfbZqGwyt0/b7QQ10ZCISHFxif8N/LYzOZ4WF9wW1Y="
+        }
+      ]
+    },
+    {
+      "Route": "Img/SPINEL-TIM-ANH-KIM-768x768.uos22287tq.jpg",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\SPINEL-TIM-ANH-KIM-768x768.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16519"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vsfbZqGwyt0/b7QQ10ZCISHFxif8N/LYzOZ4WF9wW1Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uos22287tq"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/SPINEL-TIM-ANH-KIM-768x768.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vsfbZqGwyt0/b7QQ10ZCISHFxif8N/LYzOZ4WF9wW1Y="
+        }
+      ]
+    },
+    {
+      "Route": "Img/twitter_header_photo_1.i0digy2i07.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\twitter_header_photo_1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6298"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YoqbPJrEPAEmJqIi9yHL7pnLPAsl1trk4UzLzJh0gUs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i0digy2i07"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/twitter_header_photo_1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YoqbPJrEPAEmJqIi9yHL7pnLPAsl1trk4UzLzJh0gUs="
+        }
+      ]
+    },
+    {
+      "Route": "Img/twitter_header_photo_1.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\twitter_header_photo_1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6298"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YoqbPJrEPAEmJqIi9yHL7pnLPAsl1trk4UzLzJh0gUs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YoqbPJrEPAEmJqIi9yHL7pnLPAsl1trk4UzLzJh0gUs="
+        }
+      ]
+    },
+    {
+      "Route": "Img/twitter_header_photo_2.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\twitter_header_photo_2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4672"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4BBPwPdQlZbGX/gdtbp1xwEacpi6mkRGcf2MVo8PTmM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4BBPwPdQlZbGX/gdtbp1xwEacpi6mkRGcf2MVo8PTmM="
+        }
+      ]
+    },
+    {
+      "Route": "Img/twitter_header_photo_2.spcnzjaymt.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\twitter_header_photo_2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4672"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4BBPwPdQlZbGX/gdtbp1xwEacpi6mkRGcf2MVo8PTmM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "spcnzjaymt"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/twitter_header_photo_2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4BBPwPdQlZbGX/gdtbp1xwEacpi6mkRGcf2MVo8PTmM="
+        }
+      ]
+    },
+    {
+      "Route": "Img/twitter_profile_image.491v3e2b82.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\twitter_profile_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GNNiN9+L2D0Dpu/MqLkylPN10rtsuq9118VCyKnTZqs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "491v3e2b82"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/twitter_profile_image.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GNNiN9+L2D0Dpu/MqLkylPN10rtsuq9118VCyKnTZqs="
+        }
+      ]
+    },
+    {
+      "Route": "Img/twitter_profile_image.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\twitter_profile_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GNNiN9+L2D0Dpu/MqLkylPN10rtsuq9118VCyKnTZqs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GNNiN9+L2D0Dpu/MqLkylPN10rtsuq9118VCyKnTZqs="
+        }
+      ]
+    },
+    {
+      "Route": "Img/youtube_profile_image.btyngf9wxd.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\youtube_profile_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AbRAi4QXni6HsBKzqcfwb1VBUWqJEQD8cTb18oImcw8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "btyngf9wxd"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/youtube_profile_image.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AbRAi4QXni6HsBKzqcfwb1VBUWqJEQD8cTb18oImcw8="
+        }
+      ]
+    },
+    {
+      "Route": "Img/youtube_profile_image.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\youtube_profile_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AbRAi4QXni6HsBKzqcfwb1VBUWqJEQD8cTb18oImcw8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AbRAi4QXni6HsBKzqcfwb1VBUWqJEQD8cTb18oImcw8="
+        }
+      ]
+    },
+    {
+      "Route": "Img/zalo-icon.4j52osqxdn.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\zalo-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24119"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gHAZAptreh5k64/zqe64TMqWl1KEEV+usirS4ulHXMY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4j52osqxdn"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/zalo-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gHAZAptreh5k64/zqe64TMqWl1KEEV+usirS4ulHXMY="
+        }
+      ]
+    },
+    {
+      "Route": "Img/zalo-icon.png",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\zalo-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24119"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gHAZAptreh5k64/zqe64TMqWl1KEEV+usirS4ulHXMY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 10:44:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gHAZAptreh5k64/zqe64TMqWl1KEEV+usirS4ulHXMY="
+        }
+      ]
+    },
+    {
+      "Route": "js/jsShoppingCart.7j8fb0x9od.js",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\js\\jsShoppingCart.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2374"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8xOSf+mjuoxz6mFyBzJ/SJClTicjh3S6k0Y/4TqV0ZU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Jan 2025 12:01:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7j8fb0x9od"
+        },
+        {
+          "Name": "label",
+          "Value": "js/jsShoppingCart.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8xOSf+mjuoxz6mFyBzJ/SJClTicjh3S6k0Y/4TqV0ZU="
+        }
+      ]
+    },
+    {
+      "Route": "js/jsShoppingCart.js",
+      "AssetFile": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\js\\jsShoppingCart.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2374"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8xOSf+mjuoxz6mFyBzJ/SJClTicjh3S6k0Y/4TqV0ZU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Jan 2025 12:01:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8xOSf+mjuoxz6mFyBzJ/SJClTicjh3S6k0Y/4TqV0ZU="
+        }
+      ]
+    }
+  ]
 }
