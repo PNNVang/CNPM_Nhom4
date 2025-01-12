@@ -178,3 +178,8 @@ E:\DOCNET\Project_Dot_Net\obj\Debug\net8.0\Dot_Net_ECommerceWeb.pdb
 E:\DOCNET\Project_Dot_Net\obj\Debug\net8.0\Dot_Net_ECommerceWeb.genruntimeconfig.cache
 E:\DOCNET\Project_Dot_Net\obj\Debug\net8.0\ref\Dot_Net_ECommerceWeb.dll
 E:\DOCNET\Project_Dot_Net\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+E:\DOCNET\Project_Dot_Net\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+E:\DOCNET\Project_Dot_Net\bin\Debug\net8.0\MailKit.dll
+E:\DOCNET\Project_Dot_Net\bin\Debug\net8.0\MimeKit.dll
+E:\DOCNET\Project_Dot_Net\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+E:\DOCNET\Project_Dot_Net\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

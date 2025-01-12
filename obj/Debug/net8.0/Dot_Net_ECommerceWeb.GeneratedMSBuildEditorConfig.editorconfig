@@ -96,6 +96,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ2F0ZWdvcnlEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/DOCNET/Project_Dot_Net/Views/Contact/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/DOCNET/Project_Dot_Net/Views/demo/demoIPAddress.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGVtb1xkZW1vSVBBZGRyZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

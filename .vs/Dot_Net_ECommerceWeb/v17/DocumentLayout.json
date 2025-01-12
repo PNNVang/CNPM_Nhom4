@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "E:\\DOCNET\\Project_Dot_Net\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\views\\contact\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:views\\contact\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\controller\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:controller\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\service\\forgotpasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:service\\forgotpasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\controller\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,24 +23,16 @@
       "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:views\\header\\header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\controller\\headercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:controller\\headercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\controller\\productusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:controller\\productusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\controller\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:controller\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\views\\category\\category.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:views\\category\\category.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,117 +54,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Product.cs",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Model\\Product.cs",
-              "RelativeDocumentMoniker": "Model\\Product.cs",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Model\\Product.cs",
-              "RelativeToolTip": "Model\\Product.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA5wBoAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "Service\\UserService.cs",
+              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Service\\UserService.cs",
+              "RelativeToolTip": "Service\\UserService.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAswJEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T13:09:48.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Service\\ProductService.cs",
-              "RelativeDocumentMoniker": "Service\\ProductService.cs",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Service\\ProductService.cs",
-              "RelativeToolTip": "Service\\ProductService.cs",
-              "ViewState": "AgIAADgBAAAAAAAAAAAvwEQBAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T13:07:08.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAswHgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T12:41:52.439Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Header.cshtml",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Views\\Header\\Header.cshtml",
-              "RelativeDocumentMoniker": "Views\\Header\\Header.cshtml",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Views\\Header\\Header.cshtml",
-              "RelativeToolTip": "Views\\Header\\Header.cshtml",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAAAK8AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-10T09:53:16.873Z",
+              "WhenOpened": "2025-01-12T08:33:58.385Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "HeaderController.cs",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Controller\\HeaderController.cs",
-              "RelativeDocumentMoniker": "Controller\\HeaderController.cs",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Controller\\HeaderController.cs",
-              "RelativeToolTip": "Controller\\HeaderController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAgwAUAAAABAAAAAAAAAA==",
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Model\\User.cs",
+              "RelativeDocumentMoniker": "Model\\User.cs",
+              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Model\\User.cs",
+              "RelativeToolTip": "Model\\User.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T09:51:35.439Z",
+              "WhenOpened": "2025-01-12T08:33:23.989Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProductUserController.cs",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Controller\\ProductUserController.cs",
-              "RelativeDocumentMoniker": "Controller\\ProductUserController.cs",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Controller\\ProductUserController.cs",
-              "RelativeToolTip": "Controller\\ProductUserController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwCQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T09:04:00.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Controller\\CategoryController.cs",
-              "RelativeDocumentMoniker": "Controller\\CategoryController.cs",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Controller\\CategoryController.cs",
-              "RelativeToolTip": "Controller\\CategoryController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:39:09.93Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ForgotPasswordService.cs",
+              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Service\\ForgotPasswordService.cs",
+              "RelativeDocumentMoniker": "Service\\ForgotPasswordService.cs",
+              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Service\\ForgotPasswordService.cs",
+              "RelativeToolTip": "Service\\ForgotPasswordService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T08:30:44.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
               "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Controller\\HomeController.cs",
               "RelativeDocumentMoniker": "Controller\\HomeController.cs",
               "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Controller\\HomeController.cs",
               "RelativeToolTip": "Controller\\HomeController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwBkAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:36:37.841Z",
+              "WhenOpened": "2025-01-12T07:36:53.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Header.cshtml",
+              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Views\\Header\\Header.cshtml",
+              "RelativeDocumentMoniker": "Views\\Header\\Header.cshtml",
+              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Views\\Header\\Header.cshtml",
+              "RelativeToolTip": "Views\\Header\\Header.cshtml",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAD0AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-12T07:33:48.457Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAABEAAAATAAAAAAAAAA==",
+              "Title": "Category.cshtml",
+              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Views\\Category\\Category.cshtml",
+              "RelativeDocumentMoniker": "Views\\Category\\Category.cshtml",
+              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Views\\Category\\Category.cshtml",
+              "RelativeToolTip": "Views\\Category\\Category.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAFwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-10T08:36:21.841Z"
+              "WhenOpened": "2025-01-11T10:13:33.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Contact.cshtml",
+              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Views\\Contact\\Contact.cshtml",
+              "RelativeDocumentMoniker": "Views\\Contact\\Contact.cshtml",
+              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Views\\Contact\\Contact.cshtml",
+              "RelativeToolTip": "Views\\Contact\\Contact.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-11T10:11:28.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Controller\\ContactController.cs",
+              "RelativeDocumentMoniker": "Controller\\ContactController.cs",
+              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Controller\\ContactController.cs",
+              "RelativeToolTip": "Controller\\ContactController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T10:10:47.182Z",
+              "EditorCaption": ""
             }
           ]
         }
