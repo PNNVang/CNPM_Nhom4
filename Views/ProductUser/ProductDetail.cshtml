@@ -1,0 +1,194 @@
+﻿@{
+    ViewBag.Title = "Danh Mục Sản Phẩm";
+    // var format = new System.Globalization.CultureInfo("vi-VN");
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<style> 
+         #product-detail {} 
+
+        #product-detail .img-product img { 
+            height: 510px; 
+             width: 550px; 
+         } 
+
+         #product-detail .sub-img img { 
+             margin-top: 10px; 
+             height: 130px; 
+             width: 130px; 
+         } 
+
+         #product-detail .line { 
+             width: 100px; 
+             height: 1px; 
+             background-color: black; 
+         } 
+ 
+         #product-detail td { 
+             list-style-type: disc; 
+         } 
+ 
+         #product-detail .thanhToan button { 
+             height: 40px; 
+         } 
+ 
+         #largeImage { 
+             display: none; 
+             position: fixed; 
+             top: 0; 
+             left: 0; 
+             width: 100%; 
+             height: 100%; 
+             z-index: 9999; 
+             background-color: rgba(0, 0, 0, 0.8); 
+         } 
+ 
+         #largeImage img { 
+             width: 650px; /* hoặc height: 800px; */ 
+             height: auto; /* hoặc width: auto; */ 
+ 
+         } 
+ 
+         #product-detail .dataFlow { 
+             margin: auto; 
+             display: flex; 
+         } 
+ 
+         #product-detail .dataFlow .key { 
+             font-weight: bold; 
+             flex: 2; 
+             margin: 0; 
+         } 
+ 
+         #product-detail .dataFlow .value { 
+             flex: 4; 
+             margin: 0; 
+         }
+
+    #largeImage {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+
+        #largeImage img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+     </style> 
+<body>
+    @Html.Partial("~/Views/views/header.cshtml")
+
+    <section id="product-detail" class="container mt-2">
+        <div class="container row mx-auto">
+            <div class="col-5 mx-4">
+                <div class="img-product">
+                    <!-- Hiển thị hình ảnh chính của sản phẩm -->
+                    <img src="@Url.Content(ViewBag.ProductImage?.ImgMain)" alt="Main Image" onclick="displayImage(this)">
+                </div>
+                <div class="d-flex">
+                    <!-- Hiển thị các hình ảnh phụ -->
+                    <div class="sub-img ms-2">
+                        <img src="@Url.Content(ViewBag.ProductImage?.Img1)" alt="Extra Image 1" onclick="displayImage(this)">
+                    </div>
+                    <div class="sub-img ms-2">
+                        <img src="@Url.Content(ViewBag.ProductImage?.Img2)" alt="Extra Image 2" onclick="displayImage(this)">
+                    </div>
+                    <div class="sub-img ms-2">
+                        <img src="@Url.Content(ViewBag.ProductImage?.Img3)" alt="Extra Image 3" onclick="displayImage(this)">
+                    </div>
+                    <div class="sub-img ms-2">
+                        <img src="@Url.Content(ViewBag.ProductImage?.Img4)" alt="Extra Image 4" onclick="displayImage(this)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-5 ms-3">
+                <div class="name fs-3">
+                    @ViewBag.Product.ProductName
+                </div>
+                <div class="line"></div>
+
+                <div class="gia fs-4 fw-bold my-4">
+                    @ViewBag.Product.Price
+                </div>
+
+                <div class="moTa">
+                    <p class="lh-base fw-bold">
+                        @ViewBag.Product.Description
+                    </p>
+                    <ul>
+                        <li><p class="fs-6">Đá tự nhiên 100%</p></li>
+                        <li><p class="fs-6">Kiểm định và bảo hành trọn đời</p></li>
+                        <li><p class="fs-6">Miễn phí vận chuyển toàn quốc</p></li>
+                        <li><p class="fs-6">Ship đảm bảo Quốc tế</p></li>
+                    </ul>
+                </div>
+
+                <div class="row thanhToan">
+                    <form action="@Url.Action("AddToCart", "Cart")" method="post">
+                        <input type="hidden" name="id" value="@ViewBag.Product.Id" />
+                        <input type="hidden" name="quantity" value="1" />
+                        <button class="col me-2 btn btn-outline-warning fw-bold" type="submit">Giỏ hàng</button>
+                        <button id="btnBuy" class="btn btn-outline-info fw-bold" type="submit">Mua ngay</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+         @* <div class="row container mx-auto mt-3"> 
+             <p class="text-center fs-3">THÔNG SỐ KỸ THUẬT</p> 
+             <div class="row d-flex"> 
+                 <div class="col mx-auto"> 
+                     @foreach (var entry in Model.Infor) 
+                     { 
+                         <div class="dataFlow m-3"> 
+                             <p class="key">@entry.Key</p> 
+                             <p class="value">@entry.Value</p> 
+                         </div> 
+                     } 
+                 </div> 
+             </div> 
+         </div>  *@
+
+        @Html.Partial("~/Views/views/footer.cshtml")
+    </section>
+
+    <div id="largeImage" class="text-center" onclick="hiddenImage()">
+        <img class="mt-5" src="" alt="Large Image">
+    </div>
+
+    <script>
+        var isClicked = false;
+
+        function displayImage(element) {
+            var imageURL = element.src;
+            var largeImage = document.getElementById('largeImage');
+            var imgElement = largeImage.querySelector('img');
+            imgElement.src = imageURL;
+            largeImage.style.display = 'block';
+        }
+
+
+        function hiddenImage() {
+            var largeImage = document.getElementById('largeImage');
+            largeImage.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

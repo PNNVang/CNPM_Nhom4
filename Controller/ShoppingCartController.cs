@@ -20,6 +20,17 @@ namespace Dot_Net_ECommerceWeb.Controller
            
             return View();
         }
+        public IActionResult Checkout()
+        {
+            ShoppingCart cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart");
+            if (cart != null)
+            {
+                ViewBag.CheckCart = cart;
+
+
+            }
+            return View();
+        }
         public IActionResult Partial_Item_Cart()
         {
             ShoppingCart cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart");
@@ -28,6 +39,16 @@ namespace Dot_Net_ECommerceWeb.Controller
                 return PartialView(cart.Items);
 
             }   
+            return PartialView();
+        }
+        public IActionResult Partial_Item_Checkout()
+        {
+            ShoppingCart cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart");
+            if (cart != null)
+            {
+                return PartialView(cart.Items);
+
+            }
             return PartialView();
         }
 
@@ -45,8 +66,9 @@ namespace Dot_Net_ECommerceWeb.Controller
         public IActionResult AddToCart(int id, int quantity)
         {
             var code = new { Success = false, massage = "", code = -1, Count = 0 };
-            var db = new AppDBContext();
-            var checkProduct = db.Products.FirstOrDefault(x => x.Id == id);
+            //cái class context có trong class này rồi tài võ chỉ việc gọi ra thôi
+            // var db = new AppDBContext();
+            var checkProduct = _context.Products.FirstOrDefault(x => x.Id == id);
             if (checkProduct != null)
             {
                 ShoppingCart cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart");
@@ -62,7 +84,7 @@ namespace Dot_Net_ECommerceWeb.Controller
                     Quantity = quantity
                 };
 
-                if (checkProduct.ProductImage != null && checkProduct.ProductImage.IsDefault)
+                if (checkProduct.ProductImage != null && checkProduct.ProductImage.ImgMain != null)
                 {
                     item.ProductImg = checkProduct.ProductImage.ImgMain;
                 }

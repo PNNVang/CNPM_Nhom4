@@ -1,6 +1,7 @@
 ﻿using Dot_Net_ECommerceWeb.DBContext;
 using Dot_Net_ECommerceWeb.Model;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Dot_Net_ECommerceWeb.Service;
 
@@ -17,5 +18,11 @@ public class CategoryService
     {
         var categories=_context.Categories.ToList();
         return await Task.FromResult(categories);
+    }
+
+    public async Task<Category> GetCategoryByIdAsync(int categoryId)
+    {
+        return await _context.Categories
+                               .FirstOrDefaultAsync(c => c.Id == categoryId);
     }
 }

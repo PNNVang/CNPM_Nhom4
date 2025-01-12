@@ -56,6 +56,15 @@ builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
         new MySqlServerVersion(new Version(8, 0, 32))));
 
+//Cấu hình dịch vụ Session
+builder.Services.AddDistributedMemoryCache(); // Đăng ký dịch vụ bộ nhớ cache cho session
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian session hết hạn (30 phút)
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 // Đăng ký các dịch vụ ứng dụng
 builder.Services.AddScoped<TestUser>();
 builder.Services.AddScoped<CloudinaryService>();
@@ -66,6 +75,12 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<InventoryService>();
 builder.Services.AddScoped<SummaryService>();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<EncryptAndDencrypt>();
+builder.Services.AddScoped<LoginService>();
+builder.Services.AddScoped<RegisterService>();
+builder.Services.AddScoped<ForgotPasswordService>();
+builder.Services.AddScoped<ChangePasswordService>();
 // Cấu hình dịch vụ
 builder.Services.AddControllers()
     .AddNewtonsoftJson(options =>
@@ -106,13 +121,22 @@ app.UseStaticFiles();
 
 
 
-app.UseSession(); 
+
+app.UseSession();
 
 // Cấu hình endpoints
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-app.MapRazorPages(); // Nếu bạn sử dụng Razor Pages
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+
+    endpoints.MapControllerRoute(
+        name: "category",
+        pattern: "Category/{action=Category}/{id?}",
+        defaults: new { controller = "Category" });
+});
+
 
 // Khởi động ứng dụng với dịch vụ DBContext
 using (var scope = app.Services.CreateScope())
@@ -122,7 +146,13 @@ using (var scope = app.Services.CreateScope())
     // Thực hiện các công việc khởi tạo dữ liệu ở đây nếu cần
 }
 
-app.MapGet("/", () => "Hello World!");
+// app.MapGet("/", () => "Hello World!");
+app.MapGet("/", async (HttpContext context) =>
+{
+    context.Response.Redirect("Account/login");
+    return Task.CompletedTask;
+});
+
 app.MapControllerRoute(
     name: "ShoppingCart",
     pattern: "cart",
@@ -134,3 +164,5 @@ app.MapControllerRoute(
     defaults: new { controller = "ShoppingCart", action = "Checkout", alias = "DefaultAlias" }
     );
 app.Run();
+
+

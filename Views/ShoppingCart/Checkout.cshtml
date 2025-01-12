@@ -1,12 +1,28 @@
 ﻿@{
-    ViewBag.Title = "Thanh Toán";
+    ViewBag.Tilte = "Thanh Toan";
 }
-@model IEnumerable<Dot_Net_ECommerceWeb.Model.ShoppingCartItem>
-@using Dot_Net_ECommerceWeb.Helper;
 <html lang="vi">
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
+    <style type="text/css">
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            width: 20%;
+        }
+
+        .form-control {
+            width: 20%;
+            text-align: center;
+        }
+
+    </style>
 </head>
 <body>
     @Html.Partial("~/Views/views/header.cshtml")
@@ -18,8 +34,8 @@
             </div>
         </div>
         <hr />
-        @if (ViewBag.CheckCart != null) 
-         {
+        @* @if (ViewBag.CheckCart != null) *@
+        @* { *@
         <div class="row">
             <div class="col-md-9">
                 <h3>Thông tin khách hàng</h3>
@@ -47,20 +63,19 @@
                         <option value="2">Chuyển khoản</option>
                     </select>
                 </div>
-                <br/>
                 <div class="form-group">
-                    <button type="button" class="btn btn-success w-100">Đặt hàng</button>
+                    <button type="button" class="btn btn-block btn-success">Đặt hàng</button>
                 </div>
             </div>
             <div class="col-md-3">
-                @await Html.PartialAsync("Partial_Item_ThanhToan")
+                @await Html.PartialAsync("Partial_Item_Checkout")
             </div>
         </div>
-        }else{ 
-            <div> 
-                 Bạn chưa có sản phẩm nào. Vui lòng thêm sản phẩm vào giỏ hàng!!! 
-            </div> 
-         }
+        @* }else{ *@
+        @*     <div> *@
+        @*         Bạn chưa có sản phẩm nào. Vui lòng thêm sản phẩm vào giỏ hàng!!! *@
+        @*     </div> *@
+        @* } *@
     </div>
     @Html.Partial("~/Views/views/footer.cshtml")
 </body>

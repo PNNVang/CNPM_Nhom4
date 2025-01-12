@@ -23,7 +23,7 @@ public class ProductFormUpdate
  
     public int? sale { get; set; }
     
-    public bool? hot { get; set; } // 1 là có, 0 là không
+    public int? hot { get; set; } // 1 là có, 0 là không
 
    
     public string? description { get; set; }
