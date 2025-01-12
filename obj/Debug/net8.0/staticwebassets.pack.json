@@ -1,264 +1,260 @@
 {
   "Files": [
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\HatchfulExport-All.zip",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\HatchfulExport-All.zip",
       "PackagePath": "staticwebassets\\Img\\HatchfulExport-All.zip"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\SPINEL-TIM-ANH-KIM-768x768.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\SPINEL-TIM-ANH-KIM-768x768.jpg",
       "PackagePath": "staticwebassets\\Img\\SPINEL-TIM-ANH-KIM-768x768.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\avatar.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\avatar.png",
       "PackagePath": "staticwebassets\\Img\\avatar.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\TTN-2.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\banner\\TTN-2.png",
       "PackagePath": "staticwebassets\\Img\\banner\\TTN-2.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\TTN.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\banner\\TTN.png",
       "PackagePath": "staticwebassets\\Img\\banner\\TTN.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner-about.webp",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner-about.webp",
       "PackagePath": "staticwebassets\\Img\\banner\\banner-about.webp"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner.png",
       "PackagePath": "staticwebassets\\Img\\banner\\banner.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner1.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner1.png",
       "PackagePath": "staticwebassets\\Img\\banner\\banner1.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner2.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\banner\\banner2.png",
       "PackagePath": "staticwebassets\\Img\\banner\\banner2.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\jewelry-2.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\banner\\jewelry-2.png",
       "PackagePath": "staticwebassets\\Img\\banner\\jewelry-2.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\jewelry-3.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\banner\\jewelry-3.png",
       "PackagePath": "staticwebassets\\Img\\banner\\jewelry-3.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\jewelry.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\banner\\jewelry.png",
       "PackagePath": "staticwebassets\\Img\\banner\\jewelry.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\policy-1.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\banner\\policy-1.png",
       "PackagePath": "staticwebassets\\Img\\banner\\policy-1.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\policy-2.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\banner\\policy-2.png",
       "PackagePath": "staticwebassets\\Img\\banner\\policy-2.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\policy-3.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\banner\\policy-3.png",
       "PackagePath": "staticwebassets\\Img\\banner\\policy-3.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\products-banner-1.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\banner\\products-banner-1.png",
       "PackagePath": "staticwebassets\\Img\\banner\\products-banner-1.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\products-banner-2.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\banner\\products-banner-2.png",
       "PackagePath": "staticwebassets\\Img\\banner\\products-banner-2.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\banner\\products-banner.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\banner\\products-banner.png",
       "PackagePath": "staticwebassets\\Img\\banner\\products-banner.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\GREEN-TOURMALINE.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\category\\GREEN-TOURMALINE.jpg",
       "PackagePath": "staticwebassets\\Img\\category\\GREEN-TOURMALINE.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\Peridot.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\category\\Peridot.jpg",
       "PackagePath": "staticwebassets\\Img\\category\\Peridot.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\aquamarine.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\category\\aquamarine.jpg",
       "PackagePath": "staticwebassets\\Img\\category\\aquamarine.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\enternal.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\category\\enternal.jpg",
       "PackagePath": "staticwebassets\\Img\\category\\enternal.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\garnet.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\category\\garnet.jpg",
       "PackagePath": "staticwebassets\\Img\\category\\garnet.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\ruby.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\category\\ruby.jpg",
       "PackagePath": "staticwebassets\\Img\\category\\ruby.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\sapphire.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\category\\sapphire.jpg",
       "PackagePath": "staticwebassets\\Img\\category\\sapphire.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\spinel.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\category\\spinel.jpg",
       "PackagePath": "staticwebassets\\Img\\category\\spinel.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\topaz-1.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\category\\topaz-1.jpg",
       "PackagePath": "staticwebassets\\Img\\category\\topaz-1.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\category\\zircon.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\category\\zircon.jpg",
       "PackagePath": "staticwebassets\\Img\\category\\zircon.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\dai-hoc-long-lam.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\dai-hoc-long-lam.jpg",
       "PackagePath": "staticwebassets\\Img\\dai-hoc-long-lam.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\facebook_cover_photo_1.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\facebook_cover_photo_1.png",
       "PackagePath": "staticwebassets\\Img\\facebook_cover_photo_1.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\facebook_cover_photo_2.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\facebook_cover_photo_2.png",
       "PackagePath": "staticwebassets\\Img\\facebook_cover_photo_2.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\facebook_profile_image.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\facebook_profile_image.png",
       "PackagePath": "staticwebassets\\Img\\facebook_profile_image.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\favicon.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\favicon.png",
       "PackagePath": "staticwebassets\\Img\\favicon.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\diamond\\Anh-dai-dien-Kim-Cuong-tu-nhien.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\diamond\\Anh-dai-dien-Kim-Cuong-tu-nhien.jpg",
       "PackagePath": "staticwebassets\\Img\\gemstone\\diamond\\Anh-dai-dien-Kim-Cuong-tu-nhien.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\jewels\\Nhan-nam-Kim-Cuong-Vang-trang-Au18k-MA-K-6000000.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\jewels\\Nhan-nam-Kim-Cuong-Vang-trang-Au18k-MA-K-6000000.jpg",
       "PackagePath": "staticwebassets\\Img\\gemstone\\jewels\\Nhan-nam-Kim-Cuong-Vang-trang-Au18k-MA-K-6000000.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\ruby\\Vien-Ruby-facet-Luc-Yen-063ct-IRRF152-231006300000.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\ruby\\Vien-Ruby-facet-Luc-Yen-063ct-IRRF152-231006300000.jpg",
       "PackagePath": "staticwebassets\\Img\\gemstone\\ruby\\Vien-Ruby-facet-Luc-Yen-063ct-IRRF152-231006300000.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\spinel\\Vien-Spinel-sac-cobalt-sieu-VIP-175ct-IRSI65-231117500000.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\spinel\\Vien-Spinel-sac-cobalt-sieu-VIP-175ct-IRSI65-231117500000.jpg",
       "PackagePath": "staticwebassets\\Img\\gemstone\\spinel\\Vien-Spinel-sac-cobalt-sieu-VIP-175ct-IRSI65-231117500000.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\topaz\\Vien-Topaz-tu-nhien-trang-tinh-khiet-283ct-IRTP56-23928300000-1.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\gemstone\\topaz\\Vien-Topaz-tu-nhien-trang-tinh-khiet-283ct-IRTP56-23928300000-1.jpg",
       "PackagePath": "staticwebassets\\Img\\gemstone\\topaz\\Vien-Topaz-tu-nhien-trang-tinh-khiet-283ct-IRTP56-23928300000-1.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\instagram_profile_image.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\instagram_profile_image.png",
       "PackagePath": "staticwebassets\\Img\\instagram_profile_image.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\kim_cuong_hong.webp",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\kim_cuong_hong.webp",
       "PackagePath": "staticwebassets\\Img\\kim_cuong_hong.webp"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\linkedin_banner_image_1.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\linkedin_banner_image_1.png",
       "PackagePath": "staticwebassets\\Img\\linkedin_banner_image_1.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\linkedin_banner_image_2.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\linkedin_banner_image_2.png",
       "PackagePath": "staticwebassets\\Img\\linkedin_banner_image_2.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\linkedin_profile_image.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\linkedin_profile_image.png",
       "PackagePath": "staticwebassets\\Img\\linkedin_profile_image.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\logo.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\logo.jpg",
       "PackagePath": "staticwebassets\\Img\\logo.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\logo.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\logo.png",
       "PackagePath": "staticwebassets\\Img\\logo.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\logo_transparent.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\logo_transparent.png",
       "PackagePath": "staticwebassets\\Img\\logo_transparent.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\pinterest_board_photo.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\pinterest_board_photo.png",
       "PackagePath": "staticwebassets\\Img\\pinterest_board_photo.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\pinterest_profile_image.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\pinterest_profile_image.png",
       "PackagePath": "staticwebassets\\Img\\pinterest_profile_image.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\qr.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\qr.png",
       "PackagePath": "staticwebassets\\Img\\qr.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-2.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-2.jpg",
       "PackagePath": "staticwebassets\\Img\\spinel-tim-anh-kim-2.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-3.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-3.jpg",
       "PackagePath": "staticwebassets\\Img\\spinel-tim-anh-kim-3.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-4.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-4.jpg",
       "PackagePath": "staticwebassets\\Img\\spinel-tim-anh-kim-4.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-5.jpg",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\spinel-tim-anh-kim-5.jpg",
       "PackagePath": "staticwebassets\\Img\\spinel-tim-anh-kim-5.jpg"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\twitter_header_photo_1.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\twitter_header_photo_1.png",
       "PackagePath": "staticwebassets\\Img\\twitter_header_photo_1.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\twitter_header_photo_2.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\twitter_header_photo_2.png",
       "PackagePath": "staticwebassets\\Img\\twitter_header_photo_2.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\twitter_profile_image.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\twitter_profile_image.png",
       "PackagePath": "staticwebassets\\Img\\twitter_profile_image.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\youtube_profile_image.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\youtube_profile_image.png",
       "PackagePath": "staticwebassets\\Img\\youtube_profile_image.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\Img\\zalo-icon.png",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\Img\\zalo-icon.png",
       "PackagePath": "staticwebassets\\Img\\zalo-icon.png"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\cate.css",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\css\\cate.css",
       "PackagePath": "staticwebassets\\css\\cate.css"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\change-pass.css",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\css\\change-pass.css",
       "PackagePath": "staticwebassets\\css\\change-pass.css"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\contact.css",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\css\\contact.css",
       "PackagePath": "staticwebassets\\css\\contact.css"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\forgotpassword.css",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\css\\forgotpassword.css",
       "PackagePath": "staticwebassets\\css\\forgotpassword.css"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\css\\profile.css",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\css\\profile.css",
       "PackagePath": "staticwebassets\\css\\profile.css"
     },
     {
-      "Id": "E:\\DOCNET\\Project_Dot_Net\\wwwroot\\js\\jsShoppingCart.js",
+      "Id": "D:\\C#\\Project_Dot_Net\\wwwroot\\js\\jsShoppingCart.js",
       "PackagePath": "staticwebassets\\js\\jsShoppingCart.js"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Dot_Net_ECommerceWeb.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Dot_Net_ECommerceWeb.Microsoft.AspNetCore.StaticWebAssets.props",

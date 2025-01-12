@@ -78,4 +78,3 @@ public class ForgotPasswordService
         return await _userService.UpdateUserAsync(user, "reset password", "unknown IP");
     }
 }
-

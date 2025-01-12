@@ -1,41 +1,84 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\DOCNET\\Project_Dot_Net\\",
+  "WorkspaceRootPath": "D:\\C#\\Project_Dot_Net\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\service\\forgotpasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:service\\forgotpasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\service\\changepasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:service\\changepasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\controller\\forgotpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:controller\\forgotpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\controller\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:controller\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\controller\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:controller\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\controller\\changepasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:controller\\changepasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.303\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\service\\logservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:service\\logservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\service\\serviceipaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:service\\serviceipaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\views\\demo\\demoipaddress.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:views\\demo\\demoipaddress.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\controller\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\controller\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:controller\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\views\\header\\header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\views\\header\\header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:views\\header\\header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\controller\\headercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\controller\\headercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:controller\\headercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\controller\\productusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\controller\\productusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:controller\\productusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|e:\\docnet\\project_dot_net\\controller\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|d:\\c#\\project_dot_net\\controller\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F144C6B8-5F68-4111-8FB3-A4B6CE801B59}|Dot_Net_ECommerceWeb.csproj|solutionrelative:controller\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,8 +89,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -58,76 +105,213 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ForgotPasswordService.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Service\\ForgotPasswordService.cs",
+              "RelativeDocumentMoniker": "Service\\ForgotPasswordService.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Service\\ForgotPasswordService.cs",
+              "RelativeToolTip": "Service\\ForgotPasswordService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T08:33:43.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Service\\LoginService.cs",
+              "RelativeDocumentMoniker": "Service\\LoginService.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Service\\LoginService.cs",
+              "RelativeToolTip": "Service\\LoginService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T08:33:39.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChangePasswordService.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Service\\ChangePasswordService.cs",
+              "RelativeDocumentMoniker": "Service\\ChangePasswordService.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Service\\ChangePasswordService.cs",
+              "RelativeToolTip": "Service\\ChangePasswordService.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T08:38:33.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ForgotPasswordController.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Controller\\ForgotPasswordController.cs",
+              "RelativeDocumentMoniker": "Controller\\ForgotPasswordController.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Controller\\ForgotPasswordController.cs",
+              "RelativeToolTip": "Controller\\ForgotPasswordController.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T08:40:11.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegisterController.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Controller\\RegisterController.cs",
+              "RelativeDocumentMoniker": "Controller\\RegisterController.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Controller\\RegisterController.cs",
+              "RelativeToolTip": "Controller\\RegisterController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T08:40:21.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Controller\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controller\\LoginController.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Controller\\LoginController.cs",
+              "RelativeToolTip": "Controller\\LoginController.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T08:40:16.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Microsoft.PackageDependencyResolution.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ViewState": "AQIAAP0AAAAAAAAAAAAqwAkBAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-01-12T08:30:43.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChangePasswordController.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Controller\\ChangePasswordController.cs",
+              "RelativeDocumentMoniker": "Controller\\ChangePasswordController.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Controller\\ChangePasswordController.cs",
+              "RelativeToolTip": "Controller\\ChangePasswordController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T08:31:19.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LogService.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Service\\LogService.cs",
+              "RelativeDocumentMoniker": "Service\\LogService.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Service\\LogService.cs",
+              "RelativeToolTip": "Service\\LogService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T08:38:43.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ServiceIPAddress.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Service\\ServiceIPAddress.cs",
+              "RelativeDocumentMoniker": "Service\\ServiceIPAddress.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Service\\ServiceIPAddress.cs",
+              "RelativeToolTip": "Service\\ServiceIPAddress.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T08:32:37.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "demoIPAddress.cshtml",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Views\\demo\\demoIPAddress.cshtml",
+              "RelativeDocumentMoniker": "Views\\demo\\demoIPAddress.cshtml",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Views\\demo\\demoIPAddress.cshtml",
+              "RelativeToolTip": "Views\\demo\\demoIPAddress.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-12T08:35:24.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Product.cs",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Model\\Product.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Model\\Product.cs",
               "RelativeDocumentMoniker": "Model\\Product.cs",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Model\\Product.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Model\\Product.cs",
               "RelativeToolTip": "Model\\Product.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA5wBoAAAAeAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-10T13:09:48.115Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "ProductService.cs",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Service\\ProductService.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Service\\ProductService.cs",
               "RelativeDocumentMoniker": "Service\\ProductService.cs",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Service\\ProductService.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Service\\ProductService.cs",
               "RelativeToolTip": "Service\\ProductService.cs",
               "ViewState": "AgIAADgBAAAAAAAAAAAvwEQBAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T13:07:08.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T13:07:08.073Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Program.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Program.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAG4AAAAAAAAAAAAswHgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T12:41:52.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T12:41:52.439Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "Header.cshtml",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Views\\Header\\Header.cshtml",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Views\\Header\\Header.cshtml",
               "RelativeDocumentMoniker": "Views\\Header\\Header.cshtml",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Views\\Header\\Header.cshtml",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Views\\Header\\Header.cshtml",
               "RelativeToolTip": "Views\\Header\\Header.cshtml",
               "ViewState": "AgIAAKgAAAAAAAAAAAAAAK8AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-10T09:53:16.873Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T09:53:16.873Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 16,
               "Title": "HeaderController.cs",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Controller\\HeaderController.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Controller\\HeaderController.cs",
               "RelativeDocumentMoniker": "Controller\\HeaderController.cs",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Controller\\HeaderController.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Controller\\HeaderController.cs",
               "RelativeToolTip": "Controller\\HeaderController.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAgwAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T09:51:35.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T09:51:35.439Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 17,
               "Title": "ProductUserController.cs",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Controller\\ProductUserController.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Controller\\ProductUserController.cs",
               "RelativeDocumentMoniker": "Controller\\ProductUserController.cs",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Controller\\ProductUserController.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Controller\\ProductUserController.cs",
               "RelativeToolTip": "Controller\\ProductUserController.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAYwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -135,11 +319,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 19,
               "Title": "CategoryController.cs",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Controller\\CategoryController.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Controller\\CategoryController.cs",
               "RelativeDocumentMoniker": "Controller\\CategoryController.cs",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Controller\\CategoryController.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Controller\\CategoryController.cs",
               "RelativeToolTip": "Controller\\CategoryController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -147,24 +331,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 13,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Controller\\HomeController.cs",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Controller\\HomeController.cs",
               "RelativeDocumentMoniker": "Controller\\HomeController.cs",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Controller\\HomeController.cs",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Controller\\HomeController.cs",
               "RelativeToolTip": "Controller\\HomeController.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAgwBkAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:36:37.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T08:36:37.841Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 18,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\DOCNET\\Project_Dot_Net\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "D:\\C#\\Project_Dot_Net\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\DOCNET\\Project_Dot_Net\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\C#\\Project_Dot_Net\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAABEAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",

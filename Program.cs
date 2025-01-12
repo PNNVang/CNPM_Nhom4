@@ -119,9 +119,6 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 
-
-
-
 app.UseSession();
 
 // Cấu hình endpoints
