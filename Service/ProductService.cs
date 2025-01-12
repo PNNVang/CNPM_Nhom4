@@ -323,6 +323,7 @@ public class ProductService
             if (product != null)
             {
                 //product.Hot = (bool)model.hot;
+                product.Hot=model.hot;
                 _context.Products.Update(product);
                 await _context.SaveChangesAsync();
             }

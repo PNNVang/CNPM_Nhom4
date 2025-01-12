@@ -24,8 +24,8 @@ public class Product
     [Column("status")] public string? Status { get; set; }
     [Column("sale")] public int Sale { get; set; } = 0; // Giá trị mặc định
 
-    [Column("hot")] public int Hot { get; set; } // Sử dụng bool thay vì tinyint
-
+    [Column("hot")] public int? Hot { get; set; } // Sử dụng bool thay vì tinyint
+    // [Column("hot")] public bool Hot { get; set; } // Sử dụng bool thay vì tinyint
     [Column("description")] public string? Description { get; set; }
 
     [StringLength(200)]
