@@ -34,7 +34,7 @@ public class UserService
             role = user.Role ?? string.Empty,
             status = user.Status ?? string.Empty,
             typeLogin = user.TypeLogin ?? string.Empty
-        }).Where(u=>u.status=="chưa xóa").ToList();
+        }).Where(u => u.status == "chưa xóa").ToList();
     }
 
     // Xóa người dùng
@@ -142,5 +142,5 @@ public class UserService
         return await _context.Users.AnyAsync(u => u.username.ToLower() == username.ToLower());
     }
 
-    
+
 }
