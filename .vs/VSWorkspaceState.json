@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Controller",
-    "\\DBContext",
-    "\\DTO",
-    "\\Model"
+    "\\Service"
   ],
-  "SelectedNode": "\\Controller\\ProductController.cs",
+  "SelectedNode": "\\Controller\\RegisterController.cs",
   "PreviewInSolutionExplorer": false
 }
