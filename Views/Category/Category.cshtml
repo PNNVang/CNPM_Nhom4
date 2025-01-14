@@ -1,231 +1,237 @@
-﻿@{
+﻿@model Dot_Net_ECommerceWeb.Model.Product;
+@{
     ViewBag.Title = "Danh Mục Sản Phẩm";
     var format = new System.Globalization.CultureInfo("vi-VN");
 }
-<link rel="stylesheet" href="/css/cate.css" /> 
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/css/cate.css" />
+
+</head>
 
 @* Phần header *@
-@Html.Partial("~/Views/Header/header.cshtml")
+<body>
+    @Html.Partial("~/Views/views/header.cshtml")
 
-<div class="cate">
-    <section class="categories">
-        <div class="container-fluid">
-            <div class="row justify-content-center card-img-top" style="gap: 10px">
+    <div class="cate">
+        <section class="categories">
+            <div class="container-fluid">
+                <div class="row justify-content-center card-img-top" style="gap: 10px">
 
-                @foreach (var category in ViewBag.Categories)
-                {
-                    <div class="col-6 col-md-2 image-container">
-                        <a href="@Url.Action("CategoryDetails", "Category", new { categoryId = category.Id })">
-                            <img class="category-image" src="@category.ImgLink" alt="@category.CategoryName">
-                            <p class="category-name">
-                                @category.CategoryName
-                            </p>
-                        </a>
-                    </div>
-                }
+                    @foreach (var category in ViewBag.Categories)
+                    {
+                        <div class="col-6 col-md-2 image-container">
+                            <a href="@Url.Action("CategoryDetails", "Category", new { categoryId = category.Id })">
+                                <img class="category-image" src="@category.ImgLink" alt="@category.CategoryName">
+                                <p class="category-name">
+                                    @category.CategoryName
+                                </p>
+                            </a>
+                        </div>
+                    }
 
+                </div>
             </div>
-        </div>
-    </section>
-</div>
-<!-- Hiển thị danh sách sản phẩm -->
-<div class="cate">
-    <div class="container-fluid" id="product-list">
-        <h3 style="text-align: center; font-size:50px;font-weight: bold ">Danh sách sản phẩm</h3>
-        <div class="row">
-            @foreach (var product in ViewBag.Products)
-            {
-                <div class="col-md-3 my-3">
-                    <div class="card w-100" style="width: 18rem;">
-                        <a href="@Url.Action("ProductDetail", "ProductUser", new { productId = product.Id })">
-                            <img class="card-img-top" src="@product.ProductImage.ImgMain" alt="Product Image" style="object-fit: contain;">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                                    @product.ProductName
-                                </p>
-                            </h5>
-                            <h6 class="price">
-                                <p>
-                                    @product.Price.ToString("C", new System.Globalization.CultureInfo("vi-VN"))
-                                </p>
-                            </h6>
-                            <div class="mt-3 d-flex justify-content-between">
-                                <form action="" method="Post" id="">
-                                    <input id="ipPro" type="hidden" name="id" value="@product.Id">
-                                    <input id="numPro" type="hidden" name="num" value="1">
-                                    <button id="btnBuy" class="btnBuy btn btn-primary btn-custom" type="button">
-                                        Mua ngay
-                                    </button>
-                                </form>
-                                <a class="btn btn-dark btn-custom add-to-cart" href="#" data-id="@product.Id"
-                                   style="padding: 5px 10px;font-size: 15px;white-space: nowrap">
-                                    Giỏ hàng
-                                </a>
+        </section>
+    </div>
+    <!-- Hiển thị danh sách sản phẩm -->
+    <div class="cate">
+        <div class="container-fluid" id="product-list">
+            <h3 style="text-align: center; font-size:50px;font-weight: bold ">Danh sách sản phẩm</h3>
+            <div class="row">
+                @foreach (var product in ViewBag.Products)
+                {
+                    <div class="col-md-3 my-3">
+                        <div class="card w-100" style="width: 18rem;">
+                            <a href="@Url.Action("ProductDetail", "ProductUser", new { productId = product.Id })">
+                                <img class="card-img-top" src="@product.ProductImage.ImgMain" alt="Product Image" style="object-fit: contain;">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                        @product.ProductName
+                                    </p>
+                                </h5>
+                                <h6 class="price">
+                                    <p>
+                                        @product.Price.ToString("C", new System.Globalization.CultureInfo("vi-VN"))
+                                    </p>
+                                </h6>
+                                <div class="mt-3 d-flex justify-content-between">
+                                    <form action="" method="Post" id="">
+                                        <input id="ipPro" type="hidden" name="id" value="@product.Id">
+                                        <input id="numPro" type="hidden" name="num" value="1">
+                                        <button id="btnBuy" class="btnBuy btn btn-primary btn-custom" type="button">
+                                            Mua ngay
+                                        </button>
+                                    </form>
+                                    <a class="btn btn-dark btn-custom add-to-cart" href="#" data-id="@product.Id"
+                                       style="padding: 5px 10px;font-size: 15px;white-space: nowrap">
+                                        Giỏ hàng
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            }
+                }
+            </div>
+        </div>
+
+        <!-- Phân trang -->
+        <div class="text-center">
+            <nav aria-label="Page">
+                <ul class="pagination justify-content-center">
+                    @for (var i = 1; i <= ViewBag.TotalPages; i++)
+                    {
+                        <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                            <a class="page-link" href="@Url.Action("Category", "Category", new { page = i })">
+                                @i
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </nav>
         </div>
     </div>
 
-    <!-- Phân trang -->
-    <div class="text-center">
-        <nav aria-label="Page">
-            <ul class="pagination justify-content-center">
-                @for (var i = 1; i <= ViewBag.TotalPages; i++)
-                {
-                    <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
-                        <a class="page-link" href="@Url.Action("Category", "Category", new { page = i })">
-                            @i
-                        </a>
-                    </li>
-                }
-            </ul>
-        </nav>
-    </div>
-</div>
 
+    @* Phần footer *@
+    @Html.Partial("~/Views/views/footer.cshtml")
 
-@* Phần footer *@
-@Html.Partial("~/Views/views/footer.cshtml")
+    @* @section Scripts { *@
+    @*     <script> *@
+    @*         $(document).ready(function () { *@
+    @*             // nhap so luong san pham *@
+    @*             $('.btnBuy').click(function () { *@
+    @*                 var button = this; *@
+    @*                 Swal.fire({ *@
+    @*                     title: 'Nhập số lượng sản phẩm', *@
+    @*                     input: 'number', *@
+    @*                     inputValue: 1, *@
+    @*                     showCancelButton: true, *@
+    @*                     confirmButtonText: 'OK', *@
+    @*                     cancelButtonText: 'Cancel', *@
+    @*                     inputValidator: (value) => { *@
+    @*                         if (!value || value < 1) { *@
+    @*                             return 'Số lượng không hợp lệ'; *@
+    @*                         } *@
+    @*                     } *@
+    @*                 }).then((result) => { *@
+    @*                     if (result.isConfirmed) { *@
+    @*                         var numProduct = parseInt(result.value); *@
+    @*                         $(button).closest('form').find('#numPro').val(numProduct); *@
+    @*                         var idform = $(button).closest('form').attr('id'); *@
+    @*                         checkQuanlityProduct(idform, numProduct) *@
+    @*                     } *@
+    @*                 }); *@
+    @*             }); *@
 
-@* @section Scripts { *@
-@*     <script> *@
-@*         $(document).ready(function () { *@
-@*             // nhap so luong san pham *@
-@*             $('.btnBuy').click(function () { *@
-@*                 var button = this; *@
-@*                 Swal.fire({ *@
-@*                     title: 'Nhập số lượng sản phẩm', *@
-@*                     input: 'number', *@
-@*                     inputValue: 1, *@
-@*                     showCancelButton: true, *@
-@*                     confirmButtonText: 'OK', *@
-@*                     cancelButtonText: 'Cancel', *@
-@*                     inputValidator: (value) => { *@
-@*                         if (!value || value < 1) { *@
-@*                             return 'Số lượng không hợp lệ'; *@
-@*                         } *@
-@*                     } *@
-@*                 }).then((result) => { *@
-@*                     if (result.isConfirmed) { *@
-@*                         var numProduct = parseInt(result.value); *@
-@*                         $(button).closest('form').find('#numPro').val(numProduct); *@
-@*                         var idform = $(button).closest('form').attr('id'); *@
-@*                         checkQuanlityProduct(idform, numProduct) *@
-@*                     } *@
-@*                 }); *@
-@*             }); *@
+    @*             // Kiểm tra số lượng sản phẩm còn trong kho *@
+    @*             function checkQuanlityProduct(id, num) { *@
+    @*                 var form = $('#' + id); *@
+    @*                 var productID = id; *@
+    @*                 var numProduct = num; *@
+    @*                 var data = { *@
+    @*                     numProduct: numProduct, *@
+    @*                     productID: productID *@
+    @*                 }; *@
+    @*                 $.ajax({ *@
+    @*                     url: '@Url.Action("CheckQuantityProduct")', *@
+    @*                     type: 'POST', *@
+    @*                     data: data, *@
+    @*                     success: function (resp) { *@
+    @*                         var res = resp.num; *@
+    @*                         var notification = resp.notification; *@
+    @*                         if (notification === 'ok') { *@
+    @*                             form.submit(); *@
+    @*                         } else { *@
+    @*                             swal.fire({ *@
+    @*                                 title: 'Thông Báo', *@
+    @*                                 html: notification + '<br>Số lượng bạn có thể mua: ' + res, *@
+    @*                             }) *@
+    @*                         } *@
+    @*                     }, *@
+    @*                     error: function () { *@
+    @*                         swal.fire({ *@
+    @*                             title: 'Lỗi', *@
+    @*                             text: 'Đã xảy ra lỗi khi kiểm tra số lượng sản phẩm.', *@
+    @*                             icon: 'error' *@
+    @*                         }); *@
+    @*                     } *@
+    @*                 }); *@
+    @*                 return false; *@
+    @*             } *@
 
-@*             // Kiểm tra số lượng sản phẩm còn trong kho *@
-@*             function checkQuanlityProduct(id, num) { *@
-@*                 var form = $('#' + id); *@
-@*                 var productID = id; *@
-@*                 var numProduct = num; *@
-@*                 var data = { *@
-@*                     numProduct: numProduct, *@
-@*                     productID: productID *@
-@*                 }; *@
-@*                 $.ajax({ *@
-@*                     url: '@Url.Action("CheckQuantityProduct")', *@
-@*                     type: 'POST', *@
-@*                     data: data, *@
-@*                     success: function (resp) { *@
-@*                         var res = resp.num; *@
-@*                         var notification = resp.notification; *@
-@*                         if (notification === 'ok') { *@
-@*                             form.submit(); *@
-@*                         } else { *@
-@*                             swal.fire({ *@
-@*                                 title: 'Thông Báo', *@
-@*                                 html: notification + '<br>Số lượng bạn có thể mua: ' + res, *@
-@*                             }) *@
-@*                         } *@
-@*                     }, *@
-@*                     error: function () { *@
-@*                         swal.fire({ *@
-@*                             title: 'Lỗi', *@
-@*                             text: 'Đã xảy ra lỗi khi kiểm tra số lượng sản phẩm.', *@
-@*                             icon: 'error' *@
-@*                         }); *@
-@*                     } *@
-@*                 }); *@
-@*                 return false; *@
-@*             } *@
+    @*             // Thêm vào giỏ hàng *@
+    @*             $(".add-to-cart").click(function (e) { *@
+    @*                 e.preventDefault(); *@
+    @*                 var id = $(this).data("id"); *@
 
-@*             // Thêm vào giỏ hàng *@
-@*             $(".add-to-cart").click(function (e) { *@
-@*                 e.preventDefault(); *@
-@*                 var id = $(this).data("id"); *@
+    @*                 $.ajax({ *@
+    @*                     url: '@Url.Action("AddToCart")', *@
+    @*                     type: 'GET', *@
+    @*                     data: { id: id }, *@
+    @*                     success: function (response) { *@
+    @*                         if (response.status === "success") { *@
+    @*                             swal.fire({ *@
+    @*                                 icon: 'success', *@
+    @*                                 title: 'Thông báo', *@
+    @*                                 text: 'Sản phẩm đã được thêm vào giỏ hàng.' *@
+    @*                             }) *@
+    @*                         } else if (response.status === "exists") { *@
+    @*                             swal.fire({ *@
+    @*                                 icon: 'info', *@
+    @*                                 title: 'Thông báo', *@
+    @*                                 text: 'Sản phẩm đã tồn tại trong giỏ hàng.' *@
+    @*                             }) *@
+    @*                         } else { *@
+    @*                             swal.fire({ *@
+    @*                                 icon: 'warning', *@
+    @*                                 title: 'Thông báo', *@
+    @*                                 text: 'Có lỗi xảy ra, vui lòng thử lại.' *@
+    @*                             }) *@
+    @*                         } *@
+    @*                     }, *@
+    @*                     error: function () { *@
+    @*                         swal.fire({ *@
+    @*                             icon: 'warning', *@
+    @*                             title: 'Thông báo', *@
+    @*                             text: 'Có lỗi xảy ra, vui lòng thử lại.' *@
+    @*                         }) *@
+    @*                     } *@
+    @*                 }); *@
+    @*             }); *@
 
-@*                 $.ajax({ *@
-@*                     url: '@Url.Action("AddToCart")', *@
-@*                     type: 'GET', *@
-@*                     data: { id: id }, *@
-@*                     success: function (response) { *@
-@*                         if (response.status === "success") { *@
-@*                             swal.fire({ *@
-@*                                 icon: 'success', *@
-@*                                 title: 'Thông báo', *@
-@*                                 text: 'Sản phẩm đã được thêm vào giỏ hàng.' *@
-@*                             }) *@
-@*                         } else if (response.status === "exists") { *@
-@*                             swal.fire({ *@
-@*                                 icon: 'info', *@
-@*                                 title: 'Thông báo', *@
-@*                                 text: 'Sản phẩm đã tồn tại trong giỏ hàng.' *@
-@*                             }) *@
-@*                         } else { *@
-@*                             swal.fire({ *@
-@*                                 icon: 'warning', *@
-@*                                 title: 'Thông báo', *@
-@*                                 text: 'Có lỗi xảy ra, vui lòng thử lại.' *@
-@*                             }) *@
-@*                         } *@
-@*                     }, *@
-@*                     error: function () { *@
-@*                         swal.fire({ *@
-@*                             icon: 'warning', *@
-@*                             title: 'Thông báo', *@
-@*                             text: 'Có lỗi xảy ra, vui lòng thử lại.' *@
-@*                         }) *@
-@*                     } *@
-@*                 }); *@
-@*             }); *@
+    @*             $(".pagination-link").click(function (e) { *@
+    @*                 e.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a> *@
+    @*                 var url = $(this).attr("href"); *@
 
-@*             $(".pagination-link").click(function (e) { *@
-@*                 e.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a> *@
-@*                 var url = $(this).attr("href"); *@
+    @*                 $.ajax({ *@
+    @*                     url: url, *@
+    @*                     type: 'GET', *@
+    @*                     success: function (response) { *@
+    @*                         var productListHtml = $(response).find("#product-list .row").html(); *@
+    @*                         $("#product-list .row").html(productListHtml); *@
 
-@*                 $.ajax({ *@
-@*                     url: url, *@
-@*                     type: 'GET', *@
-@*                     success: function (response) { *@
-@*                         var productListHtml = $(response).find("#product-list .row").html(); *@
-@*                         $("#product-list .row").html(productListHtml); *@
+    @*                         $(".pagination-link").parent().removeClass("active"); // Xóa active class khỏi tất cả các thẻ <li> *@
+    @*                         $(e.target).parent().addClass("active"); // Thêm active class vào thẻ <li> đã click *@
 
-@*                         $(".pagination-link").parent().removeClass("active"); // Xóa active class khỏi tất cả các thẻ <li> *@
-@*                         $(e.target).parent().addClass("active"); // Thêm active class vào thẻ <li> đã click *@
-
-@*                         // Cuộn trang lên đầu *@
-@*                         $('html, body').animate({ *@
-@*                             scrollTop: $("#product-list").offset().top *@
-@*                         }, 500); // Thời gian cuộn là 500ms *@
-@*                     }, *@
-@*                     error: function () { *@
-@*                         alert("Có lỗi xảy ra, vui lòng thử lại."); *@
-@*                     } *@
-@*                 }); *@
-@*             }); *@
-@*         }); *@
-@*     </script> *@
-
-    
-
-}
+    @*                         // Cuộn trang lên đầu *@
+    @*                         $('html, body').animate({ *@
+    @*                             scrollTop: $("#product-list").offset().top *@
+    @*                         }, 500); // Thời gian cuộn là 500ms *@
+    @*                     }, *@
+    @*                     error: function () { *@
+    @*                         alert("Có lỗi xảy ra, vui lòng thử lại."); *@
+    @*                     } *@
+    @*                 }); *@
+    @*             }); *@
+    @*         }); *@
+    @*     </script> *@
+</body>
+</html>
 
 
 

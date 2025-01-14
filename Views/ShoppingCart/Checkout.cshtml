@@ -1,28 +1,12 @@
-﻿@{
-    ViewBag.Tilte = "Thanh Toan";
+﻿@model Dot_Net_ECommerceWeb.Model.CustomerViewModel;
+
+@{
+    ViewBag.Title = "Thanh Toán";
 }
 <html lang="vi">
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
-    <style type="text/css">
-        .table th, .table td {
-            text-align: center;
-            vertical-align: middle;
-        }
-
-        .form-group {
-            display: flex;
-            justify-content: space-between;
-            width: 20%;
-        }
-
-        .form-control {
-            width: 20%;
-            text-align: center;
-        }
-
-    </style>
 </head>
 <body>
     @Html.Partial("~/Views/views/header.cshtml")
@@ -34,49 +18,70 @@
             </div>
         </div>
         <hr />
-        @* @if (ViewBag.CheckCart != null) *@
-        @* { *@
-        <div class="row">
-            <div class="col-md-9">
-                <h3>Thông tin khách hàng</h3>
-                <div class="form-group">
-                    <label>Họ tên khách hàng</label>
-                    <input type="text" name="CustomerName" class="form-control" autocomplete="off" />
-                </div>
-                <div class="form-group">
-                    <label>Số điện thoại</label>
-                    <input type="text" name="Phone" class="form-control" autocomplete="off" />
-                </div>
-                <div class="form-group">
-                    <label>Địa chỉ</label>
-                    <input type="text" name="Address" class="form-control" autocomplete="off" />
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" name="Email" class="form-control" autocomplete="off" />
-                </div>
+        @if (ViewBag.CheckCart != null)
+        {
+            <div class="row">
+                <div class="col-md-9">
+                    <form id="checkoutForm">
+                        <h3>Thông tin khách hàng</h3>
+                        <div class="form-group">
+                            <label>Họ tên khách hàng</label>
+                            <input type="text" name="CustomerName" class="form-control" autocomplete="off" style="width:80%;" />
+                        </div>
+                        <div class="form-group">
+                            <label>Số điện thoại</label>
+                            <input type="text" name="Phone" class="form-control" autocomplete="off" style="width:80%;" />
+                        </div>
+                        <div class="form-group">
+                            <label>Địa chỉ</label>
+                            <input type="text" name="Address" class="form-control" autocomplete="off" style="width:80%;" />
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" name="Email" class="form-control" autocomplete="off" style="width:80%;" />
+                        </div>
 
-                <div class="form-group">
-                    <label>Hình thức thanh toán</label>
-                    <select class="form-control" name="Payment">
-                        <option value="1" selected>OOD</option>
-                        <option value="2">Chuyển khoản</option>
-                    </select>
+                        <div class="form-group">
+                            <label>Hình thức thanh toán</label>
+                            <select class="form-control" name="Payment" style="width:80%;">
+                                <option value="1" selected>COD</option>
+                                <option value="2">Chuyển khoản</option>
+                            </select>
+                        </div>
+                    </form>
+                    <br />
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-block btn-success" style="width:80%;">Đặt hàng</button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <button type="button" class="btn btn-block btn-success">Đặt hàng</button>
+                <div class="col-md-3" id="cartContainer">
                 </div>
             </div>
-            <div class="col-md-3">
-                @await Html.PartialAsync("Partial_Item_Checkout")
+        }
+        else
+        {
+            <div>
+                Không có sản phẩm,vui lòng thêm <a href="/Category/Category">sản phẩm</a> để thanh toán!!!!
             </div>
-        </div>
-        @* }else{ *@
-        @*     <div> *@
-        @*         Bạn chưa có sản phẩm nào. Vui lòng thêm sản phẩm vào giỏ hàng!!! *@
-        @*     </div> *@
-        @* } *@
+        }
     </div>
     @Html.Partial("~/Views/views/footer.cshtml")
+
+    <script type="text/javascript">
+        // Khi trang tải xong, gọi AJAX để hiển thị giỏ hàng
+        $(document).ready(function () {
+            $.ajax({
+                url: '@Url.Action("Partial_Item_ThanhToan", "ShoppingCart")',
+                type: 'GET',
+                success: function (data) {
+                    // Cập nhật nội dung giỏ hàng vào phần tử #cartContainer
+                    $('#cartContainer').html(data);
+                },
+                error: function (xhr, status, error) {
+                    alert('Có lỗi xảy ra khi tải giỏ hàng!');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
