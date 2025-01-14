@@ -33,12 +33,12 @@ public class AdminController : Microsoft.AspNetCore.Mvc.Controller
     {
         return View();
     }
-
+//quan li anh san pham
     public IActionResult admin_image()
     {
         return View();
     }
-
+//so luong
     public IActionResult admin_inventory()
     {
         return View();
@@ -58,7 +58,7 @@ public class AdminController : Microsoft.AspNetCore.Mvc.Controller
     {
         return View();
     }
-
+//doanh thu
     public IActionResult admin_summary()
     {
         return View();

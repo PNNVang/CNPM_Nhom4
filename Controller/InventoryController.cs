@@ -16,7 +16,7 @@ public class InventoryController:Microsoft.AspNetCore.Mvc.Controller
     {
         _inventoryService = inventoryService;
     }
-
+//api lay thong tin so luong san pham
     [HttpGet("getinventoriesdetail")]
     public async Task<IActionResult> GetInventory()
     {

@@ -15,7 +15,7 @@ public class SummaryController:Microsoft.AspNetCore.Mvc.Controller
     {
         _summaryService = summaryService;
     }
-
+    //lay du lieu hien thị o trang doanh thu
     [HttpGet("getsummary")]
     public async Task<IActionResult> GetSummary()
     {

@@ -20,7 +20,7 @@ namespace Dot_Net_ECommerceWeb.Controller
         {
             _context = context;
         }
-
+        //dang nhap google
         [HttpGet("google-login")]
         public async Task GoogleLogin()
         {
@@ -29,7 +29,7 @@ namespace Dot_Net_ECommerceWeb.Controller
                 RedirectUri = Url.Action("GoogleResponse")
             });
         }
-
+        //sau khi chon tai khoan dang nhap sẽ phản hồi với google
         [HttpGet("google-response")]
         public async Task<IActionResult> GoogleResponse()
         {
@@ -47,8 +47,8 @@ namespace Dot_Net_ECommerceWeb.Controller
                 Avatar = result.Principal.FindFirstValue("picture"),
                 TypeLogin = "google",
                 Status = "chưa xóa",
-                // Role = "user",
-                Role="admin",
+                Role = "user",
+                // Role="admin",
                 CreatedAt = DateTime.Now,
                 UpdatedAt = DateTime.Now,
                 password = "chưa xác định"

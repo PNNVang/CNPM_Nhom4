@@ -1,5 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Text.RegularExpressions;
 using Dot_Net_ECommerceWeb.Model;
 
