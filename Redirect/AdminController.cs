@@ -1,10 +1,11 @@
 ﻿using Dot_Net_ECommerceWeb.Model;
+using Dot_Net_ECommerceWeb.Service.Filter;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 
 namespace Dot_Net_ECommerceWeb.Controller;
-
+[SessionCheckFilter]
 public class AdminController : Microsoft.AspNetCore.Mvc.Controller
 {
     public IActionResult admin()
@@ -86,5 +87,10 @@ public class AdminController : Microsoft.AspNetCore.Mvc.Controller
     public IActionResult admin_paypal()
     {
         return View();
+    }
+
+    public IActionResult admin_logout()
+    {
+        return RedirectToAction("Login","Account");
     }
 }

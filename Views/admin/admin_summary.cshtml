@@ -275,6 +275,14 @@
                             <i class="fa-solid fa-image"></i> <span class="ms-1 d-none d-sm-inline">Quản lí ảnh</span>
                         </a>
                     </li>
+                    @* @if (Session["user"] != null) *@
+                    @* { *@
+                    <li>
+                        <a href="@Url.Action("admin_logout","Admin")" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-door-open"></i><span class="ms-1 d-none d-sm-inline">Đăng xuất</span>
+                        </a>
+                    </li>
+                    @* } *@
                 </ul>
                 <hr>
             </div>

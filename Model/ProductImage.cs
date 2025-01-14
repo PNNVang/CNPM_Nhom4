@@ -24,6 +24,6 @@ public class ProductImage
     
     // Navigation Property for Product
     public Product Product { get; set; }
-
-
+    
+    // public bool IsDefault { get; set; }
 }

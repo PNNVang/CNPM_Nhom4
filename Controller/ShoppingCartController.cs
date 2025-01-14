@@ -66,8 +66,9 @@ namespace Dot_Net_ECommerceWeb.Controller
         public IActionResult AddToCart(int id, int quantity)
         {
             var code = new { Success = false, massage = "", code = -1, Count = 0 };
-            var db = new AppDBContext();
-            var checkProduct = db.Products.FirstOrDefault(x => x.Id == id);
+            //cái class context có trong class này rồi tài võ chỉ việc gọi ra thôi
+            // var db = new AppDBContext();
+            var checkProduct = _context.Products.FirstOrDefault(x => x.Id == id);
             if (checkProduct != null)
             {
                 ShoppingCart cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart");
