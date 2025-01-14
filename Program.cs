@@ -145,7 +145,7 @@ using (var scope = app.Services.CreateScope())
 // app.MapGet("/", () => "Hello World!");
 app.MapGet("/", async (HttpContext context) =>
 {
-    context.Response.Redirect("Account/login");
+    context.Response.Redirect("HomePage");
     return Task.CompletedTask;
 });
 
