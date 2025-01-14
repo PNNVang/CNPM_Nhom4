@@ -32,8 +32,8 @@ namespace Dot_Net_ECommerceWeb.Controller
                 {
                     // From = new MailAddress("xhoang345@gmail.com"), // Email của bạn
                     From = new MailAddress(RecipientEmail),
-                    Subject = Subject, // Chủ đề lấy từ form
-                    Body = $"Họ và tên: {FullName}\nEmail: {RecipientEmail}\nChủ đề: {Subject}\nNội dung: {Message}",
+                    Subject = "Phản hồi", // Chủ đề lấy từ form
+                    Body = "Cam on vi da phan hoi chung toi se tra loi lai trong thoi gian som nhat co the",
                     IsBodyHtml = false, // Đặt nội dung không phải HTML
                 };
 

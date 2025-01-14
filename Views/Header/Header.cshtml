@@ -2,7 +2,15 @@
 @using Dot_Net_ECommerceWeb.Model
 @using System.Text.Json;
 @inject IHttpContextAccessor HttpContextAccessor
+@{
+    var userJson = HttpContextAccessor.HttpContext.Session.GetString("user"); // Lấy thông tin người dùng từ session
+    User user = null;
 
+    if (!string.IsNullOrEmpty(userJson))
+    {
+        user = JsonSerializer.Deserialize<User>(userJson); // Deserialize JSON thành đối tượng User
+    }
+}
 @* *@
 
 <!-- Bootstrap CSS -->
@@ -133,6 +141,29 @@
                 @*  }  *@
                 @* else  *@
                 @*  {  *@
+                @if (string.IsNullOrEmpty(userJson))
+                {
+                    <li class="nav-item pt-2" style="list-style-type: none;">
+                        <button class="btn btn-outline-primary border-0">
+                            <a class="nav-link" aria-current="page" href="@Url.Action("Login", "Account")">
+                                Đăng nhập
+                            </a>
+                        </button>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item pt-2" style="list-style-type: none;">
+                        <button class="btn btn-outline-primary border-0">
+                            <a class="nav-link" aria-current="page" href="@Url.Action("Logout", "Logout")">
+                                Đăng xuất
+                            </a>
+                        </button>
+                    </li>
+                    <li class="nav-item pt-2" style="list-style-type: none;">
+                        <span class="nav-link">Xin chào, @user.FullName</span>
+                    </li>
+                }
                 <li class="nav-item pt-2" style="list-style-type: none;">
                     <button class="btn btn-outline-primary border-0">
                         <a class="nav-link" aria-current="page" href="/Cart">
