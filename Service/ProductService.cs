@@ -360,19 +360,31 @@ public class ProductService
             throw new InvalidOperationException("Error fetching products for category.", ex);
         }
     }
-
-    public async Task<Product> GetProductByIdAsync(int id)
+    public async Task<Product?> GetProductByIdAsync(int id)
     {
         return await _context.Products
-                         .Include(p => p.ProductImage)  // Bao gồm thông tin ProductImage
-                         .FirstOrDefaultAsync(p => p.Id == id);
+                             .Include(p => p.ProductImage)
+                             .FirstOrDefaultAsync(p => p.Id == id);
     }
 
-    public async Task<ProductImage> GetProductImageByIdAsync(int id)
+    public async Task<ProductImage?> GetProductImageByIdAsync(int id)
     {
         return await _context.ProductImages
                              .FirstOrDefaultAsync(pi => pi.Id == id);
     }
 
-   
+    //public async Task<Product> GetProductByIdAsync(int id)
+    //{
+    //    return await _context.Products
+    //                     .Include(p => p.ProductImage)  // Bao gồm thông tin ProductImage
+    //                     .FirstOrDefaultAsync(p => p.Id == id);
+    //}
+
+    //public async Task<ProductImage> GetProductImageByIdAsync(int id)
+    //{
+    //    return await _context.ProductImages
+    //                         .FirstOrDefaultAsync(pi => pi.Id == id);
+    //}
+
+
 }

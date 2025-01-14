@@ -122,17 +122,16 @@ app.UseStaticFiles();
 app.UseSession();
 
 // Cấu hình endpoints
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllerRoute(
+
+    app.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}");
 
-    endpoints.MapControllerRoute(
+    app.MapControllerRoute(
         name: "category",
         pattern: "Category/{action=Category}/{id?}",
         defaults: new { controller = "Category" });
-});
+
 
 
 // Khởi động ứng dụng với dịch vụ DBContext

@@ -1,65 +1,76 @@
-﻿
+﻿@model Dot_Net_ECommerceWeb.Model.Product;
 @{
     ViewData["Title"] = "DANH MỤC: " + @ViewBag.CategoryName;
 }
-<link rel="stylesheet" href="/css/cate.css" />
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/css/cate.css" />
+    <link href="/css/cate.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    @* Phần header *@
+    @Html.Partial("~/Views/views/header.cshtml")
 
-@* Phần header *@
-@Html.Partial("~/Views/views/header.cshtml")
-<link href="/css/cate.css" rel="stylesheet" type="text/css" />
 
-<div class="text" style="text-align: center; margin-top: 15px">
-    <h3 style="color: #555555;">DANH SÁCH SẢN PHẨM: @ViewBag.CategoryName.ToUpper()</h3>
-</div>
+    <div class="text" style="text-align: center; margin-top: 15px">
+        <h3 style="color: #555555;">DANH SÁCH SẢN PHẨM: @ViewBag.CategoryName.ToUpper()</h3>
+    </div>
 
-<div class="container" id="product-list">
-    <div class="row">
-        @foreach (var product in ViewBag.Products)
-        {
-            <div class="col-md-3 my-3">
-                <div class="card w-100" style="width: 18rem;">
-                    <a href="@Url.Action("ProductDetail", "ProductUser", new { productId = product.Id })">
-                        <img class="card-img-top" src="@Url.Content(product.ProductImage.ImgMain)" alt="Product Image">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">@product.ProductName</p>
-                        </h5>
-                        <h6 class="price">
-                            <p>@string.Format("{0:N0}đ", product.Price)</p>
-                        </h6>
-                        <div class="mt-3 d-flex justify-content-between">
-                            <form asp-action="Order" method="post">
-                                <input type="hidden" name="id" value="@product.Id" />
-                                <input type="hidden" name="num" value="1" />
-                                <button class="btn btn-primary btn-custom" type="submit">Mua ngay</button>
-                            </form>
-                            <div>
-                                <a class="btn btn-dark btn-custom" href="@Url.Action("AddToCart", "Cart", new { id = product.Id })" style="padding: 5px 10px; font-size: 15px; white-space: nowrap">Giỏ hàng</a>
+    <div class="container" id="product-list">
+        <div class="row">
+            @foreach (var product in ViewBag.Products)
+            {
+                <div class="col-md-3 my-3">
+                    <div class="card w-100" style="width: 18rem;">
+                        <a href="@Url.Action("ProductDetail", "ProductUser", new { productId = product.Id })">
+                            <img class="card-img-top" src="@Url.Content(product.ProductImage.ImgMain)" alt="Product Image">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">@product.ProductName</p>
+                            </h5>
+                            <h6 class="price">
+                                <p>@string.Format("{0:N0}đ", product.Price)</p>
+                            </h6>
+                            <div class="mt-3 d-flex justify-content-between">
+                                <form asp-action="Order" method="post">
+                                    <input type="hidden" name="id" value="@product.Id" />
+                                    <input type="hidden" name="num" value="1" />
+                                    <button id="btnBuy" class="btnBuy btn btn-primary btn-custom" type="button">
+                                        Mua ngay
+                                    </button>
+                                </form>
+                                <a class="btn btn-dark btn-custom add-to-cart" href="#" data-id="@product.Id"
+                                   style="padding: 5px 10px;font-size: 15px;white-space: nowrap">
+                                    Giỏ hàng
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+            }
+        </div>
+
+        <!-- Phân trang -->
+        @if (ViewBag.TotalPages > 0)
+        {
+            <div class="text-center">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                        {
+                            <li class="page-item @(ViewBag.CurrentPage == i ? "active" : "")">
+                                <a class="page-link" href="@Url.Action("CategoryDetails", "Category", new { categoryId = ViewBag.Category.Id, page = i })">@i</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
             </div>
         }
+
     </div>
-
-    <!-- Phân trang -->
-    @if (ViewBag.TotalPages > 0)
-    {
-        <div class="text-center">
-            <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-center">
-                    @for (int i = 1; i <= ViewBag.TotalPages; i++)
-                    {
-                        <li class="page-item @(ViewBag.CurrentPage == i ? "active" : "")">
-                            <a class="page-link" href="@Url.Action("CategoryDetails", "Category", new { categoryId = ViewBag.Category.Id, page = i })">@i</a>
-                        </li>
-                    }
-                </ul>
-            </nav>
-        </div>
-    }
-
-</div>
-@Html.Partial("~/Views/views/footer.cshtml")
+    @Html.Partial("~/Views/views/footer.cshtml")
+</body>
+</html>
