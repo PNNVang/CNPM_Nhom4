@@ -18,7 +18,7 @@ public class Product
 
     [StringLength(50)]
     [Column("product_name")]
-    public string ProductName { get; set; }
+    public string? ProductName { get; set; }
 
     [Column("price")] public float Price { get; set; }
     [Column("status")] public string? Status { get; set; }
