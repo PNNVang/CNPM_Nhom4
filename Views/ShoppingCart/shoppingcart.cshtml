@@ -10,24 +10,24 @@
 
 </head>
 <body>
-    @Html.Partial("~/Views/views/header.cshtml")
-    <br />
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12" id="load_data">
-                 @await Html.PartialAsync("Partial_Item_Cart") 
-            </div>
-            <div class="col-md-12">
-                <div class="text-end">
-                    <a href="#" class="btn btn-sm btn-danger btnDeleteAll">Xóa Hết</a>
-                    <a href="/checkout" class="btn btn-sm btn-success">Thanh toán</a>
-                </div>
+@Html.Partial("~/Views/views/header.cshtml")
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" id="load_data">
+            @await Html.PartialAsync("Partial_Item_Cart")
+        </div>
+        <div class="col-md-12">
+            <div class="text-end">
+                <a href="#" class="btn btn-sm btn-danger btnDeleteAll">Xóa Hết</a>
+                <a href="/checkout" class="btn btn-sm btn-success">Thanh toán</a>
             </div>
         </div>
     </div>
-    @Html.Partial("~/Views/views/footer.cshtml")
-    <script>
-        $(document).ready( LoadCart());
-    </script>
+</div>
+@Html.Partial("~/Views/views/footer.cshtml")
+<script>
+    $(document).ready( LoadCart());
+</script>
 </body>
 </html>
