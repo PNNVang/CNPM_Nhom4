@@ -25,6 +25,9 @@ public class AppDBContext : DbContext
    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<User>()
+            .Property(u => u.Id)
+            .ValueGeneratedOnAdd();
         modelBuilder.Entity<Logs>();
         modelBuilder.Entity<ProductImage>();
         modelBuilder.Entity<User>()

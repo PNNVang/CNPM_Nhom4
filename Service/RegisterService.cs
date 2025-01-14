@@ -2,18 +2,20 @@
 using Dot_Net_ECommerceWeb.Service;
 using System.Text;
 using System.Threading.Tasks;
+using Dot_Net_ECommerceWeb.DBContext;
 
 public class RegisterService
 {
     private readonly UserService userService;
     private readonly EncryptAndDencrypt encryptAndDencrypt;
     private readonly IHttpContextAccessor _httpContextAccessor;
-
-    public RegisterService(UserService userService, EncryptAndDencrypt encryptAndDencrypt, IHttpContextAccessor httpContextAccessor)
+    private readonly AppDBContext _context;
+    public RegisterService(UserService userService, EncryptAndDencrypt encryptAndDencrypt, IHttpContextAccessor httpContextAccessor, AppDBContext _context)
     {
         this.userService = userService;
         this.encryptAndDencrypt = encryptAndDencrypt;
         _httpContextAccessor = httpContextAccessor;
+        this._context = _context;
     }
 
     public async Task<bool> InsertUserAsync(string username, string password, string email)
@@ -32,7 +34,7 @@ public class RegisterService
             Status = "chưa xóa"
         };
 
-        return await userService.AddUserAsync(newUser, "register account", _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString() ?? "Unknow");
+        return await userService.AddUserAsync(newUser, "register account", _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString() ?? "Unknown");
 
     }
 
