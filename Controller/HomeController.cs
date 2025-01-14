@@ -19,7 +19,7 @@ namespace Dot_Net_ECommerceWeb.Controller
         {
             return RedirectToAction("Category", "Category");
         }
-        [HttpGet("Index")]
+        [HttpGet("HomePage")]
         public async Task<IActionResult> Index(int page = 1)
         {
             const int pageSize = 10; // Số sản phẩm mỗi trang
