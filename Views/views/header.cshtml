@@ -93,15 +93,17 @@
 
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page"
-                       href="@Url.Action("SendMail", "Home")">Liên hệ</a>
+                       href="@Url.Action("SendMail", "Contact")">Liên hệ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page"
-                       href="@Url.Content("~/policy")">Chính sách</a>
+                       @* href="@Url.Content("~/policy")">Chính sách</a> *@
+                       href="@Url.Action("Policy","Information")">Chính sách</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page"
-                       href="@Url.Content("~/views/about")">Giới thiệu</a>
+                       @* href="@Url.Content("~/views/about")">Giới thiệu</a> *@
+                       href="@Url.Action("About","Information")">Giới thiệu</a>
                 </li>
              </ul> 
              <!-- search --> 

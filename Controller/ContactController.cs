@@ -30,7 +30,8 @@ namespace Dot_Net_ECommerceWeb.Controller
                 // Tạo đối tượng email
                 var mailMessage = new MailMessage
                 {
-                    From = new MailAddress("xhoang345@gmail.com"), // Email của bạn
+                    // From = new MailAddress("xhoang345@gmail.com"), // Email của bạn
+                    From = new MailAddress(RecipientEmail),
                     Subject = Subject, // Chủ đề lấy từ form
                     Body = $"Họ và tên: {FullName}\nEmail: {RecipientEmail}\nChủ đề: {Subject}\nNội dung: {Message}",
                     IsBodyHtml = false, // Đặt nội dung không phải HTML

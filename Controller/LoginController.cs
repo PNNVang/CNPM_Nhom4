@@ -51,7 +51,7 @@ public class LoginController : Microsoft.AspNetCore.Mvc.Controller
                     case "admin":
                         return RedirectToAction("admin_summary", "Admin");
                     case "user":
-                        return RedirectToAction("Home", "Home");
+                        return RedirectToAction("Index", "Home");
                     case "prohibit":
                         HttpContext.Session.Remove("user");
                         return RedirectToAction("Prohibit", "Notification");

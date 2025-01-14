@@ -74,7 +74,7 @@ namespace Dot_Net_ECommerceWeb.Controller
             await _context.SaveChangesAsync();
             string userJson = JsonSerializer.Serialize(user);
             HttpContext.Session.SetString("user",userJson);
-            return RedirectToAction("admin_summary", "Admin");
+           return View("~/Views/Home/Index.cshtml");
         }
     }
 }
