@@ -1,0 +1,39 @@
+@using Dot_Net_ECommerceWeb.Helper;
+@{
+    ViewBag.Title = "Thanh Toán Thành Công";
+}
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+
+</head>
+<body>
+@Html.Partial("~/Views/Header/Header.cshtml")
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" id="load_data">
+            <h2>Bạn đã đặt hàng thành công. Vui lòng kiểm tra email</h2>
+        </div>
+    </div>
+</div>
+@Html.Partial("~/Views/views/footer.cshtml")
+<script>
+        $(document).ready( Load());
+                function Load() {
+            $.ajax({
+                url: '/OrderSuccess',
+                type: 'GET',
+                success: function (rs) {
+                    console.log(rs);
+                    $('#load_data').html(rs);
+                },
+                error: function (rs) {
+                    console.error(rs);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

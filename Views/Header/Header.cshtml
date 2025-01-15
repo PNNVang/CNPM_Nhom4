@@ -1,0 +1,221 @@
+﻿@using Microsoft.AspNetCore.Http
+@using Dot_Net_ECommerceWeb.Model
+@using System.Text.Json;
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    var userJson = HttpContextAccessor.HttpContext.Session.GetString("user"); // Lấy thông tin người dùng từ session
+    User user = null;
+
+    if (!string.IsNullOrEmpty(userJson))
+    {
+        user = JsonSerializer.Deserialize<User>(userJson); // Deserialize JSON thành đối tượng User
+    }
+}
+@* *@
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+<!-- style -->
+<style>
+    * {
+        font-family: 'Roboto Light', sans-serif;
+    }
+
+    header {
+        height: 66px;
+        font-size: large;
+    }
+
+        header .bg-search {
+            background-color: #E2C16C;
+        }
+
+        header .logo-img {
+            width: 50px;
+            height: 50px;
+            float: left;
+            margin-left: 20px;
+            border-radius: 15px;
+        }
+
+    .logged .dropdown-toggle::after {
+        display: none;
+    }
+
+    .nav-link.active {
+        color: #0DCAF0 !important;
+        font-size: 20px;
+    }
+</style>
+
+<header class="container-fluid border-bottom border-dark navbar navbar-expand-lg bg-light">
+    <div class="container-fluid ms-3 me-3">
+        <!-- logo -->
+        <a class="navbar-brand" href="#">
+            <img src="~/Img/logo.png" alt="Logo" class="logo-img" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- list menu -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"
+                       href="@Url.Action("Index","Home")">Trang chủ</a>
+                </li>
+
+
+                <!-- dropdown -->
+                <li class="nav-item dropdown">
+                    <!-- Dropdown link -->
+                    <a id="category-link" class="nav-link dropdown-toggle" href="@Url.Action("Category", "Category")" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">Đá quý</a>
+                    <!-- Dropdown menu -->
+                    <ul class="dropdown-menu" id="gemstone-dropdown">
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Ruby")">Ruby</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Sapphire")">Sapphire</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Ngọc%20lục%20bảo")">Ngọc lục bảo</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Spinel")">Spinel</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Tourmaline")">Tourmaline</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Aquamarine")">Aquamarine</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Peridot")">Peridot</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Garnet")">Garnet</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Zircon")">Zircon</a></li>
+                        <li><a class="dropdown-item" href="@Url.Content("~/ProductByCategory?name=Topaz")">Topaz</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page"
+                       href="@Url.Action("Contact", "Contact")">Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page"
+                       @* href="@Url.Content("~/policy")">Chính sách</a> *@
+                       href="@Url.Action("Policy","Information")">Chính sách</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page"
+                       @* href="@Url.Content("~/views/about")">Giới thiệu</a> *@
+                       href="@Url.Action("About","Information")">Giới thiệu</a>
+                </li>
+            </ul>
+            <!-- search -->
+            <form class="d-flex" role="search" action="@Url.Action("Search", "Home")" method="get">
+                <input class="form-control me-2 bg-search" aria-label="Search"
+                       type="search"
+                       name="txtSearch"
+                       placeholder="Tìm sản phẩm"
+                       autocomplete="off"
+                       @* value="@Request.Query["txtSearch"]"   *@/>
+                <button class="btn btn-outline-success" type="submit">Tìm</button>
+            </form>
+            <ul class="d-flex ">
+                <!-- cart -->
+                @* {   *@
+                @*      var user = HttpContext.Session.GetString("user"); // Lấy thông tin người dùng từ session  *@
+                @*      var cartItemCount = ViewBag.CartItemCount ?? 0; // Đếm số lượng sản phẩm trong giỏ hàng (truyền từ controller)  *@
+                @* }   *@
+                @*  @if (string.IsNullOrEmpty(user))  *@
+                @*  {  *@
+                @*      <li class="nav-item pt-2" style="list-style-type: none;">  *@
+                @*        <button class="btn btn-outline-primary border-0">  *@
+                @*              <a class="nav-link" aria-current="page" href="@Url.Action("LoginWeb", "Account")">  *@
+                @*                  <i class="fa-solid fa-cart-shopping"></i>  *@
+                @*              </a>  *@
+                @*          </button>  *@
+                @*      </li>  *@
+                @*  }  *@
+                @* else  *@
+                @*  {  *@
+                @if (string.IsNullOrEmpty(userJson))
+                {
+                    <li class="nav-item pt-2" style="list-style-type: none;">
+                        <button class="btn btn-outline-primary border-0">
+                            <a class="nav-link" aria-current="page" href="@Url.Action("Login", "Account")">
+                                Đăng nhập
+                            </a>
+                        </button>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item pt-2" style="list-style-type: none;">
+                        <button class="btn btn-outline-primary border-0">
+                            <a class="nav-link" aria-current="page" href="@Url.Action("Logout", "Logout")">
+                                Đăng xuất
+                            </a>
+                        </button>
+                    </li>
+                    <li class="nav-item pt-2" style="list-style-type: none;">
+                        <span class="nav-link">Xin chào, @user.username</span>
+                    </li>
+                }
+                <li class="nav-item pt-2" style="list-style-type: none;">
+                    <button class="btn btn-outline-primary border-0">
+                        <a class="nav-link" aria-current="page" href="/Cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="badge bg-danger px-1" id="cartItemCount">0</span>
+                        </a>
+                    </button>
+                </li>
+                @* } *@
+
+
+                @*     <!-- login --> *@
+                @*    @if (HttpContext.Session.GetString("user") == null) *@
+                @*    { *@
+                @*        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" *@
+                @*           data-bs-display="static" aria-expanded="false"> *@
+                @*            <button class="btn btn-outline-primary border-0"> *@
+                @*                <i class="fa-solid fa-user"></i> *@
+                @*            </button> *@
+                @*        </a> *@
+                @*        <ul class="dropdown-menu dropdown-menu-end"> *@
+                @*            <li><a class="dropdown-item" href="/loginWeb">Đăng nhập</a></li> *@
+                @*            <li><a class="dropdown-item" href="/register">Đăng ký</a></li> *@
+                @*        </ul> *@
+                @*    } *@
+                @*    else *@
+                @*    { *@
+                @*        // login found *@
+                @*        User user = HttpContext.Session.GetObjectFromJson<User>("user");  // assuming User is a custom model *@
+                @*        <li class="logged nav-item dropdown ms-3 me-3 pt-2" style="list-style-type: none;"> *@
+                @*            <button class="btn border-1 nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> *@
+                @*                <strong> *@
+                @*                    <img src="@user.Avatar" alt="" class="rounded-5 mx-auto d-block border-2" style="height: 32px; width: 32px;"> *@
+                @*                </strong> *@
+                @*            </button> *@
+                @*            <ul class="dropdown-menu dropdown-menu-end"> *@
+                @*                <li class="text-center"><strong>@user.username</strong></li> *@
+                @*                <li><a class="dropdown-item" href="/user/changepassword">Đổi mật khẩu</a></li> *@
+                @*                <li><a class="dropdown-item" href="/user/profile">Hồ sơ</a></li> *@
+                @*                <li><a class="dropdown-item" href="/order/listOrder">Đơn hàng</a></li> *@
+                @*                <li><hr class="dropdown-divider"></li> *@
+                @*                <li><a class="dropdown-item" href="/logout">Đăng xuất</a></li> *@
+                @*            </ul> *@
+                @*        </li> *@
+                @*    } *@
+            </ul>
+        </div>
+    </div>
+    <!-- Bootstrap JavaScript (đảm bảo phiên bản tương ứng với CSS) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="//cdn.datatables.net/2.0.2/js/dataTables.min.js"></script>
+
+</header>

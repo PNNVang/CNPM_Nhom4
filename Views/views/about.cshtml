@@ -1,0 +1,97 @@
+@* @{ *@
+@*     Layout = null; *@
+@* } *@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Giới thiệu</title>
+    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+@Html.Partial("~/Views/Header/Header.cshtml")
+
+<section>
+<div class="main">
+        <div class="banner-about">
+            <h1 class="title_1">Về chúng tôi</h1>
+            <p class="content_1">Với gần 10 năm thành lập, TTN luôn chú trọng xây dựng nền tảng của mình. Tiền thân là người
+                con của vùng đất Ngọc – Lục Yên – Yên Bái, được thừa hưởng nhiều kinh nghiệm của bậc cha chú trong làng đá.
+                Thời kỳ đầu tiên quý mến và chia sẻ, truyền đạt lại những kinh nghiệm được đúc kết từ thức tế bởi hàng chục
+                năm làm nghề.</p>
+            <p class="content_2">TTN có thế mạnh về duyệt thiết kế bản vẽ, cũng như không gian 3D. Dưới con mắt có chiều sâu
+                và kỹ thuật cao, được phát huy từ những năm học thiết kế, kỹ sư tại trường Đại Học Xây Dựng.</p>
+            <p class="content_3">TTN đã từng tham gia nhiều Triển Lãm Đá Quý Quốc tế tại nước ngoài cũng như tại Việt
+                Nam.</p>
+        </div>
+    <div class="container">
+        <h1>TTN Store</h1>
+        <div class="content">
+            <div class="content_main main-1">
+                <i class="fa-solid fa-bullseye"></i>
+                <h2>SỨ MỆNH</h2>
+                <p class="paragraph_1">Với khẩu hiệu Tinh Hoa Đá Quý đã truyền tải thông điệp tới Quý khách hàng rằng,
+                    TTN luôn tuyển chọn chất lượng và đạt tiêu chuẩn cao nhất, tinh túy nhất cho viên Đá Quý của mình.
+                    Với
+                    phương châm “Hãy bán cho mình trước khi bán cho Khách Hàng”. Nhằm mang lại trải nghiệm đam mê tốt
+                    nhất tới tay Quý Khách.</p>
+            </div>
+            <div class="content_main main-2">
+                <i class="fa-solid fa-eye"></i>
+                <h2>TẦM NHÌN</h2>
+                <p class="paragraph_1">Với tầm nhìn dài hạn xuyên suốt chung tôi nhận định phục vụ Khách Hàng đam mê đá
+                    quý là Sự Nghiệp suốt đời. Chúng tôi luôn nỗ lực thay đổi và phát triển không ngừng để đáp ứng nhu
+                    cầu
+                    của Quý khách hàng. TTN phấn đấu trở thành tập đoàn kinh doanh hàng đầu trong lĩnh vực trang sức đá
+                    quý tại Việt Nam.</p>
+            </div>
+            <div class="content_main main-3">
+                <i class="fa-solid fa-hand-holding-hand"></i>
+                <h2>NHIỆM VỤ VÀ TRÁCH NHIỆM</h2>
+                <p class="paragraph_1">Luôn cải thiện và nâng cấp chất lượng sản phẩm đẹp nhất cũng như dịch vụ tốt
+                    nhất.
+                    Luôn có trách nhiệm bảo hành chu đáo với những sản phẩm của mình bán ra.</p>
+                <P CLASS="paragraph_2">Chúng tôi luôn trân trọng sự yêu mến của Quý khách đã tin tưởng lựa chọn và giới
+                    thiệu cho bạn bè người thân biết tới thương hiệu TTN – Tinh Hoa Đá Quý.</P>
+            </div>
+            <div class="content_main main-4">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h2>TRIẾT LÝ: NGỌC SÁNG TỪ TÂM</h2>
+                <p class="paragraph_1">Xuất phát từ viên Ngọc Quý mà chúng tôi đã trải nghiệm là viên đá quý phải trong
+                    sạch
+                    nhất là phần tâm của viên đá phải ko tỳ vết, bởi nếu có chút vết tại tâm viên đá sẽ phản quang ra
+                    toàn
+                    bộ viên đá làm cho giảm vẻ đẹp đi rất nhiều, và ngược lại.</p>
+                <P CLASS="paragraph_2">Xuất phát từ tâm người bán hàng chúng tôi thấy có sự đồng điệu và trùng hợp giữa
+                    đá
+                    quý và con người có sự tương đồng giống nhau. Kinh doanh và bán hàng lĩnh vực đá quý thì cần cái tâm
+                    rất
+                    lớn, uy tín và trách nhiệm rất cao. Bởi chúng tôi xác định đây là SỰ NGHIỆP và SỨ MỆNH.</P>
+            </div>
+        </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+@Html.Partial("~/Views/views/footer.cshtml")
+<script>
+    $(document).ready(function (){
+        nav_active()
+    })
+    function nav_active() {
+        $('a.nav-link').removeClass('active')
+        $('a.nav-link').each(function() {
+            if ($(this).text().trim() === 'Giới thiệu') { // Dùng .trim() để loại bỏ khoảng trắng dư thừa
+                $(this).addClass('active');
+            }
+        });
+    }
+</script>
+</body>
+</html>

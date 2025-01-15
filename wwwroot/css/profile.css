@@ -1,0 +1,31 @@
+#profile {
+    font-size: medium;
+    background-color: #F5F5F5;
+}
+
+
+#profile .avatar img {
+    height: 48px;
+}
+
+#profile .context-profile button:hover {
+    color: #EE5233;
+}
+
+#profile .actived {
+    color: #EE5233;
+}
+
+#imgAvatar {
+    height: 100px;
+    margin: auto;
+}
+
+#ipphoneNumber {
+    display: none;
+
+}
+
+#ipAddress {
+    display: none;
+}

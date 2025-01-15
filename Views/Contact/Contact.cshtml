@@ -1,0 +1,72 @@
+﻿@{
+    // ViewBag.Title = "Liên hệ";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Liên hệ</title>
+    <link rel="stylesheet" href="~/css/contact.css" type="text/css">
+</head>
+<body>
+    @await Html.PartialAsync("~/Views/Header/Header.cshtml") <!-- Include header -->
+
+    <div class="contact-wrap">
+        <div class="contact-in">
+            <h1>THÔNG TIN LIÊN HỆ</h1>
+            <h2><i class="fa fa-phone" aria-hidden="true"></i> Hotline</h2>
+            <p>0000000000</p>
+            <h2><i class="fa fa-envelope" aria-hidden="true"></i> Email</h2>
+            <p>abc@gmail.com</p>
+            <h2><i class="fa fa-map-marker" aria-hidden="true"></i> Địa chỉ</h2>
+            <p>123ABC</p>
+            <ul>
+                <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-google"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="contact-in">
+            <h1>Phản ánh từ khách hàng</h1>
+            <form action="@Url.Action("SendMail", "Contact")" method="post">
+                <input type="text" required placeholder="Họ và tên" name="FullName" class="contact-in-input">
+                <input type="email" required placeholder="Email" name="RecipientEmail" class="contact-in-input">
+                <input type="text" required placeholder="Chủ đề" name="Subject" class="contact-in-input">
+                <textarea placeholder="Nội dung" required name="Message" class="contact-in-textarea"></textarea>
+                <input id="submit" type="submit" value="GỬI" class="contact-in-btn">
+            </form>
+        </div>
+
+
+        <div class="contact-in">
+            <iframe src="#"
+                    width="100%" height="auto" style="border:0;" allowfullscreen
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+    <div>
+        @Html.Partial("~/Views/views/footer.cshtml") <!-- Include footer -->
+
+        <script>
+            $(document).ready(function () {
+                nav_active();
+            });
+
+            function nav_active() {
+                $('a.nav-link').removeClass('active');
+                $('a.nav-link').each(function () {
+                    if ($(this).text().trim() === 'Liên hệ') {
+                        $(this).addClass('active').addClass('main-color');
+                    }
+                });
+            }
+        </script>
+    </div>
+</body>
+</html>

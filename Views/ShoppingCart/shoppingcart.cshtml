@@ -1,0 +1,33 @@
+
+@using Dot_Net_ECommerceWeb.Helper;
+@{
+    ViewBag.Title = "Giỏ Hàng";
+}
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+
+</head>
+<body>
+@Html.Partial("~/Views/Header/Header.cshtml")
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" id="load_data">
+            @await Html.PartialAsync("Partial_Item_Cart")
+        </div>
+        <div class="col-md-12">
+            <div class="text-end">
+                <a href="#" class="btn btn-sm btn-danger btnDeleteAll">Xóa Hết</a>
+                <a href="/checkout" class="btn btn-sm btn-success">Thanh toán</a>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Partial("~/Views/views/footer.cshtml")
+<script>
+    $(document).ready( LoadCart());
+</script>
+</body>
+</html>
