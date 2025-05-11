@@ -14,6 +14,7 @@ namespace Dot_Net_ECommerceWeb.Service
             _context = context;
         }
 
+        // Phương thức lấy ra danh sách đơn hàng theo trạng thái đơn hàng
         public List<Order> GetOrdersByStatus(string status)
         {
             string translatedStatus = status switch
