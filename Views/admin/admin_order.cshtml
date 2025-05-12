@@ -1,4 +1,3 @@
-@* @model List<OrderViewModel> *@
 @{
     ViewData["Title"] = "Quản lí đơn hàng";
 }
@@ -18,9 +17,9 @@
         height: 50px;
     }
 
-    .button-status:hover {
-        box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-    }
+        .button-status:hover {
+            box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+        }
 
     #table_id_wrapper {
         overflow-x: auto;
@@ -77,14 +76,11 @@
                             <i class="fa-solid fa-image"></i> <span class="ms-1 d-none d-sm-inline">Quản lí ảnh</span>
                         </a>
                     </li>
-                    @* @if (Session["user"] != null) *@
-                    @* { *@
                     <li>
                         <a href="@Url.Action("admin_logout","Admin")" class="nav-link px-0 align-middle">
                             <i class="fa-solid fa-door-open"></i><span class="ms-1 d-none d-sm-inline">Đăng xuất</span>
                         </a>
                     </li>
-                    @* } *@
                 </ul>
                 <hr>
             </div>
@@ -96,33 +92,37 @@
             <button class="button-status text-black" name="btn" value="Đang giao" id="giving">Đang giao</button>
             <button class="button-status text-black" name="btn" id="gived" value="Đã giao">Đã giao</button>
             <button class="button-status text-black" name="btn" id="canceled" value="Hủy">Hủy</button>
-            @* <button type="button" class="btn btn-primary" id="convert" onclick="converttoExcel()">Xuất Excel</button> *@
 
             <table id="table_id" class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Thông tin đơn hàng</th>
+                        <th>Mã đơn hàng</th>
+                        <th>Tên khách hàng</th>
+                        <th>Ngày đặt hàng</th>
+                        <th>Tổng tiền</th>
+                        <th>Trạng thái</th>
+                        <th>Trạng thái thanh toán</th>
+                        <th>Hành động</th>
                     </tr>
                 </thead>
                 <tbody id="body">
-                </tbody>
             </table>
         </div>
     </div>
 </div>
 
-@* @section Scripts { *@
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="//cdn.datatables.net/2.0.2/js/dataTables.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    @* <script src="~/js/table2excel.js"></script> *@
+@* Scripts *@
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="//cdn.datatables.net/2.0.2/js/dataTables.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@* <script src="~/js/table2excel.js"></script> *@
 
-    <script>
+<script>
         var $tbody = $('#body');
         $(document).ready(function () {
             $("#submenu_1").hide();
@@ -130,11 +130,14 @@
                 $("#submenu_1").slideToggle();
             });
         });
+
+        // Khởi tạo DataTable, gán vào biến
+        let dataTable;
+
         $(document).ready(function () {
-            $("#table_id").DataTable();
-        });
-        $(document).ready(function () {
-            $("#dt-search-0").attr('name', 'search');
+         dataTable = $("#table_id").DataTable();
+
+         $("#dt-search-0").attr('name', 'search');
         });
 
         // Order status buttons click handlers
@@ -145,37 +148,50 @@
         $('#waiting-giving').click(loadOrders.bind(null, '/api/orders/getorders/waiting_giving'));
 
         function loadOrders(url) {
-            $tbody.empty();
-            showSpinner();
+        showSpinner();
 
-            $.ajax({
-                url: url,
-                method: 'GET',
-                dataType: 'JSON',
-                success: function (response) {
-                    hideSpinner();
-                    $.each(response, function (index, value) {
-                        var $row = $('<tr>').attr('id', value.id);
-                        $.each(value, function (key, value_item) {
-                            var $cell = $('<td>').text(value_item);
-                            $row.append($cell);
-                        });
+        $.ajax({
+            url: url,
+            method: 'GET',
+            dataType: 'JSON',
+            success: function (response) {
+                hideSpinner();
 
-                        var $edit = $('<i class="fa-solid fa-wrench"></i>').click(function () {
+                // Xóa dữ liệu cũ trong DataTable
+                dataTable.clear();
+
+                // Duyệt dữ liệu và thêm hàng
+                $.each(response, function (index, value) {
+                    const rowData = [];
+
+                $.each(value, function (key, value_item) {
+                   // Format định dạng tiền trước khi thêm vào DataTable
+                   if (key.toLowerCase().includes("totalprice")) {
+                       const formattedPrice = value_item.toLocaleString('vi-VN') + ' đ';
+                       rowData.push(formattedPrice);
+                    } else {
+                       rowData.push(value_item);
+                    }
+                });
+
+                    // Thêm icon sửa
+                    const $edit = $('<button class="btn btn-sm btn-warning"><i class="fa-solid fa-wrench"></i> Cập nhật</button>').click(function () {
                             showUpdateOrderModal(value.id);
-                        });
+                    })[0].outerHTML;
 
-                        var $actionCell = $('<td>').append($edit);
-                        $row.append($actionCell);
-                        $tbody.append($row);
-                    });
-                },
-                error: function (error) {
-                    hideSpinner();
-                    alert('Lỗi khi lấy dữ liệu');
-                }
-            });
-        }
+                    rowData.push($edit); // Thêm vào cột cuối cùng
+                    dataTable.row.add(rowData);
+                });
+
+                // Cập nhật bảng
+                dataTable.draw();
+            },
+            error: function (error) {
+                hideSpinner();
+                alert('Lỗi khi lấy dữ liệu');
+            }
+        });
+    }
 
         function showUpdateOrderModal(orderId) {
             Swal.fire({
@@ -233,9 +249,9 @@
             $('.spinner').remove();
         }
 
-      
+
         $(document).ready(function () {
             $('.dt-empty').hide()
         })
-    </script>
+</script>
 }

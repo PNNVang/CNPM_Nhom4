@@ -2,6 +2,7 @@
 using System.Net.Mail;
 using Dot_Net_ECommerceWeb.DBContext;
 using Dot_Net_ECommerceWeb.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace Dot_Net_ECommerceWeb.Service
 {
@@ -15,29 +16,43 @@ namespace Dot_Net_ECommerceWeb.Service
         }
 
         // Phương thức lấy ra danh sách đơn hàng theo trạng thái đơn hàng
-        public List<Order> GetOrdersByStatus(string status)
+        public List<OrderSummaryViewModel> GetOrdersByStatus(string status)
         {
             string translatedStatus = status switch
             {
-                "waiting" => "chờ xác nhận",
-                "giving" => "đang giao",
-                "gived" => "đã giao",
-                "cancelled" => "hủy",
-                "waiting_giving" => "đang chờ giao",
+                "waiting" => "Chờ xác nhận",
+                "giving" => "Đang giao hàng",
+                "gived" => "Đã giao",
+                "cancelled" => "Đã hủy",
+                "waiting_giving" => "Chờ giao hàng",
                 _ => null
             };
-            return _context.Orders.Where(o => o.Status == translatedStatus).ToList();
+
+            return _context.Orders
+                .Where(o => o.Status == translatedStatus)
+                .Include(o => o.user) // để truy cập được FullName của user
+                .Select(o => new OrderSummaryViewModel
+                {
+                    Id = o.Id,
+                    FullName = o.user.FullName,
+                    CreatedAt = o.CreatedAt,
+                    TotalPrice = o.TotalPrice,
+                    Status = o.Status,
+                    StatusPayment = o.StatusPayment
+                })
+                .ToList();
         }
+
 
         public async Task<Order> UpdateOrderStatusAsync(int id, string newStatus)
         {
             string translatedStatus = newStatus switch
             {
-                "waiting" => "chờ xác nhận",
-                "giving" => "đang giao",
-                "gived" => "đã giao",
-                "cancelled" => "hủy",
-                "waiting_giving" => "đang chờ giao",
+                "waiting" => "Chờ xác nhận",
+                "giving" => "Đang giao hàng",
+                "gived" => "Đã giao",
+                "cancelled" => "Đã hủy",
+                "waiting_giving" => "Chờ giao hàng",
                 _ => null
             };
             var order = _context.Orders.Find(id);
