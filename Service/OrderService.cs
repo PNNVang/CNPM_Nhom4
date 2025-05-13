@@ -15,6 +15,23 @@ namespace Dot_Net_ECommerceWeb.Service
             _context = context;
         }
 
+        // Phương thức lấy ra danh sách đơn hàng
+        public List<OrderSummaryViewModel> GetOrders()
+        {
+            return _context.Orders      
+                   .Include(o => o.user) // để truy cập được FullName của user
+                   .Select(o => new OrderSummaryViewModel
+            {
+                Id = o.Id,
+                FullName = o.user.FullName,
+                CreatedAt = o.CreatedAt,
+                TotalPrice = o.TotalPrice,
+                Status = o.Status,
+                StatusPayment = o.StatusPayment
+            })
+            .ToList();
+        }
+
         // Phương thức lấy ra danh sách đơn hàng theo trạng thái đơn hàng
         public List<OrderSummaryViewModel> GetOrdersByStatus(string status)
         {

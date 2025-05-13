@@ -21,6 +21,25 @@
             box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
         }
 
+    .btn-detail, .btn-update {
+        padding: 8px 16px;
+        margin-bottom: 10px;
+    }
+
+    .btn-detail {
+        width: 85%;
+    }
+
+        .btn-detail:hover {
+            background-color: #3ab0f2 !important;
+            color: white;
+        }
+
+    .btn-update:hover {
+        background-color: #d39e00 !important;
+        color: white;
+    }
+
     #table_id_wrapper {
         overflow-x: auto;
     }
@@ -138,6 +157,9 @@
          dataTable = $("#table_id").DataTable();
 
          $("#dt-search-0").attr('name', 'search');
+
+         // Load tất cả đơn hàng
+         loadOrders('/api/orders/getorders/all');
         });
 
         // Order status buttons click handlers
@@ -174,12 +196,19 @@
                     }
                 });
 
-                    // Thêm icon sửa
-                    const $edit = $('<button class="btn btn-sm btn-warning"><i class="fa-solid fa-wrench"></i> Cập nhật</button>').click(function () {
-                            showUpdateOrderModal(value.id);
+                    // Tạo nút Chi tiết
+                    const $detail = $('<button class="btn btn-sm btn-info btn-detail me-2"><i class="fa-solid fa-circle-info"></i> Chi tiết</button>').click(function () {
+                        showOrderDetailModal(value.id);
                     })[0].outerHTML;
 
-                    rowData.push($edit); // Thêm vào cột cuối cùng
+                    // Tạo nút Cập nhật
+                    const $edit = $('<button id="btnUpdate" class="btn btn-sm btn-warning btn-update"><i class="fa-solid fa-wrench"></i> Cập nhật</button>').click(function () {
+                        showUpdateOrderModal(value.id);
+                    })[0].outerHTML;
+
+                    // Thêm cả 2 nút vào cùng 1 ô cột cuối
+                    rowData.push($detail + $edit);
+
                     dataTable.row.add(rowData);
                 });
 
@@ -193,28 +222,38 @@
         });
     }
 
+        // Gắn sự kiện cho nút cập nhật đơn hàng
+        $(document).on('click', '.btn-update', function () {
+        // Lấy ID đơn hàng từ dòng hiện tại
+        const orderId = dataTable.row($(this).parents('tr')).data()[0]; // giả sử ID nằm ở cột đầu
+        console.log(orderId)
+        showUpdateOrderModal(orderId);
+        });
+
+        // SweetAlert thông báo khi người dùng nhấn nút cập nhật đơn hàng
         function showUpdateOrderModal(orderId) {
-            Swal.fire({
-                title: "Bạn có chắc chắn không?",
-                text: "Bạn sẽ không thể khôi phục được!",
-                icon: "warning",
-                input: 'select',
-                inputOptions: {
-                    waiting: 'chờ xác nhận',
-                    cancelled: 'hủy',
-                    waiting_giving: 'đang chờ giao',
-                    giving: 'đang giao',
-                    gived: 'đã giao'
-                },
-                showCancelButton: true,
-                confirmButtonColor: "#3085d6",
-                cancelButtonColor: "#d33",
-                confirmButtonText: "Yes, update it!"
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    updateOrder(orderId, result.value);
-                }
-            });
+        Swal.fire({
+            title: "Cập nhật trạng thái đơn hàng",
+            text: "Vui lòng chọn trạng thái mới cho đơn hàng này.",
+            icon: "info",
+            input: 'select',
+            inputOptions: {
+                waiting: 'Chờ xác nhận',
+                cancelled: 'Đã hủy',
+                waiting_giving: 'Chờ giao hàng',
+                giving: 'Đang giao hàng',
+                gived: 'Đã giao'
+            },
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Cập nhật đơn hàng",
+            cancelButtonText: "Hủy bỏ"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                updateOrder(orderId, result.value);
+            }
+        });
         }
 
         function updateOrder(orderId, status) {
@@ -223,13 +262,15 @@
                 dataType: 'JSON',
                 method: "PUT",
                 success: function (res) {
-                    console.log(res);
                     Swal.fire({
-                        title: "Đã cập nhật!",
-                        text: "Cập nhật thành công.",
-                        icon: "success"
-                    });
-                },
+                    title: "Hoàn tất!",
+                    text: "Cập nhật đơn hàng thành công.",
+                    icon: "success"
+                }).then(() => {
+                // Gọi lại hàm loadOrders để hiển thị
+                loadOrders('/api/orders/getorders/all');
+            });
+        },
                 error: function (error) {
                     Swal.fire({
                         title: "Lỗi!",
@@ -254,4 +295,3 @@
             $('.dt-empty').hide()
         })
 </script>
-}

@@ -15,8 +15,16 @@ namespace Dot_Net_ECommerceWeb.Controller
             _orderService = orderService;
         }
 
+
+        [HttpGet("getorders/all")]
+        public async Task<IActionResult> GetOrders()
+        {
+            var orders = _orderService.GetOrders();
+            return Ok(orders);
+        }
+
         [HttpGet("getorders/{status}")]
-        public async Task<IActionResult> GetOrders(string status)
+        public async Task<IActionResult> GetOrdersByStatus(string status)
         {
             var orders =  _orderService.GetOrdersByStatus(status);
             return Ok(orders);
