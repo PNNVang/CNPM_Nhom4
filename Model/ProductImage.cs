@@ -10,6 +10,7 @@ public class ProductImage
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Column("id")]
+    [ForeignKey("Product")]
     public int Id { get; set; }
     [Column("img_main")]
     public string? ImgMain { get; set; }

@@ -32,5 +32,7 @@ public class Order
     [Column("note")]
     public string? Note { get; set; }
     public ICollection<OrderDetail> OrderDetails { get; set; }
+
+    [ForeignKey("UserId")]
     public User user { get; set; }
 }

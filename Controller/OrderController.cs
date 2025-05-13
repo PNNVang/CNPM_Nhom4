@@ -38,5 +38,21 @@ namespace Dot_Net_ECommerceWeb.Controller
 
             return Ok(updatedOrder);
         }
+
+        // Lấy chi tiết đơn hàng qua orderId cụ thể
+        [HttpGet("getordersdetail/{id}")]
+        public ActionResult<OrderDetailViewModel> GetOrderDetail(int id)
+        {
+            // Lấy thông tin chi tiết đơn hàng từ service
+            var orderDetail = _orderService.GetOrderDetail(id);
+
+            if (orderDetail == null)
+            {
+                return NotFound("Order not found");
+            }
+
+            return Ok(orderDetail);
+        }
+
     }
 }

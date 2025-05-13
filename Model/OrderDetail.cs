@@ -8,7 +8,7 @@ public class OrderDetail
     [Key]
     [Column("order_id")]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int? OrderId { get; set; }
+    public int OrderId { get; set; }
     [Column("product_id")]
     public int? ProductId { get; set; }
     [Column("quantity_total")]

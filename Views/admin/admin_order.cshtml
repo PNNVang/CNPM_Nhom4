@@ -17,9 +17,9 @@
         height: 50px;
     }
 
-        .button-status:hover {
-            box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-        }
+    .button-status:hover {
+        box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+     }
 
     .btn-detail, .btn-update {
         padding: 8px 16px;
@@ -38,6 +38,11 @@
     .btn-update:hover {
         background-color: #d39e00 !important;
         color: white;
+    }
+
+    .modal-body ul li {
+        list-style-type: none !important;
+
     }
 
     #table_id_wrapper {
@@ -126,6 +131,24 @@
                 </thead>
                 <tbody id="body">
             </table>
+        </div>
+    </div>
+
+    <!-- Modal Chi tiết đơn hàng -->
+    <div class="modal fade" id="orderDetailModal" tabindex="-1" aria-labelledby="orderDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderDetailModalLabel">Chi tiết đơn hàng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Nội dung chi tiết đơn hàng điền vào đây -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -225,8 +248,7 @@
         // Gắn sự kiện cho nút cập nhật đơn hàng
         $(document).on('click', '.btn-update', function () {
         // Lấy ID đơn hàng từ dòng hiện tại
-        const orderId = dataTable.row($(this).parents('tr')).data()[0]; // giả sử ID nằm ở cột đầu
-        console.log(orderId)
+        const orderId = dataTable.row($(this).parents('tr')).data()[0];
         showUpdateOrderModal(orderId);
         });
 
@@ -277,6 +299,49 @@
                         text: "Cập nhật không thành công.",
                         icon: "error"
                     });
+                }
+            });
+        }
+
+        // Gắn sự kiện cho nút chi tiết đơn hàng
+        $(document).on('click', '.btn-detail', function () {
+            // Lấy ID đơn hàng từ dòng hiện tại
+            const orderId = dataTable.row($(this).parents('tr')).data()[0];
+            showOrderDetailModal(orderId); // Gọi hàm hiển thị chi tiết đơn hàng
+        });
+
+    // Hàm hiển thị modal chi tiết đơn hàng
+    function showOrderDetailModal(orderId) {
+        $.ajax({
+            url: `/api/orders/getordersdetail/${orderId}`, // API lấy chi tiết đơn hàng
+            method: 'GET',
+            success: function (orderDetail) {
+                // Hiển thị modal và điền thông tin chi tiết vào
+                    $('#orderDetailModal .modal-body').html(`
+                      <h5>Chi tiết đơn hàng #${orderDetail.orderId}</h5>
+                      <p><strong>Ngày tạo:</strong> ${orderDetail.createdAt}</p>
+                      <p><strong>Trạng thái:</strong> ${orderDetail.orderStatus}</p>
+                      <p><strong>Ghi chú:</strong> ${orderDetail.note}</p>
+                      <p><strong>Tổng tiền:</strong> ${orderDetail.totalPrice} VNĐ</p>
+                      <p><strong>Phí vận chuyển:</strong> ${orderDetail.shippingCost} VNĐ</p>
+                      <p><strong>Tổng cộng:</strong> ${orderDetail.totalAmount} VNĐ</p>
+                      <hr>
+                      <h6>Sản phẩm:</h6>
+                      <ul>
+                      ${orderDetail.products.map(product => `
+                        <li>
+                            <img src="${product.productImage}" alt="${product.productName}" style="width: 50px; height: 50px;">
+                            <strong>${product.productName}</strong> - ${product.quantity} x ${product.price} VNĐ
+                        </li>
+                      `)}
+                    </ul>
+                    `);
+
+                // Hiển thị modal
+                $('#orderDetailModal').modal('show');
+             },
+                error: function (error) {
+                    alert('Lỗi khi lấy chi tiết đơn hàng');
                 }
             });
         }
