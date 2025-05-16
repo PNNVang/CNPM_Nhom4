@@ -80,7 +80,7 @@ public class ProductService
             Price = (float)model.price,
             Status = model.Status,
             Description = model.Description,
-            Information = GenerateProductInfo(model),
+         
         };
 
         _context.Products.Add(product);
@@ -113,12 +113,6 @@ public class ProductService
         return true;
     }
 
-    public string GenerateProductInfo(ProductForm model)
-    {
-        return
-            $"/color:{model.Color};weight:{model.Weight};size:{model.Size};opacity:{model.Opacity};cutting_form:{model.CuttingForm}/";
-    }
-
     private async Task<string[]> UploadImagesToCloudinary(ProductForm model)
     {
         var images = new[] { model.MainImage, model.Image1, model.Image2, model.Image3, model.Image4 };
@@ -148,202 +142,8 @@ public class ProductService
 
         return await _cloudinary.UploadAsync(uploadParams);
     }
-
-    public async Task<bool> UpdateProduct(ProductFormUpdate model)
-    {
-        if (model.productName != null)
-        {
-            var product = _context.Products.FirstOrDefault(p => p.Id == model.id);
-            if (product != null)
-            {
-                product.ProductName = model.productName;
-                _context.Products.Update(product);
-                await _context.SaveChangesAsync();
-            }
-        }
-
-        if (model.price != null)
-        {
-            var product = _context.Products.FirstOrDefault(p => p.Id == model.id);
-            if (product != null)
-            {
-                product.Price = (float)model.price;
-                _context.Products.Update(product);
-                await _context.SaveChangesAsync();
-            }
-        }
-
-        if (model.imageMain != null)
-        {
-            var image = _context.ProductImages.FirstOrDefault(p => p.Id == model.id);
-            if (image != null)
-            {
-                // Upload image to Cloudinary
-                var uploadResult = await UploadImageToCloudinary(model.imageMain);
-                if (uploadResult != null)
-                {
-                    // Get the URL of the uploaded image
-                    var imageUrl = uploadResult.SecureUrl.ToString();
-                    Console.WriteLine(imageUrl);
-                    // Update database with the new image URL
-                    var productImage = _context.ProductImages.FirstOrDefault(p => p.Id == model.id);
-                    if (productImage != null)
-                    {
-                        productImage.ImgMain = imageUrl;
-                        _context.ProductImages.Update(productImage);
-                        await _context.SaveChangesAsync();
-                    }
-                }
-            }
-        }
-
-        if (model.image1 != null)
-        {
-            var image = _context.ProductImages.FirstOrDefault(p => p.Id == model.id);
-            if (image != null)
-            {
-                // Upload image to Cloudinary
-                var uploadResult = await UploadImageToCloudinary(model.image1);
-                if (uploadResult != null)
-                {
-                    // Get the URL of the uploaded image
-                    var imageUrl = uploadResult.SecureUrl.ToString();
-
-                    // Update database with the new image URL
-                    var productImage = _context.ProductImages.FirstOrDefault(p => p.Id == model.id);
-                    if (productImage != null)
-                    {
-                        productImage.Img1 = imageUrl;
-                        _context.ProductImages.Update(productImage);
-                        await _context.SaveChangesAsync();
-                    }
-                }
-            }
-        }
-
-        if (model.image2 != null)
-        {
-            var image = _context.ProductImages.FirstOrDefault(p => p.Id == model.id);
-            if (image != null)
-            {
-                // Upload image to Cloudinary
-                var uploadResult = await UploadImageToCloudinary(model.image2);
-                if (uploadResult != null)
-                {
-                    // Get the URL of the uploaded image
-                    var imageUrl = uploadResult.SecureUrl.ToString();
-
-                    // Update database with the new image URL
-                    var productImage = _context.ProductImages.FirstOrDefault(p => p.Id == model.id);
-                    if (productImage != null)
-                    {
-                        productImage.Img2 = imageUrl;
-                        _context.ProductImages.Update(productImage);
-                        await _context.SaveChangesAsync();
-                    }
-                }
-            }
-        }
-
-        if (model.image3 != null)
-        {
-            var image = _context.ProductImages.FirstOrDefault(p => p.Id == model.id);
-            if (image != null)
-            {
-                // Upload image to Cloudinary
-                var uploadResult = await UploadImageToCloudinary(model.image3);
-                if (uploadResult != null)
-                {
-                    // Get the URL of the uploaded image
-                    var imageUrl = uploadResult.SecureUrl.ToString();
-
-                    // Update database with the new image URL
-                    var productImage = _context.ProductImages.FirstOrDefault(p => p.Id == model.id);
-                    if (productImage != null)
-                    {
-                        productImage.Img3 = imageUrl;
-                        _context.ProductImages.Update(productImage);
-                        await _context.SaveChangesAsync();
-                    }
-                }
-            }
-        }
-
-        if (model.image4 != null)
-        {
-            var image = _context.ProductImages.FirstOrDefault(p => p.Id == model.id);
-            if (image != null)
-            {
-                // Upload image to Cloudinary
-                var uploadResult = await UploadImageToCloudinary(model.image4);
-                if (uploadResult != null)
-                {
-                    // Get the URL of the uploaded image
-                    var imageUrl = uploadResult.SecureUrl.ToString();
-
-                    // Update database with the new image URL
-                    var productImage = _context.ProductImages.FirstOrDefault(p => p.Id == model.id);
-                    if (productImage != null)
-                    {
-                        productImage.Img4 = imageUrl;
-                        _context.ProductImages.Update(productImage);
-                        await _context.SaveChangesAsync();
-                    }
-                }
-            }
-        }
-
-        if (model.status != null)
-        {
-            var product = _context.Products.FirstOrDefault(p => p.Id == model.id);
-            if (product != null)
-            {
-                product.Status = model.status;
-                _context.Products.Update(product);
-                await _context.SaveChangesAsync();
-            }
-        }
-
-        if (model.sale != null)
-        {
-            var product = _context.Products.FirstOrDefault(p => p.Id == model.id);
-            if (product != null)
-            {
-                product.Sale = (int)model.sale;
-                _context.Products.Update(product);
-                await _context.SaveChangesAsync();
-                
-            }
-            
-        }
-
-        if (model.hot != null)
-        {
-            var product = _context.Products.FirstOrDefault(p => p.Id == model.id);
-            if (product != null)
-            {
-                //product.Hot = (bool)model.hot;
-                product.Hot=model.hot;
-                _context.Products.Update(product);
-                await _context.SaveChangesAsync();
-            }
-        }
-
-        if (model.description != null)
-        {
-            var product = _context.Products.FirstOrDefault(p => p.Id == model.id);
-            if (product != null)
-            {
-                product.Description = model.description;
-                _context.Products.Update(product);
-                await _context.SaveChangesAsync();
-            }
-        }
-        return true;
-    }
-
     public async Task<List<Product>> GetProductsByCategoryId(int categoryId)
-    {   
+    {
         try
         {
             // Truy vấn sản phẩm thuộc danh mục theo categoryId
@@ -360,6 +160,8 @@ public class ProductService
             throw new InvalidOperationException("Error fetching products for category.", ex);
         }
     }
+
+
     public async Task<Product?> GetProductByIdAsync(int id)
     {
         return await _context.Products
@@ -372,19 +174,4 @@ public class ProductService
         return await _context.ProductImages
                              .FirstOrDefaultAsync(pi => pi.Id == id);
     }
-
-    //public async Task<Product> GetProductByIdAsync(int id)
-    //{
-    //    return await _context.Products
-    //                     .Include(p => p.ProductImage)  // Bao gồm thông tin ProductImage
-    //                     .FirstOrDefaultAsync(p => p.Id == id);
-    //}
-
-    //public async Task<ProductImage> GetProductImageByIdAsync(int id)
-    //{
-    //    return await _context.ProductImages
-    //                         .FirstOrDefaultAsync(pi => pi.Id == id);
-    //}
-
-
 }

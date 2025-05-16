@@ -41,26 +41,6 @@ public class ProductForm
     [BindProperty(Name = "number_import")]
     public int NumberImport { get; set; }
 
-    [Display(Name = "Màu sắc")]
-    [BindProperty(Name="color")]
-    public string Color { get; set; }
-
-    [Display(Name = "Trọng lượng")]
-    [BindProperty(Name="weight")]
-    public string Weight { get; set; }
-
-    [Display(Name = "Kích cỡ")]
-    [BindProperty(Name="size")]
-    public string Size { get; set; }
-
-    [Display(Name = "Độ trong")]
-    [BindProperty(Name="opacity")]
-    public string Opacity { get; set; }
-
-    [Display(Name = "Giác cắt")]
-    [BindProperty(Name="cutting_form")]
-    public string CuttingForm { get; set; }
-
     [Display(Name = "Tình trạng")]
     [BindProperty(Name="status")]
     public string Status { get; set; }

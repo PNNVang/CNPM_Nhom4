@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 [ApiController]
 public class ProductController : Microsoft.AspNetCore.Mvc.Controller
 {
-    private readonly ProductService _productService;
+    private readonly ProductManagementService _productService;
 
-    public ProductController(ProductService productService)
+    public ProductController(ProductManagementService productService)
     {
         _productService = productService;
     }

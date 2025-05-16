@@ -28,10 +28,6 @@ public class Product
     // [Column("hot")] public bool Hot { get; set; } // Sử dụng bool thay vì tinyint
     [Column("description")] public string? Description { get; set; }
 
-    [StringLength(200)]
-    [Column("information")]
-    public string? Information { get; set; } // NOT NULL
-
     [Column("created_at")] [JsonIgnore] public DateTime? CreatedAt { get; set; }
     [Column("updated_at")] [JsonIgnore] public DateTime? UpdatedAt { get; set; }
     [JsonIgnore] [Column("deleted_at")] public DateTime? DeletedAt { get; set; }
