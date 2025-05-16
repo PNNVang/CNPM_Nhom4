@@ -94,8 +94,6 @@
                             <th>Tên sản phẩm</th>
                             <th>Giá</th>
                             <th>Tình trạng</th>
-                            <th>Giảm giá</th>
-                            <th>Hot</th>
                             <th>Thao tác</th>
                         </tr>
                     </thead>
@@ -137,24 +135,22 @@
                 $.each(response, function (index, value) {
                     var $row = $('<tr>');
 
-                    // Xử lý đặc biệt cho key 'id'
-                    $.each(value, function (key, value_item_key) {
-                            
-                            // Các cột dữ liệu khác
-                            var $cell = $('<td>').text(value_item_key);
-                            $row.append($cell);
-                    });
-                    $row.attr('id',value.id)
+                    $row.append($('<td>').text(index + 1));
+                    $row.append($('<td>').text(value.categoryId || ''));
+                    $row.append($('<td>').text(value.productName || ''));
+                    $row.append($('<td>').text(value.price || ''));
+                    $row.append($('<td>').text(value.status || ''));
+
                     // Add icons at the end of each row
                     var $icon1 = $('<i class="fa-solid fa-trash"></i>').click(function () {
                         Swal.fire({
-                            title: "Bạn có chắc không?",
+                            title: "Bạn có chắc muốn xóa không?",
                             text: "Bạn sẽ không thể khôi phục được!",
                             icon: "warning",
                             showCancelButton: true,
                             confirmButtonColor: "#3085d6",
                             cancelButtonColor: "#d33",
-                            confirmButtonText: "Xóa đi!"
+                            confirmButtonText: "Xóa"
                         }).then((result) => {
                             if (result.isConfirmed) {
                                 // Lấy ID từ data-id
