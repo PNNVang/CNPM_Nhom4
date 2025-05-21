@@ -1,7 +1,15 @@
+@* 7.1.4. Hệ thống hiển thị giao diện (admin_order.cshtml) từ action admin_order() trả về *@
 @{
     ViewData["Title"] = "Quản lí đơn hàng";
 }
 
+@* Scripts *@
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="//cdn.datatables.net/2.0.2/js/dataTables.min.js"></script>
+
+@* CSS *@
 <link rel="stylesheet" href="//cdn.datatables.net/2.0.2/css/dataTables.dataTables.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -19,7 +27,7 @@
 
     .button-status:hover {
         box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-     }
+    }
 
     .btn-detail, .btn-update {
         padding: 8px 16px;
@@ -30,10 +38,10 @@
         width: 85%;
     }
 
-        .btn-detail:hover {
-            background-color: #3ab0f2 !important;
-            color: white;
-        }
+    .btn-detail:hover {
+        background-color: #3ab0f2 !important;
+        color: white;
+    }
 
     .btn-update:hover {
         background-color: #d39e00 !important;
@@ -42,165 +50,120 @@
 
     .modal-body ul li {
         list-style-type: none !important;
-
     }
 
     #table_id_wrapper {
         overflow-x: auto;
     }
 </style>
-<body>
-    @await Html.PartialAsync("admin_header")
-    <div class="container-fluid">
-        <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                    <a href="#" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-5 d-none d-sm-inline">Danh mục</span>
-                    </a>
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
-                        <li class="nav-item">
-                            <a href="@Url.Action("admin_summary","Admin")" class="nav-link align-middle px-0">
-                                <i class="fa-solid fa-chart-simple"></i> <span class="ms-1 d-none d-sm-inline">Doanh thu</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("admin_product","Admin")" class="nav-link px-0 align-middle" id="menu_0">
-                                <i class="fa-brands fa-product-hunt"></i> <span class="ms-1 d-none d-sm-inline">Quản lí sản phẩm</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("admin_order","Admin")" class="nav-link px-0 align-middle">
-                                <i class="fa-solid fa-gift"></i> <span class="ms-1 d-none d-sm-inline">Quản lí đơn hàng</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("admin_user","Admin")" class="nav-link px-0 align-middle">
-                                <i class="fa-solid fa-user"></i> <span class="ms-1 d-none d-sm-inline">Quản lí người dùng</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("admin_inventory","Admin")" class="nav-link px-0 align-middle">
-                                <i class="fa-solid fa-warehouse"></i><span class="ms-1 d-none d-sm-inline">Quản lí số lượng tồn kho</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("admin_log","Admin")" class="nav-link px-0 align-middle">
-                                <i class="fa-solid fa-note-sticky"></i> <span class="ms-1 d-none d-sm-inline">Quản lí log</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("admin_image","Admin")" class="nav-link px-0 align-middle">
-                                <i class="fa-solid fa-image"></i> <span class="ms-1 d-none d-sm-inline">Quản lí ảnh</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("admin_logout","Admin")" class="nav-link px-0 align-middle">
-                                <i class="fa-solid fa-door-open"></i><span class="ms-1 d-none d-sm-inline">Đăng xuất</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <hr>
-                </div>
-            </div>
-            <div class="col py-3" style="width: 70%;">
 
-                <button class="button-status text-black" name="btn" value="Chờ xác nhận" id="waiting">Chờ xác nhận</button>
-                <button class="button-status text-black" name="btn" value="Cho giao" id="waiting-giving">Đang chờ giao</button>
-                <button class="button-status text-black" name="btn" value="Đang giao" id="giving">Đang giao</button>
-                <button class="button-status text-black" name="btn" id="gived" value="Đã giao">Đã giao</button>
-                <button class="button-status text-black" name="btn" id="canceled" value="Hủy">Hủy</button>
+<partial name="_AdminHeader" />
 
-                <table id="table_id" class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Mã đơn hàng</th>
-                            <th>Tên khách hàng</th>
-                            <th>Ngày đặt hàng</th>
-                            <th>Tổng tiền</th>
-                            <th>Trạng thái</th>
-                            <th>Trạng thái thanh toán</th>
-                            <th>Hành động</th>
-                        </tr>
-                    </thead>
-                    <tbody id="body">
-                </table>
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="#" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline">Danh mục</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
+                    <li class="nav-item">
+                        <a href="@Url.Action("admin_summary","Admin")" class="nav-link align-middle px-0">
+                            <i class="fa-solid fa-chart-simple"></i> <span class="ms-1 d-none d-sm-inline">Doanh thu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("admin_product","Admin")" class="nav-link px-0 align-middle" id="menu_0">
+                            <i class="fa-brands fa-product-hunt"></i> <span class="ms-1 d-none d-sm-inline">Quản lí sản phẩm</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("admin_form_upload_product","Admin")" class="nav-link px-0 align-middle" id="menu_1">
+                            <i class="fa-solid fa-upload"></i> <span class="ms-1 d-none d-sm-inline">Thêm sản phẩm</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("admin_order","Admin")" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-gift"></i> <span class="ms-1 d-none d-sm-inline">Quản lí đơn hàng</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("admin_user","Admin")" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-user"></i> <span class="ms-1 d-none d-sm-inline">Quản lí người dùng</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("admin_inventory","Admin")" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-warehouse"></i><span class="ms-1 d-none d-sm-inline">Quản lí số lượng tồn kho</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("admin_log","Admin")" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-note-sticky"></i> <span class="ms-1 d-none d-sm-inline">Quản lí log</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("admin_image","Admin")" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-image"></i> <span class="ms-1 d-none d-sm-inline">Quản lí ảnh</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("admin_logout","Admin")" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-door-open"></i><span class="ms-1 d-none d-sm-inline">Đăng xuất</span>
+                        </a>
+                    </li>
+                </ul>
+                <hr>
             </div>
         </div>
+        <div class="col py-3" style="width: 70%;">
 
-        <!-- Modal Chi tiết đơn hàng -->
-        <div class="modal fade" id="orderDetailModal" tabindex="-1" aria-labelledby="orderDetailModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="orderDetailModalLabel">Chi tiết đơn hàng</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Nội dung chi tiết đơn hàng điền vào đây -->
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                    </div>
-                </div>
-            </div>
+            <button class="button-status text-black" name="btn" value="Chờ xác nhận" id="waiting">Chờ xác nhận</button>
+            <button class="button-status text-black" name="btn" value="Cho giao" id="waiting-giving">Chờ giao hàng</button>
+            <button class="button-status text-black" name="btn" value="Đang giao" id="giving">Đang giao hàng</button>
+            <button class="button-status text-black" name="btn" id="gived" value="Đã giao">Đã giao</button>
+            <button class="button-status text-black" name="btn" id="canceled" value="Hủy">Đã hủy</button>
+
+            <table id="table_data" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Mã đơn hàng</th>
+                        <th>Tên khách hàng</th>
+                        <th>Ngày đặt hàng</th>
+                        <th>Tổng tiền</th>
+                        <th>Trạng thái</th>
+                        <th>Trạng thái thanh toán</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                @* 7.2.11. Nếu danh sách đơn hàng trả về trống, DataTable hiển thị: "No data available in table." *@
+                <tbody id="body">
+            </table>
         </div>
     </div>
-</body>
-
-@* Scripts *@
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="//cdn.datatables.net/2.0.2/js/dataTables.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-@* <script src="~/js/table2excel.js"></script> *@
+</div>
 
 <script>
-        var $tbody = $('#body');
-        $(document).ready(function () {
-            $("#submenu_1").hide();
-            $("#menu_1").click(function () {
-                $("#submenu_1").slideToggle();
-            });
-        });
-
-        // Khởi tạo DataTable, gán vào biến
         let dataTable;
 
         $(document).ready(function () {
-         dataTable = $("#table_id").DataTable();
-
-         $("#dt-search-0").attr('name', 'search');
-
-         // Load tất cả đơn hàng
+        // 7.1.5. Hệ thống khởi tạo DataTable từ bảng hiển thị dữ liệu và gán vào biến dataTable
+        dataTable = $("#table_data").DataTable();
+         // 7.1.6. Giao diện gửi yêu cầu lấy danh sách đơn hàng đến OrderController thông qua API
          loadOrders('/api/orders/getorders/all');
         });
 
-        // Order status buttons click handlers
-        $('#waiting').click(loadOrders.bind(null, '/api/orders/getorders/waiting'));
-        $('#giving').click(loadOrders.bind(null, '/api/orders/getorders/giving'));
-        $('#gived').click(loadOrders.bind(null, '/api/orders/getorders/gived'));
-        $('#canceled').click(loadOrders.bind(null, '/api/orders/getorders/cancelled'));
-        $('#waiting-giving').click(loadOrders.bind(null, '/api/orders/getorders/waiting_giving'));
-
+        // Hàm loadOrders()
         function loadOrders(url) {
-        showSpinner();
-
         $.ajax({
             url: url,
             method: 'GET',
+            // 7.1.8. OrderController trả về danh sách tất cả đơn hàng trong respone dưới dạng JSON
             dataType: 'JSON',
+            // 7.1.9. Trang admin_order.cshtml nhận dữ liệu danh sách đơn hàng dạng JSON
             success: function (response) {
-                hideSpinner();
 
-                // Xóa dữ liệu cũ trong DataTable
-                dataTable.clear();
-
-                // Duyệt dữ liệu và thêm hàng
+                // 7.1.10. Hệ thống duyệt qua từng dữ liệu đơn hàng trong JSON
                 $.each(response, function (index, value) {
                     const rowData = [];
 
@@ -220,138 +183,25 @@
                     })[0].outerHTML;
 
                     // Tạo nút Cập nhật
-                    const $edit = $('<button id="btnUpdate" class="btn btn-sm btn-warning btn-update"><i class="fa-solid fa-wrench"></i> Cập nhật</button>').click(function () {
+                    const $edit = $('<button class="btn btn-sm btn-warning btn-update"><i class="fa-solid fa-wrench"></i> Cập nhật</button>').click(function () {
                         showUpdateOrderModal(value.id);
                     })[0].outerHTML;
 
                     // Thêm cả 2 nút vào cùng 1 ô cột cuối
                     rowData.push($detail + $edit);
 
+                    // 7.1.11. Hệ thống gọi dataTable.row.add(rowData) để thêm dòng dữ liệu đơn hàng vào DataTable
                     dataTable.row.add(rowData);
                 });
 
-                // Cập nhật bảng
+                   // 7.1.12. Hệ thống gọi dataTable.draw() để vẽ bảng với dữ liệu tất cả đơn hàng
                 dataTable.draw();
             },
+
+            // 7.2.8. Hệ thống hiển thị thông báo lỗi "Lỗi khi lấy danh sách đơn hàng" (alert) trên màn hình quản lý đơn hàng
             error: function (error) {
-                hideSpinner();
-                alert('Lỗi khi lấy dữ liệu');
+                alert('Lỗi khi lấy danh sách đơn hàng');
             }
         });
     }
-
-        // Gắn sự kiện cho nút cập nhật đơn hàng
-        $(document).on('click', '.btn-update', function () {
-        // Lấy ID đơn hàng từ dòng hiện tại
-        const orderId = dataTable.row($(this).parents('tr')).data()[0];
-        showUpdateOrderModal(orderId);
-        });
-
-        // SweetAlert thông báo khi người dùng nhấn nút cập nhật đơn hàng
-        function showUpdateOrderModal(orderId) {
-        Swal.fire({
-            title: "Cập nhật trạng thái đơn hàng",
-            text: "Vui lòng chọn trạng thái mới cho đơn hàng này.",
-            icon: "info",
-            input: 'select',
-            inputOptions: {
-                waiting: 'Chờ xác nhận',
-                cancelled: 'Đã hủy',
-                waiting_giving: 'Chờ giao hàng',
-                giving: 'Đang giao hàng',
-                gived: 'Đã giao'
-            },
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Cập nhật đơn hàng",
-            cancelButtonText: "Hủy bỏ"
-        }).then((result) => {
-            if (result.isConfirmed) {
-                updateOrder(orderId, result.value);
-            }
-        });
-        }
-
-        function updateOrder(orderId, status) {
-            $.ajax({
-                url: "/api/orders/updateorder/"+orderId+'/'+status,
-                dataType: 'JSON',
-                method: "PUT",
-                success: function (res) {
-                    Swal.fire({
-                    title: "Hoàn tất!",
-                    text: "Cập nhật đơn hàng thành công.",
-                    icon: "success"
-                }).then(() => {
-                // Gọi lại hàm loadOrders để hiển thị
-                loadOrders('/api/orders/getorders/all');
-            });
-        },
-                error: function (error) {
-                    Swal.fire({
-                        title: "Lỗi!",
-                        text: "Cập nhật không thành công.",
-                        icon: "error"
-                    });
-                }
-            });
-        }
-
-        // Gắn sự kiện cho nút chi tiết đơn hàng
-        $(document).on('click', '.btn-detail', function () {
-            // Lấy ID đơn hàng từ dòng hiện tại
-            const orderId = dataTable.row($(this).parents('tr')).data()[0];
-            showOrderDetailModal(orderId); // Gọi hàm hiển thị chi tiết đơn hàng
-        });
-
-    // Hàm hiển thị modal chi tiết đơn hàng
-    function showOrderDetailModal(orderId) {
-        $.ajax({
-            url: `/api/orders/getordersdetail/${orderId}`, // API lấy chi tiết đơn hàng
-            method: 'GET',
-            success: function (orderDetail) {
-                // Hiển thị modal và điền thông tin chi tiết vào
-                    $('#orderDetailModal .modal-body').html(`
-                      <h5>Chi tiết đơn hàng #${orderDetail.orderId}</h5>
-                      <p><strong>Ngày tạo:</strong> ${orderDetail.createdAt}</p>
-                      <p><strong>Trạng thái:</strong> ${orderDetail.orderStatus}</p>
-                      <p><strong>Ghi chú:</strong> ${orderDetail.note}</p>
-                      <p><strong>Tổng tiền:</strong> ${orderDetail.totalPrice} VNĐ</p>
-                      <p><strong>Phí vận chuyển:</strong> ${orderDetail.shippingCost} VNĐ</p>
-                      <p><strong>Tổng cộng:</strong> ${orderDetail.totalAmount} VNĐ</p>
-                      <hr>
-                      <h6>Sản phẩm:</h6>
-                      <ul>
-                      ${orderDetail.products.map(product => `
-                        <li>
-                            <img src="${product.productImage}" alt="${product.productName}" style="width: 50px; height: 50px;">
-                            <strong>${product.productName}</strong> - ${product.quantity} x ${product.price} VNĐ
-                        </li>
-                      `)}
-                    </ul>
-                    `);
-
-                // Hiển thị modal
-                $('#orderDetailModal').modal('show');
-             },
-                error: function (error) {
-                    alert('Lỗi khi lấy chi tiết đơn hàng');
-                }
-            });
-        }
-
-        function showSpinner() {
-            var $spinner = $('<div class="spinner"><div class="d-flex justify-content-center"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div></div></div>');
-            $('body').append($spinner);
-        }
-
-        function hideSpinner() {
-            $('.spinner').remove();
-        }
-
-
-        $(document).ready(function () {
-            $('.dt-empty').hide()
-        })
 </script>

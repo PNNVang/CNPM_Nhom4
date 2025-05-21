@@ -1,3 +1,4 @@
+@* 7.1.0. Hệ thống đang ở màn hình chính của trang quản trị viên (admin.cshtml) *@
 @{
     Layout = null;
 }
@@ -21,6 +22,7 @@
                         <span class="fs-5 d-none d-sm-inline">Danh mục</span>
                     </a>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
+                        @* 7.1.1. Hệ thống tạo @Url.Action, URL trỏ đến action tương ứng cho từng mục chức năng *@
                         <li class="nav-item">
                             <a href="@Url.Action("admin_summary","Admin")" class="nav-link align-middle px-0">
                                 <i class="fa-solid fa-chart-simple"></i> <span class="ms-1 d-none d-sm-inline">Doanh thu</span>
@@ -31,6 +33,7 @@
                                 <i class="fa-brands fa-product-hunt"></i> <span class="ms-1 d-none d-sm-inline">Quản lí sản phẩm</span>
                             </a>
                         </li>
+
                         <li>
                             <a href="@Url.Action("admin_order","Admin")" class="nav-link px-0 align-middle">
                                 <i class="fa-solid fa-gift"></i> <span class="ms-1 d-none d-sm-inline">Quản lí đơn hàng</span>
@@ -56,8 +59,6 @@
                                 <i class="fa-solid fa-image"></i> <span class="ms-1 d-none d-sm-inline">Quản lí ảnh</span>
                             </a>
                         </li>
-                        @* @if (Session["user"] != null) *@
-                        @* { *@
                         <li>
                             <a href="@Url.Action("admin_logout","Admin")" class="nav-link px-0 align-middle">
                                 <i class="fa-solid fa-door-open"></i><span class="ms-1 d-none d-sm-inline">Đăng xuất</span>

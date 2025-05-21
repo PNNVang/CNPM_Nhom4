@@ -49,6 +49,7 @@ public class AdminController : Microsoft.AspNetCore.Mvc.Controller
         return View();
     }
 
+    // 7.1.3. Hệ thống gọi đến action admin_order() trong AdminController
     public IActionResult admin_order()
     {
         return View();
