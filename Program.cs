@@ -73,6 +73,7 @@ builder.Services.AddScoped<LogService>();
 builder.Services.AddScoped<OrderService>();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<ProductManagementService>();
 builder.Services.AddScoped<InventoryService>();
 builder.Services.AddScoped<SummaryService>();
 builder.Services.AddHttpContextAccessor();

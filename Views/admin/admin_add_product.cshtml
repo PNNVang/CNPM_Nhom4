@@ -10,6 +10,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
 <style>
+    h2 {
+        font-family: 'Times New Roman';
+        text-align: center;
+        color: deepskyblue;
+        font-weight: bold;
+    }
     label {
         font-weight: bold;
         color: #333;
@@ -46,11 +52,6 @@
                     <li>
                         <a href="@Url.Action("admin_product","Admin")" class="nav-link px-0 align-middle" id="menu_0">
                             <i class="fa-brands fa-product-hunt"></i> <span class="ms-1 d-none d-sm-inline">Quản lí sản phẩm</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("admin_form_upload_product","Admin")" class="nav-link px-0 align-middle" id="menu_1">
-                            <i class="fa-solid fa-upload"></i> <span class="ms-1 d-none d-sm-inline">Thêm sản phẩm</span>
                         </a>
                     </li>
                     <li>
@@ -143,26 +144,6 @@
                 <div class="form-group">
                     <label for="number_import">Số lượng</label>
                     <input type="number" name="number_import" id="number_import" placeholder="Nhập số lượng thêm vào" />
-                </div>
-                <div class="form-group">
-                    <label for="color">Màu sắc</label>
-                    <input type="text" name="color" id="color" placeholder="Nhập thông tin về màu sắc" />
-                </div>
-                <div class="form-group">
-                    <label for="weight">Trọng lượng</label>
-                    <input type="text" name="weight" id="weight" placeholder="Nhập thông tin về trọng lượng" />
-                </div>
-                <div class="form-group">
-                    <label for="size">Kích cỡ </label>
-                    <input type="text" name="size" id="size" placeholder="Nhập thông tin về kích cỡ" />
-                </div>
-                <div class="form-group">
-                    <label for="opacity">Độ trong</label>
-                    <input type="text" name="opacity" id="opacity" placeholder="Nhập thông tin về độ trong suốt" />
-                </div>
-                <div class="form-group">
-                    <label for="cutting_form">Giác cắt </label>
-                    <input type="text" name="cutting_form" id="cutting_form" placeholder="Nhập thông tin giác cắt" />
                 </div>
                 <div class="form-group">
                     <label for="status">Tình trạng </label>

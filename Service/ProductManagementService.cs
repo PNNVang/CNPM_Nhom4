@@ -1,22 +1,19 @@
 ﻿using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Dot_Net_ECommerceWeb.DBContext;
-using Dot_Net_ECommerceWeb.DTO;
 using Dot_Net_ECommerceWeb.Model;
 using Microsoft.EntityFrameworkCore;
 
-public class ProductService
+public class ProductManagementService
 {
     private AppDBContext _context { get; set; }
     private readonly Cloudinary _cloudinary;
 
-
-    public ProductService(AppDBContext context, Cloudinary cloudinary)
+    public ProductManagementService(AppDBContext context, Cloudinary cloudinary)
     {
         _context = context;
         _cloudinary = cloudinary;
     }
-
     public async Task<IEnumerable<Product>> GetProductAsync()
     {
         return await _context.Products
@@ -28,46 +25,16 @@ public class ProductService
                 ProductName = p.ProductName,
                 Price = p.Price,
                 Status = p.Status,
-                Sale = p.Sale,
-                Hot = p.Hot
             })
-            .ToListAsync();
+           .ToListAsync();
     }
-
-    public async Task<List<Product>> GetProduct()
-    {
-        return await _context.Products
-            .Include(p => p.ProductImage)
-            .Where(p => p.StatusDeleted == "chưa xóa")
-            .ToListAsync();
-    }
-
-    public async Task<List<Product>> GetProductHot()
-    {
-        return await _context.Products
-       .Include(p => p.ProductImage)
-       .Where(p => p.StatusDeleted == "chưa xóa" && p.Hot == 1)
-       .ToListAsync();
-    }
-
-
-    public async Task<bool> DeleteProductAsync(int id)
-    {
-        var product = await _context.Products.FindAsync(id);
-        if (product == null) return false;
-
-        product.StatusDeleted = "đã xóa";
-        _context.Products.Update(product);
-        await _context.SaveChangesAsync();
-        return true;
-    }
-
     public async Task<bool> AddProductAsync(ProductForm model)
     {
+        //6.1.1: Khởi tạo id tự động tăng 
         var newProductId = _context.Products.Any() ? _context.Products.Max(x => x.Id) + 1 : 1;
-        var newInventoryId = _context.Inventories.Any() ? _context.Inventories.Max(x => x.id) + 1 : 1;
         var newProductImageId = _context.ProductImages.Any() ? _context.ProductImages.Max(x => x.Id) + 1 : 1;
-        var newInventoryDetailId = _context.InventoryDetails.Any() ? _context.InventoryDetails.Max(x=>x.Id) + 1 : 1;
+
+        //6.1.2: Tạo đối tượng sản phẩm 
         var product = new Product
         {
             Id = newProductId,
@@ -80,22 +47,13 @@ public class ProductService
             Price = (float)model.price,
             Status = model.Status,
             Description = model.Description,
-         
         };
 
+        //6.1.3: Lưu sản phẩm vào bảng Product trong database
         _context.Products.Add(product);
         await _context.SaveChangesAsync();
 
-        var inventory = new Inventories
-        {
-            id = newInventoryId,
-            date = DateTime.Now,
-            user_imported = "admin",
-        };
-
-        _context.Inventories.Add(inventory);
-        await _context.SaveChangesAsync();
-
+        //6.1.4: Upload các ảnh sản phẩm lên Cloudinary và nhận về URL
         var imageUrls = await UploadImagesToCloudinary(model);
         var productImage = new ProductImage
         {
@@ -107,12 +65,12 @@ public class ProductService
             Img4 = imageUrls[4]
         };
 
+        //6.1.5: Lưu thông tin ảnh sản phẩm vào database
         _context.ProductImages.Add(productImage);
         await _context.SaveChangesAsync();
 
         return true;
     }
-
     private async Task<string[]> UploadImagesToCloudinary(ProductForm model)
     {
         var images = new[] { model.MainImage, model.Image1, model.Image2, model.Image3, model.Image4 };
@@ -132,7 +90,6 @@ public class ProductService
 
         return urls;
     }
-
     private async Task<ImageUploadResult> UploadImageToCloudinary(IFormFile image)
     {
         var uploadParams = new ImageUploadParams
@@ -142,36 +99,6 @@ public class ProductService
 
         return await _cloudinary.UploadAsync(uploadParams);
     }
-    public async Task<List<Product>> GetProductsByCategoryId(int categoryId)
-    {
-        try
-        {
-            // Truy vấn sản phẩm thuộc danh mục theo categoryId
-            var products = await _context.Products
-                .Include(p => p.ProductImage)
-                .Where(p => p.CategoryId == categoryId)  // Lọc sản phẩm theo CategoryId
-                .ToListAsync(); // Lấy danh sách sản phẩm
-
-            return products;
-        }
-        catch (Exception ex)
-        {
-            // Log lỗi hoặc xử lý thông báo lỗi
-            throw new InvalidOperationException("Error fetching products for category.", ex);
-        }
-    }
-
-
-    public async Task<Product?> GetProductByIdAsync(int id)
-    {
-        return await _context.Products
-                             .Include(p => p.ProductImage)
-                             .FirstOrDefaultAsync(p => p.Id == id);
-    }
-
-    public async Task<ProductImage?> GetProductImageByIdAsync(int id)
-    {
-        return await _context.ProductImages
-                             .FirstOrDefaultAsync(pi => pi.Id == id);
-    }
 }
+
+

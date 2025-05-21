@@ -24,7 +24,7 @@ public class AdminController : Microsoft.AspNetCore.Mvc.Controller
         return View();
     }
 
-    public IActionResult admin_form_upload_product()
+    public IActionResult admin_add_product()
     {
         return View();
     }

@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 [ApiController]
 public class ProductController : Microsoft.AspNetCore.Mvc.Controller
 {
-    private readonly ProductService _productService;
+    private readonly ProductManagementService _productService;
 
-    public ProductController(ProductService productService)
+    public ProductController(ProductManagementService productService)
     {
         _productService = productService;
     }
@@ -19,34 +19,18 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
         return Ok(products);
     }
 
-    [HttpDelete("deleteproduct_admin/{id}")]
-    public async Task<IActionResult> DeleteProduct(int id)
-    {
-        var isDeleted = await _productService.DeleteProductAsync(id);
-        if (!isDeleted)
-        {
-            return NotFound(new { message = "Product not found" });
-        }
-
-        return Ok(new { message = "Product deleted successfully" });
-    }
-
+    //6.1: Admin gửi yêu cầu thêm sản phẩm mới
     [HttpPost("insertproduct")]
     public async Task<IActionResult> AddProduct(ProductForm model)
     {
         var isAdded = await _productService.AddProductAsync(model);
         if (!isAdded)
         {
+            //6.1.7: Thêm không thành công sản phẩm 
             return BadRequest(new { message = "Failed to add product" });
         }
 
+        //6.1.6: Thêm thành công sản phẩm 
         return Ok(new { message = "Product added successfully" });
-    }
-
-    [HttpPost("updateproduct")]
-    public async Task<IActionResult> UpdateProduct([FromForm] ProductFormUpdate model)
-    {
-        await _productService.UpdateProduct(model);
-        return Ok(new { message = "Product updated successfully" });
     }
 }

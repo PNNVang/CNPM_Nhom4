@@ -18,102 +18,97 @@
     #table_id_wrapper {
         overflow-x: auto;
     }
+    .btn{
+        background-color: deepskyblue;
+        border: 5px;
+        color: white;
+        float: right;
+    }
 </style>
-
-<div class="container-fluid">
-    <div class="row flex-nowrap">
-        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                <a href="#" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <span class="fs-5 d-none d-sm-inline">Danh mục</span>
+<body>
+    @await Html.PartialAsync("admin_header")
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="#" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Danh mục</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
+                        <li class="nav-item">
+                            <a href="@Url.Action("admin_summary","Admin")" class="nav-link align-middle px-0">
+                                <i class="fa-solid fa-chart-simple"></i> <span class="ms-1 d-none d-sm-inline">Doanh thu</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("admin_product","Admin")" class="nav-link px-0 align-middle" id="menu_0">
+                                <i class="fa-brands fa-product-hunt"></i> <span class="ms-1 d-none d-sm-inline">Quản lí sản phẩm</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("admin_order","Admin")" class="nav-link px-0 align-middle">
+                                <i class="fa-solid fa-gift"></i> <span class="ms-1 d-none d-sm-inline">Quản lí đơn hàng</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("admin_user","Admin")" class="nav-link px-0 align-middle">
+                                <i class="fa-solid fa-user"></i> <span class="ms-1 d-none d-sm-inline">Quản lí người dùng</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("admin_inventory","Admin")" class="nav-link px-0 align-middle">
+                                <i class="fa-solid fa-warehouse"></i><span class="ms-1 d-none d-sm-inline">Quản lí số lượng tồn kho</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("admin_log","Admin")" class="nav-link px-0 align-middle">
+                                <i class="fa-solid fa-note-sticky"></i> <span class="ms-1 d-none d-sm-inline">Quản lí log</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("admin_image","Admin")" class="nav-link px-0 align-middle">
+                                <i class="fa-solid fa-image"></i> <span class="ms-1 d-none d-sm-inline">Quản lí ảnh</span>
+                            </a>
+                        </li>
+                        @* @if (Session["user"] != null) *@
+                        @* { *@
+                        <li>
+                            <a href="@Url.Action("admin_logout","Admin")" class="nav-link px-0 align-middle">
+                                <i class="fa-solid fa-door-open"></i><span class="ms-1 d-none d-sm-inline">Đăng xuất</span>
+                            </a>
+                        </li>
+                        @* } *@
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+            <div class="col py-3" style="width: 70%">
+                <a href="@Url.Action("admin_add_product", "Admin")" class="btn btn-primary">
+                    Thêm Sản Phẩm
                 </a>
-                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
-                    <li class="nav-item">
-                        <a href="@Url.Action("admin_summary","Admin")" class="nav-link align-middle px-0">
-                            <i class="fa-solid fa-chart-simple"></i> <span class="ms-1 d-none d-sm-inline">Doanh thu</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("admin_product","Admin")" class="nav-link px-0 align-middle" id="menu_0">
-                            <i class="fa-brands fa-product-hunt"></i> <span class="ms-1 d-none d-sm-inline">Quản lí sản phẩm</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("admin_form_upload_product","Admin")" class="nav-link px-0 align-middle" id="menu_1">
-                            <i class="fa-solid fa-upload"></i> <span class="ms-1 d-none d-sm-inline">Thêm sản phẩm</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("admin_order","Admin")" class="nav-link px-0 align-middle">
-                            <i class="fa-solid fa-gift"></i> <span class="ms-1 d-none d-sm-inline">Quản lí đơn hàng</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("admin_user","Admin")" class="nav-link px-0 align-middle">
-                            <i class="fa-solid fa-user"></i> <span class="ms-1 d-none d-sm-inline">Quản lí người dùng</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("admin_inventory","Admin")" class="nav-link px-0 align-middle">
-                            <i class="fa-solid fa-warehouse"></i><span class="ms-1 d-none d-sm-inline">Quản lí số lượng tồn kho</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("admin_log","Admin")" class="nav-link px-0 align-middle">
-                            <i class="fa-solid fa-note-sticky"></i> <span class="ms-1 d-none d-sm-inline">Quản lí log</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("admin_image","Admin")" class="nav-link px-0 align-middle">
-                            <i class="fa-solid fa-image"></i> <span class="ms-1 d-none d-sm-inline">Quản lí ảnh</span>
-                        </a>
-                    </li>
-                    @* @if (Session["user"] != null) *@
-                    @* { *@
-                    <li>
-                        <a href="@Url.Action("admin_logout","Admin")" class="nav-link px-0 align-middle">
-                            <i class="fa-solid fa-door-open"></i><span class="ms-1 d-none d-sm-inline">Đăng xuất</span>
-                        </a>
-                    </li>
-                    @* } *@
-                </ul>
-                <hr>
+                <table id="table_id" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Loại sản phẩm</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Tình trạng</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="body">
+                    </tbody>
+                </table>
             </div>
         </div>
-        <div class="col py-3" style="width: 70%">
-            @* <button type="button" class="btn btn-primary" id="convert" onclick="converttoExcel()">Xuất Excel</button> *@
-            @* <select class="form-select" aria-label="Default select example"> *@
-            @*     <option selected>Mục lục</option> *@
-            @*     <option value="1">Loại</option> *@
-            @*     <option value="2">Giá</option> *@
-            @*     <option value="3">Bán chạy</option> *@
-            @*     <option value="4">Giảm giá</option> *@
-            @* </select> *@
-            <table id="table_id" class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>STT</th>
-                        <th>Loại sản phẩm</th>
-                        <th>Tên sản phẩm</th>
-                        <th>Giá</th>
-                        <th>Tình trạng</th>
-                        <th>Giảm giá</th>
-                        <th>Hot</th>
-                        <th>Thao tác</th>
-                    </tr>
-                </thead>
-                <tbody id="body">
-                </tbody>
-            </table>
-        </div>
     </div>
-</div>
+</body>
 
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="//cdn.datatables.net/2.0.2/js/dataTables.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-@* <script src="~/js/table2excel.js"></script> *@
 
 <script>
     var $tbody = $('#body');
@@ -140,28 +135,25 @@
                 $.each(response, function (index, value) {
                     var $row = $('<tr>');
 
-                    // Xử lý đặc biệt cho key 'id'
-                    $.each(value, function (key, value_item_key) {
-                            
-                            // Các cột dữ liệu khác
-                            var $cell = $('<td>').text(value_item_key);
-                            $row.append($cell);
-                    });
-                    $row.attr('id',value.id)
+                    $row.append($('<td>').text(index + 1));
+                    $row.append($('<td>').text(value.categoryId || ''));
+                    $row.append($('<td>').text(value.productName || ''));
+                    $row.append($('<td>').text(value.price || ''));
+                    $row.append($('<td>').text(value.status || ''));
+
                     // Add icons at the end of each row
                     var $icon1 = $('<i class="fa-solid fa-trash"></i>').click(function () {
                         Swal.fire({
-                            title: "Bạn có chắc không?",
+                            title: "Bạn có chắc muốn xóa không?",
                             text: "Bạn sẽ không thể khôi phục được!",
                             icon: "warning",
                             showCancelButton: true,
                             confirmButtonColor: "#3085d6",
                             cancelButtonColor: "#d33",
-                            confirmButtonText: "Xóa đi!"
+                            confirmButtonText: "Xóa"
                         }).then((result) => {
                             if (result.isConfirmed) {
                                 // Lấy ID từ data-id
-                               
                                 $.ajax({
                                     url: '/api/Product/deleteproduct_admin/'+ + $row.prop('id'),
                                     method: 'DELETE',
@@ -188,13 +180,7 @@
                         });
                     });
 
-                    var $icon2 = $('<i class="fa-solid fa-wrench"></i>').click(function () {
-                        // Lấy ID từ data-id
-                        var productId = $row.attr('id');
-                        window.location.href = '@Url.Action("admin_form_update", "Admin")?id=' + productId;
-                    });
-
-                    var $actionsCell = $('<td>').append($icon1).append($icon2);
+                    var $actionsCell = $('<td>').append($icon1);
                     $row.append($actionsCell);
                     $tbody.append($row);
                 });
@@ -206,8 +192,6 @@
                 alert("Có lỗi xảy ra khi lấy dữ liệu!");
             }
         });
-
-
 
     });
 
