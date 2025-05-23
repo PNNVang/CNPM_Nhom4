@@ -109,10 +109,6 @@ namespace Dot_Net_ECommerceWeb.Controller
                 cart.ClearCart();
                 HttpContext.Session.SetObjectAsJson("Cart", cart);
 
-                if (_orderService.SendMailOrder(user, req, order))
-                {
-                    return RedirectToAction("OrderSuccess");
-                }
             }
 
             return Json(code);
