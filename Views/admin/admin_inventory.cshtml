@@ -107,10 +107,16 @@
     @* <script src="@Url.Content("~/js/table2excel.js")"></script> *@
     <script>
         $(document).ready(function () {
+            // 1. Khởi tạo DataTable
             $("#table_id").DataTable();
+
+            // 2. Ẩn dòng trống
             $('.dt-empty').hide();
 
+            // 3. Lấy phần tbody để gắn dữ liệu
             var $tbody = $('#body');
+
+            // 4. Spinner loading
             var $spinner = $('<div class="spinner"><div class="d-flex justify-content-center"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div></div></div>');
             $('body').append($spinner);
 
@@ -122,9 +128,10 @@
                 $spinner.hide();
             }
 
+            // 5. Gọi Ajax để lấy dữ liệu
             showSpinner();
             $.ajax({
-                url: '/api/Inventory/getinventoriesdetail', // Thay đổi cho phù hợp với route
+                url: '/api/Inventory/getinventoriesdetail', // Điều chỉnh theo API của bạn
                 method: 'GET',
                 dataType: 'JSON',
                 success: function (response) {
@@ -142,18 +149,17 @@
                     });
                 },
                 error: function (error) {
+                    hideSpinner();
                     alert('Lấy dữ liệu không thành công');
                 }
             });
         });
 
+        // 6. Xuất Excel
         function converttoExcel() {
             var table2excel = new Table2Excel();
             table2excel.export(document.querySelectorAll("table"));
         }
-        $(document).ready(function () {
-            $('.dt-empty').hide()
-        })
     </script>
 </body>
 </html>

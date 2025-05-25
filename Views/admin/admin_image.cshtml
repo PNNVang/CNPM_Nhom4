@@ -110,100 +110,87 @@
     <script src="~/js/table2excel.js"></script>
 
     <script>
-        $(document).ready(function () {
-            $("#table_id").DataTable();
-        });
+    // Khi tài liệu sẵn sàng
+    $(document).ready(function () {
+        // Khởi tạo DataTable cho bảng sản phẩm
+        $("#table_id").DataTable();
 
+        // Khởi tạo đối tượng tbody để thêm dòng dữ liệu vào bảng
         var $tbody = $('#body');
 
-        $(document).ready(function () {
-            var $spinner = $('<div class="spinner"><div class="d-flex justify-content-center"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div></div></div>');
-            $('body').append($spinner);
+        // Tạo spinner loading và thêm vào body (ẩn lúc đầu)
+        var $spinner = $('<div class="spinner"><div class="d-flex justify-content-center"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div></div></div>');
+        $('body').append($spinner);
 
-            function showSpinner() {
-                $spinner.show();
-            }
+        // Hàm hiển thị loading
+        function showSpinner() {
+            $spinner.show();
+        }
 
-            function hideSpinner() {
-                $spinner.hide();
-            }
+        // Hàm ẩn loading
+        function hideSpinner() {
+            $spinner.hide();
+        }
 
-            showSpinner();
-            $.ajax({
-                url: '/api/Image/getimage', // Adjust your URL here
-                method: 'GET',
-                dataType: 'JSON',
-                success: function (response) {
-                    hideSpinner();
-                    $.each(response, function (key, value) {
-                        var $row = $('<tr>');
-                        $row.attr('id', value.id);
+        // Gọi API để lấy dữ liệu ảnh sản phẩm
+        showSpinner();
+        $.ajax({
+            url: '/api/Image/getimage', // URL lấy dữ liệu ảnh
+            method: 'GET',
+            dataType: 'JSON',
+            success: function (response) {
+                hideSpinner(); // Ẩn spinner khi có dữ liệu trả về
 
-                        $.each(value, function (key, value_item_key) {
-                            var $cell;
-                            if (key == 'imgMain') {
-                                var imgmain = $('<img>', {
-                                    src: value_item_key,
-                                    alt: 'Ảnh chính',
-                                    width: '20%',
-                                    height: '20%'
-                                });
-                                $cell = $('<td>').append(imgmain);
-                            } else if (key === 'img1') {
-                                var img1 = $('<img>', {
-                                    src: value_item_key,
-                                    alt: 'Ảnh 1',
-                                    width: '20%',
-                                    height: '20%'
-                                });
-                                $cell = $('<td>').append(img1);
-                            } else if (key === 'img2') {
-                                var img2 = $('<img>', {
-                                    src: value_item_key,
-                                    alt: 'Ảnh 2',
-                                    width: '20%',
-                                    height: '20%'
-                                });
-                                $cell = $('<td>').append(img2);
-                            } else if (key === 'img3') {
-                                var img3 = $('<img>', {
-                                    src: value_item_key,
-                                    alt: 'Ảnh 3',
-                                    width: '20%',
-                                    height: '20%'
-                                });
-                                $cell = $('<td>').append(img3);
-                            } else if (key === 'img4') {
-                                var img4 = $('<img>', {
-                                    src: value_item_key,
-                                    alt: 'Ảnh 4',
-                                    width: '20%',
-                                    height: '20%'
-                                });
-                                $cell = $('<td>').append(img4);
-                            } else {
-                                $cell = $('<td>').text(value_item_key);
-                            }
-                            $row.append($cell);
-                        });
-                        $tbody.append($row); 
+                // Duyệt từng sản phẩm trong kết quả trả về
+                $.each(response, function (index, item) {
+                    var $row = $('<tr>').attr('id', item.id); // Tạo hàng mới
+
+                    // Duyệt qua từng cột dữ liệu trong sản phẩm
+                    $.each(item, function (key, value) {
+                        var $cell;
+
+                        // Kiểm tra nếu là trường ảnh
+                        switch (key) {
+                            case 'imgMain':
+                            case 'img1':
+                            case 'img2':
+                            case 'img3':
+                            case 'img4':
+                                $cell = $('<td>').append(
+                                    $('<img>', {
+                                        src: value,
+                                        alt: `Ảnh`,
+                                        width: '20%',
+                                        height: '20%'
+                                    })
+                                );
+                                break;
+                            default:
+                                $cell = $('<td>').text(value); // Trường văn bản thông thường
+                        }
+
+                        $row.append($cell); // Thêm ô vào hàng
                     });
-                },
-                error: function (error) {
-                    hideSpinner();
-                    alert('Không thể tải dữ liệu người dùng');
-                }
-            });
+
+                    $tbody.append($row); // Thêm hàng vào bảng
+                });
+            },
+            error: function (error) {
+                hideSpinner(); // Ẩn spinner nếu có lỗi
+                alert('Không thể tải dữ liệu ảnh sản phẩm');
+            }
         });
 
-        function converttoExcel() {
-            var table2excel = new Table2Excel();
-            table2excel.export(document.querySelectorAll("#table_id"));
-        }
-        $(document).ready(function () {
-            $('.dt-empty').hide()
-        })
-    </script>
+        // Ẩn hàng rỗng mặc định của DataTable (nếu có)
+        $('.dt-empty').hide();
+    });
+
+    // Hàm xuất bảng thành file Excel
+    function converttoExcel() {
+        var table2excel = new Table2Excel();
+        table2excel.export(document.querySelectorAll("#table_id"));
+    }
+</script>
    
 </body>
 </html>
