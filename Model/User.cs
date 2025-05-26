@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Dot_Net_ECommerceWeb.Model;
@@ -41,6 +43,9 @@ public class User
     public string? Status { get; set; }
     [Column("type_login")]
     public string? TypeLogin { get; set; }
+
+    [BindNever]
+    [ValidateNever]
     public List<Order> Orders { get; set; }
 
     // public User(string username, string password)
