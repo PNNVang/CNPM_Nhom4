@@ -1,0 +1,502 @@
+﻿@model Dot_Net_ECommerceWeb.DTO.UserDTO
+
+@{
+    ViewData["Title"] = "Xóa Người Dùng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .delete-container {
+        padding: 30px 0;
+    }
+
+    .delete-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .delete-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-header-delete {
+        background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+        color: white;
+        padding: 30px;
+        text-align: center;
+        border: none;
+    }
+
+    .warning-icon {
+        font-size: 4rem;
+        margin-bottom: 15px;
+        animation: pulse 2s infinite;
+    }
+
+    @@keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    .card-title-delete {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-subtitle-delete {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        font-weight: 300;
+    }
+
+    .card-body-delete {
+        padding: 40px;
+    }
+
+    .user-info {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        border-left: 5px solid #007bff;
+    }
+
+    .info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .info-row:last-child {
+        border-bottom: none;
+    }
+
+    .info-label {
+        font-weight: 600;
+        color: #495057;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 150px;
+    }
+
+    .info-value {
+        color: #212529;
+        font-weight: 500;
+        flex: 1;
+        text-align: right;
+    }
+
+    .avatar-container {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .user-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 4px solid #007bff;
+        object-fit: cover;
+        box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+    }
+
+    .default-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2.5rem;
+        margin: 0 auto;
+        box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+    }
+
+    .warning-message {
+        background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+        border: 1px solid #ffc107;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .warning-message i {
+        color: #856404;
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+
+    .warning-text {
+        color: #856404;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    .btn-group-custom {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn-custom {
+        padding: 12px 30px;
+        font-weight: 600;
+        border-radius: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    .btn-custom::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+    }
+
+    .btn-custom:hover::before {
+        left: 100%;
+    }
+
+    .btn-delete {
+        background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+        color: white;
+        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+    }
+
+    .btn-delete:hover {
+        background: linear-gradient(135deg, #ee5a24, #d63031);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+        color: white;
+    }
+
+    .btn-cancel {
+        background: linear-gradient(135deg, #6c757d, #495057);
+        color: white;
+        box-shadow: 0 5px 15px rgba(108, 117, 125, 0.4);
+    }
+
+    .btn-cancel:hover {
+        background: linear-gradient(135deg, #495057, #343a40);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(108, 117, 125, 0.6);
+        color: white;
+        text-decoration: none;
+    }
+
+    .status-badge {
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .status-active {
+        background: linear-gradient(135deg, #00b894, #00a085);
+        color: white;
+    }
+
+    .status-inactive {
+        background: linear-gradient(135deg, #6c757d, #495057);
+        color: white;
+    }
+
+    .role-badge {
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .role-admin {
+        background: linear-gradient(135deg, #e17055, #d63031);
+        color: white;
+    }
+
+    .role-user {
+        background: linear-gradient(135deg, #0984e3, #74b9ff);
+        color: white;
+    }
+
+    .role-manager {
+        background: linear-gradient(135deg, #00b894, #00a085);
+        color: white;
+    }
+
+    @@media (max-width: 768px) {
+        .delete-container {
+            padding: 15px 0;
+        }
+
+        .card-header-delete {
+            padding: 20px;
+        }
+
+        .card-title-delete {
+            font-size: 1.5rem;
+        }
+
+        .warning-icon {
+            font-size: 3rem;
+        }
+
+        .card-body-delete {
+            padding: 20px;
+        }
+
+        .user-info {
+            padding: 20px;
+        }
+
+        .info-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+        }
+
+        .info-value {
+            text-align: left;
+        }
+
+        .btn-group-custom {
+            flex-direction: column;
+        }
+
+        .btn-custom {
+            width: 100%;
+        }
+    }
+</style>
+
+<div class="delete-container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card delete-card">
+                <div class="card-header-delete">
+                    <div class="warning-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h2 class="card-title-delete">Xác Nhận Xóa Người Dùng</h2>
+                    <p class="card-subtitle-delete">Thao tác này không thể hoàn tác</p>
+                </div>
+
+                <div class="card-body-delete">
+                    <div class="warning-message">
+                        <i class="fas fa-warning"></i>
+                        <div class="warning-text">
+                            Bạn có chắc chắn muốn xóa người dùng này? Tất cả dữ liệu liên quan sẽ bị xóa vĩnh viễn.
+                        </div>
+                    </div>
+
+                    <div class="user-info">
+                        <div class="avatar-container">
+                            @if (!string.IsNullOrEmpty(Model.avatar))
+                            {
+                                <img src="@Model.avatar" alt="Avatar" class="user-avatar" />
+                            }
+                            else
+                            {
+                                <div class="default-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-id-badge"></i>
+                                ID người dùng:
+                            </div>
+                            <div class="info-value">@Model.Id</div>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-user"></i>
+                                Tên đăng nhập:
+                            </div>
+                            <div class="info-value">@Model.username</div>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-user-circle"></i>
+                                Họ và tên:
+                            </div>
+                            <div class="info-value">@(Model.fullName ?? "Chưa cập nhật")</div>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-envelope"></i>
+                                Email:
+                            </div>
+                            <div class="info-value">@Model.email</div>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-phone"></i>
+                                Số điện thoại:
+                            </div>
+                            <div class="info-value">@(Model.phone ?? "Chưa cập nhật")</div>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-venus-mars"></i>
+                                Giới tính:
+                            </div>
+                            <div class="info-value">@(Model.gender ?? "Chưa cập nhật")</div>
+                        </div>
+
+                        @if (Model.birthday.HasValue)
+                        {
+                            <div class="info-row">
+                                <div class="info-label">
+                                    <i class="fas fa-birthday-cake"></i>
+                                    Ngày sinh:
+                                </div>
+                                <div class="info-value">@Model.birthday.Value.ToString("dd/MM/yyyy")</div>
+                            </div>
+                        }
+
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Địa chỉ:
+                            </div>
+                            <div class="info-value">@(Model.address ?? "Chưa cập nhật")</div>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-user-tag"></i>
+                                Vai trò:
+                            </div>
+                            <div class="info-value">
+                                @{
+                                    var roleClass = Model.role?.ToLower() switch
+                                    {
+                                        "admin" => "role-admin",
+                                        "manager" => "role-manager",
+                                        _ => "role-user"
+                                    };
+                                }
+                                <span class="role-badge @roleClass">@(Model.role ?? "User")</span>
+                            </div>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-info-circle"></i>
+                                Trạng thái:
+                            </div>
+                            <div class="info-value">
+                                @{
+                                    var isActive = Model.status != "đã xóa";
+                                    var statusClass = isActive ? "status-active" : "status-inactive";
+                                    var statusText = isActive ? "Hoạt động" : "Không hoạt động";
+                                }
+                                <span class="status-badge @statusClass">@statusText</span>
+                            </div>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Loại đăng nhập:
+                            </div>
+                            <div class="info-value">@(Model.typeLogin ?? "Hệ thống")</div>
+                        </div>
+
+                        @if (Model.createdAt != null)
+                        {
+                            <div class="info-row">
+                                <div class="info-label">
+                                    <i class="fas fa-calendar-plus"></i>
+                                    Ngày tạo:
+                                </div>
+                                <div class="info-value">@Model.createdAt.ToString("dd/MM/yyyy HH:mm")</div>
+                            </div>
+                        }
+
+                        @if (Model.updatedAt.HasValue)
+                        {
+                            <div class="info-row">
+                                <div class="info-label">
+                                    <i class="fas fa-calendar-edit"></i>
+                                    Cập nhật lần cuối:
+                                </div>
+                                <div class="info-value">@Model.updatedAt.Value.ToString("dd/MM/yyyy HH:mm")</div>
+                            </div>
+                        }
+                    </div>
+
+                    <form asp-action="Delete" asp-controller="UserAdmin" asp-route-id="@Model.Id" method="post" class="delete-form">
+                        <input name="__RequestVerificationToken" type="hidden" value="@Html.AntiForgeryToken()" />
+                        <div class="btn-group-custom">
+                            <button type="submit" class="btn btn-custom btn-delete" id="deleteBtn">
+                                <i class="fas fa-trash-alt me-2"></i>
+                                Xác Nhận Xóa
+                            </button>
+                            <a asp-action="Index" asp-controller="UserAdmin" class="btn btn-custom btn-cancel">
+                                Hủy Bỏ
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add confirmation dialog for extra safety
+        document.querySelector('.delete-form').addEventListener('submit', function(e) {
+            if (!confirm('Bạn có thật sự chắc chắn muốn xóa người dùng "' + '@Model.username' + '" không?\n\nThao tác này không thể hoàn tác!')) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Add loading state to delete button
+        document.getElementById('deleteBtn').addEventListener('click', function(e) {
+            // Only show loading if form validation passes
+            setTimeout(() => {
+                if (!e.defaultPrevented) {
+                    this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Đang xóa...';
+                    this.disabled = true;
+                }
+            }, 100);
+        });
+    });
+</script>

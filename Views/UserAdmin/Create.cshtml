@@ -1,0 +1,233 @@
+﻿@model Dot_Net_ECommerceWeb.Model.User
+
+@{
+    ViewData["Title"] = "Thêm người dùng mới";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0">
+                            <i class="fas fa-user-plus me-2"></i>Thêm người dùng mới
+                        </h4>
+                        <a asp-action="Index" class="btn btn-light btn-sm">
+                            <i class="fas fa-arrow-left me-1"></i>Quay lại
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <form action="/UserAdmin/Create" method="post" enctype="multipart/form-data">
+                        @Html.AntiForgeryToken()
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                        <div class="row">
+                            <!-- Thông tin đăng nhập -->
+                            <div class="col-md-6">
+                                <div class="card border-primary mb-4">
+                                    <div class="card-header bg-primary text-white py-2">
+                                        <h6 class="mb-0"><i class="fas fa-key me-2"></i>Thông tin đăng nhập</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label asp-for="username" class="form-label">
+                                                <i class="fas fa-user me-1"></i>Tên đăng nhập <span class="text-danger">*</span>
+                                            </label>
+                                            <input asp-for="username" class="form-control" placeholder="Nhập tên đăng nhập" />
+                                            <span asp-validation-for="username" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label asp-for="password" class="form-label">
+                                                <i class="fas fa-lock me-1"></i>Mật khẩu <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="input-group">
+                                                <input asp-for="password" type="password" class="form-control" placeholder="Nhập mật khẩu" />
+                                                <button type="button" class="btn btn-outline-secondary" onclick="togglePassword('password')">
+                                                    <i class="fas fa-eye" id="password-icon"></i>
+                                                </button>
+                                            </div>
+                                            <span asp-validation-for="password" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label asp-for="Role" class="form-label">
+                                                <i class="fas fa-user-tag me-1"></i>Vai trò
+                                            </label>
+                                            <select asp-for="Role" class="form-select">
+                                                <option value="user">User</option>
+                                                <option value="prohibit">prohibit</option>
+                                                <option value="admin">Admin</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label asp-for="TypeLogin" class="form-label">
+                                                <i class="fas fa-sign-in-alt me-1"></i>Loại đăng nhập
+                                            </label>
+                                            <select asp-for="TypeLogin" class="form-select">
+                                                <option value="Normal">Thông thường</option>
+                                                <option value="Google">Google</option>
+                                                <option value="Facebook">Facebook</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Thông tin cá nhân -->
+                            <div class="col-md-6">
+                                <div class="card border-info mb-4">
+                                    <div class="card-header bg-info text-white py-2">
+                                        <h6 class="mb-0"><i class="fas fa-id-card me-2"></i>Thông tin cá nhân</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label asp-for="FullName" class="form-label">
+                                                <i class="fas fa-user-circle me-1"></i>Họ và tên <span class="text-danger">*</span>
+                                            </label>
+                                            <input asp-for="FullName" class="form-control" placeholder="Nhập họ và tên" />
+                                            <span asp-validation-for="FullName" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label asp-for="Gender" class="form-label">
+                                                    <i class="fas fa-venus-mars me-1"></i>Giới tính
+                                                </label>
+                                                <select asp-for="Gender" class="form-select">
+                                                    <option value="">Chọn giới tính</option>
+                                                    <option value="Nam">Nam</option>
+                                                    <option value="Nữ">Nữ</option>
+                                                    <option value="Khác">Khác</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-6 mb-3">
+                                                <label asp-for="Birthday" class="form-label">
+                                                    <i class="fas fa-birthday-cake me-1"></i>Ngày sinh
+                                                </label>
+                                                <input asp-for="Birthday" type="date" class="form-control" />
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label asp-for="Avatar" class="form-label">
+                                                <i class="fas fa-image me-1"></i>Avatar URL
+                                            </label>
+                                            <input asp-for="Avatar" class="form-control" placeholder="URL hình ảnh avatar" />
+                                            <div class="form-text">Nhập URL hình ảnh hoặc để trống</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thông tin liên hệ -->
+                        <div class="card border-warning mb-4">
+                            <div class="card-header bg-warning text-dark py-2">
+                                <h6 class="mb-0"><i class="fas fa-address-book me-2"></i>Thông tin liên hệ</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label asp-for="Email" class="form-label">
+                                            <i class="fas fa-envelope me-1"></i>Email <span class="text-danger">*</span>
+                                        </label>
+                                        <input asp-for="Email" type="email" class="form-control" placeholder="example@email.com" />
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label asp-for="Phone" class="form-label">
+                                            <i class="fas fa-phone me-1"></i>Số điện thoại
+                                        </label>
+                                        <input asp-for="Phone" class="form-control" placeholder="0123456789" />
+                                        <span asp-validation-for="Phone" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="Address" class="form-label">
+                                        <i class="fas fa-map-marker-alt me-1"></i>Địa chỉ
+                                    </label>
+                                    <textarea asp-for="Address" class="form-control" rows="3" placeholder="Nhập địa chỉ chi tiết"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success btn-lg me-3">
+                                <i class="fas fa-save me-2"></i>Lưu thông tin
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary btn-lg">
+                                <i class="fas fa-times me-2"></i>Hủy bỏ
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function togglePassword(fieldId) {
+        const field = document.getElementById(fieldId);
+        const icon = document.getElementById(fieldId + '-icon');
+
+        if (field.type === 'password') {
+            field.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            field.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
+    }
+
+    // Preview avatar
+    document.querySelector('input[name="Avatar"]').addEventListener('input', function() {
+        const url = this.value;
+        const preview = document.getElementById('avatar-preview');
+
+        if (url && preview) {
+            preview.src = url;
+            preview.style.display = 'block';
+        }
+    });
+</script>
+
+<style>
+    .card {
+        border-radius: 10px;
+    }
+
+    .card-header {
+        border-radius: 10px 10px 0 0 !important;
+    }
+
+    .form-control:focus, .form-select:focus {
+        border-color: #86b7fe;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    }
+
+    .btn-lg {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+
+    .text-danger {
+        font-size: 0.875rem;
+    }
+
+    .required {
+        color: #dc3545;
+    }
+</style>
