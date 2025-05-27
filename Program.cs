@@ -52,10 +52,9 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true; // Đánh dấu cookie là cần thiết
 });
 // Đăng ký dịch vụ kết nối DB (MySQL)
-builder.Services.AddDbContext<AppDBContext>(options =>
-    options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
-        new MySqlServerVersion(new Version(8, 0, 32))));
 
+builder.Services.AddDbContext<AppDBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 //Cấu hình dịch vụ Session
 builder.Services.AddDistributedMemoryCache(); // Đăng ký dịch vụ bộ nhớ cache cho session
 builder.Services.AddSession(options =>

@@ -1,0 +1,424 @@
+﻿@model Dot_Net_ECommerceWeb.DTO.UserDTO
+
+@{
+    ViewData["Title"] = "Chi tiết người dùng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-info text-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0">
+                            <i class="fas fa-user-circle me-2"></i>Chi tiết người dùng
+                        </h4>
+                        <div>
+                            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning btn-sm me-2">
+                                <i class="fas fa-edit me-1"></i>Chỉnh sửa
+                            </a>
+                            <a asp-action="Index" class="btn btn-light btn-sm">
+                                <i class="fas fa-arrow-left me-1"></i>Quay lại
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body p-0">
+                    <!-- Profile Header -->
+                    <div class="bg-gradient-info text-white p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 text-center">
+                                @if (!string.IsNullOrEmpty(Model.avatar))
+                                {
+                                    <img src="@Model.avatar" alt="Avatar" class="rounded-circle border border-4 border-white shadow"
+                                         style="width: 150px; height: 150px; object-fit: cover;">
+                                }
+                                else
+                                {
+                                    <div class="bg-white rounded-circle d-flex align-items-center justify-content-center text-info shadow"
+                                         style="width: 150px; height: 150px; margin: 0 auto;">
+                                        <i class="fas fa-user fa-4x"></i>
+                                    </div>
+                                }
+                            </div>
+                            <div class="col-md-9">
+                                <h2 class="mb-2">@Model.fullName</h2>
+                                <p class="mb-1 fs-5">
+                                    <i class="fas fa-at me-2"></i>@Model.username
+                                </p>
+                                <p class="mb-2">
+                                    <span class="badge bg-@(Model.role == "Admin" ? "danger" : Model.role == "prohibit" ? "warning text-dark" : "light text-dark") fs-6 px-3 py-2">
+                                        <i class="fas fa-user-tag me-1"></i>@Model.role
+                                    </span>
+                                    <span class="badge bg-@(Model.status == "chưa xóa" ? "success" : "danger") fs-6 px-3 py-2 ms-2">
+                                        <i class="fas fa-@(Model.status == "chưa xóa" ? "check" : "times") me-1"></i>
+                                        @(Model.status == "chưa xóa" ? "Hoạt động" : "Đã xóa")
+                                    </span>
+                                </p>
+                                <p class="mb-0">
+                                    <small><i class="fas fa-hashtag me-1"></i>ID: @Model.Id</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <div class="row">
+                            <!-- Thông tin cá nhân -->
+                            <div class="col-lg-6">
+                                <div class="card border-primary mb-4">
+                                    <div class="card-header bg-primary text-white">
+                                        <h5 class="mb-0">
+                                            <i class="fas fa-id-card me-2"></i>Thông tin cá nhân
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-4 fw-bold text-muted">Họ và tên:</div>
+                                            <div class="col-sm-8">@Model.fullName</div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-4 fw-bold text-muted">Giới tính:</div>
+                                            <div class="col-sm-8">
+                                                @if (Model.gender == "Nam")
+                                                {
+                                                    <i class="fas fa-mars text-primary me-1"></i>
+
+                                                    <span>Nam</span>
+                                                }
+                                                else if (Model.gender == "Nữ")
+                                                {
+                                                    <i class="fas fa-venus text-danger me-1"></i>
+
+                                                    <span>Nữ</span>
+                                                }
+                                                else if (!string.IsNullOrEmpty(Model.gender))
+                                                {
+                                                    <i class="fas fa-genderless text-info me-1"></i>
+
+                                                    <span>@Model.gender</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="text-muted">Chưa cập nhật</span>
+                                                }
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-4 fw-bold text-muted">Ngày sinh:</div>
+                                            <div class="col-sm-8">
+                                                @if (Model.birthday.HasValue)
+                                                {
+                                                    <i class="fas fa-birthday-cake text-warning me-1"></i>
+                                                    @Model.birthday.Value.ToString("dd/MM/yyyy")
+                                                    <small class="text-muted ms-2">
+                                                        (Tuổi: @((DateTime.Now - Model.birthday.Value).Days / 365))
+                                                    </small>
+                                                }
+                                                else
+                                                {
+                                                    <span class="text-muted">Chưa cập nhật</span>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Thông tin hệ thống -->
+                                <div class="card border-secondary mb-4">
+                                    <div class="card-header bg-secondary text-white">
+                                        <h5 class="mb-0">
+                                            <i class="fas fa-cogs me-2"></i>Thông tin hệ thống
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-4 fw-bold text-muted">Vai trò:</div>
+                                            <div class="col-sm-8">
+                                                <span class="badge bg-@(Model.role == "Admin" ? "danger" : Model.role == "Manager" ? "warning text-dark" : "info") px-3 py-2">
+                                                    @Model.role
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-4 fw-bold text-muted">Trạng thái:</div>
+                                            <div class="col-sm-8">
+                                                <span class="badge bg-@(Model.status == "chưa xóa" ? "success" : "danger") px-3 py-2">
+                                                    <i class="fas fa-@(Model.status == "chưa xóa" ? "check" : "times") me-1"></i>
+                                                    @(Model.status == "chưa xóa" ? "Hoạt động" : "Đã xóa")
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-4 fw-bold text-muted">Loại đăng nhập:</div>
+                                            <div class="col-sm-8">
+                                                @if (Model.typeLogin == "Google")
+                                                {
+                                                    <i class="fab fa-google text-danger me-1"></i>
+
+                                                    <span>Google</span>
+                                                }
+                                                else if (Model.typeLogin == "Facebook")
+                                                {
+                                                    <i class="fab fa-facebook text-primary me-1"></i>
+
+                                                    <span>Facebook</span>
+                                                }
+                                                else
+                                                {
+                                                    <i class="fas fa-user-lock text-secondary me-1"></i>
+
+                                                    <span>Thông thường</span>
+                                                }
+                                            </div>
+                                        </div>
+                              
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Thông tin liên hệ -->
+                            <div class="col-lg-6">
+                                <div class="card border-success mb-4">
+                                    <div class="card-header bg-success text-white">
+                                        <h5 class="mb-0">
+                                            <i class="fas fa-address-book me-2"></i>Thông tin liên hệ
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-4 fw-bold text-muted">Email:</div>
+                                            <div class="col-sm-8">
+                                                <i class="fas fa-envelope text-success me-1"></i>
+                                                <a href="mailto:@Model.email" class="text-decoration-none">@Model.email</a>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-4 fw-bold text-muted">Số điện thoại:</div>
+                                            <div class="col-sm-8">
+                                                @if (!string.IsNullOrEmpty(Model.phone))
+                                                {
+                                                    <i class="fas fa-phone text-success me-1"></i>
+                                                    <a href="tel:@Model.phone" class="text-decoration-none">@Model.phone</a>
+                                                }
+                                                else
+                                                {
+                                                    <span class="text-muted">Chưa cập nhật</span>
+                                                }
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-4 fw-bold text-muted">Địa chỉ:</div>
+                                            <div class="col-sm-8">
+                                                @if (!string.IsNullOrEmpty(Model.address))
+                                                {
+                                                    <i class="fas fa-map-marker-alt text-success me-1"></i>
+
+                                                    @Model.address
+                                                }
+                                                else
+                                                {
+                                                    <span class="text-muted">Chưa cập nhật</span>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Actions -->
+                                <div class="card border-warning">
+                                    <div class="card-header bg-warning text-dark">
+                                        <h5 class="mb-0">
+                                            <i class="fas fa-tools me-2"></i>Hành động
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-grid gap-2">
+                                            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">
+                                                <i class="fas fa-edit me-2"></i>Chỉnh sửa thông tin
+                                            </a>
+
+                                            @if (Model.status == "chưa xóa")
+                                            {
+                                                <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">
+                                                    <i class="fas fa-trash me-2"></i>Xóa người dùng
+                                                </a>
+                                            }
+
+                                            <button class="btn btn-info" onclick="printUserInfo()">
+                                                <i class="fas fa-print me-2"></i>In thông tin
+                                            </button>
+
+                                            <button class="btn btn-secondary" onclick="exportUserInfo()">
+                                                <i class="fas fa-download me-2"></i>Xuất dữ liệu
+                                            </button>
+
+                                            <a asp-action="Index" class="btn btn-outline-secondary">
+                                                <i class="fas fa-list me-2"></i>Danh sách người dùng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal xác nhận xóa -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="deleteModalLabel">
+                    <i class="fas fa-exclamation-triangle me-2"></i>Xác nhận xóa
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Bạn có chắc chắn muốn xóa người dùng <strong>@Model.fullName</strong> không?</p>
+                <p class="text-danger small">
+                    <i class="fas fa-warning me-1"></i>
+                    Hành động này không thể hoàn tác!
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-1"></i>Hủy
+                </button>
+                <a href="@Url.Action("Delete", "UserAdmin", new { id = Model.Id })" class="btn btn-danger">
+                    <i class="fas fa-trash me-1"></i>Xóa
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function printUserInfo() {
+            var printContent = document.querySelector('.card-body').innerHTML;
+            var originalContent = document.body.innerHTML;
+
+            document.body.innerHTML = `
+                <div style="padding: 20px;">
+                    <h2 style="text-align: center; margin-bottom: 30px;">THÔNG TIN NGƯỜI DÙNG</h2>
+                    ${printContent}
+                </div>
+            `;
+
+            window.print();
+            document.body.innerHTML = originalContent;
+            location.reload();
+        }
+
+        function exportUserInfo() {
+            const userData = {
+                id: '@Model.Id',
+                username: '@Model.username',
+                fullName: '@Model.fullName',
+                email: '@Model.email',
+                phone: '@Model.phone',
+                address: '@Model.address',
+                gender: '@Model.gender',
+                birthday: '@(Model.birthday?.ToString("yyyy-MM-dd"))',
+                role: '@Model.role',
+                status: '@Model.status',
+                typeLogin: '@Model.typeLogin',
+                createdAt: '@(Model.createdAt.ToString("yyyy-MM-dd HH:mm"))',
+                updatedAt: '@(Model.updatedAt?.ToString("yyyy-MM-dd HH:mm"))'
+            };
+
+            const jsonData = JSON.stringify(userData, null, 2);
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `user_${userData.username}_${new Date().getTime()}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Tooltip initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+
+        // Auto refresh for updated time
+        setInterval(function() {
+            const updatedElements = document.querySelectorAll('[data-updated-time]');
+            updatedElements.forEach(function(element) {
+                const updatedTime = new Date(element.getAttribute('data-updated-time'));
+                const now = new Date();
+                const diffDays = Math.floor((now - updatedTime) / (1000 * 60 * 60 * 24));
+                element.textContent = diffDays + ' ngày trước';
+            });
+        }, 60000); // Update every minute
+    </script>
+
+    <style>
+        .bg-gradient-info {
+            background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+        }
+
+        .card {
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .badge {
+            font-size: 0.75em;
+        }
+
+        @@media print {
+            .btn, .card-header {
+                display: none !important;
+            }
+            .card {
+                border: none !important;
+                box-shadow: none !important;
+            }
+        }
+
+        .text-decoration-none:hover {
+            text-decoration: underline !important;
+        }
+
+        .fa-2x {
+            opacity: 0.7;
+        }
+
+        .card-body .row {
+            margin-bottom: 0.5rem;
+        }
+
+        hr {
+            margin: 0.75rem 0;
+            opacity: 0.3;
+        }
+    </style>
+}

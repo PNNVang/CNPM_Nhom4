@@ -1,0 +1,336 @@
+﻿@model Dot_Net_ECommerceWeb.Model.User
+
+@{
+    ViewData["Title"] = "Chỉnh sửa thông tin người dùng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0">
+                            <i class="fas fa-user-edit me-2"></i>Chỉnh sửa thông tin người dùng
+                        </h4>
+                        <div>
+                            <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-info btn-sm me-2">
+                                <i class="fas fa-eye me-1"></i>Xem chi tiết
+                            </a>
+                            <a asp-action="Index" class="btn btn-light btn-sm">
+                                <i class="fas fa-arrow-left me-1"></i>Quay lại
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <!-- User Avatar and Basic Info -->
+                    <div class="row mb-4">
+                        <div class="col-md-3 text-center">
+                            <div class="position-relative d-inline-block">
+                                @if (!string.IsNullOrEmpty(Model.Avatar))
+                                {
+                                    <img src="@Model.Avatar" alt="Avatar" class="rounded-circle img-thumbnail"
+                                         style="width: 120px; height: 120px; object-fit: cover;" id="avatar-preview">
+                                }
+                                else
+                                {
+                                    <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center text-white img-thumbnail"
+                                         style="width: 120px; height: 120px;" id="avatar-placeholder">
+                                        <i class="fas fa-user fa-3x"></i>
+                                    </div>
+                                }
+                            </div>
+                            <div class="mt-2">
+                                <small class="text-muted">ID: #@Model.Id</small>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="text-primary">@Model.FullName</h5>
+                            <p class="text-muted mb-1">
+                                <i class="fas fa-at me-1"></i>@Model.username
+                            </p>
+                            <p class="text-muted mb-1">
+                                <i class="fas fa-envelope me-1"></i>@Model.Email
+                            </p>
+                            <p class="text-muted">
+                                <span class="badge bg-@(Model.Role == "admin" ? "danger" : Model.Role == "prohibit" ? "warning" : "info")">
+                                    @Model.Role
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <form asp-action="Edit" method="post">
+                        <input asp-for="Id" type="hidden" />
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                        @Html.AntiForgeryToken()
+                        <div class="row">
+                            <!-- Thông tin đăng nhập -->
+                            <div class="col-lg-6">
+                                <div class="card border-primary mb-4">
+                                    <div class="card-header bg-primary text-white py-2">
+                                        <h6 class="mb-0"><i class="fas fa-key me-2"></i>Thông tin đăng nhập</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label asp-for="username" class="form-label">
+                                                <i class="fas fa-user me-1"></i>Tên đăng nhập <span class="text-danger">*</span>
+                                            </label>
+                                            <input asp-for="username" class="form-control" />
+                                            <span asp-validation-for="username" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label asp-for="password" class="form-label">
+                                                <i class="fas fa-lock me-1"></i>Mật khẩu
+                                            </label>
+                                            <div class="input-group">
+                                                <input asp-for="password" type="password" class="form-control"  />
+                                                <button type="button" class="btn btn-outline-secondary" onclick="togglePassword('password')">
+                                                    <i class="fas fa-eye" id="password-icon"></i>
+                                                </button>
+                                            </div>
+                                            <span asp-validation-for="password" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label asp-for="Role" class="form-label">
+                                                <i class="fas fa-user-tag me-1"></i>Vai trò
+                                            </label>
+                                            <select asp-for="Role" class="form-select">
+                                                <option value="user">User</option>
+                                                <option value="prohibit">prohibit</option>
+                                                <option value="admin">Admin</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label asp-for="TypeLogin" class="form-label">
+                                                <i class="fas fa-sign-in-alt me-1"></i>Loại đăng nhập
+                                            </label>
+                                            <select asp-for="TypeLogin" class="form-select">
+                                                <option value="Normal">Thông thường</option>
+                                                <option value="Google">Google</option>
+                                                <option value="Facebook">Facebook</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label asp-for="Status" class="form-label">
+                                                <i class="fas fa-toggle-on me-1"></i>Trạng thái
+                                            </label>
+                                            <select asp-for="Status" class="form-select">
+                                                <option value="chưa xóa">Hoạt động</option>
+                                                <option value="Đã xóa">Đã xóa</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Thông tin cá nhân -->
+                            <div class="col-lg-6">
+                                <div class="card border-info mb-4">
+                                    <div class="card-header bg-info text-white py-2">
+                                        <h6 class="mb-0"><i class="fas fa-id-card me-2"></i>Thông tin cá nhân</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label asp-for="FullName" class="form-label">
+                                                <i class="fas fa-user-circle me-1"></i>Họ và tên <span class="text-danger">*</span>
+                                            </label>
+                                            <input asp-for="FullName" class="form-control" />
+                                            <span asp-validation-for="FullName" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label asp-for="Gender" class="form-label">
+                                                    <i class="fas fa-venus-mars me-1"></i>Giới tính
+                                                </label>
+                                                <select asp-for="Gender" class="form-select">
+                                                    <option value="">Chọn giới tính</option>
+                                                    <option value="Nam">Nam</option>
+                                                    <option value="Nữ">Nữ</option>
+                                                    <option value="Khác">Khác</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-6 mb-3">
+                                                <label asp-for="Birthday" class="form-label">
+                                                    <i class="fas fa-birthday-cake me-1"></i>Ngày sinh
+                                                </label>
+                                                <input asp-for="Birthday" type="date" class="form-control"
+                                                       value="@(Model.Birthday?.ToString("yyyy-MM-dd"))" />
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label asp-for="Avatar" class="form-label">
+                                                <i class="fas fa-image me-1"></i>Avatar URL
+                                            </label>
+                                            <input asp-for="Avatar" class="form-control" placeholder="URL hình ảnh avatar"
+                                                   onchange="previewAvatar(this.value)" />
+                                            <div class="form-text">Nhập URL hình ảnh mới hoặc để nguyên</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thông tin liên hệ -->
+                        <div class="card border-success mb-4">
+                            <div class="card-header bg-success text-white py-2">
+                                <h6 class="mb-0"><i class="fas fa-address-book me-2"></i>Thông tin liên hệ</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label asp-for="Email" class="form-label">
+                                            <i class="fas fa-envelope me-1"></i>Email <span class="text-danger">*</span>
+                                        </label>
+                                        <input asp-for="Email" type="email" class="form-control" />
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label asp-for="Phone" class="form-label">
+                                            <i class="fas fa-phone me-1"></i>Số điện thoại
+                                        </label>
+                                        <input asp-for="Phone" class="form-control" />
+                                        <span asp-validation-for="Phone" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="Address" class="form-label">
+                                        <i class="fas fa-map-marker-alt me-1"></i>Địa chỉ
+                                    </label>
+                                    <textarea asp-for="Address" class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-warning btn-lg me-3">
+                                <i class="fas fa-save me-2"></i>Cập nhật thông tin
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary btn-lg me-2">
+                                <i class="fas fa-list me-2"></i>Danh sách
+                            </a>
+                            <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-info btn-lg">
+                                <i class="fas fa-eye me-2"></i>Xem chi tiết
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function togglePassword(fieldId) {
+        const field = document.getElementById(fieldId);
+        const icon = document.getElementById(fieldId + '-icon');
+
+        if (field.type === 'password') {
+            field.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            field.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
+    }
+
+    function previewAvatar(url) {
+        const preview = document.getElementById('avatar-preview');
+        const placeholder = document.getElementById('avatar-placeholder');
+
+        if (url && url.trim() !== '') {
+            if (preview) {
+                preview.src = url;
+            } else if (placeholder) {
+                // Create new img element and replace placeholder
+                const newImg = document.createElement('img');
+                newImg.id = 'avatar-preview';
+                newImg.src = url;
+                newImg.alt = 'Avatar';
+                newImg.className = 'rounded-circle img-thumbnail';
+                newImg.style.cssText = 'width: 120px; height: 120px; object-fit: cover;';
+                placeholder.parentNode.replaceChild(newImg, placeholder);
+            }
+        }
+    }
+
+    // Form validation enhancements
+    document.addEventListener('DOMContentLoaded', function () {
+        // Add custom validation feedback
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (e) {
+            const requiredFields = form.querySelectorAll('input[required], select[required]');
+            let isValid = true;
+
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    field.classList.remove('is-invalid');
+                }
+            });
+
+            if (!isValid) {
+                e.preventDefault();
+                alert('Vui lòng điền đầy đủ thông tin bắt buộc!');
+            }
+        });
+    });
+</script>
+
+<style>
+    .card {
+        border-radius: 10px;
+    }
+
+    .card-header {
+        border-radius: 10px 10px 0 0 !important;
+    }
+
+    .img-thumbnail {
+        border: 3px solid #dee2e6;
+    }
+
+    .form-control:focus, .form-select:focus {
+        border-color: #86b7fe;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    }
+
+    .btn-lg {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+
+    .is-invalid {
+        border-color: #dc3545;
+    }
+
+        .is-invalid:focus {
+            border-color: #dc3545;
+            box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+        }
+
+    .text-primary {
+        font-weight: 600;
+    }
+
+    .badge {
+        font-size: 0.8rem;
+    }
+</style>

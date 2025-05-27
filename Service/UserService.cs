@@ -8,10 +8,11 @@ namespace Dot_Net_ECommerceWeb.Service;
 public class UserService
 {
     private readonly AppDBContext _context;
-
-    public UserService(AppDBContext context)
+    private readonly EncryptAndDencrypt _encryptAndDencrypt;
+    public UserService(AppDBContext context, EncryptAndDencrypt encryptAndDencrypt)
     {
         _context = context;
+        _encryptAndDencrypt = encryptAndDencrypt;
     }
 
     // Lấy danh sách người dùng
@@ -64,6 +65,7 @@ public class UserService
     {
         try
         {
+            user.password = _encryptAndDencrypt.HashPassword(user.password);
             await _context.Users.AddAsync(user);
 
             var log = new Logs
@@ -94,7 +96,7 @@ public class UserService
         if (existingUser == null) return false;
 
         existingUser.username = user.username;
-        existingUser.password = user.password;
+        existingUser.password = _encryptAndDencrypt.HashPassword(user.password);
         existingUser.FullName = user.FullName;
         existingUser.Gender = user.Gender;
         existingUser.Birthday = user.Birthday;
