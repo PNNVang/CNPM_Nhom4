@@ -26,7 +26,7 @@
     </style>
 </head>
 <body>
-    @await Html.PartialAsync("admin_header")
+    @await Html.PartialAsync("admin_header") <!-- 8.4: Gọi header chung cho trang admin  -->
     <div class="container-fluid">
         <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
@@ -84,7 +84,7 @@
             </div>
             <div class="col py-3" style="width: 70%">
                 @* <button type="button" class="btn btn-primary" id="convert" onclick="converttoExcel()">Xuất Excel</button> *@
-                <table id="table_id" class="table table-striped">
+                <table id="table_id" class="table table-striped"><!-- 8.5: Bảng hiển thị dữ liệu tồn kho -->
                     <thead>
                         <tr>
                             <th>STT</th>
@@ -94,7 +94,7 @@
                         </tr>
                     </thead>
                     <tbody id="body">
-                        <!-- Dữ liệu sẽ được chèn vào đây bằng Ajax -->
+                        <!-- 8.10: Dữ liệu được thêm vào đây bằng Ajax -->
                     </tbody>
                 </table>
             </div>
@@ -107,7 +107,7 @@
     @* <script src="@Url.Content("~/js/table2excel.js")"></script> *@
     <script>
         $(document).ready(function () {
-            // 1. Khởi tạo DataTable
+            // 8.5: Khởi tạo DataTable
             $("#table_id").DataTable();
 
             // 2. Ẩn dòng trống
@@ -121,41 +121,45 @@
             $('body').append($spinner);
 
             function showSpinner() {
-                $spinner.show();
+                $spinner.show();// 8.6: Hiện loading
             }
 
             function hideSpinner() {
-                $spinner.hide();
+                $spinner.hide();// 8.8: Ẩn loading
             }
 
             // 5. Gọi Ajax để lấy dữ liệu
             showSpinner();
             $.ajax({
-                url: '/api/Inventory/getinventoriesdetail', // Điều chỉnh theo API của bạn
+                url: '/api/Inventory/getinventoriesdetail', // 8.6: Gọi API tồn kho
                 method: 'GET',
                 dataType: 'JSON',
                 success: function (response) {
-                    hideSpinner();
+                    hideSpinner();// 8.8: Ẩn loading sau khi lấy xong
+
+                    // 8.9: Duyệt kết quả trả về từ API
                     $.each(response, function (index, item) {
                         var $row = $('<tr>');
+                         // 8.10: Thêm dữ liệu vào từng cột
                         $.each(item, function (key, value_item) {
                             var $cell = $('<td>').text(value_item);
+                             // 8.11: Đánh dấu màu nếu hết hàng
                             if (key === 'status' && value_item === 'hết hàng') {
                                 $cell.css('background-color', '#DD0000');
                             }
                             $row.append($cell);
                         });
-                        $tbody.append($row);
+                        $tbody.append($row);// 8.10: Thêm dòng vào bảng
                     });
                 },
                 error: function (error) {
                     hideSpinner();
-                    alert('Lấy dữ liệu không thành công');
+                    alert('Lấy dữ liệu không thành công');// 8.13: Hiển thị lỗi
                 }
             });
         });
 
-        // 6. Xuất Excel
+         // 8.14: Hàm xuất dữ liệu tồn kho ra Excel (nếu kích hoạt)
         function converttoExcel() {
             var table2excel = new Table2Excel();
             table2excel.export(document.querySelectorAll("table"));

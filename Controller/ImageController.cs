@@ -16,17 +16,18 @@ namespace Dot_Net_ECommerceWeb.Controller
     {
         private readonly AppDBContext _dbContext;
 
-        // Constructor nhận AppDBContext để truy cập dữ liệu từ CSDL
+        // 8.7: Inject DbContext để truy cập database
         public ImageController(AppDBContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        // API để lấy thông tin ảnh sản phẩm
+        // 8.7: API để lấy danh sách ảnh sản phẩm
+
         [HttpGet("getimage")]
         public async Task<ActionResult<ProductImage>> GetImage()
         {
-            // Truy vấn kết hợp bảng Products và ProductImages
+             // 8.7: Truy vấn kết hợp bảng Products và ProductImages
             var image = (from p in _dbContext.Products
                          join imgproduct in _dbContext.ProductImages on p.Id equals imgproduct.Id
                          select new
@@ -40,7 +41,7 @@ namespace Dot_Net_ECommerceWeb.Controller
                              imgproduct.Img4,
                          });
 
-            // Trả kết quả dạng HTTP 200 OK với danh sách ảnh
+            // 8.8: Trả về danh sách ảnh dưới dạng JSON
             return Ok(image);
         }
     }
